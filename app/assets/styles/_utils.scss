@@ -1,0 +1,8 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.no_pad { padding: 0 !important; }
+.no_underline { border: 0; }

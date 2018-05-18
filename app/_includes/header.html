@@ -1,0 +1,24 @@
+<header class ="nav-down">
+	<div class ="nav-container nav-container__left">
+		<span class="nav-web"><a class="no_underline head-home" href="./">Moriarty Naps</a></span>
+
+		<span class="nav-home"><a class="no_underline" href= "{{ site.baseurl }}"><i class="collecticons collecticons-dm"></i></a>
+		<a class="no_underline" href= "https://twitter.com/DylanMoriarty" target="_blank">
+			<i class="collecticons collecticons-twitter"></i>
+		</a>
+		<a class="no_underline" href= "https://github.com/DylanMoriarty" target="_blank">
+			<i class="collecticons collecticons-github"></i>
+		</a>
+		</span>
+	</div>
+
+	{% if page.song %}
+	<div class="nav-container nav-container__right nav-container__tunes">
+		{{ layout.songtext }}: <a class="no_pad" href="{{ page.songurl }}" target="_blank">{{ page.song }}</a>
+	</div>
+	{% endif %}
+
+	<script>
+		var PT = {lang: '{{page.lang}}' };
+	</script>
+</header>

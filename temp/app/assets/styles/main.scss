@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "myHand";
+    src: url("/assets/fonts/MyHand.woff") format('woff');
+}
+@font-face {
+    font-family: "myHand_bold";
+    src: url("/assets/fonts/MyHand_Bold.woff") format('woff');
+}
+
+.MyHand{
+  font-family: myHand, "Crimson Text", serif; 
+}
+
+.MyHand_b{
+  font-family: myHand_Bold, "Crimson Text", serif;
+}
+
+.pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+
+.pagination a {    
+    &:hover {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+ }
+
+.pagination {
+    text-align: center;
+ }
+ 

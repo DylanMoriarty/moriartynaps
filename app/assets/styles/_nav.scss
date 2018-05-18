@@ -1,0 +1,124 @@
+/* ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+ Navigation Bar CSS 
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ */
+
+#header{
+  max-width:1080px;
+  position: relative;
+  margin: auto;
+}
+
+header {
+    background-color: black;
+    border-bottom: 1px solid;
+    animation: dullColor 25s infinite;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    padding: 0.25rem 0;
+    height: 37px;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index:1000;
+}
+
+.nav-up {
+    top: -50px;
+}
+
+.nav-container{
+  text-align: right;
+  margin-right: 5%;
+  height: 38px;
+  i{
+    display: none;
+    @media screen and (max-width: 530px){
+      display: inline-block;
+    }
+  }
+  a{
+    padding: 0 2%;
+    @media screen and (max-width: 530px) {
+      padding: 0 15px;
+    }
+  }
+  h1{
+    font-size: 0.9em;
+    font-weight: normal;
+    display: inline-block;
+    @media screen and (max-width: 530px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    text-align: center;
+    font-size: 1.1em;
+  }
+}
+
+.nav-container__left { float: left; }
+.nav-container__right { 
+  padding-top: 8px;
+  float: right;
+  font-size: 13px;
+  a {
+    margin-left: 0.25rem;
+  }
+}
+
+.nav-container__tunes {
+  font-family: 'Quicksand';
+  letter-spacing: 1.25px;
+  @include media-query($laptop) { display: none; }
+}
+
+.nav-up {
+    top: -40px;
+}
+
+.nav-web {
+  float: left;
+  font-size: 1rem;
+  width: auto;
+  padding: 8px 0 11px 1rem;
+  a {
+    padding: 0;
+  }
+  &:after {
+    content: "";
+    padding-left: 1.25rem;
+    position: absolute;
+    top: 0;
+    height: 45px;
+    border-right: 1px solid white;
+    animation: dullColor 25s infinite;
+  }
+}
+
+.nav-home{
+  float: left;
+  text-align: left;
+  padding-top:9px;
+  margin-left: 2rem;
+  width: 150px;
+  a{
+    margin: 0 0.5em;
+  }
+  i{
+    display: inline-block;
+    font-size:1.2em;
+  }
+  @media screen and (max-width: 530px) {
+    float: initial;
+    margin-left: initial;
+    a{
+      margin: auto;
+      padding: 0 15px;
+    }
+  }
+}
+
+.head-home {
+  font-size: 13px;
+}

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "myHand";
+    src: url("/assets/fonts/MyHand.woff") format('woff');
+}
+@font-face {
+    font-family: "myHand_bold";
+    src: url("/assets/fonts/MyHand_Bold.woff") format('woff');
+}
+
+.MyHand{
+  font-family: myHand, "Crimson Text", serif; 
+}
+
+.MyHand_b{
+  font-family: myHand_Bold, "Crimson Text", serif;
+}

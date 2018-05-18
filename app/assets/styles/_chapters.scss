@@ -1,0 +1,55 @@
+.Chapterbox{
+  font-family: Quicksand;
+  text-align: center;
+  margin: 5.5rem 0 7rem;
+  color: #9FB8AF;
+  opacity: 0.2;
+  transition: 1s all;
+  h2{
+    display: inline-block;
+    position: relative;
+    height: 4px;
+    width: 40px;
+    bottom: 4px;
+    margin: 0;
+    font-family: Quicksand;
+    letter-spacing: 3px;
+    color: #9FB8AF;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+}
+
+.ChapterboxHeader{
+  margin-bottom: 3px;
+}
+
+.ChapterboxTitle{
+  bottom:3px;
+  font-size: 1.3em;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.ChapterboxHeaderLine{
+  width: 100px;
+  height:1px;
+  background-color: darken($Primary, 10);
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.ChapterboxFooterLine{
+  width: 250px;
+  height:1px;
+  background-color: #e86862;
+  margin: auto;
+  margin-top: 12px;
+}
+
+/*.ChapterboxLine {
+  opacity: 0.5;
+  background-color: rgba(255,255,255,0.5);
+}
+*/
