@@ -12,10 +12,9 @@
 
 header {
     position: fixed;
-    background-color: black;
-    border-bottom: 1px solid;
+    background-color: white;
+    border-bottom: 4px solid;
     animation: dullColor 25s infinite;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.8);
     padding: 0.25rem 0;
     height: 37px;
     top: 0;
@@ -66,7 +65,7 @@ header {
   height: auto;
   margin-top: -3rem;
   font-size: 13px;
-  background-color: black;
+  background-color: white;
   border: 1px solid;
   margin-top: -3rem;
   &:before {
@@ -77,7 +76,7 @@ header {
     height: calc(42px + 3rem);
     width: 4px;
     z-index: 1;
-    background-color: black;
+    background-color: white;
     border: 0;
   }
   &:after {
@@ -88,7 +87,7 @@ header {
     height: calc(42px + 3rem);
     width: 4px;
     z-index: 1;
-    background-color: black;
+    background-color: white;
     border: 0;
   }
   &:hover {

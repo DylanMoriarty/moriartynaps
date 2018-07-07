@@ -10,11 +10,11 @@ button {
 	transition: 0.1s all;
 	letter-spacing: 0.35rem;
 	text-transform: uppercase;
-  box-shadow: 0px 2px 20px rgba(0,0,0,0.4);
 	&:hover {
 		cursor: pointer;
 		border-color: darken($Primary, 10);
 		color: darken($Primary, 12);
+    animation: dullColor 25s infinite;
 	}
 	&:active {
 		outline: !important none;

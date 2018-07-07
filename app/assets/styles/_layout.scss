@@ -6,21 +6,16 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 
-  background: #000;
   background-image:
   /*url('/assets/graphics/intersection.png'),*/
-  -webkit-radial-gradient(80% 5%, circle, #001a1b, transparent),
-  -webkit-radial-gradient(80% 50%, circle, #02567d, transparent),
-  -webkit-radial-gradient(0% 72%, 40em 40em, #33696E, transparent),
-  -webkit-radial-gradient(10% 10%, circle, #240c52, transparent),
-  -webkit-gradient(linear, 0 0, 0 100%, from(#FFF), to(#000));
+  -webkit-gradient(linear, 0 0, 0 400%, from(#efefef), to(#D6DFDA));
 
-  color: #9FB8AF;
+  color: $text-color;
 }
 
 h2, h3, h4 {
   font-family: $display-font-family;
-  color: $Primary;
+  color: #345650;
   margin: 0;
   padding: 0;
 }
@@ -187,7 +182,7 @@ footer {
   font-family: Quicksand;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  background-color: black;
+  background-color: white;
   border-top: 1px solid;
   border-bottom: 8px solid;
   animation: dullColor 25s infinite;
