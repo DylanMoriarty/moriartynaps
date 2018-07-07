@@ -11,6 +11,7 @@
 }
 
 header {
+    position: fixed;
     background-color: black;
     border-bottom: 1px solid;
     animation: dullColor 25s infinite;
@@ -58,19 +59,54 @@ header {
 }
 
 .nav-container__left { float: left; }
-.nav-container__right { 
-  padding-top: 8px;
+.nav-container__right {
+  position: relative;
   float: right;
+  padding: calc(14px + 3rem) 2rem 1rem;
+  height: auto;
+  margin-top: -3rem;
   font-size: 13px;
+  background-color: black;
+  border: 1px solid;
+  margin-top: -3rem;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: calc(42px + 3rem);
+    width: 4px;
+    z-index: 1;
+    background-color: black;
+    border: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    height: calc(42px + 3rem);
+    width: 4px;
+    z-index: 1;
+    background-color: black;
+    border: 0;
+  }
+  &:hover {
+    .nav-musicBox {
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+    }
+  }
   a {
     margin-left: 0.25rem;
   }
+  @include media-query($laptop) { display: none; }
 }
 
 .nav-container__tunes {
+  position: relative;
   font-family: 'Quicksand';
   letter-spacing: 1.25px;
-  @include media-query($laptop) { display: none; }
 }
 
 .nav-up {
@@ -121,4 +157,12 @@ header {
 
 .head-home {
   font-size: 13px;
+}
+
+.nav-musicBox {
+  transition: 1s margin;
+  height: 200px;
+  width: 100%;
+  margin-top: -14rem;
+  margin-bottom: 2.5rem;
 }

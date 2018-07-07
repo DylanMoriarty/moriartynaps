@@ -1,0 +1,11 @@
+{% if page.song %}
+<div class="nav-container nav-container__right">
+	<div class="nav-musicBox">
+		<iframe width="100%" height="200" src="{{ page.songurl}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="nav-container__tunes">
+		{{ layout.songtext }}: <a class="no_pad" href="{{ page.songurl }}" target="_blank">{{ page.song }}</a>
+	</div>
+</div>
+{% endif %}

@@ -4,22 +4,18 @@ title:  Broad Band
 date:   2018-5-1
 categories: book
 
-song: "War on Women"
-songurl: https://www.youtube.com/watch?v=zBTlLWFgJd0
+song: "War on Women - YACHT"
+songurl: https://www.youtube.com/embed/zBTlLWFgJd0
 
 visible: true
 ---
 
-
-
-
-
-
+It's really, really easy to take for granted all the life that was put into making the machine you're reading this on right now. From the components of the computer to the programs it runs, to these words I'm typing now, the byline on a standard web browser is probably longer than anyone could fathom.
 
 
 
 {% include bits/chapter1.html %}I
-{% include bits/chapter2.html %}WHAT CAN IT BE!?
+{% include bits/chapter2.html %}EARLY
 {% include bits/chapter3.html %}
 
 {% include bits/postimg.html imgsrc="posts/nic-cage.jpg" %}
@@ -27,7 +23,7 @@ visible: true
 asdf asfdasdf asdfasf
 
 {% include bits/chapter1.html %}II
-{% include bits/chapter2.html %}WRITE MORE
+{% include bits/chapter2.html %}MODERN
 {% include bits/chapter3.html %}
 
 I don't think many people will read this stuff, but I want to DO ALL THE THINGS. And one of those things is articulating myself in a decent way.
@@ -35,7 +31,7 @@ I don't think many people will read this stuff, but I want to DO ALL THE THINGS.
 
 
 {% include bits/chapter1.html %}III
-{% include bits/chapter2.html %}FEEDING THE BEAST
+{% include bits/chapter2.html %}INSTRUCTIVE
 {% include bits/chapter3.html %}
 
 Awhile back, someone introduced me to [an essay by Paul Ford](http://www.ftrain.com/wwic.html
@@ -46,28 +42,4 @@ This has stuck with me a lot, and everytime I go to post something on Facebook, 
 Particularly with posts even slightly political, it's hard to not view a field of people on soapboxes, each expressing heart felt speeches.
 
 That said, I have that itch. I have opinions! And thoughts. And I can't kick the notion that it'd be nice to preserve them somewhere.
-
-{% include bits/chapter1.html %}IV
-{% include bits/chapter2.html %}OWNING MY WORDS
-{% include bits/chapter3.html %}
-
-Another big thing about social platforms is that while they promise a soapbox, I don't like that my words and stuff immediately become their property.
-
-Case in point Snapchat, where the Terms of Service quietely notes that they effectively own any image you upload to them. The same holds true for most social sites.
-
-I want to emphasis that *I don't believe there's nefarious purposes behind these rules*, but I do believe the "data" I'd provide could get used in ways I'd raise an eyebrow to.
-
-{% include bits/chapter1.html %}V
-{% include bits/chapter2.html %}LEGACY
-{% include bits/chapter3.html %}
-
-
-
-
-
-
-
-
-http://www.ftrain.com/wwic.html
-
 

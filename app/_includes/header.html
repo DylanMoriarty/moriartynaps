@@ -12,11 +12,7 @@
 		</span>
 	</div>
 
-	{% if page.song %}
-	<div class="nav-container nav-container__right nav-container__tunes">
-		{{ layout.songtext }}: <a class="no_pad" href="{{ page.songurl }}" target="_blank">{{ page.song }}</a>
-	</div>
-	{% endif %}
+	{% include musicBox.html %}
 
 	<script>
 		var PT = {lang: '{{page.lang}}' };
