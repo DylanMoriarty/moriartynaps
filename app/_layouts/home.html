@@ -1,58 +1,25 @@
----
-layout: meta
----
+{% include head.html %}
 
-<!-- Just some nice to have styles for the pager buttons -->
-<div class="home">
-  
-  <div class="clearfix">
+<h1>Moriarty Naps</h1>
 
-    <div class="intro-block">
-      Good morning!
-    </div>
+<p>This is <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a>'s new website. He doesn't like it. He didn't like Adobe Illustrator at first either.</p>
 
-    <ul class="post-list">
-      <!-- 
-          Here is the main paginator logic called.
-          All calls to site.posts should be replaced by paginator.posts 
-      -->
-      {% for post in paginator.posts %}
-        {% if post.visible != "hidden" %}
-          <li class="post-list__container" onclick="location.href='{{ post.url | relative_url }}';">
-            <div class="post-icon__container"></div>
+<h3>Posts</h3>
 
-            <h2 class="post-title">
-              <a class="post-link no_underline">{{ post.title | escape }}</a>
-            </h2>
+<ul>
+{% for post in paginator.posts %}
+	<li><a href='{{ post.url | relative_url }}'>{{ post.title | escape }}</a></li>
+{% endfor %}
+</ul>
+<!-- 
 
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+<li class="post-list__container" onclick="location.href='{{ post.url | relative_url }}';">
+  <div class="post-icon__container"></div>
 
-  </div>
+  <h2 class="post-title">
+    <a class="post-link no_underline">{{ post.title | escape }}</a>
+  </h2>
 
-  <!-- 
-    Showing buttons to move to the next and to the previous list of posts (pager buttons).
-  -->
-  {% if paginator.total_pages > 1 %}
-  <ul class="pager">
-      {% if paginator.previous_page %}
-      <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          <button>&larr; Newer Posts</button>
-        </a>
-      </li>
-      {% endif %}
-      {% if paginator.next_page %}
-      <li class="next">
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            <button>Older Posts &rarr;</button>
-          </a>
-      </li>
-      {% endif %}
-  </ul>
-  {% endif %}
-
-</div>
+  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+</li>
+ -->

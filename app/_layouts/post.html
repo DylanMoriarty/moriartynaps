@@ -1,34 +1,9 @@
----
-layout: meta
----
+{% include head.html %}
 
-<section class="article-container">
+<h1>Moriarty Naps</h1>
 
-  <div class="article-gutter"></div>
+<a href="{{ site.baseurl }}">Return home</a>
 
-  <article class="article-content">
-  	<div class="article-header">
-      <!-- <div class=""><a href="./">Back</a></div> -->
-
-      <div class="article-back"><a href="./" class="no_underline">&larr; back</a></div>
-	    <h2 class="article-title">{{ page.title }}</h2>
-
-			<div class="mobile-tunes">
-				Companion tunes: <a class="no_pad" href="{{ page.songurl }}" target="_blank">{{ page.song }}</a>
-			</div>
-		</div>
-
-    {{ content }}
-
-	</div>
-
-
-  </article>
-
-</section>
-
-<div class = "article-foot">
-  <a class="no_underline" href="../">
-    <button>Back Home</button>
-  </a>
+<div class="content">
+	{{ content }}
 </div>
