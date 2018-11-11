@@ -1,25 +1,36 @@
-{% include head.html %}
+---
+layout: default
+---
 
-<h1>Moriarty Naps</h1>
+<p class="small">This is <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a>'s new website. Neat.</p>
 
-<p>This is <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a>'s new website. He doesn't like it. He didn't like Adobe Illustrator at first either.</p>
-
-<h3>Posts</h3>
-
-<ul>
+<ul class="post-container clearfix">
 {% for post in paginator.posts %}
-	<li><a href='{{ post.url | relative_url }}'>{{ post.title | escape }}</a></li>
+	<li class="post">
+    <p class="icon-{{ post.type }}"></p>
+    <p class="post-hed">
+      <a href='{{ post.url | relative_url }}'>{{ post.title | escape }}</a>
+    </p>
+    <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+  </li>
 {% endfor %}
 </ul>
-<!-- 
 
-<li class="post-list__container" onclick="location.href='{{ post.url | relative_url }}';">
-  <div class="post-icon__container"></div>
-
-  <h2 class="post-title">
-    <a class="post-link no_underline">{{ post.title | escape }}</a>
-  </h2>
-
-  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-</li>
- -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <button>&larr; Newer Posts</button>
+      </a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          <button>Older Posts &rarr;</button>
+        </a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

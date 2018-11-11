@@ -1,9 +1,15 @@
-{% include head.html %}
+---
+layout: default
+songtext: "Reccomended Tunes"
+---
 
-<h1>Moriarty Naps</h1>
-
-<a href="{{ site.baseurl }}">Return home</a>
+{% include musicBox.html %}
 
 <div class="content">
+  <h3>{{ page.title }}</h3>
 	{{ content }}
+</div>
+
+<div class="post-foot">
+  <a href="./">Return home</a>
 </div>
