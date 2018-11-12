@@ -25,29 +25,22 @@ document.addEventListener("DOMContentLoaded", function(e) {
 					chapter.style.opacity = 0.2
 				}
 			}
-
 		})
-
-
-
-
-
-	 //    const fadeStart=100,
-	 //    			fadeUntil=200,
-	 //    			fading = $('#fading');
-
-	 //    var offset = $(document).scrollTop()
-	 //        ,opacity=0
-	 //    ;
-	 //    if( offset<=fadeStart ){
-	 //        opacity=1;
-	 //    }else if( offset<=fadeUntil ){
-	 //        opacity=1-offset/fadeUntil;
-	 //    }
-	 //    fading.css('opacity',opacity).html(opacity);
-		// })
-
 	}
-
-
 })
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".nav-down").style.top = "0";
+  } else {
+    document.querySelector(".nav-down").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+
