@@ -27,7 +27,7 @@ theme: minima
 gems:
   - jekyll-paginate-v2
 exclude:
-  - [vendor]
+  - vendor
   - Gemfile
   - Gemfile.lock
 

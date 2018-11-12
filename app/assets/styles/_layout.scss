@@ -88,6 +88,8 @@ p {
 
 .post-container {
   font-size: 20px;
+  float: left;
+  margin: 0 4rem;
   li {
     max-width: 600px;
     margin: 0 auto 1.5rem;
@@ -99,5 +101,10 @@ p {
   img {
     width: 250px;
   }
+}
+
+.intro-box {
+  float: left;
+  left: 1rem;
 }
 
