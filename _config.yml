@@ -15,6 +15,7 @@ theme: minima
 gems:
   - jekyll-paginate-v2
 exclude:
+  - README.md
   - bundle
   - Gemfile
   - Gemfile.lock
