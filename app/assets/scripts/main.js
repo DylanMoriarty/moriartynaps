@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		document.addEventListener('scroll', function(e) {
 			for (var i = chapters.length - 1; i >= 0; i--) {
 				let chapter = chapters[i]
-				let chapterOffset = chapter.offsetTop - (window.innerHeight / 1.5)
+				let chapterOffset = chapter.offsetTop - (window.innerHeight / 3)
 
 				if (window.scrollY > chapterOffset) {
 					chapter.style.opacity = 1

@@ -7,11 +7,11 @@ body {
 
 .site-home {
   min-height: calc(100% - 98px);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.content {
-	max-width: 500px;
-	margin: 2rem auto 0;
+.article-content {
   font-size: 20px;
   line-height: 28px;
   p {
@@ -19,18 +19,17 @@ body {
   }
 }
 
-img {
-  width: 600px;
-	max-width: 100%;
-	margin: 1rem 0 1.5rem;
-}
+// img {
+//   width: 600px;
+// 	max-width: 100%;
+// 	margin: 1rem 0 1.5rem;
+// }
 
 $titleOutline: 2px;
 
 h3 {
   font-family: 'Averia Serif Libre';
   font-size: 2rem;
-	margin: 6rem 0 4rem;
   border-bottom: 2px solid #bbb;
   text-shadow:
    -$titleOutline -$titleOutline 0 #f5f5f5,  
@@ -94,3 +93,11 @@ p {
     margin: 0 auto 1.5rem;
   }
 }
+
+.sleepyme {
+  float: left;
+  img {
+    width: 250px;
+  }
+}
+

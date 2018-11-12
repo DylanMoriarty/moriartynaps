@@ -5,11 +5,27 @@ songtext: "Reccomended Tunes"
 
 {% include musicBox.html %}
 
-<div class="content">
-  <h3>{{ page.title }}</h3>
-	{{ content }}
-</div>
+<section class="article-container">
 
-<div class="post-foot">
-  <a href="./">Return home</a>
+  <div class="article-gutter"></div>
+
+  <article class="article-content">
+    <div class="article-header">
+      <div class="article-back"><a href="./" class="no_underline">&larr; back</a></div>
+      <h3 class="">{{ page.title }}</h3>
+    </div>
+
+    {{ content }}
+
+  </div>
+
+
+  </article>
+
+</section>
+
+<div class = "article-foot">
+  <a class="no_underline" href="../">
+    <button>Back Home</button>
+  </a>
 </div>
