@@ -242,8 +242,7 @@ gulp.task('styles', function () {
           v.setValue(encodeURIComponent(url.getValue()));
           return v;
         }
-      },
-      includePaths: require('node-bourbon').with('.', 'node_modules/jeet/scss')
+      }
     }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/assets/styles'))

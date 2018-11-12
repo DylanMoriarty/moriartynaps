@@ -4,6 +4,15 @@
   clear: both;
 }
 
-.no_pad { padding: 0 !important; }
-.no_underline { border: 0; }
-.multiply { mix-blend-mode: multiply; }
+// Width of the content area
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+$mobile:          600px;
+$laptop:        800px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}

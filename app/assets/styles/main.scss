@@ -1,19 +1,9 @@
-@import 'variables.scss';
-@import 'reset.scss';
-@import 'collecticons.scss';
+@import 'utils';
+@import 'animations';
 
-@import 'utils.scss';
-@import 'animations.scss';
-
+@import 'collecticons';
 @import 'layout.scss';
-@import 'nav.scss';
-@import 'fonts.scss';
-@import 'article.scss';
-@import 'tooltips.scss';
+@import 'anchor.scss';
 @import 'chapters.scss';
-
-@import 'buttons.scss';
-
-.g-box-full {
-	background-color: none !important;
-}
+@import 'musicbox.scss';
+@import 'post.scss';

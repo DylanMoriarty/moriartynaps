@@ -1,7 +1,24 @@
+.post-foot {
+  width: 100%;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.post-hed {
+  margin-bottom: 0.15rem;
+}
+
+.post-date {
+  font-style: italic;
+  font-size: 18px;
+  opacity: 0.4;
+}
+
 .article-container {
   position: relative;
   display: table;
-  margin: 8rem 0 2rem;
+  margin: 6rem auto 2rem;
+  max-width: 800px;
 }
 
 .article-gutter {
@@ -11,7 +28,7 @@
 
 .article-content {
   float: right;
-  width: 70%;
+  width: 65%;
   ul {
     margin: 2rem 1rem 2rem;
     li {
@@ -60,17 +77,6 @@
     font-size: 6rem;
     text-align:center;
     display: block;
-  }
-}
-
-.mobile-tunes {
-  display: none;
-  font-size: 13px;
-  font-family: Quicksand;
-  letter-spacing: 1.25px;
-  color: darken($text-color, 24);
-  @include media-query($laptop) {
-    display: inline-block;
   }
 }
 
