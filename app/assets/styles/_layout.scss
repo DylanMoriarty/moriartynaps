@@ -1,12 +1,14 @@
 body {
+  position: relative;
   padding: 0;
   margin: 0;
+  min-height: 100%;
 	background-color: #f5f5f5;
   font-family: 'Crimson Text';
 }
 
 .site-home {
-  min-height: calc(100% - 98px);
+  min-height: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -45,7 +47,8 @@ li {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
@@ -58,7 +61,9 @@ p {
 }
 
 .site-title {
+  position: absolute;
   margin: 1rem 0 1rem 1rem;
+  left: 1rem;
 }
 
 .pagination a, .pagination span {
@@ -89,7 +94,8 @@ p {
 .post-container {
   font-size: 20px;
   float: left;
-  margin: 0 4rem;
+  margin: 6rem 4rem 0;
+  z-index: 100;
   li {
     max-width: 600px;
     margin: 0 auto 1.5rem;
@@ -104,7 +110,13 @@ p {
 }
 
 .intro-box {
-  float: left;
+  position: absolute;
   left: 1rem;
+  top: 4rem;
 }
 
+.jus-takin-up-space {
+  float: left;
+  width: 20%;
+  height: 100%;
+}

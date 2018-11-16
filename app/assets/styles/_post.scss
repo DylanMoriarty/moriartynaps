@@ -17,8 +17,13 @@
 .article-container {
   position: relative;
   display: table;
-  margin: 6rem auto 2rem;
+  margin: 0 auto;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
   max-width: 800px;
+  @include media-query($laptop) {
+    margin: 6rem 1rem 2rem;
+  }
 }
 
 .article-gutter {
@@ -30,7 +35,8 @@
   float: right;
   width: 65%;
   ul {
-    margin: 2rem 1rem 2rem;
+    padding: 0;
+    margin: 2rem 1rem 3rem;
     li {
       position: relative;
       margin: 1rem 0 0 2rem;
