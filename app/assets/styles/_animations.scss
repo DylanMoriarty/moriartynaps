@@ -1,9 +1,9 @@
 @keyframes dullColor {
-  0%  {color: #8F5388; border-color: #8F5388;}
-  15% {color: #8F615D; border-color: #8F615D;}
-  30% {color: #8C9262; border-color: #8C9262;}
-  45% {color: #6E926A; border-color: #6E926A;}
-  60% {color: #538690; border-color: #538690;}
-  75% {color: #6182C1; border-color: #6182C1;}
-  100%  {color: #8F5388; border-color: #8F5388;}
+  0%  {color: $rainRed; border-color: $rainRed;}
+  15% {color: $rainOrange; border-color: $rainOrange;}
+  30% {color: $rainYellow; border-color: $rainYellow;}
+  45% {color: $rainGreen; border-color: $rainGreen;}
+  60% {color: $rainBlue; border-color: $rainBlue;}
+  75% {color: $rainPurple; border-color: $rainPurple;}
+  100%  {color: $rainRed; border-color: $rainRed;}
 }

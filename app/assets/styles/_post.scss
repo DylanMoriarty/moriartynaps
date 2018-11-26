@@ -18,22 +18,22 @@
   position: relative;
   display: table;
   margin: 0 auto;
-  padding-top: 6rem;
-  padding-bottom: 10rem;
-  max-width: 800px;
+  padding: 6rem 2rem 10rem;
+  max-width: 1000px;
   @include media-query($laptop) {
-    margin: 6rem 1rem 2rem;
+    margin: 0 0 2rem;
+    padding: 6rem 0 10rem;
   }
 }
 
 .article-gutter {
   float: left;
-  width: 30%;
+  width: 40%;
 }
 
 .article-content {
   float: right;
-  width: 65%;
+  width: 55%;
   ul {
     padding: 0;
     margin: 2rem 1rem 3rem;
@@ -43,8 +43,8 @@
       &:before {
         position: absolute;
         content: "\EA0A";
-        top: 9px;
-        left: -16px;
+        top: 12px;
+        left: -20px;
         font-size: 7px;
         @extend %collecticons;
       }
@@ -88,10 +88,14 @@
 
 .post-image {
   position: absolute;
-  max-width: 25%;
+  max-width: 40%;
   left: 0;
   img {
-    max-width: 100%;
+    max-width: 90%;
+  }
+  &__first {
+    margin-top: -8rem;
+    z-index: -1;
   }
   @include media-query($mobile) {
     position: relative;
@@ -99,4 +103,12 @@
     text-align: center;
     margin-bottom: 4rem;
   }
+}
+
+.notes {
+  margin-top: 6rem;
+  padding: 2rem 0;
+  border-top: 1px solid $Primary;
+  border-bottom: 1px solid $Primary;
+  font-size: 16px;
 }

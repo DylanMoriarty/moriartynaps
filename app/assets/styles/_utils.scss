@@ -3,6 +3,23 @@ $Primary: #70b5b2;
 $ChapterColor: #555;
 $LineColor: #70b5b2;
 
+$bodyColor: #f5f5f5;
+$bodyToFade: lighten($Primary, 28);
+
+$rainRed: #e46565;
+$rainOrange: #d59b62;
+$rainYellow: #d2bb75;
+$rainGreen: #69c371;
+$rainBlue: #69c3bc;
+$rainPurple: #a16e9f;
+
+// $rainRed: #8F5388;
+// $rainOrange: #8F615D;
+// $rainYellow: #8C9262;
+// $rainGreen: #6E926A;
+// $rainBlue: #538690;
+// $rainPurple: #6182C1;
+
 .clearfix:after {
   content: "";
   display: table;

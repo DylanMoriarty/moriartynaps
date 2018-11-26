@@ -4,7 +4,7 @@
   display: inline-block;
   font-style: italic;
   cursor: help;
-  color: $Primary;
+  color: darken($Primary, 20);
   i{
     vertical-align: super;
     line-height: 0px;

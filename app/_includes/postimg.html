@@ -1,6 +1,6 @@
-<div class="post-image">
+<div class="post-image {{ include.class }}">
 	<fig>
-		<img class="{{ include.class }}" src="{{site.baseurl}}/assets/graphics/{{ include.imgsrc }}" />
+		<img src="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc }}" />
 	</fig>
 	<figcaption>
 		{{ include.caption }}
