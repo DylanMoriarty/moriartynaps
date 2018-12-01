@@ -1,4 +1,8 @@
 <div class = "Chapterbox">
 	<div class = "ChapterboxHeader">
 		<div class = "ChapterboxHeaderLine ChapterboxLine"></div>
-		<h2>
+    {% if include.id %}
+		<h2 id= "{{include.id}}">
+    {% else %}
+    <h2>
+    {% endif %}

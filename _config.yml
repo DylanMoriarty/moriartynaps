@@ -1,8 +1,8 @@
 title: MoriartyNaps
 email: moriartymaps@gmail.com
-description: Spoooky!
+description: Daydreams of a sleepy carto fella.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://moriartynaps.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  DylanMoriarty
 
 # Build settings
@@ -23,7 +23,7 @@ exclude:
 # bundle/cache/ruby/2.3.0/gems/jekyll-3.4.3/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb
 
 # Produces a cleaner folder structure when using categories
-permalink: /:title.html
+permalink: /:title/
 
 # Pagination Settings
 pagination:

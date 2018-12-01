@@ -110,5 +110,23 @@
   padding: 2rem 0;
   border-top: 1px solid $Primary;
   border-bottom: 1px solid $Primary;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+aside {
+  background-color: lighten($Primary, 30);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+pre {
+  background: rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  margin: 2rem 0;
+  font-size: 12px;
+  overflow: scroll
 }
