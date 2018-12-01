@@ -41,7 +41,9 @@ Along with that– I have a few other goals in mind too:
 {% include chapter2.html %}Paying it Forward
 {% include chapter3.html %}
 
-Most of the things I do I can only do because people before me wrote wonderful tutorials either in books or online. As a roundabout way of saying thanks to those folks, I'd love to contribute back to that space. I've written a bit more [stuff stuff](http://dylanmoriarty.github.io/blog/basketweavers-and-open-data.html)
+I can only do the things I do because people before me wrote wonderful guides online either in blogs or in stackOverflow answers. 
+
+The best roundabout way of saying thanks to those folks to me would be contributing back to that space. I already try to write up documentation for a lot of the things I do, so here's a public home for it!
 
 {% include chapter1.html %}3.
 {% include chapter2.html %}Write More
@@ -55,11 +57,11 @@ You only get good at a skill by doing, and so this is me publicly egging myself 
 {% include chapter2.html %}Own the Medium
 {% include chapter3.html %}
 
-This is a bonefide blog, but I'm still going the self-coded route. Medium, Wordpress, or what have ya seem like swell options for this, but I like having complete control over _everything_.
+This is a bonefide blog, but I'm still going the self-coded route. Medium, Wordpress, or what have ya seem like swell options, but I like having complete control over _everything_.
 
 Instead of having to cross my fingers that various mapping libraries work with this, I can make it work. If I want a feature (such as {% include tooltips.html face="tooltips!" tip="Or the musicbox at the top of this post!" %}), I can make it.
 
-This means each post will be more work, but hey, maybe it'll be worth it. Afterall, these are artisanal blog posts folks!!
+This means each post will be more work, but hey, maybe it'll be worth it. Afterall, these are _artisanal blog posts_ folks!!
 
 {% include chapter1.html %}5.
 {% include chapter2.html %}OK, ...but why naps?
