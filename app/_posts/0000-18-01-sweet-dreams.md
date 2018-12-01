@@ -27,7 +27,7 @@ Instead, there's nothing in the air but cautious optimism. Sure, it's empty nowâ
 
 Ideally this site will be a smorgasbord of:
 
-- Carto tutorials
+- Guides n' how-to's
 - Scribbles
 - Fondue recipes
 - Quick, quirky, wordier thoughts
