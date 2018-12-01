@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  Sweet Dreams
-date:   2018-11-26
-categories: wikipedia
+date:   2018-12-1
 
 type: code
 
