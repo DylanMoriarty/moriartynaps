@@ -16,7 +16,7 @@ visible: true
 
 {% include postimg.html imgsrc="posts/1-dreams/moon.png" class="post-image__first" %}
 
-There's no "new car smell" equivilant for new websites, and that's a bummer.
+There's no "new car smell" equivalent for new websites, and that's a bummer.
 
 Instead, there's nothing in the air but cautious optimism. Sure, it's empty now– but oh boy! What it could be!
 
@@ -48,7 +48,7 @@ The best roundabout way of saying thanks to those folks to me would be contribut
 {% include chapter2.html %}Write More
 {% include chapter3.html %}
 
-While the readership of this webzone will be exclusive to wanderlust twitter folks & my parents, I work at newspaper where the same can't be said. There's ample opportunity to do my own research and writing, but I'd like to be more confident in writing in general.
+While the readership of this webzone will be exclusive to wanderlust twitter folks & my parents, I work at newspaper where the same can't be said. There's ample opportunity to do my own research and writing, so I'd like to be more confident in writing in general.
 
 You only get good at a skill by doing, and so this is me publicly egging myself to write more. (\*_This also is me giving you permission to shame me if you see this blog-flower wilt from neglect over the course of many months._\*)
 
@@ -60,7 +60,7 @@ This is a bonefide blog, but I'm still going the self-coded route. Medium, Wordp
 
 Instead of having to cross my fingers that various mapping libraries work with this, I can make it work. If I want a feature (such as {% include tooltips.html face="tooltips!" tip="Or the musicbox at the top of this post!" %}), I can make it.
 
-This means each post will be more work, but hey, maybe it'll be worth it. Afterall, these are _artisanal blog posts_ folks!!
+This means each post will be more work, but hey, maybe it'll be worth it. After all, these are _artisanal blog posts_ folks!!
 
 {% include chapter1.html %}5.
 {% include chapter2.html %}OK, ...but why naps?

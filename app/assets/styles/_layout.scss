@@ -114,12 +114,17 @@ p {
     max-width: 600px;
     margin: 0 auto 1.5rem;
   }
+  @include media-query($laptop) {
+    margin-left: 6rem;
+  }
 }
 
 .sleepyme {
   float: left;
-  img {
-    width: 250px;
+  pointer-events: none;
+  img { width: 250px; }
+  @include media-query($laptop) {
+    img { width: 200px; }
   }
 }
 
