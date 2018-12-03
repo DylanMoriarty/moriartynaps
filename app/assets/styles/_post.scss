@@ -20,6 +20,7 @@
   margin: 0 auto;
   padding: 6rem 2rem 10rem;
   max-width: 1000px;
+  width: 100%;
   @include media-query($laptop) {
     margin: 0 0 2rem;
     padding: 6rem 0 10rem;
@@ -105,6 +106,46 @@
   }
 }
 
+.post-image__full {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+  margin-top: -10rem;
+  img { 
+    max-width: 1200px;
+    @include media-query(1200px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.full-img-placeholder {
+  height: 800px;
+  @include media-query($laptop) {
+    height: 600px;
+  }
+  @include media-query($mobile) {
+    height: 400px;
+  }
+}
+
+.inline-img {
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+  img {
+    max-width: 100%; 
+  }
+}
+
+.grey-border {
+  img { border: 1px solid #bbb; }
+}
+
+.black-border {
+  img { border: 1px solid black; }
+}
+
 .notes {
   margin-top: 6rem;
   padding: 2rem 0;
@@ -122,11 +163,34 @@ aside {
   line-height: 24px;
 }
 
+code {
+  background: rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  margin: 2rem 0;
+  font-size: 13px;
+}
+
 pre {
   background: rgba(0,0,0,0.1);
   border-radius: 10px;
   padding: 0.5rem 0.85rem;
   margin: 2rem 0;
-  font-size: 12px;
+  font-size: 13px;
   overflow: scroll
+}
+
+pre code {
+  background: initial;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.code-def {
+  color: darken($Primary, 15);
+}
+
+.gold-text {
+  color: $golden;
 }
