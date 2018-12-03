@@ -25,6 +25,9 @@
     margin: 0 0 2rem;
     padding: 6rem 0 10rem;
   }
+  @include media-query($mobile) {
+    padding-top: 2rem;
+  }
 }
 
 .article-gutter {

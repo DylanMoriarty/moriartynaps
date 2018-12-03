@@ -88,6 +88,9 @@ p {
   position: absolute;
   margin: 1rem 0 1rem 1rem;
   left: 1rem;
+  @include media-query($mobile) {
+    position: relative;
+  }
 }
 
 .pagination a, .pagination span {
@@ -127,6 +130,11 @@ p {
   @include media-query($laptop) {
     margin-left: 6rem;
   }
+  @include media-query($mobile) {
+    margin-left: 0;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 .sleepyme {
@@ -147,10 +155,20 @@ p {
   position: absolute;
   left: 1rem;
   top: 4rem;
+  z-index: -1;
+  @include media-query($mobile) {
+    opacity: 0.65;
+    right: 0;
+    top: -1rem;
+    left: initial;
+  }
 }
 
 .jus-takin-up-space {
   float: left;
   width: 20%;
   height: 100%;
+  @include media-query($mobile) {
+    display: none;
+  }
 }
