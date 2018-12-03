@@ -39,7 +39,7 @@ Elsewhere while remarking on the population of the United States, it states "_Th
 
 I get the feeling we mostly see maps either in the recent world – such as a parents globe that still has the Soviet Union displayed, or an old board of RISK – or antinque maps from the Age of Exploration. 
 
-1850's seem  surprisingly recent yet unfathomably far away! Which makes it all the more surprising to have a physical reminder of how little of Africa or northern Canada were known.
+1870's seem  surprisingly recent yet unfathomably far away! Which makes it all the more surprising to have a physical reminder of how little of Africa or northern Canada were known.
 
 #### Africa
 
@@ -91,13 +91,25 @@ True to the advertising, by my count there's 101 engravings all throughout the b
 
 {% include postimg.html imgsrc="posts/2-primary-geo/marg-lion.jpg" class="inline-img black-border" %}
 
+{% include postimg.html imgsrc="posts/2-primary-geo/marg-cathedral.jpg" class="inline-img black-border" %}
+
+{% include postimg.html imgsrc="posts/2-primary-geo/marg-capetown.jpg" class="inline-img black-border" %}
+
+{% include postimg.html imgsrc="posts/2-primary-geo/marg-kremlin.jpg" class="inline-img black-border" %}
+
 {% include postimg.html imgsrc="posts/2-primary-geo/marg-elephant.jpg" class="inline-img black-border" %}
 
+{% include postimg.html imgsrc="posts/2-primary-geo/marg-saltlake.jpg" class="inline-img black-border" %}
+
 {% include postimg.html imgsrc="posts/2-primary-geo/marg-asia.jpg" class="inline-img black-border" %}
+
+{% include postimg.html imgsrc="posts/2-primary-geo/marg-swiss.jpg" class="inline-img black-border" %}
 
 <hr />
 
 If you want to see more from this book, <a href="https://babel.hathitrust.org/cgi/pt?id=pst.000004465812;view=1up;seq=3" target="_blank">HathiTrust have it all scanned and online</a>. Their copy seems less water damaged than mine, but all the smudges and aged paper has a character I wouldn't trade a new primary geography for.
+
+Can't help but wonder what lines will divide the world in another 150 years, aye?
 
 Cheers,
 
