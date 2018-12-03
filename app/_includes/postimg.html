@@ -1,4 +1,11 @@
-<div class="post-image {{ include.class }}">
+{% if include.full %}
+  {::nomarkdown}  
+      </article>
+    </section>
+  {:/}
+{% endif %}
+ 
+<div class="post-image {{ include.class }} {% if include.full %}post-image__full{% endif %}">
 	<fig>
 		<img src="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc }}" />
 	</fig>
@@ -6,3 +13,11 @@
 		{{ include.caption }}
 	</figcaption>
 </div>
+
+{% if include.full %}
+  {::nomarkdown}
+    <section class="article-container article-cotainer__within">
+      <div class="article-gutter"></div>
+      <article class="article-content">
+  {:/}
+{% endif %}
