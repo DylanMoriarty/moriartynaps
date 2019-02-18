@@ -208,6 +208,7 @@ pre code {
   position: relative;
   width: 100%;
   display: block;
+  white-space: pre-wrap;
   &:before {
     position: absolute;
     top: -1.75rem;
@@ -218,7 +219,19 @@ pre code {
 }
 
 .code-def {
-  color: darken($Primary, 15);
+  display: inline-block;
+  font-weight: 300;
+  font-family: 'Proza Libre';
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $Primary;
+  margin-bottom: 1rem;
+}
+
+.code-def-intro {
+  display: inline-block;
+  font-size: 17px;
+  opacity: 0.45;
 }
 
 .gold-text {
