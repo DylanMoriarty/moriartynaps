@@ -7,7 +7,10 @@
  
 <div class="post-image {{ include.class }} {% if include.full %}post-image__full{% endif %}">
 	<fig>
-		<img src="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc }}" />
+		<img 
+      src="{{site.baseurl}}/assets/graphics/blank.png"
+      alt="{{ include.alt }}"
+      data-echo="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc }}" />
 	</fig>
 	<figcaption>
 		{{ include.caption }}
