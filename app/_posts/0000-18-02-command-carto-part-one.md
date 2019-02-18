@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  Command Carto – Part One
-date:   2019-1-26 19:16:49 +0100
+date:   2019-2-17 19:16:49 +0100
 categories: wikipedia
 
 type: code
 
 twit-title: "Command Carto – Part One"
-twit-img: "https://moriartynaps.org/assets/graphics/posts/1-dreams/twi-img.png"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/4-command-one/twi-img-min.png"
 
 song: "Pocket Calculator – Kraftwerk"
 songurl: https://www.youtube.com/embed/oAmxGglMXYg
@@ -15,47 +15,49 @@ songurl: https://www.youtube.com/embed/oAmxGglMXYg
 visible: true
 ---
 
-{% include postimg.html imgsrc="posts/4-command-one/pile.png" class="inline-img__small" %}
+{% include postimg.html imgsrc="posts/4-command-one/secrets-min.png" class="post-image__first" %}
 
-Cartography work can be pretty messy. For every operation done, whether it's projecting, buffering, clipping, merging, etc. either a new file is created, or you risk having to repeating your process when later you notice an early data join didn't work.
+When we talk about Command Line Interfaces (CLI), we're referring to text-based commands for our computer. 
 
-Even when everything does work out perfectly, new data will inevitably come along. 
+Think of it like playing one of those {% include tooltips.html face="80's text adventure games" tip="If you want to try it out yourself, the spirit of the 80's lives on in <a href='https://eblong.com/zarf/zweb/dreamhold' target='_blank'>corners of the web.</a>" %} where you have to enter "Move North" to explore. If instead you type "Prance Left", nothing will happen because the computer only understands very, _very_ specific inputs.
 
-Where we're going, we don't need visual interfaces.
+Which is a pain. But! for GIS work it can be a godsend.
+
+It's not a cure-all for all GIS woes, but you can save yourself a lot of future headaches by having them now learning the magic of <i class="collecticon collecticons-star"></i>_Command Line Cartography_<i class="collecticon collecticons-star"></i>
 
 #### What we're covering here
 
 - What is a command line interface (CLI)?
-- How do you navigate around a CLI?
-- Some basic CLI carto commands
+- When is this a useful approach?
+- An introduction to CLI navigation
+- How to get setup to run GIS commands
+- Some basic CLI carto commands via Mapshaper
 
-{% include postimg.html imgsrc="posts/4-command-one/pile-2.png" class="inline-img__small" %}
-
-{% include chapter1.html %}1.
-{% include chapter2.html %}Command Line Interface
+{% include chapter1.html id="basic" %}1.
+{% include chapter2.html %}Why CLI?
 {% include chapter3.html %}
 
-{% include postimg.html imgsrc="posts/4-command-one/secrets.png" class="post-image__first" %}
+{% include postimg.html imgsrc="posts/4-command-one/pile-min.png" class="post-image" %}
 
-When we talk about Command Line Interfaces (CLI), we're referring to text-based commands for our computer. 
+#### Repeatability
 
-Think of it like playing one of those early {% include tooltips.html face="90's text adventure games" tip="If you want to try it out yourself, the spirit of the 90's lives on in <a href='https://eblong.com/zarf/zweb/dreamhold' target='_blank'>corners of the web.</a>" %} where you have to enter "Move North" to explore. If instead you type "Prance Left", nothing will happen because the syntax is very, _very_ specific.
+A staple of GIS work is that almost every action either permanently changes the original shapefile, or you save another one. This adds up fast between projections, clipping, buffers, data joins, etc. If you realize you need to fix or update something from early on in the process, this can be a huge time drain redoing in QGIS or Arc.
 
-Which is a pain. But! it can be incredibly useful for a bunch of reasons:
+CLI's biggest advantage is that each step is written out and repeatable. You can make the needed tweaks to early work, re-run it and be on your merry way. 
 
-#### Repeatability & Documentation
+#### Documentation
 
-Once you have it working, _it works_.
-
-If you notice that you forgot to change a attribute at an earlier step, you won't have to reopen QGIS and run through your whole process manually again. You can simply make the fix & re-run the prewritten commands. 
+Hand in hand with repeatability is that you're incidentally creating perfect documentation for your GIS process. If you need to come back to a subject six months later you'll know exactly what you did and how you did it.
 
 #### Batch Processing
 
 If you want to operate over 100 or so files we can iterate commands over a folder of files. So, if we have multiple shapefiles, we can easily execute GIS operations over each of them.
 
+{% include postimg.html imgsrc="posts/4-command-one/pile-2-min.png" class="post-image" %}
+
 #### Mix & Match
 
-Want to automate more than just GIS operations? Perfect. We can bring in additional CLI to also fetch data from websites, or text operators to tweak csv's. We can also run scripts written in javascript, python, or whatever have you. The world's your oyster!
+Want to automate more than just GIS operations? Perfect. We can bring in additional CLI to also fetch data from websites, or text operators to tweak csv's. We can also run scripts written in Javascript, python, or whatever have you. The world's your oyster!
 
 #### You become Neo
 
@@ -65,68 +67,82 @@ Not as important as the above things, but you will _literally_ become Neo from t
 {% include chapter2.html %}Get Moving
 {% include chapter3.html %}
 
-{% include postimg.html imgsrc="posts/4-command-one/terminal.png" class="post-image__first" %}
+{% include postimg.html imgsrc="posts/4-command-one/terminal-min.png" class="post-image" %}
 
 <aside>
   If you're already familiar with navigating a computer terminal, feel free to skip <a href="#shop">to the next section</a>.
 </aside>
 
-If you're on a Mac, you can open up your Terminal by searching for an application called "Terminal". If you're on Windows, it's called the "Command Prompt". You can also download 
+To start yelling orders at your computer, you'll need to open up it's **Terminal**. If you're on a Mac, you can do so by searching for an application called "Terminal". If you're on Windows, it's called the "Command Prompt".
 
 #### Where Am I?
 
-When you start up your terminal, you'll see a scary, empty, text box. Much like your computer's finder, it is actually usually looking at a specific folder on your computer. When you open a brand new terminal, it will be looking at a folder that's called your 'home'.
+When you start up your terminal, you'll see a guide-less void of a text box. First let's figure out where we are:
 
-That's cool, but unlike the finder we don't have anything to click on! Instead, we have to tell the computer in text how to move around. Here's how.
+<div>
+	<code class="code-block">pwd</code> 
+	<span class="code-def-intro">stands for &#8594;</span> <dd class="code-def">Print working directory</dd>
+</div>
 
-<code class="code-block">pwd</code> 
-_Print working directory_
+Type `pwd` and hit enter. You'll see the terminal reply with _where_ it's is currently looking at. Should be something along the lines of "/Users/yourUsernameHere".
 
-This will reply with _where_ your terminal is currently looking at. When used, you should see something along the lines of "/Users/yourUsernameHere".
+Just like when you navigate folders and files on your desktop, this terminal is open to a specific folder on your computer. Unlike your desktop, however, we don't have any folder graphics to click on.
 
-<code class="code-block">ls</code> 
-_List_
+<div>
+	<code class="code-block">ls</code> 
+	<dd class="code-def">List</dd>
+</div>
 
-This will list off all the files & folders that are where your terminal is currently looking. Basically a text version of what you usually see what you look at folders in finder.
+Entering `ls` will list off all the files & folders that are inside wherever your terminal is currently looking. Basically a text version of what you usually see what you look at folders in finder.
 
-This is useful for determing what a filename is named, and confirmation that you're in the right place.
+<div>
+	<code class="code-block">mkdir newfolder</code> 
+	<dd class="code-def">Make Directory</dd>
+</div>
 
-<code class="code-block">mkdir newfolder</code> 
-_Make Directory_
+This will create a folder named newfolder. `mkdir` will create a folder with whatever name you enter after the initial command. Quite a few commands work this way – the first word evokes a command and the words that follow help define it.
 
-This will create a folder named newfolder. You can actually change 'newfolder' with whatever you want the folder to be named. _This will only create that folder. It will not move you into it._
+_This will only create that folder. It will not move you into it._
 
-Unlike our previous commands, mkdir will not cause your terminal to reply with a message, unless it fails. It can be a bit hard to get used to at first, but many commands don't automatically say "hey, I did the job and it worked". Just to be safe that the folder you just made exists, you can run the `ls` command again and see if it is now listed.
+Unlike our previous commands, `mkdir` will not cause your terminal to reply with a message. It can be a bit hard to get used to at first, but many commands don't automatically say "hey, I did the thing and it worked, hooray!". 
+
+To confirm that the folder you just made exists, you can run the `ls` command again. You should see your newly created folder listed now. You did the thing and it worked, hooray!
 
 
-{% include postimg.html imgsrc="posts/4-command-one/moving-left.png" class="post-image__first" %}
+{% include postimg.html imgsrc="posts/4-command-one/moving-left-min.png" class="post-image" %}
 
 #### Moving Left
 
 Files on your computer are tucked away into folders, and the route to them is refereed to as the file's 'path'.
 
-You're likely already familiar with file paths from website URLs. On your computer they work much the same way.
+You're already familiar with how file paths work from navigating website URLs. On your computer they work much the same way.
 
-<code class="code-block">cd</code> 
-_Change Directory_
+<div>
+	<code class="code-block">cd</code> 
+	<dd class="code-def">Change Directory</dd>
+</div>
 
-This will take you to your home directory regardless of where you are.
+This will take you to your home directory, aka your computer's home folder regardless of where you are.
 
-<code class="code-block">cd newfolder</code> 
-_Change Directory_ to 'newfolder'
+<div>
+	<code class="code-block">cd newfolder</code> 
+	<dd class="code-def">Change Directory to 'new folder'</dd>
+</div>
 
-This will move you into your newly created folder. Like mkdir, you can replace 'newfolder' with any folder name you want to navigate to. 
+This will move you into your newly created folder. Like `mkdir`, you can enter any text after cd and it will take you to that folder, if it exists.
 
-<code class="code-block">cd ..</code> 
-_Change Directory_ up one level.
+<div>
+	<code class="code-block">cd ..</code> 
+	<dd class="code-def">Change Directory up one level.</dd>
+</div>
 
-This will take you to your current folders parent.
+This will take you to your current folders parent. So, if you're currently at "home/code/disco-party" and run `cd ..` you'll move to "home/code/". Think of this as your 'back' command.
 
 #### Let the Adventure Begin!
 
 OK. Now that we can navigate around, we can get started.
 
-{% include postimg.html imgsrc="posts/4-command-one/champ.png" class="inline-img__small" %}
+{% include postimg.html imgsrc="posts/4-command-one/champ-min.png" class="inline-img__small" %}
 
 {% include chapter1.html id="shop"%}3.
 {% include chapter2.html %}Setting up Shop
@@ -134,41 +150,43 @@ OK. Now that we can navigate around, we can get started.
 
 Or well, sorry, one more step. Then we can get to the GIS.
 
-{% include postimg.html imgsrc="posts/4-command-one/notyet.png" class="inline-img__small" %}
+{% include postimg.html imgsrc="posts/4-command-one/notyet-min.png" class="inline-img__small" %}
 
-All of the above commands from the previous section are built into modern operating systems. Commands to do GIS operations however, are not. We'll need to install some libaries to help out with that work.
+All of the above commands from the previous section are built into modern operating systems. Commands to do GIS operations however, are not. We'll need to install some libraries to help out with that work. 
 
-There are a lot of options for GIS work – QGIS is built upon many of em' – but for the purposes of this tutorial we'll mostly rely on <a href="https://github.com/mbloch/mapshaper" target="_blank">Mapshaper</a>.
+There are a {% include tooltips.html face="lot of options" tip="QGIS is built with and upon many of em'!" %} for GIS work but for the purposes of this tutorial we'll rely on the workhorse library <a href="https://github.com/mbloch/mapshaper" target="_blank">Mapshaper</a>.
 
-Mapshaper is a phenominal one-stop-shop for commonly used carto operations. To get it installed, we'll want to do the following:
+To get it installed, we'll want to do the following:
 
 <ol>
 	<li>Install <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
-	<li>Type the command <code>npm</code>. If it returns a block of text starting with "Usage: npm &lt;command&gt;", we know we're good.</li>
-	<li>Run the command <code>npm install -g mapshaper</code></li>
+	<li>Type the command <code>npm</code>. If it returns a block of text starting with "Usage: npm &lt;command&gt;", we know we're good. If you get an error, copy and paste that error into Google. Someone else has likely had the same issue!</li>
+	<li>Run the command <code>npm install -g mapshaper</code>. This will install mapshaper on your computer globally so it can be accessed anywhere! Neat.</li>
 </ol>
 
 Finally, you need a geographic file to work with. You can use anything you'd like for the following examples, but I'll leave one here for consistencies sake.
 
 <ol>
-	<li>Download this shapefile.</li>
-	<li>Locate your root folder (the one <code>cd</code> default navigates to). Create a folder there called Carto.</li>
-	<li>Put the downloaded file that new Carto folder. This will just help us stay on the same page for where our working files are located.</li>
+	<li><a href="{{ site.baseurl }}/assets/files/cli-tutorial-one-files.zip" download>Download this file. (4.9 MB)</a>. This is Natural Earth Data's 10m country geography, renamed 'countries.shp' to save us time typing out the file name. Also included is a csv of countries that red panda's call home.</li>
+	<li>Locate your home folder (the one <code>cd</code> navigates to by default) and create a folder there called Carto.</li>
+	<li>Put the contents in that new Carto folder. This will just help us stay on the same page for where our working files are located.</li>
 </ol>
 
 {% include chapter1.html id="shape"%}4.
 {% include chapter2.html %}Shape Up a Map
 {% include chapter3.html %}
 
-For our first command, download this file of the united states from Natural Earth. Now let's do some common commands.
+Let's go! 
+
+{% include postimg.html imgsrc="posts/4-command-one/mapshaper-min.png" class="post-image" %}
 
 #### Change file formats
 
-First things first, let's change the format. Shapefiles are fine, but given that they require four to six different files for one database things get messy fast. Let's convert to a Geojson for the time being.
+First, let's change the file format. Shapefiles are fine, but given that they require four to six different files for one database things get messy fast. Let's convert to a {% include tooltips.html face="topojson" tip="Added bonus: topojson is a wonderfully small format, so you'll save disk space working it." %} for the time being.
 
-<code class="code-block">mapshaper countries.shp -o countries.geojson format=geojson</code>
+<code class="code-block">mapshaper countries.shp -o countries.json format=topojson</code>
 
-All commands will roughly follow this form: The first word <code>mapshaper</code> tells our Terminal to use the mapshaper library of commands. Next we type in the input file. <code>-o</code> is shorthand for "output", and then we explicitly say what we want the output file to be called. Finally, we tell it what format we want it to kick out into.
+All commands will roughly follow this form: The first word <code>mapshaper</code> tells our Terminal to use the mapshaper library of commands. Next we type in the name of the file we want to operate on. <code>-o</code> is shorthand for "output", which we follow by stating what the output file should be called. Finally, we tell it what format we want it to kick out as.
 
 If you type <code>ls</code> now, you should see the new file created! Neat, eh?
 
@@ -180,66 +198,92 @@ Mapshaper can translate between the following formats:
 
 #### Projections
 
-{% include postimg.html imgsrc="posts/4-command-one/projections.png" class="post-image__first" %}
+Next let's project our countries. With <code>mapshaper -projections</code> you can see a full list of projections Mapshaper does by default. Let's do a quick projection to Robinson:
 
-For something more commonplace, let's project our countries to Albers.
+<code class="code-block">mapshaper countries.json -proj robin -o countries-projected.json</code>
 
-<code class="code-block">mapshaper countries.geojson -proj albersusa -o countries-projected.geojson</code>
-
-Here we enter the projection code we're interested following the -proj word.
-
-You can see a full list of what projections are available through the command <code>mapshaper -projections</code>. Mapshaper also takes EPSG values, and proj4 strings if you need something more custom. For EPSG values, the command remains mostly the same, albeit with different text following -proj:
-
-<code class="code-block">mapshaper countries.geojson -proj +init=EPSG:2831 -o countries-projected.geojson</code>
+{% include postimg.html imgsrc="posts/4-command-one/projections-min.png" class="post-image" %}
 
 <br>
 
 #### Filter Geography
 
-Let's say you only need the geography for Ireland. Let's remove the rest of the polygons with:
+Let's say you only need to filter your geography by countries with a low population. First let's see what attributes our file has with:
 
-<code class="code-block">mapshaper countries.geojson -filter '"USA".indexOf(NAME) > -1' -o usa.geojson</code>
- 
-The part of the text here between the hyphens is a Javascript true or false test. It looks at the NAME attribute of each feature in our geojson, and if it sees the value "IRELAND" the left side returns a 1. Because 1 > -1, the statement is true and that feature is saved. All other features will return a false.
+<code class="code-block">mapshaper countries.json -info</code>
 
-If you don't know Javascript, don't worry too much! You can do the indexOf for testing string values, or can just do a regular math equation for testing numeric values, such as filtering for populations over a certain size:
+Looks like POP_EST is what we'll want to go with. We can filter our features with:
 
-<code class="code-block">mapshaper countries.geojson -filter 'POP > 100000' -o usa.geojson</code>
+<code class="code-block">mapshaper countries.json -filter 'POP_EST < 250000' -o countries-lowpop.json</code>
+
+The part of the text here between the hyphens is a Javascript boolean test. For each feature it asks "is the POP_EST attribute less than 100000?" and if it doesn't, the feature is excluded from the output. This'll work on for filtering any attribute that is a numeric value.
+
+You can also filter by strings. Let's get just countries in South America:
+
+<code class="code-block">mapshaper countries.json -filter '"South America".indexOf(CONTINENT) > -1' -o south-america.json</code>
+
+This does the same test as before, this time with a bit of Javascript called indexOf. This looks at the value of CONTINENT and if it matches "South America" returns a 1. Because 1 > -1, the statement is true and that feature's saved. This'll also work for any attribute that is a string.
 
 <br>
 
+#### Projections, cont.
+
+In addition to the default projections mapshaper has, you can also use proj4 strings for more specificity. 
+
+<a href="https://epsg.io/" target="_blank">epsg.io</a> is a great resource for getting proj4 string defintions, letting you search either by projection name or country. Once you've selected a projection, just scroll down the page to the Export menu and click Proj.4 to get a defintion.  
+
+Just paste that string after -proj, and you'll be good to go:
+
+<code class="code-block">mapshaper south-america.json -proj +proj=poly +lat_0=0 +lon_0=-54 +x_0=5000000 +y_0=10000000 +ellps=aust_SA +towgs84=-57,1,-41,0,0,0,0 +units=m +no_defs -o south-america-projected.json</code>
+
+<br>
+
+{% include postimg.html imgsrc="posts/4-command-one/friends-min.png" class="post-image" %}
+
 #### Join CSV Data to Geography
 
-One last example– joins.
+One last example– joins. Let's join my csv of red panda habitats to our countries dataset. 
 
-<code class="code-block">mapshaper states.shp -join data.csv keys=STATE_FIPS,VALUE:str -o out.shp</code>
+<code class="code-block">mapshaper countries.json -join native-red-pandas.csv keys=NAME,COUNTRY -o countries-with-pandas.json</code>
 
 Here we need to put the path to the data.csv following -join. <code>keys=</code> tells mapshaper which attributes to join by, the former being the field in the GIS file. The later is what field to join by in the csv.
 
-If you're joining fields that are numbers (such as FIPS codes), you'll need to add a <code>:str</code> to the end to prevent mapshaper from treating them as numbers (i.e. "01" would become "1", ruining the join).
+#### Chaining it all together
 
-<code class="code-block">mapshaper states.shp -join data.csv keys=STATE_FIPS,VALUE:str -o out.shp</code>
+Doing these step by step will work fine, but you may notice a lot of repetition in the commands structure. We can actually run a lot of these commands together likeso:
+
+<code class="code-block">mapshaper countries.json \
+	-join native-red-pandas.csv keys=NAME,COUNTRY \
+	-filter '"yes".indexOf(PANDAS) > -1' \
+	-clean \
+	-proj +init=EPSG:32645 \
+	-o countries-with-pandas.json
+</code>
+
+For terminal commands, if you write a command on a new line, it will understand it as two separate commands. The `\` character tells it to ignore the new line and instead read it as one uninterrupted command.
+
+You might notice that I snuck one more new command in there; `clean`. Sometimes the data we're working with has minor topological errors in it– or we create them along the way. Mapshaper's clean function helps tidy up those stray points and mis-aligned borders.
 
 {% include chapter1.html %}4.
 {% include chapter2.html %}To Be Continued...
 {% include chapter3.html %}
 
-{% include postimg.html imgsrc="posts/4-command-one/makebot.png" class="post-image__first" %}
+{% include postimg.html imgsrc="posts/4-command-one/makebot-min.png" class="post-image" %}
 
-Thanks for reading!
+If you've made it this far, kudos! Hope it's helped demystify CLI ever so slightly.
 
-In the next part I'll talk about how we can chain together multiple commands to make our own CLI robots. Til then,
+In the next part, I'll introduce <i class="collecticon collecticons-star"></i> Makefiles <i class="collecticon collecticons-star"></i>
+, which are an old school way of running commands from a saved file vs. having to copy and paste into the terminal to run. We're gonna build some CLI robots! 
 
-<br>
+Til then,
 
-<i>– D.M., on a hill, Brookyln<br>
-<span class="post-date">Nov.18th, 2018</span></i>
+<i>–D.M. `cd ~./ny/new-york/brooklyn/boerum-hill`<br>
+<span class="post-date">Feb.18th, 2019</span></i>
 
 <br>
 <br>
 
 <div class="notes">
-  <p>If you've read this and notice any parts that still seem super confusing, or just have any other questions feel free to reach out to me on Twitter!</p>
-  <p>Quick kudos to Matthew Bloch for both creating Mapshaper and sparking a flame that'd become a fire through his talk at NACIS in 2016. It's been amazing to see this come up time in time again at NACIS, through additional talks from Seth Fitzsimmons in ’17, & Joshua Stevens in ’18 about how amazing CLI carto can be.</p>
-  <p>And finally another quick kudos to <a href="https://twitter.com/dereklieu">Derek Lieu</a> for introducing me to this approach for GIS work.</p>
+  <p>If any parts of this seem super confusing, or you just have any other questions feel free to send a bird my way on <a href="https://twitter.com/DylanMoriarty" target="_blank">Twitter</a>.</p>
+  <p>Quick kudos to Matthew Bloch for both creating Mapshaper and sparking my interest in this approach to GIS work through <a href="https://www.youtube.com/watch?v=X-CGAS4YaPA" target="_blank">his talk at NACIS</a> in 2016.</p>
 </div>
