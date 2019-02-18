@@ -7,7 +7,7 @@ categories: wikipedia
 type: code
 
 twit-title: "Command Carto – Part One"
-twit-img: "https://moriartynaps.org/assets/graphics/posts/4-command-one/twi-img-min.png"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/4-command-one/twi-img.png"
 
 song: "Pocket Calculator – Kraftwerk"
 songurl: https://www.youtube.com/embed/oAmxGglMXYg
