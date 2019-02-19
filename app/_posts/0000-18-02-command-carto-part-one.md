@@ -162,6 +162,7 @@ To get it installed, we'll want to do the following:
 	<li>Install <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
 	<li>Type the command <code>npm</code>. If it returns a block of text starting with "Usage: npm &lt;command&gt;", we know we're good. If you get an error, copy and paste that error into Google. Someone else has likely had the same issue!</li>
 	<li>Run the command <code>npm install -g mapshaper</code>. This will install mapshaper on your computer globally so it can be accessed anywhere! Neat.</li>
+	<li>If you get an error message that talks about denied access or permissions, you may need to run it as <code>sudo install -g mapshaper</code>. Sudo is a prefix you can add to commands that tells your terminal you're an administrator of the computer, so it'll ask for your admin password. In general, only run sudo if you need to. No other commands in this tutorial should require it.</li>
 </ol>
 
 Finally, you need a geographic file to work with. You can use anything you'd like for the following examples, but I'll leave one here for consistencies sake.
@@ -169,7 +170,8 @@ Finally, you need a geographic file to work with. You can use anything you'd lik
 <ol>
 	<li><a href="{{ site.baseurl }}/assets/files/cli-tutorial-one-files.zip" download>Download this file. (4.9 MB)</a>. This is Natural Earth Data's 10m country geography, renamed 'countries.shp' to save us time typing out the file name. Also included is a csv of countries that red panda's call home.</li>
 	<li>Locate your home folder (the one <code>cd</code> navigates to by default) and create a folder there called Carto.</li>
-	<li>Put the contents in that new Carto folder. This will just help us stay on the same page for where our working files are located.</li>
+	<li>Put the contents in that new Carto folder. I'd recommend just doing this via finder. This will just help us stay on the same page for where our working files are located.</li>
+	<li>Finally, cd via your terminal into your newly created Carto folder.</li>
 </ol>
 
 {% include chapter1.html id="shape"%}4.
@@ -204,6 +206,8 @@ Next let's project our countries. With <code>mapshaper -projections</code> you c
 
 {% include postimg.html imgsrc="posts/4-command-one/projections-min.png" class="post-image" %}
 
+If you want to check out these files after they've gone through these commands you can open them in [insert favorite gis software here].
+
 <br>
 
 #### Filter Geography
@@ -216,7 +220,7 @@ Looks like POP_EST is what we'll want to go with. We can filter our features wit
 
 <code class="code-block">mapshaper countries.json -filter 'POP_EST < 250000' -o countries-lowpop.json</code>
 
-The part of the text here between the hyphens is a Javascript boolean test. For each feature it asks "is the POP_EST attribute less than 100000?" and if it doesn't, the feature is excluded from the output. This'll work on for filtering any attribute that is a numeric value.
+The part of the text here between the hyphens is a Javascript boolean test. For each feature it asks "is the POP_EST attribute less than 250000?" and if it doesn't, the feature is excluded from the output. This'll work on for filtering any attribute that is a numeric value.
 
 You can also filter by strings. Let's get just countries in South America:
 
@@ -242,7 +246,7 @@ Just paste that string after -proj, and you'll be good to go:
 
 #### Join CSV Data to Geography
 
-One last example– joins. Let's join my csv of red panda habitats to our countries dataset. 
+One last example– joins. Let's join my csv of red panda habitats to the original countries.json dataset. 
 
 <code class="code-block">mapshaper countries.json -join native-red-pandas.csv keys=NAME,COUNTRY -o countries-with-pandas.json</code>
 
@@ -263,6 +267,10 @@ Doing these step by step will work fine, but you may notice a lot of repetition 
 For terminal commands, if you write a command on a new line, it will understand it as two separate commands. The `\` character tells it to ignore the new line and instead read it as one uninterrupted command.
 
 You might notice that I snuck one more new command in there; `clean`. Sometimes the data we're working with has minor topological errors in it– or we create them along the way. Mapshaper's clean function helps tidy up those stray points and mis-aligned borders.
+
+At the end, you should end up with a json of just the five countries that are the current home of red pandas. Fast, eh? 
+
+If, somehow, they discover Red Panda's also exist natively in Ireland, we only need to update the csv with that information and re-run the final script. It will work the exact same- only this time including Ireland in the final output. For practice, try it out! The projection may be a bit off... but you can also tweak that!
 
 {% include chapter1.html %}4.
 {% include chapter2.html %}To Be Continued...
@@ -286,4 +294,5 @@ Til then,
 <div class="notes">
   <p>If any parts of this seem super confusing, or you just have any other questions feel free to send a bird my way on <a href="https://twitter.com/DylanMoriarty" target="_blank">Twitter</a>.</p>
   <p>Quick kudos to Matthew Bloch for both creating Mapshaper and sparking my interest in this approach to GIS work through <a href="https://www.youtube.com/watch?v=X-CGAS4YaPA" target="_blank">his talk at NACIS</a> in 2016.</p>
+  <p>Last updated Feb.18th.</p>
 </div>
