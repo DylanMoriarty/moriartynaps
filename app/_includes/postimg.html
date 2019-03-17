@@ -10,7 +10,8 @@
 		<img 
       src="{{site.baseurl}}/assets/graphics/blank.png"
       alt="{{ include.alt }}"
-      data-echo="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc }}" />
+      data-echo="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc }}"
+      {% if include.max %}style="max-width: {{ include.max }}px;"{% endif %} />
 	</fig>
 	<figcaption>
 		{{ include.caption }}
