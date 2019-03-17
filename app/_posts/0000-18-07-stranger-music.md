@@ -6,7 +6,7 @@ categories: wikipedia
 
 type: code
 
-twit-title: "Command Carto – Part One"
+twit-title: "Stranger Music – A Month of someone else's tunes"
 twit-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/twi-img.png"
 
 song: "Can't Nobody Love You – Solomon Burke"
