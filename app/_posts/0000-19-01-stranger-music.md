@@ -21,7 +21,7 @@ There’s something very personal about these modern mix-tape packages. They tak
 
 Walking home a few weeks ago I passed by a house with a small box of things out on the sidewalk. Under a “PLEASE TAKE!” sign were some cleaning supplies, a few books, and a couple towers of CD’s. Looking closer, I was delighted that almost every cd in the collection was burned.
 
-A month and 56 cds later, I’m almost halfway through the collection. Here’s some favorites so far!
+A month and 53 cds later, I’m almost halfway through the collection. Here’s some favorites so far!
 
 {% include postimg.html imgsrc="posts/6-sm1/all.jpg" full="true" class="black-border" %}
 
