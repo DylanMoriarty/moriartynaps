@@ -15,3 +15,20 @@
   75% {color: darken(gold, 2); border-color: darken(gold, 2);}
   100%  {color: gold; border-color: gold;}
 }
+
+.spinme {
+  fig {
+    img {
+      transition: 0.2s;
+      animation-timing-function: linear !important;
+      &:hover {
+        animation: spin 2s infinite;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}

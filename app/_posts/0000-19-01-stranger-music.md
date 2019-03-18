@@ -25,7 +25,7 @@ A month and 53 cds later, I’m almost halfway through the collection. Here’s 
 
 {% include postimg.html imgsrc="posts/6-sm1/all.jpg" full="true" class="black-border" %}
 
-{% include postimg.html imgsrc="posts/6-sm1/bob-dylan.png" class="post-image" %}
+{% include postimg.html imgsrc="posts/6-sm1/bob-dylan.png" class="post-image spinme" %}
 
 <br>
 
@@ -39,7 +39,7 @@ Outside of Dylan's raspy narrations, the show features a lot of 30's-70's Americ
 
 I'm legitimately frustrated I spent a decade not knowing this show existed. Luckily for me (and you!) they have the archive of the whole show here: [http://www.themetimeradio.com](http://www.themetimeradio.com). Treat yourself, listen to a few of em'. 
 
-{% include postimg.html imgsrc="posts/6-sm1/hotel-easy.png" class="post-image" %}
+{% include postimg.html imgsrc="posts/6-sm1/hotel-easy.png" class="post-image spinme" %}
 
 <br>
 
@@ -51,7 +51,7 @@ La Scandal Disqoteche is a bunch of 70s funk, jazz, and orchestra rock you can't
 
 At least one other person also digs this, as they put together a playlist of the tunes on it on Spotify. <a href="https://open.spotify.com/user/groovyfamily/playlist/26o3X8NvHurOMxK0Sw2Ogg?si=sAYfw6ICRtOjkzfEVVhGZg" target="_blank">You can check it out here</a>.
 
-{% include postimg.html imgsrc="posts/6-sm1/united-states.png" class="post-image" %}
+{% include postimg.html imgsrc="posts/6-sm1/united-states.png" class="post-image spinme" %}
 
 <br>
 
@@ -65,7 +65,7 @@ It's reminiscent of Olivia Tremor Control, so if you like them, or other Elephan
 
 <a href="https://open.spotify.com/album/328gsq5mObioXj2TcD8AED?si=4y_nQcSiQ2ubqM1YVf4tEA" target="_blank">These guys are also on Spotify here.</a>
 
-{% include postimg.html imgsrc="posts/6-sm1/minotaur-shock.png" class="post-image" %}
+{% include postimg.html imgsrc="posts/6-sm1/minotaur-shock.png" class="post-image spinme" %}
 
 <br>
 
@@ -80,7 +80,7 @@ Also check out that adorable minotaur doodle. We need to figure out how to add i
 <a href="https://open.spotify.com/album/51YMhBQOs92pNzRJsy0gaC?si=TyhUp4g1QNKlnwEGl9vFWQ
 " target="_blank">Spotify link.</a>
 
-{% include postimg.html imgsrc="posts/6-sm1/belle-seb.png" class="post-image" %}
+{% include postimg.html imgsrc="posts/6-sm1/belle-seb.png" class="post-image spinme" %}
 
 <br>
 
