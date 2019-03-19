@@ -11,7 +11,7 @@ twit-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/twi-img.png"
 soc-descrip: "A Month of someone else's tunes"
 soc-url: "https://moriartynaps.org/stranger-music/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/soc-img.jpg"
+soc-img: "http://moriartynaps.org/assets/graphics/posts/6-sm1/soc-img.jpg"
 
 song: "Can't Nobody Love You – Solomon Burke"
 songurl: https://www.youtube.com/embed/JP_5a3D_DFA
