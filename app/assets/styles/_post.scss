@@ -17,10 +17,9 @@
 .article-container {
   position: relative;
   display: table;
-  margin: 0 auto;
+  margin: 0 2rem;
   padding: 6rem 0 10rem;
   max-width: 1000px;
-  width: 100%;
   @include media-query($laptop) {
     margin: 0 0 2rem;
     padding: 6rem 0 10rem;
