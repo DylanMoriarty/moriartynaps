@@ -21,9 +21,13 @@ There’s something very personal about these modern mix-tape packages. They tak
 
 Walking home a few weeks ago I passed by a house with a small box of things out on the sidewalk. Under a “PLEASE TAKE!” sign were some cleaning supplies, a few books, and a couple towers of CD’s. Looking closer, I was delighted that almost every cd in the collection was burned.
 
-A month and 53 cds later, I’m almost halfway through the collection. Here’s some favorites so far!
+A month and 53 cds later, I’m almost halfway through the collection!
 
 {% include postimg.html imgsrc="posts/6-sm1/all.jpg" full="true" class="black-border" %}
+
+Before diving into the cd's themselves, here's a playlist of my favorites:
+
+<iframe src="https://open.spotify.com/embed/user/eatincake/playlist/3RnDeEYBPK12SwAmkcbRdf" width="100%" height="300px" frameborder="0" allowtransparency="true" class="spotif"></iframe>
 
 {% include postimg.html imgsrc="posts/6-sm1/bob-dylan.png" class="post-image spinme" %}
 
@@ -31,11 +35,11 @@ A month and 53 cds later, I’m almost halfway through the collection. Here’s 
 
 ## Bob Dylan's Theme Time Radio Hour
 
-Hands down, this was the best find so far. Bob Dylan did a radio show between 2006-’09! !!
+Hands down, this was the best. Bob Dylan did a radio show between 2006-’09! !!
 
 This particular episode starts out with him reading Edgar Allen Poe's "The Raven", and instantly I was hooked. Every episode features Dylan chewing up narration between the music he plays. Sometimes it's interesting trivia about the musicians and tunes he's playing. Other times it just him rattling off a list of things. And it's all amazing.
 
-Outside of Dylan's raspy narrations, the show features a lot of 30's-70's American music. Every episode is based around a theme, and a lot of the choices are pretty inspired. Every so often he also throws in something more modern, such as in the 'Mom' themed episode, which includes L.L.Cool Jay's "Mama Said Knock You Out".
+Outside of Dylan's raspy narrations, the show features a lot of 30's-70's American music. Every episode is based around a theme, and a lot of the choices are pretty inspired. Every so often he also throws in something more modern, such as in the 'Mom' themed episode, which includes LL Cool J's "Mama Said Knock You Out".
 
 I'm legitimately frustrated I spent a decade not knowing this show existed. Luckily for me (and you!) they have the archive of the whole show here: [http://www.themetimeradio.com](http://www.themetimeradio.com). Treat yourself, listen to a few of em'. 
 
@@ -86,17 +90,17 @@ Also check out that adorable minotaur doodle. We need to figure out how to add i
 
 ## , and the rest.
 
-Here's what the rest of em' look like:
+Here's what the rest of em' look like so far:
 
 + **4 albums of Belle & Sebastian**. I've been a fan for awhile of em', it's been cool to go back and listen to the albums full through.
 
-+ **’70's Arabic & Egypitan Rock**. Only a few cds of these so far, but they're great.
++ **’70's Arabic & Egypitan Rock**. Only a few cds of these, but they're great.
 
-+ **Only one rap album so far**, aptly titled "Old Skool Hip Hop"
++ **Only one rap album**, aptly titled "Old Skool Hip Hop"
 
 + **Lots of 2000's pop rock bands**. This stuff I'm less thrilled about. It seems to be a pattern for these bands that they write a hook and then spend 6 minutes just repeating it over and over again without doing anything interesting on top... and then it fades out.
 
-+ **Worst one so far:** a compliation of Green Day b-sides. They've made good music, this ain't it.
++ **Worst one:** a compliation of Green Day b-sides. They've made good music, this ain't it.
 
 + **Lots of Ryan Adams**. Maybe these are good, but before I had a chance to listen to em' news of his sexual abuse broke. Pretty content skipping these ones over.
 
@@ -109,7 +113,7 @@ All in all, I'm digging this person's taste. It's been particularly fun trying t
 
 Only downside has been how fast my cd player eats up AA batteries. I'm solely responsible for keeping Duracell in business at this point.
 
-<i>–The guy on the F train fiddling with a cd player at 10 in the morning, D.<br>
+<i>–The guy on the F train fiddling with a cd player at 10 in the morning<br>
 <span class="post-date">Mar.17th, 2019</span></i>
 
 <br>
