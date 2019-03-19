@@ -33,3 +33,9 @@
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
+
+.spotif {
+  border: 1px solid black;
+  margin-bottom: 2.5rem;
+  @include media-query($mobile) { margin-bottom: 4rem; }
+}
