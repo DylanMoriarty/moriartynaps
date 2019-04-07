@@ -1,17 +1,17 @@
 ---
 layout: post
 title:  Stranger Music II
-date:   2019-4-5 10:0:01 +0100
+date:   2019-4-6 10:0:01 +0100
 categories: wikipedia
 
 type: code
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/twi-img.png"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/8-sm2/twi-img.png"
 
-soc-descrip: "A Month of someone else's tunes"
-soc-url: "https://moriartynaps.org/stranger-music/"
+soc-descrip: "Another month of someone else's tunes"
+soc-url: "https://moriartynaps.org/stranger-music-ii/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/soc-img.jpg"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/8-sm2/soc-img.jpg"
 
 visible: true
 ---
