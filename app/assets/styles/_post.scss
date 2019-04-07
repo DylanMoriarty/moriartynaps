@@ -17,7 +17,7 @@
 .article-container {
   position: relative;
   display: table;
-  margin: 0 2rem;
+  margin: 0 auto;
   padding: 6rem 0 10rem;
   max-width: 1000px;
   @include media-query($laptop) {
@@ -25,6 +25,7 @@
     padding: 6rem 0 10rem;
   }
   @include media-query($mobile) {
+    margin: 0 2rem;
     padding-top: 2rem;
   }
 }
@@ -235,4 +236,11 @@ pre code {
 
 .gold-text {
   color: $golden;
+}
+
+figcaption {
+  font-size: 18px;
+  font-style: italic;
+  opacity: 0.9;
+  margin: 1.5rem 0 3rem;
 }
