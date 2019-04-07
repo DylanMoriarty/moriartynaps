@@ -16,7 +16,7 @@ soc-img: "https://moriartynaps.org/assets/graphics/posts/8-sm2/soc-img.jpg"
 visible: true
 ---
 
-Turns out nowadays people's faces light up when they see cd's. 
+Turns out nowadays people's faces light up when they see cds. 
 
 Sometimes it's an audible "hah", other times it's a "wait, what?"
 
@@ -87,7 +87,7 @@ This one's up on <a href="https://claramoreno.bandcamp.com/album/meu-samba-torto
 
 Chaotic, soulful, and jazzy. 
 
-I don't know enough about jazz to talk intelligently about it, but it reminds me a lot of the band backing Bowie on Blackstar.  It's from the 70's, so there's a lot of spoken words of revolution over the melodies. cut out for freeform saxophones before coming back for a resolution.
+I don't know enough about jazz to talk intelligently about it, but it reminds me a lot of the band backing Bowie on Blackstar.  It's from the 70's, so there's a lot of spoken words of revolution over the melodies, cut in and out for freeform saxophones before coming back for resolution.
 
 My favorite song on this album <a href="https://www.youtube.com/watch?v=0dnJVhBIAug" target="_blank">Drinking Song</a> can be found on Youtube and hardly anywhere else. The rest of Gary Bartz stuff is much easier to find at the <a href="https://open.spotify.com/artist/5ArqvMflDEhxdqW8sBBQUQ?si=MRlr7Q5iRrKkpmHcL157RA" target="_blank">usual places</a>.
 
@@ -97,15 +97,15 @@ My favorite song on this album <a href="https://www.youtube.com/watch?v=0dnJVhBI
 
 ## , and the rest.
 
-+ **Joe Medgewick**. A Blues/Soul songwriter from the 50s & 60s who sold most of his work to other artists to record. This album of his seems to be demo's, but it's a good window into the songwriting world. Quite a few tracks will {% include tooltips.html face="remind you of more famous work" tip="<a href='https://www.youtube.com/watch?v=cs3CTKWyHCc' target='_blank'>'When a Boy Becomes a Man'</a> starts out with a note that makes you think he's about to launch into 'A Change Is Gonna Come'. While his song <a href='https://www.youtube.com/watch?v=Cl5ZrhUGwkM' target='_blank'>'I Feel Good'</a> sounds like Jame's Brown 'I Feel Good' from an alternate dimension, to name a few." %}.
++ **Joe Medgewick**. Joe was a Blues/Soul songwriter from the 50s & 60s who sold most of his work to other artists to record. This means the album I have is mostly demo's, but it's a good window into the songwriting world. Quite a few tracks will {% include tooltips.html face="remind you of more famous work" tip="<a href='https://www.youtube.com/watch?v=cs3CTKWyHCc' target='_blank'>'When a Boy Becomes a Man'</a> starts out with a note that makes you think he's about to launch into 'A Change Is Gonna Come'. While his song <a href='https://www.youtube.com/watch?v=Cl5ZrhUGwkM' target='_blank'>'I Feel Good'</a> sounds like Jame's Brown 'I Feel Good' from an alternate dimension, to name a few." %}, but ya have to wonder if that was him keeping up with trends, or just being ahead of the game.
 
 + **Lots of Reggae**. Yah man. Jhonny Greenwood's a standout here.
 
-+ **XTC – Skylarking**, by track two or so I was on board for this. I thought the singer sounded {% include tooltips.html face="stereotypically 80's" tip="seriously tho why do they all sing in bored forced low baritone tones" %}, but I really thought this was from the 2000's. One of those psychedelic rock bands out of California.
++ **XTC – Skylarking**, by track two or so I was on board for this. I thought the singer sounded {% include tooltips.html face="stereotypically 80's" tip="seriously why do all 80s male singers sing in bored forced baritone tones" %}, but I really thought this was from the 2000's. Figured it was one of those psychedelic rock bands out of California.
 
 + **Iron & Wine & Other Folk**. Good amount of that good good folk.
 
-+ **More Worldly Tunes**. This time from Iran to Portugal, from Spain to Brazil.
++ **More Worldly Tunes**. This time from Iran to Portugal, from Spain to Brazil! When I've finished the collection I'll put a list of what they are folks interested in these.
 
 
 {% include postimg.html imgsrc="posts/8-sm2/sofar.png" full="true" max="600"%}
