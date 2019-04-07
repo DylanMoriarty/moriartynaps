@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  Stranger Music II
-date:   2019-4-6 10:0:01 +0100
+date:   2019-4-7 00:0:01 +0100
 categories: wikipedia
 
-type: code
+type: tunes
 
 twit-img: "https://moriartynaps.org/assets/graphics/posts/8-sm2/twi-img.png"
 
@@ -56,7 +56,7 @@ Love love love this band. Maybe you will too. Their album 'Book of Silk' is up <
 
 _The Viking of 6th Avenue_
 
-Moondog the person was incredible. He spent some thirty years in New York, where he dressed up in a viking garb selling his music, poetry, and philosophies. Blinded at a young age, he trained in music and became a pretty well known jazz musician.
+Moondog the person was incredible. He spent some thirty years in New York, where he dressed up in a viking garb selling his music, poetry, and philosophies in downtown Manhattan. Blinded at a young age, he trained in music and became a pretty well known jazz musician.
 
 {% include postimg.html imgsrc="posts/8-sm2/moondog-man.png" class="inline-img" caption="Doodle based off one of many <a href='https://www.gettyimages.com/photos/moondog' target='_blank'>great photos taken of Moondog</a>." %}
 
