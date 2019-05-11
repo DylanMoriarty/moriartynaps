@@ -238,7 +238,7 @@ In addition to the default projections mapshaper has, you can also use proj4 str
 
 Just paste that string after -proj, and you'll be good to go:
 
-<code class="code-block">mapshaper south-america.json -proj +proj=poly +lat_0=0 +lon_0=-54 +x_0=5000000 +y_0=10000000 +ellps=aust_SA +towgs84=-57,1,-41,0,0,0,0 +units=m +no_defs -o south-america-projected.json</code>
+<code class="code-block code-block__preline">mapshaper south-america.json -proj +proj=poly +lat_0=0 +lon_0=-54 +x_0=5000000 +y_0=10000000 +ellps=aust_SA +towgs84=-57,1,-41,0,0,0,0 +units=m +no_defs -o south-america-projected.json</code>
 
 <br>
 

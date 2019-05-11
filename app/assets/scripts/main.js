@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(e) {
 	const postsParent = document.querySelector('.post-list')
 	const chapters = document.querySelectorAll('.Chapterbox')
+	const isArticle = document.querySelector('.article-content')
 
-	if(postsParent) {
-		Array.prototype.forEach.call(postsParent.children, child => {
-			let serendipity = Math.random() * 120 + 'px'
+	// if(postsParent) {
+	// 	Array.prototype.forEach.call(postsParent.children, child => {
+	// 		let serendipity = Math.random() * 120 + 'px'
 
-			console.log(serendipity)
+	// 		console.log(serendipity)
 
-			child.style.marginRight = serendipity
-			child.style.marginLeft = serendipity
-		});
-	}
+	// 		child.style.marginRight = serendipity
+	// 		child.style.marginLeft = serendipity
+	// 	});
+	// }
 
 	if(chapters) {
 		document.addEventListener('scroll', function(e) {
