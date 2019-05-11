@@ -1,0 +1,67 @@
+
+code {
+  background: rgba(255,255,255,0.65);
+  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  margin: 2.5rem 0 0.5rem;
+  font-size: 13px;
+  overflow: auto;
+}
+
+pre {
+  // background: rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  margin: 2rem 0;
+  font-size: 13px;
+  overflow: scroll
+}
+
+pre code {
+  background: initial;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.code-block {
+  position: relative;
+  display: block;
+  white-space: pre;
+  overflow: auto;
+  margin-bottom: 2rem;
+  &:before {
+    position: absolute;
+    top: -1.75rem;
+    left: 0rem;
+    content: "code";
+    opacity: 0.35;
+  }
+  &__preline {
+    white-space: pre-line;
+  }
+}
+
+.code-def {
+  display: inline-block;
+  font-weight: 300;
+  font-family: 'Proza Libre';
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $Primary;
+  margin-bottom: 1rem;
+  margin-top: -1.5rem;
+}
+
+.code-def-intro {
+  display: inline-block;
+  font-size: 17px;
+  opacity: 0.45;
+  text-transform: initial;
+  font-family: initial;
+  color: initial;
+}
+
+.code-makefile {
+  background-color: #ead7ea;
+}

@@ -19,7 +19,7 @@
 .spinme {
   fig {
     img {
-      transition: 0.2s;
+      transition: 0.2s all;
       animation-timing-function: linear !important;
       &:hover {
         animation: spin 2s infinite;

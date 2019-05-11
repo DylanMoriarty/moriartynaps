@@ -1,0 +1,60 @@
+li {
+	margin: 0.5rem 0;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+ol {
+	counter-reset: count;
+	padding: 0;
+	margin: 2rem 2rem 3rem 1rem;
+	li {
+		position: relative;
+		margin-left: 2rem;
+		&:before {
+			counter-increment: count;
+			content: counter(count)'.';
+			position: absolute;
+			left: -1.5rem;
+			top: 1px;
+			font-family: 'Averia Serif Libre';
+			font-size: 16px;
+			color: $Primary;
+		}
+	}
+}
+
+.article-content {
+  ul {
+    padding: 0;
+    margin: 2rem 1rem 3rem;
+    li {
+      position: relative;
+      margin: 1rem 0 0 2rem;
+      &:before {
+        position: absolute;
+        content: "\EA0B";
+        top: 12px;
+        left: -20px;
+        font-size: 7px;
+        @extend %collecticons;
+      }
+    }
+  }
+}
+
+
+.article-content {
+  li {
+    ul {
+      margin-top: 0;
+      li {
+        &:before {
+          content: "\EA0A";
+          @extend %collecticons;
+        }
+      }
+    }
+  }
+}
+

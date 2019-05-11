@@ -5,11 +5,12 @@
 @import 'collecticons';
 @import 'collecticon-fixes';
 
-@import 'layout.scss';
+@import 'homepage.scss';
 @import 'anchor.scss';
 @import 'post.scss';
-@import 'lists.scss';
+@import 'posts/lists.scss';
+@import 'code.scss';
 
-@import 'chapters.scss';
-@import 'musicbox.scss';
-@import 'tooltips.scss';
+@import 'posts/chapters.scss';
+@import 'posts/musicbox.scss';
+@import 'posts/tooltips.scss';
