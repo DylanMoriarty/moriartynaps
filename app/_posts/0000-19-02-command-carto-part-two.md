@@ -13,8 +13,6 @@ visible: true
 
 {% include postimg.html imgsrc="posts/7-command-two/adventure.png" class="post-image" %}
 
-_Work in progress, tread lightly_
-
 <aside>
   This is the second part of a series for Command Line Cartography. Miss part one? Worry not, you can read part one → <a href="https://moriartynaps.org/command-carto-part-one/" target="_blank">here</a>.
 </aside>
