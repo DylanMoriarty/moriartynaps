@@ -4,6 +4,9 @@ title:  "Command Carto II – Make"
 date:   2019-6-8 06:00:00 +0100
 categories: wikipedia
 
+twit-title: "Command Carto II – Make"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/7-command-two/twit-img.png"
+
 song: "Gliss Riffer (Album) – Dan Deacon"
 songurl: https://www.youtube.com/embed/utw2oKUpHLs
 
