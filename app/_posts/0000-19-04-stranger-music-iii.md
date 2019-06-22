@@ -50,7 +50,7 @@ This band (collective?) gives me flashbacks to that time. It's folk tunes with w
 
 You might like this you dig Bob Dylan's "Rainy Day Women #12 & 35", or just unpolished folk tunes in general.
 
-These guys have little web presence, and aren't on any digital music services. You _can_ find their tunes on <a href="http://thecherryblossoms.com/music/">their lovely website</a> that was built in 2001 and has not been touched since.
+These guys have little web presence, and aren't on any digital music services. You _can_ find their tunes on <a href="http://thecherryblossoms.com/music/">their lovely website</a> that was built in 2001 and has not been touched since. I've found myself humming '<a href="http://thecherryblossoms.com/music/rocksandstones.mp3" target="_blank">rock and stones</a>' pretty often since listening to it.
 
 {% include postimg.html imgsrc="posts/9-sm3/candylion.png" class="post-image spinme" %}
 
