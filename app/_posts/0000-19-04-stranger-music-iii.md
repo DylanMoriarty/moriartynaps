@@ -16,11 +16,9 @@ soc-img: "https://moriartynaps.org/assets/graphics/posts/9-sm3/soc-img.jpg"
 visible: true
 ---
 
-This is it!
+This is it! A few months after adopting 154 cds from the sidewalk, I've made it through this stranger's collection of tunes.
 
-Over a couple months I listened to roughly 150 cds from a stranger's collection I picked up off the sidewalk. 
-
-Highly recommend the experience, and also, these artists from it! –
+Highly recommend the experience, and also, these artists from it –
 
 {% include postimg.html imgsrc="posts/9-sm3/all.jpg" full="true" class="black-border" %}
 
