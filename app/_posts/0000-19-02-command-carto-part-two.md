@@ -2,7 +2,7 @@
 layout: post
 title:  "Command Carto II – Make"
 date:   2019-6-8 06:00:00 +0100
-categories: wikipedia
+type: maps
 
 twit-title: "Command Carto II – Make"
 twit-img: "https://moriartynaps.org/assets/graphics/posts/7-command-two/twit-img.png"
@@ -17,7 +17,7 @@ visible: true
 {% include postimg.html imgsrc="posts/7-command-two/adventure.png" class="post-image" %}
 
 <aside>
-  This is the second part of a series for Command Line Cartography. Miss part one? Worry not, you can read part one → <a href="https://moriartynaps.org/command-carto-part-one/" target="_blank">here</a>. 
+  This is the second part of a series for Command Line Cartography. Miss part one? Worry not, you can read part one → <a href="https://moriartynaps.org/command-carto-part-one/" target="_blank">here</a>.
 </aside>
 
 Welcome back!

@@ -2,6 +2,7 @@
 layout: post
 title:  The New Primary Geography
 date:   2018-12-3
+type: book
 
 twit-title: "The New Primary Geography"
 twit-img: "https://moriartynaps.org/assets/graphics/posts/2-primary-geo/twi-img.png"

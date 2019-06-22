@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
   overflow: auto;
   clear: both;
-  padding-bottom: 4rem;
+  padding-bottom: 56px;
   @include media-query($mobile) {
     margin: 0 auto;
   }
@@ -83,9 +83,10 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  padding: 1rem 0;
+  padding: 16px 0;
   margin-top: 6rem;
   background-color: rgba(0,0,0,0.1);
+  height: 24px;
 }
 
 p {
@@ -98,6 +99,19 @@ p {
   margin: 1rem 0 1rem 2rem;
   @include media-query($mobile) {
     position: relative;
+  }
+}
+
+.intro-box {
+  position: absolute;
+  left: 1rem;
+  top: 4rem;
+  z-index: 2;
+  @include media-query($mobile) {
+    opacity: 0.8;
+    right: 0;
+    top: -1rem;
+    left: initial;
   }
 }
 
@@ -126,14 +140,29 @@ p {
   width: 250px;
 }
 
+.homepage-cont {
+  display: flex;
+  min-height: 100%;
+}
+
+.jus-takin-up-space {
+  flex: 2;
+  background-color: rgba(#84bec7, 0.2);
+  @include media-query($mobile) {
+    display: none;
+  }
+}
+
 .post-container {
-  font-size: 20px;
-  float: left;
+  flex: 6;
+  z-index: 1;
   margin: 6rem 4rem 0;
-  z-index: 100;
+  font-size: 20px;
   li {
     max-width: 600px;
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid rgba(17, 72, 65, 0.2);
+    padding-bottom: 1.5rem;
   }
   @include media-query($laptop) {
     margin-left: 6rem;
@@ -154,29 +183,32 @@ p {
   }
 }
 
+.post-icon {
+  float: left;
+  margin-right: 1rem;
+  width: 50px;
+  height: 43px;
+  background-color: rgba(17, 72, 65, 0.05);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 36px;
+  padding-top: 7px;
+  color: rgba(17, 72, 65, 0.2)
+}
+
+.post-hed a {
+  border-bottom: 0;
+}
+
 .post-hedimg {
   float: left;
   img { width: 350px; }
 }
 
-.intro-box {
-  position: absolute;
-  left: 1rem;
-  top: 4rem;
-  z-index: -1;
-  @include media-query($mobile) {
-    opacity: 0.65;
-    right: 0;
-    top: -1rem;
-    left: initial;
-  }
+.post-date {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.4;
 }
 
-.jus-takin-up-space {
-  float: left;
-  width: 20%;
-  height: 100%;
-  @include media-query($mobile) {
-    display: none;
-  }
-}
+

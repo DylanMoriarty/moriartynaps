@@ -2,9 +2,7 @@
 layout: post
 title:  Command Carto – The Terminal
 date:   2019-2-17 19:16:49 +0100
-categories: wikipedia
-
-type: code
+type: maps
 
 twit-title: "Command Carto – The Terminal"
 twit-img: "https://moriartynaps.org/assets/graphics/posts/4-command-one/twi-img.png"
