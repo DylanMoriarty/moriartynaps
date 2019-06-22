@@ -6,7 +6,7 @@ categories: wikipedia
 
 type: tunes
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/8-sm2/twi-img.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/9-sm3/twi-img.jpg"
 
 soc-descrip: "Final month of this stranger's tunes"
 soc-url: "https://moriartynaps.org/stranger-music-iii/"
