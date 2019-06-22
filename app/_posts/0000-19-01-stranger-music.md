@@ -1,17 +1,17 @@
 ---
 layout: post
 title:  Stranger Music
-date:   2019-3-17 0:0:0 +0100
+date:   2019-3-17 10:0:01 +0100
 categories: wikipedia
 
-type: code
+type: tunes
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/twi-img.png"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/8-sm1/twi-img.png"
 
 soc-descrip: "A Month of someone else's tunes"
 soc-url: "https://moriartynaps.org/stranger-music/"
 soc-type: "article"
-soc-img: "http://moriartynaps.org/assets/graphics/posts/6-sm1/soc-img.jpg"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/6-sm1/soc-img.jpg"
 
 song: "Can't Nobody Love You – Solomon Burke"
 songurl: https://www.youtube.com/embed/JP_5a3D_DFA
