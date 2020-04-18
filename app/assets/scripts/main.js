@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(e) {
-	var postsParent = document.querySelector('.post-list')
-	var chapters = document.querySelectorAll('.Chapterbox')
-	var isArticle = document.querySelector('.article-content')
+	const postsParent = document.querySelector('.post-list')
+	const chapters = document.querySelectorAll('.Chapterbox')
+	const isArticle = document.querySelector('.article-content')
 
 	// if(postsParent) {
 	// 	Array.prototype.forEach.call(postsParent.children, child => {
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	if(chapters) {
 		document.addEventListener('scroll', function(e) {
 			for (var i = chapters.length - 1; i >= 0; i--) {
-				var chapter = chapters[i]
-				var chapterOffset = chapter.offsetTop - (window.innerHeight / 2)
+				let chapter = chapters[i]
+				let chapterOffset = chapter.offsetTop - (window.innerHeight / 2)
 
 				if (window.scrollY > chapterOffset) {
 					chapter.style.opacity = 1

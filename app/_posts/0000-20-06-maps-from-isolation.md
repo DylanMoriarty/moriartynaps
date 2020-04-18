@@ -1,17 +1,17 @@
 ---
 layout: post
 title:  Maps from Isolation
-date:   2019-6-22 00:0:01 +0100
+date:   2020-4-20 00:0:01 +0100
 categories: wikipedia
 
-type: tunes
+type: maps
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/twi-img.png"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/twi-img.jpg"
 
 soc-descrip: "Assorted maps and sketches on geography and pandemic induced isolation"
 soc-url: "https://moriartynaps.org/maps-from-isolation/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.png"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.jpg"
 
 song: "Islands in a Stream"
 songurl: https://www.youtube.com/embed/UaNGtgYwSsU
