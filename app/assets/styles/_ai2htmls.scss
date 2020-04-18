@@ -1,0 +1,52 @@
+.ai2html {
+  margin-top: -8rem;
+}
+
+.g-show-large {
+  display: block;
+  @include media-query($mobile) {
+    display: none;
+  }
+  @include media-query($laptop) {
+    display: none;
+  }
+}
+
+.g-show-mediumMax {
+  display: block !important;
+  @include media-query($laptop) {
+    display: block;
+  }
+  @include media-query($mobile) {
+    display: none !important;
+  }
+}
+
+
+.g-show-medium {
+  display: none;
+  @include media-query($mobile) {
+    display: none !important;
+  }
+  @include media-query($laptop) {
+    display: block;
+  }
+}
+
+.g-show-smallplus {
+  display: none;
+  @include media-query($mobile) {
+    display: block;
+  }
+}
+
+
+.g-_white-outline {
+  color: black;
+  text-shadow: -1px -1px 0 #eee, 1px -1px 0 #eee, -1px 1px 0 #eee, 1px 1px 0 #eee;
+}
+
+.g-_grey-outline {
+  color: black;
+  text-shadow: -1.25px -1.25px 0 #adaca5, 1.25px -1.25px 0 #adaca5, -1.25px 1.25px 0 #adaca5, 1.25px 1.25px 0 #adaca5;
+}
