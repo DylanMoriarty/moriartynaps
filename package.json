@@ -39,7 +39,7 @@
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.26.7",
     "browserify": "^13.0.0",
     "collecticons-processor": "^3.1.0",
     "del": "^2.2.0",
@@ -71,7 +71,7 @@
     "require-globify": "^1.3.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0",
+    "watchify": "^3.11.1",
     "yamljs": "^0.2.7"
   }
 }
