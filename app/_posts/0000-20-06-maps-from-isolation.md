@@ -13,8 +13,8 @@ soc-url: "https://moriartynaps.org/maps-from-isolation/"
 soc-type: "article"
 soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.jpg"
 
-song: "Islands in a Stream"
-songurl: https://www.youtube.com/embed/UaNGtgYwSsU
+song: "You Don't Miss Your Water – Taj Mahal"
+songurl: https://www.youtube.com/embed/VUYZ2lsoEuM
 
 visible: true
 ---
