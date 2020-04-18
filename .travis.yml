@@ -18,12 +18,11 @@ cache:
   - node_modules
   - bundle/cache
 before_install:
-- rvm install 2.1
+- rvm install 2.3.7
 - chmod +x ./.build_scripts/deploy.sh
 - chmod +x ./.build_scripts/lint.sh
 before_script:
 - "./.build_scripts/lint.sh"
-- npm test
 script:
 - npm run build
 deploy:
