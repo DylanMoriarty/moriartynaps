@@ -6,12 +6,12 @@ categories: wikipedia
 
 type: tunes
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/twi-img.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/twi-img.png"
 
 soc-descrip: "Assorted maps and sketches on geography and pandemic induced isolation"
 soc-url: "https://moriartynaps.org/maps-from-isolation/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.jpg"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.png"
 
 song: "Islands in a Stream"
 songurl: https://www.youtube.com/embed/UaNGtgYwSsU
