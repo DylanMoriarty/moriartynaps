@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Maps from Isolation
-date:   2020-4-19 00:0:01 +0100
+date:   2020-4-18 00:0:01 +0100
 categories: wikipedia
 
 type: maps
@@ -84,7 +84,7 @@ Can't wait to get off it.
 
 
 <i>-Dylan, still out there, still well<br>
-<span class="post-date">April, 19th 2020</span></i>
+<span class="post-date">April, 18th 2020</span></i>
 
 
 <div class="notes">
