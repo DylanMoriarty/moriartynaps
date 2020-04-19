@@ -21,7 +21,13 @@
 {% if include.full %}
   {::nomarkdown}
     <section class="article-container article-cotainer__within">
-      <div class="article-gutter"></div>
-      <article class="article-content">
+      <div class="article-gutter {% if page.centerAlign %}article-gutter_middle{% endif %}"></div>
+      <article class="article-content {% if page.centerAlign %}article-content_middle{% endif %}">
   {:/}
 {% endif %}
+
+
+
+
+
+
