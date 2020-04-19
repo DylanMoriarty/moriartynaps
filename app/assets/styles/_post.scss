@@ -25,6 +25,10 @@
   width: 40%;
 }
 
+.article-gutter_middle {
+  width: 0;
+}
+
 .article-content {
   float: right;
   width: 55%;
@@ -32,6 +36,11 @@
     width: 100%;
     float: initial;
   }
+}
+
+.article-content_middle {
+  margin: 0 auto;
+  float: initial;
 }
 
 .article-back {

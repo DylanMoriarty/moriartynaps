@@ -16,6 +16,7 @@ soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.jpg"
 song: "You Don't Miss Your Water – Taj Mahal"
 songurl: https://www.youtube.com/embed/VUYZ2lsoEuM
 
+centerAlign: true
 visible: true
 ---
 
