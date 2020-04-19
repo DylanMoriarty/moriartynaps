@@ -31,8 +31,6 @@
   <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/graphics/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff"> 
 
-  <meta property="og:url"content="https://moriartynaps.com" />
-
   {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" />
   {% else %}
@@ -52,7 +50,11 @@
     <meta property="og:description" content="Smorgasbord of maps, illustrations, & musings" />
   {% endif%}
 
-  <meta property="og:url"         content="{{ page.soc-url }}" />
+  {% if page.soc-url %}
+    <meta property="og:url"         content="{{ page.soc-url }}" />
+  {% else %}
+    <meta property="og:url"content="https://moriartynaps.com" />
+  {% endif %}
   <meta property="og:type"        content="{{ page.soc-type }}" />
   <meta property="og:title"       content="{{ page.title }}" />
   <meta property="og:image"       content="{{ page.soc-img }}" />
