@@ -300,7 +300,7 @@ Traces linger of a kid trotting off to school.
 
       map.addSource('overlay', {
         'type': 'image',
-        'url': 'http://localhost:3000/assets/graphics/posts/13-home/home.png',
+        'url': '{{site.baseurl}}/assets/graphics/posts/13-home/home.png',
         'coordinates': [
             [-89.05998229980469,42.715488939866084],
             [-88.97415161132812,42.715488939866084],
@@ -311,7 +311,7 @@ Traces linger of a kid trotting off to school.
 
       map.addSource('janesville-label', {
         'type': 'image',
-        'url': 'http://localhost:3000/assets/graphics/posts/13-home/janesville-label.png',
+        'url': '{{site.baseurl}}/assets/graphics/posts/13-home/janesville-label.png',
         'coordinates': [
             [-88.96728515624999,42.956422511073335],
             [-87.176513671875,42.956422511073335],
@@ -425,7 +425,7 @@ Traces linger of a kid trotting off to school.
   secondMap.on('load', function() {
     secondMap.addSource('today-parents', {
       'type': 'image',
-      'url': 'http://localhost:3000/assets/graphics/posts/13-home/today-parents.png',
+      'url': '{{site.baseurl}}/assets/graphics/posts/13-home/today-parents.png',
       'coordinates': [
         [-89.03715133666992,42.70073056317599],
         [-88.97998809814453,42.70073056317599],
@@ -436,7 +436,7 @@ Traces linger of a kid trotting off to school.
 
     secondMap.addSource('today-other', {
       'type': 'image',
-      'url': 'http://localhost:3000/assets/graphics/posts/13-home/today-other.png',
+      'url': '{{site.baseurl}}/assets/graphics/posts/13-home/today-other.png',
       'coordinates': [
         [-89.03715133666992,42.70073056317599],
         [-88.97998809814453,42.70073056317599],
@@ -447,7 +447,7 @@ Traces linger of a kid trotting off to school.
 
     secondMap.addSource('today-mad', {
       'type': 'image',
-      'url': 'http://localhost:3000/assets/graphics/posts/13-home/today-madison.png',
+      'url': '{{site.baseurl}}/assets/graphics/posts/13-home/today-madison.png',
       'coordinates': [
         [-89.03715133666992,42.70073056317599],
         [-88.97998809814453,42.70073056317599],
@@ -458,7 +458,7 @@ Traces linger of a kid trotting off to school.
 
     secondMap.addSource('janesville-label', {
       'type': 'image',
-      'url': 'http://localhost:3000/assets/graphics/posts/13-home/janesville-label.png',
+      'url': '{{site.baseurl}}/assets/graphics/posts/13-home/janesville-label.png',
       'coordinates': [
           [-88.96728515624999,42.956422511073335],
           [-87.176513671875,42.956422511073335],
