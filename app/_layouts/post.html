@@ -5,6 +5,15 @@ songtext: "Companion Tunes"
 
 {% include musicBox.html %}
 
+{% if page.scripts contains 'Mapbox' %}
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+{% endif %}
+{% if page.scripts contains 'Waypoints' %}
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js'></script>
+{% endif %}
+
+
 <section class="article-container">
 
   <div class="article-gutter {% if page.centerAlign %}article-gutter_middle{% endif %}"></div>

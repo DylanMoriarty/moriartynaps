@@ -118,6 +118,7 @@
   position: relative;
   max-width: 100%;
   margin-bottom: 2.5rem;
+  text-align: center;
   img {
     max-width: 100%; 
   }
@@ -171,4 +172,23 @@ figcaption {
   font-style: italic;
   opacity: 0.9;
   margin: 1.5rem 0 3rem;
+}
+
+.nav-container {
+  &:after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 15px;
+    background-color: white;
+    left: 50%;
+    bottom: -15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 }

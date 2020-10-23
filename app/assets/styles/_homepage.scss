@@ -19,7 +19,6 @@ body {
 .site-home {
   min-height: 100%;
   margin: 0 auto;
-  overflow: auto;
   clear: both;
   padding-bottom: 56px;
   @include media-query($mobile) {
