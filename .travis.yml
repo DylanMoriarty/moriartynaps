@@ -28,7 +28,7 @@ script:
 - npm run build
 deploy:
   provider: script
-  skip_cleanup: true
+  cleanup: false
   script: ".build_scripts/deploy.sh"
   on:
     branch: "${DEPLOY_BRANCH}"
