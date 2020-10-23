@@ -9,7 +9,7 @@ scripts: Mapbox Waypoints
 
 twit-img: "https://moriartynaps.org/assets/graphics/posts/13-home/twi-img.jpg"
 
-soc-descrip: "TK TK"
+soc-descrip: "Maps and doodles of a place called Home"
 soc-url: "https://moriartynaps.org/maps-of-home/"
 soc-type: "article"
 soc-img: "https://moriartynaps.org/assets/graphics/posts/13-home/soc-img.jpg"
