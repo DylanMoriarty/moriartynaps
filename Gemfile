@@ -1,3 +1,4 @@
+source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -20,7 +21,6 @@ gem "minima", "~> 2.0"
 source 'https://rubygems.org'
 
 group :jekyll_plugins do
-  gem "bundler"
   gem "jekyll-paginate-v2", "~> 1.7"
   gem "jekyll-feed"
 end
