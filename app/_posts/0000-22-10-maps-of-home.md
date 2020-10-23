@@ -7,12 +7,12 @@ categories: wikipedia
 type: maps
 scripts: Mapbox Waypoints
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/twi-img.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/13-home/twi-img.jpg"
 
-soc-descrip: "Assorted maps and sketches on geography and pandemic induced isolation"
-soc-url: "https://moriartynaps.org/maps-from-isolation/"
+soc-descrip: "TK TK"
+soc-url: "https://moriartynaps.org/maps-of-home/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/assets/graphics/posts/12-islands/soc-img.jpg"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/13-home/soc-img.jpg"
 
 song: "Home again – Michael Kiwanuka"
 songurl: https://www.youtube.com/embed/videoseries?list=PL1KbmvLItolQlZ2TMezLG9_FngQVkz7Ee
@@ -153,18 +153,18 @@ This is Janesville, Wisconsin
         <p>Between 1990 and 2009, this was home.</p>
         </li>
       <li class="slide-4">
-        <p>Hopping off to school through a shortcut hole in a fence maintained by myself after my older siblings cleared the way.</p>
+        <p>Hopping through a shortcut hole in a fence walking to school,</p>
       </li>
       <li class="slide-5">
-        <p>Struggling to move a solid wood piano replica across an alleyway in midst a snowstorm.</p>
+        <p>Struggling to move a solid wood piano replica across an alleyway in midst a snowstorm...</p>
       </li>
       <li class="slide-6">
-        <p>Finding sanctuary from the nighttime creepies.</p>
+        <p>Finding sanctuary from the night-time monsters...</p>
       </li>
       <li class="slide-7">
-        <p>Looking forward every morning of Sophmore year my crush <i>might</i> sit next to me.</p></li>
+        <p>Looking forward to the mornings that my crush <i>might</i> sit next to me...</p></li>
       <li class="slide-8">
-        <p>& doing yard work when I got the surprising news I'd be going to UW-Madison in just a few weeks.</p></li>
+        <p>Shoveling freshly fallen snow.</p></li>
     </ol>
     <div class="fin"></div>
 
@@ -181,8 +181,8 @@ This is Janesville, Wisconsin
 {% include chapter3.html %}
 
 After six months on an island in New York City, I moved back to Wisconsin. Initially planned as a long trip, a family member’s “_not-the-plague-but-still-serious_” illness spurred a more temporarily permanent relocation.
-  
-Returning for a longer time rather vs. quick holiday pop-ins has flooded me with recollections of the small things. “_Oh, that’s right, Wisconsin is like this_”. Absence makes the heart grow fonder, and the brain forget how many spiders live in Midwestern homes.
+
+Like most folks who move away, I've returned a good deal for quick holiday pop-ins. Sticking around, however, really floods ya with recollections. Lots of: “_Oh, that’s right, Wisconsin is like this_”. Absence makes the heart grow fonder, and the brain forget how many spiders live in Midwestern homes.
 
 {% include postimg.html imgsrc="posts/13-home/midwest.png" class="inline-img" %}
 
@@ -192,7 +192,9 @@ For those who read <a href="https://moriartynaps.org/maps-from-isolation/" targe
 {% include chapter2.html %}Islands in the Stream 
 {% include chapter3.html %}
 
-Of course, the specter of Covid-19 looms large over this homecoming. In lieu of “_welcome back drinks_, there’s instead “_friendly hand waves from porches_.” It continues to be a weird pseudo-prescence. Despite being more physically nearby to folks, quarantining makes it hard to feel that much closer.
+Of course, the specter of Covid-19 looms large over this homecoming. In lieu of “_welcome back drinks_, there’s instead “_friendly hand waves from porches_.” It continues to be a weird pseudo-prescence. Despite being more physically nearby to folks, quarantining makes it hard to feel that much actually closer.
+
+For the most part, conversations follow a similar trajectory – covid sucks, isolation is a bummer, but we're perservering. Without the opportunity to do things with others, or share experiences that aren't plague related, conversations can feel surface level.
 
 {::nomarkdown}
   </article>
@@ -206,10 +208,10 @@ Of course, the specter of Covid-19 looms large over this homecoming. In lieu of 
       </div>
       <ol class="scroll-list">
         <li class="slide-21">
-          <p>Still, every rendevouz carries a weight with it.</p>
+          <p>That said, every rendevouz carries a weight with it.</p>
         </li>
         <li class="slide-22">
-          <p>That you're taking a risk, however mitigated and small</p>
+          <p>That you're taking a risk, however mitigated or small,</p>
         </li>
         <li class="slide-23">
           <p>just to sit and chat for a bit.</p>
@@ -224,7 +226,7 @@ Of course, the specter of Covid-19 looms large over this homecoming. In lieu of 
       </li>
         <!-- zoom to U.S. -->
       <li class="slide-27">
-        <p>Heck, anyone whose ever slept in the bounds of <code>[-126.6,49.6], [-65,24.2]</code>,</p>
+        <p>Heck, anyone whose ever slept in the bounds of <code>[-126.6,49.6], [-65,24.2]</code></p>
       </li>
         <!-- zoom to World -->
       <li class="slide-28">
