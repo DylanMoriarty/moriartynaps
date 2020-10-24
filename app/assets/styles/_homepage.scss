@@ -211,4 +211,18 @@ p {
   opacity: 0.4;
 }
 
+.nav-container__tunes {
+  text-align: center;
+}
 
+.music-box-gif {
+  position: absolute;
+  height: 20px;
+  margin-top: 0px;
+  &_left {
+    margin-left: -42px;
+  }
+  &_right {
+    margin-left: 6px;
+  }
+}

@@ -63,8 +63,6 @@ This is Janesville, Wisconsin
       background-color: rgba(0,0,0,0) !important;
     }
 
-    /*.map-container__second { margin-top: 0; }*/
-
     #map {
       width: 100%;
       height: 100%;
@@ -105,15 +103,6 @@ This is Janesville, Wisconsin
       box-shadow: 0px 0px 8px rgba(240, 240, 240, 0.85);
       padding: 0.75rem 0.5rem 0.5rem 0.5rem;
       border-radius: 10px;
-/*     color: black;
-     -webkit-text-stroke: 1px #f0f0f0;
-     text-shadow:
-       3px 3px 5px #f0f0f0,
-       -1px -1px 5px #f0f0f0,  
-       1px -1px 5px #f0f0f0,
-       -1px 1px 5px #f0f0f0,
-        1px 1px 5px #f0f0f0;
-*/    }
 
     .scroll-list li p {
       font-size: 20px;
@@ -186,15 +175,15 @@ Like most folks who move away, I've returned a good deal for quick holiday pop-i
 
 {% include postimg.html imgsrc="posts/13-home/midwest.png" class="inline-img" %}
 
-For those who read <a href="https://moriartynaps.org/maps-from-isolation/" target="_blank">Maps from Isolation</a>, I went with driving to make the trip.
+For those who read <a href="https://moriartynaps.org/maps-from-isolation/" target="_blank">Maps from Isolation</a>, I went with driving to make the trip. As much fun as walking halfway across the country could have been...
 
 {% include chapter1.html %}2.
 {% include chapter2.html %}Islands in the Stream 
 {% include chapter3.html %}
 
-Of course, the specter of Covid-19 looms large over this homecoming. In lieu of “_welcome back drinks_, there’s instead “_friendly hand waves from porches_.” It continues to be a weird pseudo-prescence. Despite being more physically nearby to folks, quarantining makes it hard to feel that much actually closer.
+Of course, the specter of Covid-19 looms large over this homecoming. In lieu of “_welcome back drinks_, there’s instead “_friendly hand waves from porches_.” It continues to be a weird pseudo-presence. Despite being more physically nearby to folks, quarantining makes it hard to feel that much actually closer.
 
-For the most part, conversations follow a similar trajectory – covid sucks, isolation is a bummer, but we're perservering. Without the opportunity to do things with others, or share experiences that aren't plague related, conversations can feel surface level.
+For the most part, conversations follow a similar trajectory – covid sucks, isolation is a bummer, but we're persevering. Without the opportunity to do things with others, or share experiences that aren't plague related, conversations can feel surface level.
 
 {::nomarkdown}
   </article>
@@ -208,7 +197,7 @@ For the most part, conversations follow a similar trajectory – covid sucks, i
       </div>
       <ol class="scroll-list">
         <li class="slide-21">
-          <p>That said, every rendevouz carries a weight with it.</p>
+          <p>That said, every rendezvous carries a weight with it.</p>
         </li>
         <li class="slide-22">
           <p>That you're taking a risk, however mitigated or small,</p>
@@ -216,19 +205,15 @@ For the most part, conversations follow a similar trajectory – covid sucks, i
         <li class="slide-23">
           <p>just to sit and chat for a bit.</p>
         </li>
-        <!-- zoom to janesville? -->
         <li class="slide-25">
-          <p>I've never missed Janesville, and don't feel even the slightest urge to end up here. Instead, I appreciate that for nineteen years, it was a good place to grow up with a lot of wonderful folks running around.</p>
+          <p>I've never missed Janesville, and don't feel an urge to end up here. Instead, I appreciate that for nineteen years, it was a good place to grow up with a lot of wonderful folks running around.</p>
       </li>
-        <!-- zoom to wisconsin -->
       <li class="slide-26">
         <p>It is enthralling realizing that for each of those folk, this lil' dot blows out to a whole other story.</p>
       </li>
-        <!-- zoom to U.S. -->
       <li class="slide-27">
         <p>Heck, anyone whose ever slept in the bounds of <code>[-126.6,49.6], [-65,24.2]</code></p>
       </li>
-        <!-- zoom to World -->
       <li class="slide-28">
         <p>or anywhere, <i>ever</i></p>
       </li>
@@ -252,7 +237,7 @@ For the most part, conversations follow a similar trajectory – covid sucks, i
 {% include chapter2.html %}Dancing With a Memory
 {% include chapter3.html %}
 
-The Janesville I grew up in is gone forever, and that’s ok! You can't visit it really, but I’m content that at least this familiar space retains some echoes.
+The Janesville I grew up in is gone forever, and that’s ok! You can't visit it really, but I’m content that at least this familiar space retains some echoes. Small confirmations of that time and place.
 
 That hole in the fence was never repaired. The steel wire remains bashed down for easy passage, though without Moriarty's trampling it daily, fauna has overtaken the gap. A small tree is growing right through it. 
 
@@ -405,8 +390,6 @@ Traces linger of a kid trotting off to school.
   }
 
   function animateMarker(timestamp) {
-    console.log(animationRadiusVar)
-
     const radOne = (Math.random() * 100) * animationRadiusVar
     const radTwo = (Math.random() * 100) * animationRadiusVar
     const radThree = (Math.random() * 100) * animationRadiusVar
@@ -601,7 +584,6 @@ Traces linger of a kid trotting off to school.
               secondMap.setLayoutProperty('bg-hidden', 'visibility', 'none');
             } else if (endChange === 2) {
               secondMap.setPaintProperty('janesville-label', 'raster-opacity', 0)
-
               secondMap.setLayoutProperty('us-cities-one', 'visibility', 'visible');
               secondMap.setLayoutProperty('us-cities-two', 'visibility', 'visible');
               secondMap.setLayoutProperty('us-cities-three', 'visibility', 'visible');
@@ -619,29 +601,12 @@ Traces linger of a kid trotting off to school.
 
 
 <div class="notes">
-  <p>The map concept at the top of this piece has been kicking in my head for a long whlie. Came from a dream: Meandering in a museum space, from far, far away you see a map introducing a new exhibit on New York City. Walking closer, the standard .NEW YORK CITY dot became more detailed until you'd get to up close and discovered that each inch had a drawing detailing that block's history. A historical illustration with the energy and detail of a <a href="https://www.google.com/search?q=where%27s+waldo+page&tbm=isch&ved=2ahUKEwiuxtTT1qLsAhVoja0KHTkeCZsQ2-cCegQIABAA&oq=where%27s+waldo+page&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB46BwgAELEDEEM6BAgAEEM6BQgAELEDUOoDWLcVYNAWaAFwAHgAgAHqAYgBwwWSAQUzLjIuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=ps59X67bAuiatgW5vKTYCQ&bih=978&biw=1920" target="_blank">Where's Waldo page</a>. No doubt inspired by the wonderful <a href="https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~272381~90046245:Chicago-Gangland-from-Authentic-Sou" target="_blank">1981 illustrated map of Chicago gangs.</a></p>
+  <p>The map concept at the top of this piece has been kicking in my head for a long while. Came from a dream: Meandering in a museum space, from far, far away you see a map introducing a new exhibit on New York City. Walking closer, the standard .NEW YORK CITY dot became more detailed until you'd get to up close and discovered that each inch had a drawing detailing that block's history. A historical illustration with the energy and detail of a <a href="https://www.google.com/search?q=where%27s+waldo+page&tbm=isch&ved=2ahUKEwiuxtTT1qLsAhVoja0KHTkeCZsQ2-cCegQIABAA&oq=where%27s+waldo+page&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB46BwgAELEDEEM6BAgAEEM6BQgAELEDUOoDWLcVYNAWaAFwAHgAgAHqAYgBwwWSAQUzLjIuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=ps59X67bAuiatgW5vKTYCQ&bih=978&biw=1920" target="_blank">Where's Waldo page</a>. No doubt inspired by the wonderful <a href="https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~272381~90046245:Chicago-Gangland-from-Authentic-Sou" target="_blank">1981 illustrated map of Chicago gangs.</a></p>
 
-  <p>This is a more modest implentation of that idea! The level of research needed to create that in a truly good way feels like it'd be a part-time job. Maybe some day.</p>
+  <p>This is a more modest implementation of that concept. Don't quite feel like I could do that map justice without significant study. Making it more introspective saves a lot of time on research! Moving near Janesville and turning thirty probably helped too.</p>
 
   <p>Slippy maps made w/ <a href="https://www.mapbox.com/about/maps/" target="_blank">Mapbox</a>, using <a href="http://www.openstreetmap.org/about/" target="_blank">OpenStreetMap</a> data. <a href="https://apps.mapbox.com/feedback/?owner=dmoriarty&id=ckfxb2lit031w19sxw3sauitl&access_token=pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q" target="_blank">Improve the map!</a></p>
+
+  <p>U.S. cities dataset from the U.S. Census.</p>
 </div>
-
-
-
-
-<!-- - SVG to Shapefilie
-  - Hand drawn
-  - Illustrator image trace to vectorize
-  - save to file in inkscape
-- Vibrating map
-  - Take a land polygon
-  - Break into lines, then explode to remove mult-lines
-  - Break into points, w/ vertices2 to get all of them
-  - Asssign random values to each, then filter for 98%
-  - Assign new random values, kick to Mapbox -->
-
-
-
-
-
 
