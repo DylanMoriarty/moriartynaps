@@ -103,6 +103,7 @@ This is Janesville, Wisconsin
       box-shadow: 0px 0px 8px rgba(240, 240, 240, 0.85);
       padding: 0.75rem 0.5rem 0.5rem 0.5rem;
       border-radius: 10px;
+    }
 
     .scroll-list li p {
       font-size: 20px;
