@@ -288,7 +288,7 @@ Traces linger of a kid trotting off to school.
 
       map.addSource('overlay', {
         'type': 'image',
-        'url': '{{site.baseurl}}/assets/graphics/posts/13-home/home.png',
+        'url': '{{site.baseurl}}/assets/graphics/posts/13-home/home-2.png',
         'coordinates': [
             [-89.05998229980469,42.715488939866084],
             [-88.97415161132812,42.715488939866084],
