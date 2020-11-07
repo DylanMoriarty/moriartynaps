@@ -8,12 +8,12 @@ categories: wikipedia
 type: maps
 scripts: Mapbox Waypoints
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/13-home/twi-img.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/15-midnight-arrival/twi-img.jpg"
 
 soc-descrip: "Maps and doodles of a place called Home"
 soc-url: "https://moriartynaps.org/maps-of-home/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/assets/graphics/posts/13-home/soc-img.jpg"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/15-midnight-arrival/soc-img.jpg"
 
 song: ""
 songurl: https://www.youtube.com/embed/videoseries?list=PL1KbmvLItolR5ECJKKSHAWymes57Ry4n5
@@ -63,7 +63,7 @@ Please enjoy this endless descent over Washington D.C.
 
 {::nomarkdown}
 <p class="beneathMap">
-  <i>-Dylan, sleep deprived & in the clouds<br>
+  <i>-Dylan, in the clouds<br>
   <span class="post-date">November, 7th 2020</span></i>
 </p>
 {:/}
