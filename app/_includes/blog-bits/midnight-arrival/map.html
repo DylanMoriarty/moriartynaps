@@ -37,8 +37,6 @@
   })
 
   function flyTo () {
-    console.log(placeInPath)
-
     var flyTarget = flightPath[placeInPath]
     var centerTarget = [flyTarget.lon, flyTarget.lat]
 
@@ -104,9 +102,6 @@
         map.keyboard.enable()
         map.doubleClickZoom.enable()
         map.touchZoomRotate.enable({ around: 'center' })
-
-        console.log(map)
-        console.log('turn map on')
     } else {
         map.scrollZoom.disable()
         map.dragPan.disable()
@@ -115,9 +110,6 @@
         map.keyboard.disable()
         map.doubleClickZoom.disable()
         map.touchZoomRotate.disable({ around: 'center' })
-
-        console.log(map)
-        console.log('turn map off off')
     }
   }
 
@@ -134,7 +126,6 @@
     }
 
     setInterval(function() {
-      console.log('new loop')
       const radiusStops = [70000]
       const radiusStops2 = [70000]
       const radiusStops3 = [70000]
@@ -177,8 +168,6 @@
             ]
          )
       })
-
-      console.log(radiusValues)
 
       let newRadius = {
         "base": 1,

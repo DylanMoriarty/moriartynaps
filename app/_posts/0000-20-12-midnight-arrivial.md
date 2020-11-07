@@ -66,7 +66,6 @@ Please enjoy this endless descent over Washington D.C.
   <i>-Dylan, in the clouds<br>
   <span class="post-date">November, 7th 2020</span></i>
 </p>
-{:/}
 
 <div class="notes">
   <p><a href="https://dylanmoriarty.github.io/blog/midnight-arrival.html" target="_blank">The first iteration of this project</a> was first published Oct.27, 2017. I decided to revisit it partly as an effort to transition my old blog to this one but mostly due to seeing the wonders <a href="https://twitter.com/jonni_walker" target="_blank">Jonni Walker</a> has been doing w/ firefly styling. Good lord does the 'blur' option help with luminescence! 
@@ -85,4 +84,5 @@ Please enjoy this endless descent over Washington D.C.
 
   <p>Finally, I apologize to your eyeballs for making an incredibly dark webpage on a site where otherwise every page is a very light grey. Sorry eyeballs!</p>
 </div>
+{:/}
 
