@@ -10,7 +10,7 @@ scripts: Mapbox Waypoints
 
 twit-img: "https://moriartynaps.org/assets/graphics/posts/15-midnight-arrival/twi-img.jpg"
 
-soc-descrip: "Maps and doodles of a place called Home"
+soc-descrip: "A calm descent over the flickering night lights of Washington D.C."
 soc-url: "https://moriartynaps.org/maps-of-home/"
 soc-type: "article"
 soc-img: "https://moriartynaps.org/assets/graphics/posts/15-midnight-arrival/soc-img.jpg"
