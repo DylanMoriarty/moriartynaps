@@ -1,0 +1,177 @@
+<style>
+  body {
+    background-color: #000;
+    background: #000;
+  }
+
+  article a { color: #e5c53e; }
+  article a:hover { 
+      color: darken(#e5c53e, 20);
+      opacity: 0.8;
+  }
+  a:active { color: darken(#e5c53e, 20); }
+  a:visited { color: #e5c53e; }
+
+  .site-title {
+    color: #888;
+  }
+
+  .nav-container__right {
+    background-color: #000;
+    border: 1px solid #666;
+    color: #e5c53e;
+  }
+  .nav-container__right:after {
+    background-color: #000;
+    border: 1px solid #666;
+    border-top: 0;
+  }
+
+  .page-title {
+    color: #888;
+  }
+
+  p { 
+    color: #888; 
+  }
+
+  h3 {
+    color: #ccc;
+    border-bottom: 4px solid #386664;
+    text-shadow: -4px 0 #000, 0px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  }
+
+  .romanticism p {
+    margin: 0 auto 2rem;
+    line-height: 2.5rem;
+  }
+
+  .welcomeimagebox {
+    display: none;
+  }
+
+  .full-bleed {
+    margin: 6rem 0 0;
+    height: 550px;
+  }
+
+  .mapstyle {
+    width:100%;
+    height: 85vh;
+    position:absolute;
+    left:0;
+  }
+
+  .innershadow {
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    left: 0;
+    z-index:999;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
+    pointer-events: none;
+  }
+
+  .footnotes {
+    border-top-color: #555;
+  }
+
+  .autopilot-toggle {
+    border: 1px solid #555;
+    color: #888;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    left: 1rem;
+    bottom: -3rem;
+  }
+
+  .autopilot-toggle:hover {
+    border-color: #888;
+  }
+
+  .autopilot-toggle:focus {
+    outline: none;
+  }
+
+  .map-controller {
+    position: relative;
+    margin-bottom: 0;
+    z-index: 1001;
+  }
+
+  .happy-auto-pilot {
+    position: absolute;
+    bottom: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+    left: 1rem;
+  }
+
+  .autopilot-off:hover .happy-auto-pilot {
+    opacity: 1;
+  }
+
+  .happy-auto-pilot img {
+    width: 120px;
+    border: 12px solid black;
+    border-radius: 50%;
+  }
+
+  .happy-auto-pilot:after {
+    content:'';
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    margin-left: -50px;f
+    width: 0;
+    height: 0;
+    border-top: solid 50px black;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
+    z-index: -1;
+  }
+
+  ::selection {
+    background: rgba(0,0,0,0);
+    color: #e5c53e;
+  }
+
+  .mapboxgl-ctrl-bottom-right {
+    z-index: 1000;
+  }
+
+  .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    background-color: rgba(0,0,0,0);
+  }
+
+  .mapboxgl-ctrl-attrib a { color: #666; }
+  .mapboxgl-ctrl-attrib a:hover { color: #DDB598; }
+  .mapboxgl-ctrl-attrib a:visited { color: #666; }
+  .mapboxgl-ctrl-attrib a:active { color: #666; }
+
+  .lit-match {
+    margin-bottom: 8rem;
+    position: relative;
+  }
+
+  .lit-match:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 100%);
+  }
+
+  .beneathMap {
+    margin-top: 6rem;
+  }
+</style>

@@ -5,9 +5,15 @@
 	</div>
 
 	<div class="nav-container__tunes">
-    <img src="../assets/graphics/posts/music-box.gif" class="music-box-gif music-box-gif_left" />
-		<i>Hover for Companion tunes</i>
-    <img src="../assets/graphics/posts/music-box-r.gif" class="music-box-gif music-box-gif_right" />
+    {% if page.songi %}
+      <img src="../assets/graphics/posts/music-box-i.gif" class="music-box-gif music-box-gif_left" />
+      <i>Hover for Companion tunes</i>
+      <img src="../assets/graphics/posts/music-box-ri.gif" class="music-box-gif music-box-gif_right" />
+    {% else %}
+      <img src="../assets/graphics/posts/music-box.gif" class="music-box-gif music-box-gif_left" />
+  		<i>Hover for Companion tunes</i>
+      <img src="../assets/graphics/posts/music-box-r.gif" class="music-box-gif music-box-gif_right" />
+    {% endif %}
 	</div>
 </div>
 {% endif %}
