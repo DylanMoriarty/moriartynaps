@@ -47,7 +47,7 @@
       center: centerTarget,
       zoom: curZoom,
       bearing: curBearing,
-      speed: 0.05,
+      speed: 0.03,
       easing: function (n) {
         return n;
       }
@@ -190,45 +190,9 @@
         "stops": radiusValues3
       }
 
-      // streetlights-inner-light
-      // streetlights-glow-1
-      // streetlights-glow-2
-
       map.setPaintProperty('streetlights-inner-light', 'circle-radius', newRadius)
       map.setPaintProperty('streetlights-glow-1', 'circle-radius', newRadius2)
       map.setPaintProperty('streetlights-glow-2', 'circle-radius', newRadius3)
     }, 500)
-
-  //  }
-    // setInterval(function() {
-      // radiusStops = [70000]
-      // radiusValues = []
-
-      // for (var i = 6; i >= 0; i--) { radiusStops.push(Math.floor(60000 * Math.random())) }
-
-      // radiusStops.sort((a, b) => a - b)
-
-      // radiusStops.forEach((n) => {
-      //  radiusValues.push(
-      //       [
-      //         n,
-      //         (n === 70000 ? 1 : Math.floor(Math.random() * 100) * 0.01 + 5)
-      //       ]
-      //    )
-      // })
-
-      // console.log(radiusStops)
-
-      // let newRadius = {
-    //     "base": 1,
-    //     "type": "exponential",
-    //     "property": "id",
-    //     "stops": radiusValues
-    //   }
-
-    //   console.log(map.getPaintProperty('streetlights', 'circle-radius'))
-   //    map.setPaintProperty('streetlights-glow-large', 'circle-radius', newRadius)
-      // }, 4000)
-    // }
   }
 </script>
