@@ -1,0 +1,362 @@
+// https://www.sassmeister.com/
+
+.co-byline {
+  position: absolute;
+  font-style: italic;
+  color: #999;
+  font-size: 18px;
+  margin-top: -5rem;
+}
+
+.co-byline a { color: #999; }
+.co-byline a:visited { color: #999; }
+
+.cakemap {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.mapbox-logo{ display: none; } 
+.mapboxgl-ctrl-logo { display: none !important; } 
+.mapbox-improve-map { display: none; } 
+.mapboxgl-ctrl-compass { display: none; }
+
+p { text-align: left; }
+
+.choco-border { position: relative; }
+
+.choco-border-corner {
+  position: absolute;
+  width: 300px;
+  z-index: 9999;
+
+  &__tl {
+    width: 350px;
+    top: -5rem;
+    left: 1rem;
+  }
+  &__tr {
+    top: -5rem;
+    right: 1rem;
+  }
+  &__bl {
+    bottom: -6rem;
+    left: 1rem;
+  }
+  &__br {
+    bottom: -6rem;
+    right: 1rem;
+  }
+}
+
+
+$siding-size: 46px;
+
+@mixin borderShine {
+  position: absolute;
+  content: "";
+  background-color: gold;
+}
+
+.choco-border-side {
+  position: absolute;
+  z-index: 1;
+  margin: 0 10%;
+
+  &__t {
+    background-color: black;
+    margin: 0 10%;
+    width: 80%;
+    height: $siding-size;
+    top: ($siding-size / -2);
+  }
+  &__l {
+    background-color: black;
+    width: $siding-size;
+    height: 100%;
+    right: ($siding-size / -2);
+  }
+  &__r {
+    background-color: black;
+    width: $siding-size;
+    height: 100%;
+    left: ($siding-size / -2);
+  }
+  &__b {
+    background-color: black;
+    margin: 0 10%;
+    width: 80%;
+    height: $siding-size;
+    bottom: ($siding-size / -2);
+  }
+}
+
+.choco-border-side__t, .choco-border-side__b {
+  &:after {
+    @include borderShine;
+    height: 1px;
+    width: 100%;
+    top: 6px;
+    left: 0;
+  }
+  &:before {
+    @include borderShine;
+    height: 1px;
+    width: 100%;
+    bottom: 6px;
+    right: 0;
+  }
+}
+
+.choco-border-side__l, .choco-border-side__r {
+  &:after {
+    @include borderShine;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 6px;
+  }
+  &:before {
+    @include borderShine;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 6px;
+  }
+}
+
+.choco-border-legend {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.velvet-border { position: relative; }
+
+.velvet-border-corner {
+  position: absolute;
+  width: 240px;
+  z-index: 9999;
+
+  &__tl {
+    top: -5rem;
+    left: 1rem;
+  }
+  &__tr {
+    top: -5rem;
+    right: 1rem;
+  }
+  &__bl {
+    bottom: -6rem;
+    left: 1rem;
+  }
+  &__br {
+    bottom: -6rem;
+    right: 1rem;
+  }
+}
+
+$velvet-size: 60px;
+
+.velvet-border-side {
+  position: absolute;
+  z-index: 10;
+  margin: 0 10%;
+
+  &__t {
+    background-image: url('./../../assets/graphics/posts/17-cake/velvet-frost.png');
+    background-repeat: repeat-x;
+    background-size: ($velvet-size * 2) $velvet-size;
+    margin: 0 10%;
+    width: 80%;
+    height: $velvet-size;
+    top: ($siding-size / -2);
+  }
+  &__l {
+    background-image: url('./../../assets/graphics/posts/17-cake/velvet-frost-v.png');
+    background-repeat: repeat-y;
+    background-size: $velvet-size ($velvet-size * 2);
+    width: $velvet-size;
+    height: 100%;
+    right: ($siding-size / -2);
+  }
+  &__r {
+    background-image: url('./../../assets/graphics/posts/17-cake/velvet-frost-v.png');
+    background-repeat: repeat-y;
+    background-size: $velvet-size ($velvet-size * 2);
+    width: $velvet-size;
+    height: 100%;
+    left: ($siding-size / -2);
+  }
+  &__b {
+    background-image: url('./../../assets/graphics/posts/17-cake/velvet-frost.png');
+    background-repeat: repeat-x;
+    background-size: ($velvet-size * 2) $velvet-size;
+    margin: 0 10%;
+    width: 80%;
+    height: $velvet-size;
+    bottom: ($siding-size / -2);
+  }
+}
+
+.velvet-border-legend {
+  position: absolute;
+  z-index: 9999;
+  width: 450px;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.velvet-border-legend-top {
+  position: absolute;
+  z-index: 9999;
+  width: 450px;
+  top: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+
+// =====
+
+
+.vanilla-border { position: relative; }
+
+.vanilla-border-corner {
+  position: absolute;
+  width: 240px;
+  z-index: 9999;
+
+  &__tl {
+    top: -5rem;
+    left: 1rem;
+  }
+  &__tr {
+    top: -5rem;
+    right: 1rem;
+  }
+  &__bl {
+    bottom: -6rem;
+    left: 1rem;
+  }
+  &__br {
+    bottom: -6rem;
+    right: 1rem;
+  }
+}
+
+
+$siding-van-size: 46px;
+
+@mixin borderShineVanilla {
+  position: absolute;
+  content: "";
+  background-color: black;
+}
+
+.vanilla-border-side {
+  position: absolute;
+  z-index: 1;
+  margin: 0 10%;
+
+  &__t {
+    background-color: #746446;
+    margin: 0 10%;
+    width: 80%;
+    height: $siding-van-size;
+    top: ($siding-van-size / -2);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }
+  &__l {
+    background-color: #746446;
+    width: $siding-van-size;
+    height: 100%;
+    right: ($siding-van-size / -2);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+  }
+  &__r {
+    background-color: #746446;
+    width: $siding-van-size;
+    height: 100%;
+    left: ($siding-van-size / -2);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+  }
+  &__b {
+    background-color: #746446;
+    margin: 0 10%;
+    width: 80%;
+    height: $siding-van-size;
+    bottom: ($siding-van-size / -2);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }
+}
+
+
+.vanilla-border-side__t, .vanilla-border-side__b {
+  &:after {
+    @include borderShineVanilla;
+    height: 4px;
+    width: 100%;
+    top: 6px;
+    left: 0;
+  }
+  &:before {
+    @include borderShineVanilla;
+    height: 4px;
+    width: 100%;
+    bottom: 7px;
+    right: 0;
+  }
+}
+
+.vanilla-border-side__l, .vanilla-border-side__r {
+  &:after {
+    @include borderShineVanilla;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 6px;
+  }
+  &:before {
+    @include borderShineVanilla;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    right: 6px;
+  }
+}
+
+.vanilla-border-legend {
+  position: absolute;
+  z-index: 9999;
+  width: 450px;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.innershadow {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.35) 100%);
+}

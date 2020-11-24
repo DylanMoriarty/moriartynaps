@@ -1,0 +1,28 @@
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
+
+  var chocoMap = new mapboxgl.Map({
+    container: 'chocolate-map',
+    style: 'mapbox://styles/dmoriarty/ckhfth6cq0n2c19pjgdmdn3vr',
+    zoom: 1,
+    center: [0, 25],
+    attributionControl: false
+  })
+
+  var vanillaMap = new mapboxgl.Map({
+    container: 'vanilla-map',
+    style: 'mapbox://styles/dmoriarty/ckhftapww0tdd19qkudiz1igt',
+    zoom: 3,
+    center: [-97.14,40.93],
+    attributionControl: false
+  })
+
+  var velvetMap = new mapboxgl.Map({
+    container: 'red-velvet-map',
+    style: 'mapbox://styles/dmoriarty/ckhe7ils1084g19qxb313js6r',
+    zoom: 1,
+    center: [0, 0],
+    attributionControl: false
+  })
+</script>
+
