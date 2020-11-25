@@ -24,6 +24,24 @@
 
 p { text-align: left; }
 
+.innershadow {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+// ----------------
+//    CHOCOLATE
+// ----------------
+
+
 .choco-border { position: relative; }
 
 .choco-border-corner {
@@ -52,39 +70,39 @@ p { text-align: left; }
 
 
 $siding-size: 46px;
+$siding-highlight: rgba(61,44,0,1);
 
 @mixin borderShine {
   position: absolute;
   content: "";
-  background-color: gold;
 }
 
 .choco-border-side {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   margin: 0 10%;
 
   &__t {
-    background-color: black;
+    background: linear-gradient(to left, rgba(0,0,0,1) 20%, $siding-highlight 50%, rgba(0,0,0,1) 80%);
     margin: 0 10%;
     width: 80%;
     height: $siding-size;
     top: ($siding-size / -2);
   }
   &__l {
-    background-color: black;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 20%, $siding-highlight 50%, rgba(0,0,0,1) 80%);
     width: $siding-size;
     height: 100%;
     right: ($siding-size / -2);
   }
   &__r {
-    background-color: black;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 20%, $siding-highlight 50%, rgba(0,0,0,1) 80%);
     width: $siding-size;
     height: 100%;
     left: ($siding-size / -2);
   }
   &__b {
-    background-color: black;
+    background: linear-gradient(to left, rgba(0,0,0,1) 20%, $siding-highlight 50%, rgba(0,0,0,1) 80%);
     margin: 0 10%;
     width: 80%;
     height: $siding-size;
@@ -95,6 +113,8 @@ $siding-size: 46px;
 .choco-border-side__t, .choco-border-side__b {
   &:after {
     @include borderShine;
+    background: rgb(164,150,73);
+    background: linear-gradient(to left, rgba(164,150,73,1) 15%, rgba(255,215,0,1) 30%, #fcffac 50%, rgba(255,215,0,1) 70%, rgba(164,150,73,1) 85%);
     height: 1px;
     width: 100%;
     top: 6px;
@@ -102,6 +122,8 @@ $siding-size: 46px;
   }
   &:before {
     @include borderShine;
+    background: rgb(164,150,73);
+    background: linear-gradient(to left, rgba(164,150,73,1) 15%, rgba(255,215,0,1) 30%, #fcffac 50%, rgba(255,215,0,1) 70%, rgba(164,150,73,1) 85%);
     height: 1px;
     width: 100%;
     bottom: 6px;
@@ -112,6 +134,8 @@ $siding-size: 46px;
 .choco-border-side__l, .choco-border-side__r {
   &:after {
     @include borderShine;
+    background: rgb(164,150,73);
+    background: linear-gradient(0deg, rgba(164,150,73,1) 15%, rgba(255,215,0,1) 30%, #fcffac 50%, rgba(255,215,0,1) 70%, rgba(164,150,73,1) 85%);
     width: 1px;
     height: 100%;
     top: 0;
@@ -119,6 +143,8 @@ $siding-size: 46px;
   }
   &:before {
     @include borderShine;
+    background: rgb(164,150,73);
+    background: linear-gradient(0deg, rgba(164,150,73,1) 15%, rgba(255,215,0,1) 30%, #fcffac 50%, rgba(255,215,0,1) 70%, rgba(164,150,73,1) 85%);
     width: 1px;
     height: 100%;
     top: 0;
@@ -136,12 +162,16 @@ $siding-size: 46px;
   margin: 0 auto;
 }
 
+// ----------------
+//    VELVET
+// ----------------
+
 .velvet-border { position: relative; }
 
 .velvet-border-corner {
   position: absolute;
   width: 240px;
-  z-index: 9999;
+  z-index: 15;
 
   &__tl {
     top: -5rem;
@@ -216,7 +246,7 @@ $velvet-size: 60px;
 
 .velvet-border-legend-top {
   position: absolute;
-  z-index: 9999;
+  z-index: 15;
   width: 450px;
   top: -100px;
   left: 0;
@@ -225,7 +255,9 @@ $velvet-size: 60px;
 }
 
 
-// =====
+// ----------------
+//    VANILLA
+// ----------------
 
 
 .vanilla-border { position: relative; }
@@ -255,6 +287,7 @@ $velvet-size: 60px;
 
 
 $siding-van-size: 46px;
+$siding-van-highlight: #d69d5c;
 
 @mixin borderShineVanilla {
   position: absolute;
@@ -264,11 +297,11 @@ $siding-van-size: 46px;
 
 .vanilla-border-side {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   margin: 0 10%;
 
   &__t {
-    background-color: #746446;
+    background: linear-gradient(to left, #261e0f 15%, #746446 50%, #362f22 85%);
     margin: 0 10%;
     width: 80%;
     height: $siding-van-size;
@@ -277,7 +310,7 @@ $siding-van-size: 46px;
     border-bottom: 4px solid black;
   }
   &__l {
-    background-color: #746446;
+    background: linear-gradient(0deg, #261e0f 15%, #746446 50%, #362f22 85%);
     width: $siding-van-size;
     height: 100%;
     right: ($siding-van-size / -2);
@@ -285,7 +318,7 @@ $siding-van-size: 46px;
     border-right: 4px solid black;
   }
   &__r {
-    background-color: #746446;
+    background: linear-gradient(0deg, #261e0f 15%, #746446 50%, #362f22 85%);
     width: $siding-van-size;
     height: 100%;
     left: ($siding-van-size / -2);
@@ -293,7 +326,7 @@ $siding-van-size: 46px;
     border-right: 4px solid black;
   }
   &__b {
-    background-color: #746446;
+    background: linear-gradient(to left, #261e0f 15%, #746446 50%, #362f22 85%);
     margin: 0 10%;
     width: 80%;
     height: $siding-van-size;
@@ -348,15 +381,50 @@ $siding-van-size: 46px;
   margin: 0 auto;
 }
 
-.innershadow {
-  position: absolute;
+.mapboxgl-popup { pointer-events: none; }
+.mapboxgl-popup-content {
+  border-radius: 13px;
+  box-shadow: 0 1px 4px rgb(0 0 0);
+  padding: 7px 9px 9px;
   pointer-events: none;
-  z-index: 1;
-  width: 80%;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+@mixin JudgeDot($color) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $color
+  }
+}
+
+.popup-hed {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 -40px 0 20px;
+  width: 100%;
+  max-width: calc(100% - 40px);
+
+  &__paul { @include JudgeDot(#8fc9cb); }
+  &__prue { @include JudgeDot(#e8d575); }
+  &__mary { @include JudgeDot(#f07c8d); }
+  &__unknown { @include JudgeDot(#ccc); }
+}
+
+.popup-mid {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.popup-link {
+  font-size: 12px;
+  font-style: italic;
+  pointer-events: all;
 }
