@@ -1,7 +1,7 @@
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
 
-  var chocoMap = new mapboxgl.Map({
+  const chocoMap = new mapboxgl.Map({
     container: 'chocolate-map',
     style: 'mapbox://styles/dmoriarty/ckhfth6cq0n2c19pjgdmdn3vr',
     zoom: 1,
@@ -9,7 +9,7 @@
     attributionControl: false
   })
 
-  var vanillaMap = new mapboxgl.Map({
+  const vanillaMap = new mapboxgl.Map({
     container: 'vanilla-map',
     style: 'mapbox://styles/dmoriarty/ckhftapww0tdd19qkudiz1igt',
     zoom: 3,
@@ -17,12 +17,42 @@
     attributionControl: false
   })
 
-  var velvetMap = new mapboxgl.Map({
+  const velvetMapCont = document.querySelector('#red-velvet-map')
+
+  const velvetMap = new mapboxgl.Map({
     container: 'red-velvet-map',
     style: 'mapbox://styles/dmoriarty/ckhe7ils1084g19qxb313js6r',
     zoom: 1,
     center: [0, 0],
     attributionControl: false
   })
+
+  velvetMap.on('load', function () {
+    const velvetPopup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+    })
+
+    velvetMap.on('mouseenter', 'gbbo-data', function (e) {
+      velvetMap.getCanvas().style.cursor = 'pointer';
+       
+      const coordinates = e.features[0].geometry.coordinates.slice()
+      const props = e.features[0].properties
+
+      const hed = `<div class="popup-hed popup-hed__${props.Challenger}">${props.Challenge}</div>`
+      const location = `<div class="popup-mid">${props.Location}</div>`
+      const details = `<a class="popup-link" href="${props["wiki link"]}" target="_blank">more information</a>`
+
+      const content = hed + location + details
+
+      velvetPopup.setLngLat(coordinates).setHTML(content).addTo(velvetMap);
+    })
+    
+    velvetMapCont.addEventListener("mouseleave", function () {
+      velvetMap.getCanvas().style.cursor = '';
+      velvetPopup.remove();
+    })
+  })
+
 </script>
 
