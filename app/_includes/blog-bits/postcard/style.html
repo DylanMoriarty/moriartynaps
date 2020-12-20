@@ -1,0 +1,162 @@
+<style>
+  li, ol {
+    list-style: none;
+    margin: 0 !important;
+  }
+
+  ol { padding: 0 !important; }
+
+  li::before {
+    content: none !important;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: calc(60% - 7px) 8px calc(40% - 7px);
+    width: 100%;
+    font-family: Quicksand;
+    text-transform: uppercase;
+  }
+
+  .card-cont {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px;
+    border: 1px solid black;
+  }
+
+  .card-inputs {
+    background-color: #E4A493;
+    margin-right: 2px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .card-image {
+    background-color: #C8BC8F;
+    margin-left: 2px;
+  }
+
+  .card-inputs__left {
+    border: 1px solid black;
+    border-top: 0;
+  }
+
+  .card-inputs__right {
+    border: 1px solid black;
+    border-top: 0;
+  }
+
+  .input-title {
+    font-size: 16px;
+    font-weight: 700;
+    border-top: solid black 1px;
+    border-bottom: solid black 2px;
+  }
+
+  li {
+    position: relative;
+    border-bottom: 1px solid black;
+    font-size: 14px;
+    padding: 4px 20px 4px 3px;
+  }
+
+  label li { 
+    padding-left: 10px;
+    cursor: pointer;
+  }
+
+  .radio_control {
+    position: absolute;
+    width: 20px;
+    background-color: #D6BE61;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 1px solid black;
+  }
+
+  input {
+    float: right;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  input:checked+.radio_control:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 2px;
+    bottom: 0;
+    background-image: url("./../assets/graphics/posts/18-card/x-mark.png");
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-cont__right {
+    border: 2px solid black;
+  }
+
+  .hello { background-color: #DFA869; }
+  .place { background-color: #C5BA8D; }
+  .weather { background-color: #9B8E97; }
+  .parents { background-color: #E4A493; }
+  .feeling { background-color: #BCC2C2; }
+
+  .time { background-color: #BCC2C2; }
+  .need { background-color: #E3AA9C; }
+  .see { background-color: #C5BA8D; }
+  .regards { background-color: #EFB474; }
+  .picture { background-color: #9B8E97; }
+
+  .texture-cover {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    background-image: url("./../assets/graphics/posts/18-card/texture.png");
+    width: 100%;
+    height: 100%;
+    opacity: 0.65;
+  }
+
+  .texture-cover__right { opacity: 1; }
+
+  .card-image {
+    background-image: url("./../assets/graphics/posts/18-card/holidays.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    overflow: hidden;
+  }
+
+  .card-title {
+    font-family: Quicksand;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+    margin-top: -7rem;
+  }
+
+  .card-bottom {
+    display: grid;
+    grid-template-columns: calc(60% - 7px) 8px calc(40% - 7px);
+    margin-bottom: 4rem;
+  }
+
+  .card-bottom_left {
+    font-family: Quicksand;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+</style>

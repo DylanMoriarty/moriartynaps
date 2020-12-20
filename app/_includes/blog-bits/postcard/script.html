@@ -1,0 +1,182 @@
+
+<script>
+  const linputs = [
+    {
+      "title": "Hello",
+      "name": "hello",
+      "entries": [
+        ["friends"],
+        ["fam"],
+        ["folks"],
+        ["chums"],
+        ["kiddo"],
+        ["fellow kids", "kids"]
+      ]
+    },
+    {
+      "title": "This place is",
+      "name": "place",
+      "entries": [
+        ["on fire", "fire"],
+        ["flooding"],
+        ["having peak covid cases", "peak"],
+        ["best on the map", "map"]
+      ]
+    },
+    {
+      "title": "The weather is",
+      "name": "weather",
+      "entries": [
+        ["Mostly fire", "alsofire"],
+        ["tolerable"],
+        ["irrelevant"],
+        ["conversational"]
+      ]
+    },
+    {
+      "title": "The folks are",
+      "name": "parents",
+      "entries": [
+        ["Flaunting quarentine", "flaunting"],
+        ["alright"],
+        ["beating the odds", "odds"],
+        ["Full of pep", "pep"]
+      ]
+    },
+    {
+      "title": "I'm feeling",
+      "name": "feeling",
+      "entries": [
+        ["ok, considering"],
+        ["ambitious"],
+        ["symptomatic", "symptoms"],
+        ["exhausted"],
+        ["panic attack-y", "attack"],
+        ["Very lonesome", "lonesome"]
+      ]
+    }
+  ]
+
+  const rinputs = [
+    {
+      "title": "I spend my time",
+      "name": "time",
+      "entries": [
+        ["Worrying"],
+        ["surviving"],
+        ["Streaming on Twitch", "twitch"],
+        ["In a wiki-rabbit hole", "hole"],
+        ["Getting into bread", "bread"],
+      ]
+    },
+    {
+      "title": "I Need",
+      "name": "need",
+      "entries": [
+        ["Money"],
+        ["Sleep"],
+        ["You"],
+        ["A good job", "job"],
+        ["$1,000,000"],
+        ["the vaccine"]
+      ]
+    },
+    {
+      "title": "Will see you",
+      "name": "see",
+      "entries": [
+        ["in cyberspace", "space"],
+        ["Post pandemic"],
+        ["Outside, from 6 ft away", "outside"],
+        ["I hope", "hope"],
+        ["space cowboy", "cowboy"]
+      ]
+    },
+    {
+      "title": "Give my regards to",
+      "name": "regards",
+      "entries": [
+        ["the children", "children"],
+        ["the chums", "chums2"],
+        ["Everybody", "everybody"],
+        ["Cindy", "cindy"]
+      ]
+    },
+    {
+      "title": "Picture &#8594;",
+      "name": "picture",
+      "checked": true,
+      "entries": [
+        ["everything is fine", "everyok"],
+        ["apartment"],
+        ["lakeside"],
+        ["holidays"]
+      ]
+    }
+  ]
+
+  const lefthand = document.querySelector('.card-inputs__hello')
+  const righthand = document.querySelector('.card-inputs__goodbye')
+
+  linputs.forEach((f) => {
+    inputBuilder(f, lefthand)
+  })
+
+  rinputs.forEach((f) => {
+    inputBuilder(f, righthand)
+  })
+
+  const picturePuts = document.getElementsByName('picture')
+  const pictureFrame = document.querySelector('.card-image')
+
+  picturePuts.forEach((p) => {
+    p.addEventListener('change', function() {
+      pictureFrame.style.backgroundImage = `url(./../assets/graphics/posts/18-card/${p.id}.jpg)`
+    })
+  })
+
+  // console.log(picturePuts)
+
+  function inputBuilder(f, elem) {
+    const title = f.title
+    const name = f.name
+
+    const titleBar = document.createElement('li')
+    titleBar.className = `input-title ${name}`
+    titleBar.innerHTML = title
+
+    elem.appendChild(titleBar)
+
+    f.entries.map((e) => {
+      let entryName = e[0]
+
+      if (e.length > 1) {
+        entryName = e[1]
+      }
+
+      const label = document.createElement('Label')
+      label.setAttribute('for', entryName)
+
+      const inputRadio = document.createElement('input')
+      inputRadio.setAttribute('type', 'radio')
+      inputRadio.setAttribute('id', entryName)
+      inputRadio.setAttribute('name', name)
+
+      if (f.checked) {
+        inputRadio.setAttribute('checked', 'checked')
+      }
+
+      const radioSpan = document.createElement('span')
+      radioSpan.className = 'radio_control'
+
+      const listItem = document.createElement('li')
+      listItem.innerHTML = e[0]
+      listItem.className = name
+
+      listItem.appendChild(inputRadio)
+      listItem.appendChild(radioSpan)
+      label.appendChild(listItem)
+      elem.appendChild(label)
+    })
+  }
+</script>
