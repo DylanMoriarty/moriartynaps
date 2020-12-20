@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  A Busy Person's Correspondence Card for the Modern Era
-date:   2020-12-17 00:0:01 +0100
+date:   2020-12-20 00:0:01 +0100
 categories: wikipedia
 
-type: code
+type: art
 
 twit-img: "https://moriartynaps.org/assets/graphics/posts/18-card/twi-img.jpg"
 
@@ -28,15 +28,15 @@ While digging through a scrapbook from my great aunt Dorothy, I was tickled by t
 
 Apparently this was a trend from the 1930's, coming in <a href="https://duckduckgo.com/?q=A+Busy+Person%27s+Correspondence+Card&t=h_&iax=images&ia=images" target="_blank">varieties and different art</a>. Suppose it's a noveltly, but the idea of creating a shortcut to writing out one's situation/feelings is alive and well nowadays: 💃
 
-This is a good start, but too general to really be relatable to these times. So, naturally, below I've made the first _Busy Person's_ noveltly card since the early 20th century as an interactive web card for you, _yes you_! to fill out. 
+This is a good start, but to general to really be relatable to these times. So, naturally, below I've created the first _Busy Person's_ noveltly card since the early 20th century: reimagined as an interactive form for you, _yes you_! to fill out. 
 
-Feel free to screenshot it to share with your the pals, folks, chums, sugars, hubbys or wifeys in your life. Watch as they bask in the shining glory that is your wise time managmenet acumen.
+Feel free to screenshot it to share with the pals, folks, chums, sugars, hubbys and wifeys in your life. Watch as they bask in the shining glory that is your wise time managmenet acumen.
 
 {::nomarkdown}
   </article>
 </section> 
 
-<div class="card-title">Busy person's correspondence card 2020</div>
+<div class="card-title">Busy person's correspondence card</div>
 <section class="card-container">
   <div class="card-cont card-cont__left card-inputs">
     <div class="card-inputs__left">
@@ -72,7 +72,7 @@ Feel free to screenshot it to share with your the pals, folks, chums, sugars, hu
 
 
 
-<i>-D.M., remembering Dorothy and a long gone world.<br>
+<i>-D.M., happy holidays folks<br>
 <span class="post-date">December, 20th 2020</span></i>
 
 <!-- <div class="notes">
