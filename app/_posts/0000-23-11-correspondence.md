@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  A Busy Person's Correspondence Card for the Modern Era
-date:   2020-12-20 00:0:01 +0100
+date:   2020-12-21 00:0:01 +0100
 categories: wikipedia
 
 type: art
