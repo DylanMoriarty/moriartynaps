@@ -26,7 +26,7 @@ While reading through a scrapbook from my great aunt Dorothy, I was delighted by
 
 {% include postimg.html imgsrc="posts/18-card/card.jpg" class="black-border" full="true" max="800" %}
 
-Apparently this was a trend from the 1930's, coming in <a href="https://duckduckgo.com/?q=A+Busy+Person%27s+Correspondence+Card&t=h_&iax=images&ia=images" target="_blank">varieties and different art</a>. Suppose it's a noveltly, but the idea of creating a shortcut to writing out one's situation/feelings is alive and well nowadays: 💃
+Apparently this was a trend from the 1930's, coming in <a href="https://duckduckgo.com/?q=A+Busy+Person%27s+Correspondence+Card&t=h_&iax=images&ia=images" target="_blank">varieties and different art</a>. It's a novelty, but shortcuts for the communication of feelings & situations that doesn't require you to be a poet are alive and well today: 💃
 
 These are good, but too general to really be relatable to the trials of today. So, naturally, below I've created the first _Busy Person's_ noveltly card since the early 20th century: reimagined as an interactive form for you, _yes you_! to fill out. 
 
