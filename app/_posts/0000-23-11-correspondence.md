@@ -24,7 +24,7 @@ visible: true
 
 While digging through a scrapbook from my great aunt Dorothy, I was tickled by this postcard:
 
-{% include postimg.html imgsrc="posts/18-card/card.jpg" class="inline-img black-border" %}
+{% include postimg.html imgsrc="posts/18-card/card.jpg" class="black-border" full="true" max="800" %}
 
 Apparently this was a trend from the 1930's, coming in <a href="https://duckduckgo.com/?q=A+Busy+Person%27s+Correspondence+Card&t=h_&iax=images&ia=images" target="_blank">varieties and different art</a>. Suppose it's a noveltly, but the idea of creating a shortcut to writing out one's situation/feelings is alive and well nowadays: 💃
 
