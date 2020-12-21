@@ -22,7 +22,7 @@ visible: true
 
 {% include blog-bits/postcard/style.html %}
 
-While digging through a scrapbook from my great aunt Dorothy, I was tickled by this postcard:
+While reading through a scrapbook from my great aunt Dorothy, I was delighted by this postcard:
 
 {% include postimg.html imgsrc="posts/18-card/card.jpg" class="black-border" full="true" max="800" %}
 
