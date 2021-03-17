@@ -1,0 +1,90 @@
+<script>
+  let cityName = 'New York'
+  let admin = 'New York'
+  let cityNameLen = cityName.length
+  let adminLen = admin.length
+  let maxChar = (cityNameLen > adminLen ? cityNameLen : adminLen)
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
+
+  buildLetters(cityName, 'vert')
+  buildLetters(admin, 'horz')
+
+  const callingMap = new mapboxgl.Map({
+    container: 'callingMap',
+    style: 'mapbox://styles/dmoriarty/ckm4frs7y03jl17o7gywfldcj',
+    zoom: 9.5,
+    center: [-73.8060, 40.7128],
+    attributionControl: false,
+    pitch: 15
+  })
+
+  callingMap.on('load', function () {
+    callingMap.on('mousemove', 'nearest-city', function (e) {
+      callingMap.getCanvas().style.cursor = 'pointer';
+      const props = e.features[0].properties
+
+      if (props.NAME === cityName) {
+        return
+      } else {
+        cityName = (props.NAME === 'NULLIS' ? 'NULL' : props.NAME)
+        admin = props.ADMIN
+
+        cityName = cityName.replaceAll('.', '')
+        cityName = cityName.replaceAll(',', '')
+
+        cityNameLen = cityName.length
+        adminLen = admin.length
+        maxChar = (cityNameLen > adminLen ? cityNameLen : adminLen)
+
+        buildLetters(cityName, 'vert')
+        buildLetters(admin, 'horz')
+      }
+    })
+  })
+
+  function buildLetters(name, dir) {
+    const cap = name.toUpperCase()
+    const charArray = [...cap]
+    const color = (dir === 'vert' ? 'p' : 'g')
+
+    const elem = document.querySelector(`.calling-${dir}`)
+    elem.innerHTML = ''
+
+    charArray.map((c) => {
+      let img = ''
+
+      if (c != ' ') {
+        img = document.createElement('img')
+        const charPath = `{{site.baseurl}}/assets/graphics/posts/19-album/letters/letters_${color}__${c}.svg`
+        img.src = charPath
+      } else {
+        img = document.createElement('div')
+      }
+
+      img.className = `letter letter_${dir}`
+
+      const horzHeight = `calc(100% / ${adminLen}`
+      const horzWidth = 'calc(100% - 20px)'
+
+      const vertHeight = `calc(100% - 35px - (100% / ${adminLen}))`
+      const vertWidth = `calc((100% - 20px) / ${cityNameLen}`
+
+      if (dir === 'vert') {
+        elem.style.width = vertWidth
+        elem.style.height = vertHeight
+
+        img.style.height = `calc(${vertHeight} / ${cityNameLen})`
+        img.style.width = '100%'
+        // elem.width = `calc(100% / ${maxChar})`
+      } else {
+        elem.style.width = horzWidth
+        elem.style.height = horzHeight
+
+        img.style.width = `calc(100% / ${adminLen})`
+        img.style.height = `100%`
+      }
+
+      elem.appendChild(img)
+    })
+  }
+</script>

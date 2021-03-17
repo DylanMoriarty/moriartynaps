@@ -1,0 +1,30 @@
+<script>
+window.addEventListener('load', function() {
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
+
+  const darkSyde = new mapboxgl.Map({
+    container: 'darksyde',
+    style: 'mapbox://styles/dmoriarty/ckln2ih6731qf17p2arcm584n',
+    zoom: 10.5,
+    center: [0.1278, 51.5204],
+    attributionControl: false,
+    pitch: 55
+  })
+
+  const rainbow = new mapboxgl.Map({
+    container: 'rainbow',
+    style: 'mapbox://styles/dmoriarty/ckln2pkco18ct18s5ahavwl5r',
+    zoom: 10.5,
+    center: [0.1278, 51.5204],
+    attributionControl: false,
+    pitch: 55
+  })
+
+  var container = '#comparison-container';
+
+  console.log(mapboxgl)
+
+  const compMap = new mapboxgl.Compare(darkSyde, rainbow, container)
+})
+
+</script>

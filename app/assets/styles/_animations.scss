@@ -28,6 +28,14 @@
   }
 }
 
+.spingme2 {
+  transition: 0.2s all;
+  animation-timing-function: linear !important;
+  &:hover {
+    animation: spin 4s infinite;
+  }
+}
+
 @keyframes spin {
     0% {transform:rotate(0deg);}
     100% {transform:rotate(360deg);}
