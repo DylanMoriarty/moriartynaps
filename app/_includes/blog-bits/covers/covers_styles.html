@@ -18,10 +18,10 @@
 
   #comparison-container {
     display: flex;
-    width: 80%;
+    width: 85%;
     height: 80vh;
     position: relative;
-    margin: -8rem auto 0;
+    margin: 0 auto 0;
   }
 
   #darksyde {
@@ -101,7 +101,7 @@
 
   .callingCont {
     max-width: 700px;
-    width: 80%;
+    width: 85%;
     display: flex;
     margin: 0 auto;
   }
@@ -202,5 +202,36 @@
     0% { transform: rotate();(0deg); }
     50% { transform: rotate(-180deg); }
     100% { transform: rotate(-359deg); }
+  }
+
+  .mbmap-btns {
+    width: 85%;
+    display: flex;
+    position: relative;
+    margin: -8rem auto 3px;
+  }
+
+  .mbmap-btn {
+    display: inline-block;
+    padding: 15px 0;
+    width: calc(50% - 2px);
+    color: #666;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: "Quicksand";
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border: 2px solid #aaa;
+    transition: all 0.4s;
+  }
+
+  .mbmap-btn:hover {
+    background-color: rgba(0,0,0,0.08);
+  }
+
+  .darksyde-labels, .calling-labels {
+    margin-right: 4px;
   }
 </style>

@@ -1,10 +1,15 @@
 <script>
+const DSlabelToggle = document.querySelector('.darksyde-labels')
+const DSlockToggle = document.querySelector('.darksyde-lock')
+let DSlabelsVisible = false
+let DSlock = false
+
 window.addEventListener('load', function() {
   mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
 
   const darkSyde = new mapboxgl.Map({
     container: 'darksyde',
-    style: 'mapbox://styles/dmoriarty/ckln2ih6731qf17p2arcm584n',
+    style: 'mapbox://styles/dmoriarty/ckms0if2r0ras17se31m7lvoc',
     zoom: 10.5,
     center: [0.1278, 51.5204],
     attributionControl: false,
@@ -22,9 +27,78 @@ window.addEventListener('load', function() {
 
   var container = '#comparison-container';
 
-  console.log(mapboxgl)
+  DSlabelToggle.addEventListener('click', ()=> {
+    if (DSlabelsVisible) {
+      tweakLabels(darkSyde, 'none')
+      tweakLabels(rainbow, 'none')
+
+      DSlabelToggle.innerHTML = 'Turn on labels'
+      DSlabelsVisible = false
+    } else {
+      tweakLabels(darkSyde, 'visible')
+      tweakLabels(rainbow, 'visible')
+
+      DSlabelToggle.innerHTML = 'Turn off labels'
+      DSlabelsVisible = true
+    }
+  })
+
+  DSlockToggle.addEventListener('click', ()=> {
+    const DSmapCont = document.querySelector('#comparison-container')
+    const rainbowMapCont = document.querySelector('#rainbow > .mapboxgl-canvas-container')
+    const darkSydeMapCont = document.querySelector('#darksyde > .mapboxgl-canvas-container')
+
+    if (DSlock) {
+      enableMap(darkSyde)
+      enableMap(rainbow)
+
+      DSlockToggle.innerHTML = 'Lock Map'
+      rainbowMapCont.style.cursor = 'grab'
+      darkSydeMapCont.style.cursor = 'grab'
+      DSmapCont.setAttribute("pointer-events", "auto !important")
+      DSlock = false
+    } else {
+      disableMap(darkSyde)
+      disableMap(rainbow)
+
+      DSlockToggle.innerHTML = 'Unlock Map'
+      rainbowMapCont.style.cursor = 'auto'
+      darkSydeMapCont.style.cursor = 'auto'
+      DSmapCont.setAttribute("pointer-events", "none")
+      DSlock = true
+    }
+  })
 
   const compMap = new mapboxgl.Compare(darkSyde, rainbow, container)
 })
+
+function tweakLabels (map, visibility) {
+  map.setLayoutProperty('country-label', 'visibility', visibility)
+  map.setLayoutProperty('state-label', 'visibility', visibility)
+  map.setLayoutProperty('settlement-major-label', 'visibility', visibility)
+  map.setLayoutProperty('settlement-minor-label', 'visibility', visibility)
+  map.setLayoutProperty('settlement-subdivision-label', 'visibility', visibility)
+}
+
+function disableMap (map) {
+  map.boxZoom.disable();
+  map.scrollZoom.disable();
+  map.dragPan.disable();
+  map.dragRotate.disable();
+  map.keyboard.disable();
+  map.doubleClickZoom.disable();
+  map.touchZoomRotate.disable();
+}
+
+function enableMap (map) {
+  map.boxZoom.enable();
+  map.scrollZoom.enable();
+  map.dragPan.enable();
+  map.dragRotate.enable();
+  map.keyboard.enable();
+  map.doubleClickZoom.enable();
+  map.touchZoomRotate.enable();
+}
+
 
 </script>

@@ -18,12 +18,17 @@
     pitch: 15
   })
 
+  const CMlabelToggle = document.querySelector('.calling-labels')
+  const CMlockToggle = document.querySelector('.calling-lock')
+  let CMlabelsVisible = false
+  let CMlock = false
+
   callingMap.on('load', function () {
     callingMap.on('mousemove', 'nearest-city', function (e) {
       callingMap.getCanvas().style.cursor = 'pointer';
       const props = e.features[0].properties
 
-      if (props.NAME === cityName) {
+      if (props.NAME === cityName || CMlock) {
         return
       } else {
         cityName = (props.NAME === 'NULLIS' ? 'NULL' : props.NAME)
@@ -38,6 +43,54 @@
 
         buildLetters(cityName, 'vert')
         buildLetters(admin, 'horz')
+      }
+    })
+
+    CMlabelToggle.addEventListener('click', ()=> {
+      if (CMlabelsVisible) {
+        callingMap.setLayoutProperty('city-centroid-point', 'visibility', 'none')
+        callingMap.setLayoutProperty('city-centroid-label', 'visibility', 'none')
+        callingMap.setLayoutProperty('city-centroid-voronoi', 'visibility', 'none')
+
+        CMlabelToggle.innerHTML = 'Turn on guides'
+        CMlabelsVisible = false
+      } else {
+        callingMap.setLayoutProperty('city-centroid-point', 'visibility', 'visible')
+        callingMap.setLayoutProperty('city-centroid-label', 'visibility', 'visible')
+        callingMap.setLayoutProperty('city-centroid-voronoi', 'visibility', 'visible')
+
+        CMlabelToggle.innerHTML = 'Turn off guides'
+        CMlabelsVisible = true
+      }
+    })
+
+    CMlockToggle.addEventListener('click', ()=> {
+      const CmapCont = document.querySelector('#callingMap > .mapboxgl-canvas-container')
+
+      if (CMlock) {
+        callingMap.boxZoom.enable();
+        callingMap.scrollZoom.enable();
+        callingMap.dragPan.enable();
+        callingMap.dragRotate.enable();
+        callingMap.keyboard.enable();
+        callingMap.doubleClickZoom.enable();
+        callingMap.touchZoomRotate.enable();
+
+        CMlockToggle.innerHTML = 'Lock Map'
+        CmapCont.style.cursor = 'grab'
+        CMlock = false
+      } else {
+        callingMap.boxZoom.disable();
+        callingMap.scrollZoom.disable();
+        callingMap.dragPan.disable();
+        callingMap.dragRotate.disable();
+        callingMap.keyboard.disable();
+        callingMap.doubleClickZoom.disable();
+        callingMap.touchZoomRotate.disable();
+
+        CMlockToggle.innerHTML = 'Unlock Map'
+        CmapCont.style.cursor = 'auto'
+        CMlock = true
       }
     })
   })

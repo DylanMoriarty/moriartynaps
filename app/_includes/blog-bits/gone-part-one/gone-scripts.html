@@ -1,0 +1,235 @@
+<script>
+  const birthValue = document.querySelector('.birth-selector_value')
+  const birthSelect = document.querySelector('.birth-selector_select')
+
+  const latestYear = 2019
+  const earliestYear = 1930
+  let currentYear = 1990
+
+  for (var i = 0; i < (latestYear - earliestYear); i++) {
+    const option = document.createElement('option')
+    option.value = latestYear - i
+    option.innerHTML = latestYear - i
+
+    birthSelect.appendChild(option)
+  }
+
+  birthSelect.value = currentYear
+  const data = pops
+  let currentYearData = pops[currentYear]
+
+  createChart('.chart')
+
+  function createChart(elm) {
+    // VARIABLES
+    const $chart = d3.select(elm)
+    const totalYears =  165
+
+    let $svg = null
+    let defs = null
+    let $g = null
+    let $axis = null
+    let xAxisG = null
+    let yAxisG = null
+    let bars = null
+    let legend = null
+    let tooltipG = null
+
+    let data = pops
+    const yMax = 1000000
+
+    let width = 0
+    let height = 0
+    let bandStep = 0
+    const MARGIN = {
+      TOP: 10,
+      RIGHT: 0,
+      BOTTOM: 20,
+      LEFT: 50
+    }
+
+    // BEGIN DA BUILD
+    const scaleX = d3.scaleLinear()
+    const scaleY = d3.scaleLinear()
+
+    const formatNumber = d3.format(',~s');
+    const formatYear = d3.format('0');
+
+    let axisBottomGenerator = d3.axisBottom(scaleX).tickFormat(formatNumber)
+    let axisLeftGenerator = d3.axisLeft(scaleY).tickFormat(formatYear)
+
+    const Chart = {
+      init() {
+        $svg = $chart.append('svg')
+        def = $svg.append('defs')
+
+        $g = $svg.append('g')
+        $axis = $g.append('g').attr('class', 'g-axis');
+        xAxisG = $axis.append('g').attr('class', 'axis x-axis')
+        yAxisG = $axis.append('g').attr('class', 'axis y-axis')
+        bars = $g.append('g').attr('class', 'bars');
+
+        Chart.resize();        
+      },
+
+      resize() {
+        width = $chart.node().offsetWidth - MARGIN.LEFT - MARGIN.RIGHT
+        height = $chart.node().offsetHeight - MARGIN.TOP - MARGIN.BOTTOM
+
+        $svg
+          .attr('width', width + MARGIN.LEFT + MARGIN.RIGHT)
+          .attr('height', height + MARGIN.TOP + MARGIN.BOTTOM);
+        $g.attr('transform', `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
+
+        scaleX
+          .domain([0, 5000000])
+          .range([0, width])
+
+        scaleY
+          .domain([1855, 2020])
+          .range([0, height])
+
+        Chart.render()
+        return Chart
+      },
+
+      render() {
+        axisBottomGenerator.ticks(5)
+        axisLeftGenerator.ticks(20)
+
+        xAxisG
+          .attr('transform', `translate(0, ${height})`)
+          .call(axisBottomGenerator)
+
+        yAxisG
+          .attr('transform', `translate(0, 0)`)
+          .call(axisLeftGenerator)
+
+        bars
+          .selectAll('.bar')
+          .data(currentYearData)
+          .join('rect')
+          .attr('class', (d) => { return `bar bar-${d.age}`})
+          .attr('y', (d, i) => {
+            const tester = scaleY(d.age)
+            return tester
+          })
+          .attr('width', (d) => {
+            return scaleX(0)
+          })
+          .attr('height', height / totalYears)
+          .attr('fill', (d) => {
+            return 'rgba(0,0,0,0)';
+          });
+
+        bars
+          .selectAll('.bar')
+          .transition()
+          .duration(300)
+          .attr('fill', function(d) {
+            return barColorRange(d)
+          })
+          .attr('width', function(d) {
+            return scaleX(Number(d.value))
+          })
+
+        return Chart
+      },
+
+      reorg() {
+        bars
+          .selectAll('.bar')
+          .data(currentYearData)
+          .transition()
+          .duration(400)
+          .attr('fill', function(d) {
+            return barColorRange(d)
+          })
+          .attr('width', function(d) {
+            return scaleX(Number(d.value))
+          })
+          .attr('y', (d, i) => {
+            const tester = scaleY(d.age)
+            return tester
+          })
+      }
+    }
+
+    // animate thru years
+    setInterval(myTimer, 500);
+    function myTimer() {
+      console.log(currentYear)
+      console.log('woof')
+
+      if (currentYear < 2019) {
+        currentYear = currentYear + 1
+      } else {
+        currentYear = 1930
+      }
+
+      currentYearData = pops[currentYear]
+      console.log(currentYearData)
+
+      Chart.reorg()
+    }
+
+
+    birthSelect.addEventListener('change', function() {
+      currentYearData = pops[this.value]
+      currentYear = this.value
+
+      Chart.reorg()
+    })
+
+    Chart.init();
+
+    return Chart;
+  }
+
+
+  function barColorRange(data) {
+    const age = currentYear - data.age
+
+    if(data.value) {
+      if(age < 20) {
+        return '#197e80'
+      } else if (age < 40 && age > 19) {
+        return '#2fa8ab'
+      } else if (age < 60 && age > 39) {
+        return '#5ac5c2'
+      } else if (age < 80 && age > 59) {
+        return '#92d5d8'
+      } else {
+        return '#c6e8eb'
+      }
+    } else {
+      return '#ccc'
+    }
+  }
+
+
+
+  // const birthValue = document.querySelector('.birth-selector_value')
+  // const birthRange = document.querySelector('.birth-selector_slider')
+
+  // console.log(birthRange)
+
+  // birthValue.onchange = function() {
+  //   birthRange.value = this.value
+
+  //   if(this.value > 2015) {
+  //     birthValue.value = 2015
+  //   } else if (this.value < 1930) {
+  //     birthValue.value = 1930
+  //   }
+  // }
+
+  // birthRange.onchange = function() {
+  //   birthValue.value = this.value
+  // }
+
+  // console.log('woof')
+
+
+
+</script>
