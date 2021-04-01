@@ -5,10 +5,50 @@
   }
 
   .album img {
+    position: relative;
     max-width: 100%;
     width: 700px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
   }
+
+  .album-r fig::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 148px;
+    top: 0;
+    bottom: 0;
+    background-image: url("./../../assets/graphics/posts/19-album/vinyl.png");
+    background-size: contain;
+    background-repeat-x: no-repeat;
+  }
+
+  .album-l fig::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 148px;
+    top: 0;
+    bottom: 0;
+    background-image: url("./../../assets/graphics/posts/19-album/vinyl.png");
+    background-size: contain;
+    background-repeat-x: no-repeat;
+    transform: rotate(180deg);
+    margin-left: -80px;
+  }
+
+/*  .velvetGoldmine::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 148px;
+    top: 0;
+    bottom: 0;
+    background-image: url("./../../assets/graphics/posts/19-album/vinyl.png");
+    background-size: contain;
+    background-repeat-x: no-repeat;
+  }*/
 
   .londonMap {
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
