@@ -35,8 +35,9 @@
     ['0317', 'd'],
   ]
 
-
-  window.onload(makeTalkMap())
+  window.addEventListener('load', function () {
+    makeTalkMap()
+  })
 
   function makeTalkMap() {
     for (var i = 0; i < 529; i++) {
