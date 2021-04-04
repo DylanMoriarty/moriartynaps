@@ -20,8 +20,9 @@
 
   const CMlabelToggle = document.querySelector('.calling-labels')
   const CMlockToggle = document.querySelector('.calling-lock')
+  const CMcover = document.querySelector('.callingMap-cover')
   let CMlabelsVisible = false
-  let CMlock = false
+  let CMlock = true
 
   callingMap.on('load', function () {
     callingMap.on('mousemove', 'nearest-city', function (e) {
@@ -46,6 +47,14 @@
       }
     })
 
+    CMcover.addEventListener('click', ()=> {
+      hideCMCover()
+
+      CMlockToggle.innerHTML = 'Lock Map'
+      CMlockToggle.className = 'mbmap-btn calling-lock'
+      CMlock = false
+    })
+
     CMlabelToggle.addEventListener('click', ()=> {
       if (CMlabelsVisible) {
         callingMap.setLayoutProperty('city-centroid-point', 'visibility', 'none')
@@ -53,6 +62,7 @@
         callingMap.setLayoutProperty('city-centroid-voronoi', 'visibility', 'none')
 
         CMlabelToggle.innerHTML = 'Turn on guides'
+        CMlabelToggle.className = 'mbmap-btn calling-labels'
         CMlabelsVisible = false
       } else {
         callingMap.setLayoutProperty('city-centroid-point', 'visibility', 'visible')
@@ -60,12 +70,15 @@
         callingMap.setLayoutProperty('city-centroid-voronoi', 'visibility', 'visible')
 
         CMlabelToggle.innerHTML = 'Turn off guides'
+        CMlabelToggle.className = 'mbmap-btn mbmap-btn_active calling-labels'
         CMlabelsVisible = true
       }
     })
 
     CMlockToggle.addEventListener('click', ()=> {
       const CmapCont = document.querySelector('#callingMap > .mapboxgl-canvas-container')
+
+      hideCMCover()
 
       if (CMlock) {
         callingMap.boxZoom.enable();
@@ -77,6 +90,7 @@
         callingMap.touchZoomRotate.enable();
 
         CMlockToggle.innerHTML = 'Lock Map'
+        CMlockToggle.className = 'mbmap-btn calling-labels'
         CmapCont.style.cursor = 'grab'
         CMlock = false
       } else {
@@ -89,10 +103,13 @@
         callingMap.touchZoomRotate.disable();
 
         CMlockToggle.innerHTML = 'Unlock Map'
+        CMlockToggle.className = 'mbmap-btn mbmap-btn_active calling-labels'
         CmapCont.style.cursor = 'auto'
         CMlock = true
       }
     })
+
+    callingMap.resize()
   })
 
   function buildLetters(name, dir) {
@@ -139,5 +156,10 @@
 
       elem.appendChild(img)
     })
+  }
+
+  function hideCMCover() {
+    CMcover.style.opacity = 0
+    CMcover.style.pointerEvents = 'none'
   }
 </script>

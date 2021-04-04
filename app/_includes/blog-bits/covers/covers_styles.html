@@ -1,7 +1,16 @@
 <style>
+  .introalbum { 
+    overflow-x: hidden; 
+    margin-top: -10rem !important;
+  }
+
   .introalbum img {
     max-width: 100%;
     width: 800px !important;
+  }
+
+  .album {
+    margin-top: -8rem;
   }
 
   .album img {
@@ -176,7 +185,7 @@
     max-height: 700px;
     clear: both;
     box-shadow: 0 2px 16px rgb(0 0 0 / 80%);
-    margin: -6rem auto 0;
+    margin: -6rem auto 3rem;
   }
 
   .peelSlowly {
@@ -196,11 +205,27 @@
 
   .wowieZowie {
     position: absolute;
-    top: 48%;
-    left: calc(48% - 25px);
-    width: 50px;
-    height: 50px;
+    top: calc(48% - 20px);
+    left: calc(48% - 40px);
+    width: 80px;
+    height: 80px;
     cursor: zoom-in;
+    z-index: 99;
+  }
+
+  .bowieBolt {
+    position: absolute;
+    top: calc(48% - 20px);
+    left: calc(48% - 20px);
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .bowieBolt img {
+    box-shadow: none;
+    animation: slowRotate 1s infinite ease-in-out;
   }
 
   .sailor {
@@ -236,12 +261,25 @@
 
   .spaceMan {
     margin-top: -6rem;
+    margin-bottom: 2rem;
+  }
+
+  .beneathMap {
+    margin-top: 4rem;
   }
 
   @keyframes spinner {
     0% { transform: rotate();(0deg); }
     50% { transform: rotate(-180deg); }
     100% { transform: rotate(-359deg); }
+  }
+
+  @keyframes slowRotate {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(0deg); }
+    60% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
   }
 
   .mbmap-btns {
@@ -271,7 +309,33 @@
     background-color: rgba(0,0,0,0.08);
   }
 
+  .mbmap-btn_active {
+    border: 2px solid #333;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+  }
+
+  .mbmap-btn_active:hover {
+    background-color: rgba(0,0,0,0.8) !important;
+  }
+
   .darksyde-labels, .calling-labels {
     margin-right: 4px;
+  }
+
+  .darksyde-cover, .callingMap-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    transition: all 0.2;
+    cursor: pointer;
+  }
+
+  .darksyde-cover img, .callingMap-cover img {
+    margin-top: 2rem;
+    max-width: 90%;
   }
 </style>

@@ -1,7 +1,40 @@
 <script>
   const talkingCont = document.querySelector('.talking-map')
   const validSqrs = ['0000', '0001', '0002', '0003', '0100', '0101', '0102', '0103', '0200', '0201', '0202', '0203', '0300', '0301', '0302', '0303', '0501', '0620', '0809', '0919', '1112', '1310', '1513', '1517', '0502', '0621', '0810', '0920', '1113', '1311', '1514', '0503', '0622', '0811', '1001', '1114', '1312', '1515', '0504', '0701', '0812', '1002', '1115', '1313', '1516', '0505', '0702', '0813', '1003', '1116', '1314', '0506', '0703', '0814', '1004', '1117', '1315', '1604', '0507', '0704', '0815', '1005', '1201', '1402', '1605', '0508', '0705', '0816', '1006', '1202', '1403', '1606', '0509', '0706', '0817', '1007', '1203', '1404', '1607', '0510', '0707', '0818', '1008', '1204', '1405', '1608', '0511', '0708', '0819', '1009', '1205', '1406', '1609', '0512', '0709', '0820', '1010', '1206', '1407', '1610', '0513', '0710', '0900', '1011', '1207', '1408', '1611', '0521', '0611', '0711', '0901', '1012', '1208', '1409', '1612', '0520', '0712', '0902', '1013', '1209', '1410', '1613', '1614', '0601', '0713', '0903', '1014', '1210', '1411', '1616', '0602', '0714', '0904', '1015', '1211', '1412', '1617', '0603', '0715', '0905', '1016', '1212', '1413', '0604', '0717', '0906', '1017', '1213', '1414', '0605', '0718', '0907', '1018', '1019', '1118', '1218', '1316', '1317', '1416', '1417', '1214', '1415', '0606', '0719', '0908', '1101', '1215', '1503', '1707', '0607', '0720', '0909', '1102', '1216', '1504', '1708', '0608', '0721', '0910', '1103', '1217', '1505', '1713', '1710', '1901', '1902', '0609', '0801', '0911', '1104', '1302', '1506', '1716', '0610', '0802', '0912', '1105', '1303', '1507', '1717', '0612', '0803', '0913', '1106', '1304', '1508', '0613', '0804', '0914', '1107', '1305', '1509', '1808', '1809', '0614', '0805', '0915', '1108', '1306', '151', '', '1818', '0806', '0916', '1109', '1307', '1510', '1709', '1817', '0807', '0917', '1110', '1308', '1511', '0619', '0808', '0918', '1111', '1309', '1512']
-  const flipSquares = ['0919', '0710', '0503', '1018', '1513', '1605', '1613', '0720', '0609', '1107', '1305']
+  const flipSquares = ['0919', '0710', '0503', '1018', '1513', '1605', '1613', '0721', '0609', '1107', '1305', '0611', '0820', '0905', '1302', '0912', '1114']
+  const titleSquares = [
+    ['0106', 'm'],
+    ['0107', 'o'],
+    ['0108', 'r'],
+    ['0109', 'e'],
+    ['0111', 'm'],
+    ['0112', 'a'],
+    ['0113', 'p'],
+    ['0114', 's'],
+    ['0116', 'a'],
+    ['0117', 'b'],
+    ['0118', 'o'],
+    ['0119', 'u'],
+    ['0120', 't'],
+    ['0120', 't'],
+    ['0208', 'b'],
+    ['0209', 'u'],
+    ['0210', 'i'],
+    ['0211', 'l'],
+    ['0212', 'd'],
+    ['0213', 'i'],
+    ['0214', 'n'],
+    ['0215', 'g'],
+    ['0216', 's'],
+    ['0310', 'a'],
+    ['0311', 'n'],
+    ['0312', 'd'],
+    ['0314', 'f'],
+    ['0315', 'o'],
+    ['0316', 'o'],
+    ['0317', 'd'],
+  ]
+
 
   window.onload(makeTalkMap())
 
@@ -18,11 +51,21 @@
 
       const randomDeg = `${(Math.random() - 0.5) * 4}deg`
 
-      const checkValid = (validSqrs.includes(`${rowStr}${colStr}`) ? true : false)
-      const checkFlip = (flipSquares.includes(`${rowStr}${colStr}`) ? true : false)
+      const posStr = `${rowStr}${colStr}`
 
-      if (checkValid) {
-      }
+      const checkValid = (validSqrs.includes(posStr) ? true : false)
+      const checkFlip = (flipSquares.includes(posStr) ? true : false)
+      let checkTitle = false
+      let titleChar = ''
+
+      titleSquares.forEach((o) => {
+        if(o[0] == posStr) {
+          checkTitle = true
+          titleChar = o[1]
+        }
+      })
+
+      console.log(titleChar)
 
       if (checkValid && checkFlip) {
         // FLIP CONT
@@ -61,6 +104,33 @@
         staticImg.style.top = yPos
 
         talkingCont.append(staticImg)
+      } else if (checkTitle) {
+
+
+        const flipCont = document.createElement('div')
+        const flipInner = document.createElement('div')
+        const flipFront = document.createElement('div')
+        const flipBack = document.createElement('div')
+
+        const animationSet = Math.ceil(Math.random() * 6);
+
+        flipCont.className = `talkingSquare id_${rowStr}${colStr} flipContainer `
+        flipCont.style.transform = `rotate(${randomDeg})`
+        flipCont.style.left = xPos
+        flipCont.style.top = yPos
+
+        flipInner.className = `talkingSquare id_${rowStr}${colStr} flipInner flipInner_flip_8`
+
+        flipFront.className = `talkingSquare_front flipFront`
+        flipFront.style.backgroundImage = `url({{ site.baseurl }}/assets/graphics/posts/19-album/th/blank.jpg)`
+
+        flipBack.className = `talkingSquare_back flipBack`
+        flipBack.style.backgroundImage = `url({{ site.baseurl }}/assets/graphics/posts/19-album/alt/${titleChar}.jpg)`
+
+        flipInner.append(flipFront)
+        flipInner.append(flipBack)
+        flipCont.append(flipInner)
+        talkingCont.append(flipCont)
       } else {
         // EMPTY :,(
         const emptyCont = document.createElement('div')

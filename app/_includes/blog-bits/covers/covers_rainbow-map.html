@@ -1,8 +1,9 @@
 <script>
 const DSlabelToggle = document.querySelector('.darksyde-labels')
 const DSlockToggle = document.querySelector('.darksyde-lock')
+const DScover = document.querySelector('.darksyde-cover')
 let DSlabelsVisible = false
-let DSlock = false
+let DSlock = true
 
 window.addEventListener('load', function() {
   mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
@@ -10,7 +11,7 @@ window.addEventListener('load', function() {
   const darkSyde = new mapboxgl.Map({
     container: 'darksyde',
     style: 'mapbox://styles/dmoriarty/ckms0if2r0ras17se31m7lvoc',
-    zoom: 10.5,
+    zoom: 11.5,
     center: [0.1278, 51.5204],
     attributionControl: false,
     pitch: 55
@@ -33,14 +34,24 @@ window.addEventListener('load', function() {
       tweakLabels(rainbow, 'none')
 
       DSlabelToggle.innerHTML = 'Turn on labels'
+      DSlabelToggle.className = 'mbmap-btn darksyde-labels'
       DSlabelsVisible = false
     } else {
       tweakLabels(darkSyde, 'visible')
       tweakLabels(rainbow, 'visible')
 
       DSlabelToggle.innerHTML = 'Turn off labels'
+      DSlabelToggle.className = 'mbmap-btn darksyde-labels mbmap-btn_active'
       DSlabelsVisible = true
     }
+  })
+
+  DScover.addEventListener('click', ()=> { 
+    hideDSCover()
+
+    DSlockToggle.innerHTML = 'Lock Map'
+    DSlockToggle.className = 'mbmap-btn darksyde-lock'
+    DSlock = false
   })
 
   DSlockToggle.addEventListener('click', ()=> {
@@ -48,11 +59,14 @@ window.addEventListener('load', function() {
     const rainbowMapCont = document.querySelector('#rainbow > .mapboxgl-canvas-container')
     const darkSydeMapCont = document.querySelector('#darksyde > .mapboxgl-canvas-container')
 
+    hideDSCover()
+
     if (DSlock) {
       enableMap(darkSyde)
       enableMap(rainbow)
 
       DSlockToggle.innerHTML = 'Lock Map'
+      DSlockToggle.className = 'mbmap-btn darksyde-lock'
       rainbowMapCont.style.cursor = 'grab'
       darkSydeMapCont.style.cursor = 'grab'
       DSmapCont.setAttribute("pointer-events", "auto !important")
@@ -62,6 +76,7 @@ window.addEventListener('load', function() {
       disableMap(rainbow)
 
       DSlockToggle.innerHTML = 'Unlock Map'
+      DSlockToggle.className = 'mbmap-btn mbmap-btn_active darksyde-lock'
       rainbowMapCont.style.cursor = 'auto'
       darkSydeMapCont.style.cursor = 'auto'
       DSmapCont.setAttribute("pointer-events", "none")
@@ -100,5 +115,9 @@ function enableMap (map) {
   map.touchZoomRotate.enable();
 }
 
+function hideDSCover () {
+  DScover.style.opacity = 0
+  DScover.style.pointerEvents = 'none'
+}
 
 </script>
