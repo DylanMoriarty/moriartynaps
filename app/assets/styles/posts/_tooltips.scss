@@ -26,13 +26,20 @@
 .tooltiptext{
     transition: all 0.2s;
     display: none;
-    &:hover{
-      opacity: 1;
-      display: block;
-    }
+    pointer-events: none;
     img {
       max-width: 200px;
     }
+}
+
+.tooltip {
+  &:hover {
+    .tooltiptext {
+      opacity: 1;
+      display: block;
+      pointer-events: auto;
+    }
+  }
 }
 
 /* Tooltip text */

@@ -40,3 +40,40 @@
   margin-bottom: 2.5rem;
   @include media-query($mobile) { margin-bottom: 4rem; }
 }
+
+.inner-musicBox-contain {
+  position: relative;
+  padding: 0.25rem 0.75rem 0.75rem;
+  height: 20px;
+  font-size: 15px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    height: 250px;
+    padding-bottom: 0;
+  }
+}
+
+.inner-musicBox {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.inner-musicBox-labels {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.inner-musicBox-labels .music-box-gif_left, 
+.inner-musicBox-labels .music-box-gif_right {
+  margin-left: 0;
+  position: relative;
+  vertical-align: middle;
+}
