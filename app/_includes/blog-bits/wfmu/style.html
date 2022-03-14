@@ -28,11 +28,7 @@
     padding: 4rem 10%;
   }
 
-  @media only screen and (max-width: 600px) {
-    .show-text { display: none; }        
-  }
-
-  .show-title {
+  .wfmu-show-title {
     width:  auto;
     text-align:  center;
     line-height: 26px;
@@ -40,23 +36,49 @@
     margin-bottom: 8px;
   }
 
+  .wfmu-show-title-font {
+    font-family: 'Quicksand';
+    font-weight:  800;
+  }
+
+/*  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script" rel="stylesheet">
+*/
+
+  /*.collecticons-expand-top-right-after:after {
+    margin-left: 6px;
+    font-size: 14px;
+    opacity: 0.35;
+    content: "\EA07"
+  }*/
+
   .show-host {
+    font-family: Quicksand;
     font-style:  italic;
+    color:  #888;
     margin-bottom:  8px;
   }
 
+  .show-description {
+    margin-top:  14px;
+    font-family: Quicksand;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .show-text { padding-top: 20px; }
+  }
+
   @media only screen and (max-width: 700px) {
-    .show-title { margin-top: -12px; }        
+    .show-description {
+      display:  none;
+    }
   }
 
 /*
-      <h2 className="show-title">{{ include.show }}</h2>
+    <h2 className="show-title">{{ include.show }}</h2>
     </a>
     <p className="show-host">w/ {{ include.host }}</p>
     <p className="show-description">{{ include.descrip }}</p>
-
 */
-
 
   .blank-cd {
     z-index: -1;
