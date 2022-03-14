@@ -1,0 +1,82 @@
+<style>
+  .cd-container {
+    max-width: 900px;
+    width: 100%;
+    margin: -10rem auto 0;
+  }
+
+  .show-block {
+    display: flex;
+  }
+
+  .show-cd {
+    position: relative;
+    flex: 50%;
+    width: 50%;
+  }
+
+  .show-cd a {
+    border-bottom:  0;
+  }
+
+  .show-cd img { max-width: 100%; }
+
+  .show-text {
+    position: relative;
+    flex: 30%;
+    width: 30%;
+    padding: 4rem 10%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .show-text { display: none; }        
+  }
+
+  .show-title {
+    width:  auto;
+    text-align:  center;
+    line-height: 26px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .show-host {
+    font-style:  italic;
+    margin-bottom:  8px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .show-title { margin-top: -12px; }        
+  }
+
+/*
+      <h2 className="show-title">{{ include.show }}</h2>
+    </a>
+    <p className="show-host">w/ {{ include.host }}</p>
+    <p className="show-description">{{ include.descrip }}</p>
+
+*/
+
+
+  .blank-cd {
+    z-index: -1;
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%; 
+  }
+
+/*  .show-text__right { text-align: right; }
+*/
+/*  .wfmu-cd-sleeve {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+  }*/
+</style>
