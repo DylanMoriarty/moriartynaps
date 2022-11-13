@@ -6,7 +6,7 @@ date:   2022-11-11 00:0:01 +0100
 
 type: maps
 
-twit-img: "https://moriartynaps.org/assets/graphics/posts/24-foggy-spaces/twi-card.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/24-foggy-spaces/twit-card.jpg"
 
 soc-descrip: "The search for the next great album-inspired map pastiche"
 soc-url: "https://moriartynaps.org/foggy-spaces/"
