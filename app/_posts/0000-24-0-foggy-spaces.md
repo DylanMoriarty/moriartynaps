@@ -8,7 +8,7 @@ type: maps
 
 twit-img: "https://moriartynaps.org/assets/graphics/posts/24-foggy-spaces/twit-card.jpg"
 
-soc-descrip: "The search for the next great album-inspired map pastiche"
+soc-descrip: "Mental maps of youth & places once called home"
 soc-url: "https://moriartynaps.org/foggy-spaces/"
 soc-type: "article"
 soc-img: "https://moriartynaps.org/assets/graphics/posts/24-foggy-spaces/soc-card.jpg"
