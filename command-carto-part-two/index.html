@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Command Carto II – Make</title>
+  <meta name="description" content="								">
+
+  <link rel="canonical" href="https://moriartynaps.org/command-carto-part-two/">
+  <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/styles/main-a78c22e7cb.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/graphics/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/graphics/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/graphics/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/graphics/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/graphics/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/graphics/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> 
+
+  
+    <meta property="og:title" content="Command Carto II – Make" />
+  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DylanMoriarty">
+  <meta name="twitter:creator" content="@DylanMoriarty">
+  <meta name="twitter:title" content="Command Carto II – Make">
+
+  
+    <meta name="twitter:description" content="Smorgasbord of maps, illustrations, & musings">
+    <meta property="og:description" content="Smorgasbord of maps, illustrations, & musings" />
+  
+
+  
+    <meta property="og:url"content="https://moriartynaps.com" />
+  
+  <meta property="og:type"        content="" />
+  <meta property="og:title"       content="Command Carto II – Make" />
+  <meta property="og:image"       content="" />
+
+  <meta name="twitter:image" content="https://moriartynaps.org/assets/graphics/posts/7-command-two/twit-img.png">
+</head>
+
+
+<h1 class="site-title"><a href="../" class="no_underline">Moriarty Naps</a></h1>
+
+<div class="site-home">
+  
+<div class="nav-container nav-container__right">
+	<div class="nav-musicBox">
+		<iframe width="100%" height="200" src="https://www.youtube.com/embed/utw2oKUpHLs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="nav-container__tunes">
+    
+      <img src="../assets/graphics/posts/music-box.gif" class="music-box-gif music-box-gif_left" />
+  		<i>Hover for Companion tunes</i>
+      <img src="../assets/graphics/posts/music-box-r.gif" class="music-box-gif music-box-gif_right" />
+    
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="article-container">
+
+  <div class="article-gutter "></div>
+
+  <article class="article-content ">
+    <div class="article-header">
+      <div class="article-back"><a href="../" class="no_underline">&larr; back</a></div>
+      <h3 class="">Command Carto II – Make</h3>
+    </div>
+
+    
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/adventure.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<aside>
+  This is the second part of a series for Command Line Cartography. Miss part one? Worry not, you can read part one → <a href="https://moriartynaps.org/command-carto-part-one/" target="_blank">here</a>.
+</aside>
+
+<p>Welcome back!</p>
+
+<p>Last time we popped open our terminal and did some quick GIS work. As we saw at the end, the real benefit comes from chaining commands together. However, typing all that out in the terminal is inconvenient, and you don’t leave a history of commands for later.</p>
+
+<p>We want to yell “DO THE THING”, in so many words, and have it do the thing.</p>
+
+<p>Good news! This round we’re gonna learn how to do that by introducing <i class="collecticon collecticons-star"></i>Makefiles<i class="collecticon collecticons-star"></i>.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    1.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Making Camp
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>At this point I’d recommend getting a text editor to help write in. Text editors are fancy notepads that make coding more pleasant.</p>
+
+<p>I personally use <a href="https://www.sublimetext.com/" target="_blank">Sublime</a>, but there are lots of other good options – all free to download and use. If you work on a team, it’s best to see what your colleagues are using and start there.</p>
+
+<p>Also:</p>
+
+<ol>
+  <li>Make sure your terminal can run Make commands. You can test this by typing <code>make</code> into your terminal. If it returns the message: <code>make: *** No targets specificed...</code>, you're good. Otherwise, you may need to install additional <a href="https://stackoverflow.com/questions/1469994/using-make-on-osx" target="_blank">developer tools</a>.</li>
+  <li>New blog post, new package of files to help ya along. <a href="/assets/files/cli-carto-two-files.zip">Download this zip file (409kb)</a> s'il vous plaît.</li>
+  <li>Throw those files into a folder, and navigate your terminal to it.</li>
+  <li>Mentally picture your favorite meal or snack. Promise yourself that you'll go get said meal or snack after finishing this tutorial. Makefile syntax is frustrating and unforgiving. You'll have earned it.</li>
+</ol>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    2.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Make It So
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Make was created in 1976 as a means to give computer’s a task list of commands they can use to install programs and properly setup files. It’s still used, albeit mostly in software development. This format is <em>old</em>, but tried and true!</p>
+
+<p>Make gives us the ability to save terminal commands to a file we can then call from – as opposed to typing them in manually into the terminal, as we did in part one. That file is a <code class="highlighter-rouge">makefile</code>.</p>
+
+<p>In our Makefile, we write <span class="tooltip">
+	<strong>Tasks</strong><i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		In official documentation, this is called TARGET. I’ll explain why in the <em>next</em> installment. For now, don’t worry about that.
+	</span>
+</span></p>
+
+<p>. Think of each Task as a lil’ robot you can call to execute your series of commands. A Make task is formatted like so:</p>
+
+<div class="post-image inline-img__small ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/makebot.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>To call a task, you first save your Makefile to a folder. This file should just be called <code class="highlighter-rouge">makefile</code>, no extension or <span class="tooltip">
+	<strong>additional names needed</strong><i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		Of course, you <em>can</em> give it a name, but then you also have to type more when calling the tasks. For brevities sake, just having it be ‘makefile’ works well and good.
+	</span>
+</span>
+.</p>
+
+<p>If your terminal is directed to a folder containing a Makefile, you can call tasks from the terminal with: <code>make [task name]</code>. When called the commands for that task are run sequentially.</p>
+
+<h4 id="mike-alfa-kilo-echo">Mike… Alfa… Kilo… Echo…</h4>
+
+<p>We’re going to be alternating between your terminal and the Makefile throughout this tutorial. For the sake of clarity, code written in the <span class="code-makefile">purple boxes</span> is meant for a Makefile. Code in <span class="white-bg">white boxes</span> are meant to be entered into your terminal, just like last time.</p>
+
+<p>The following is a functional make command:</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/echo.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+	<code class="code-block code-makefile">echo-caynon:
+	echo "don't have a cow homer!"
+	echo "don't have a cow homer!!"
+	echo "don't have a cow homer!!!"</code>
+</div>
+
+<p>The <code>echo-caynon</code> task is included in the Makefile you downloaded. You can run it yourself by typing <code>make echo-caynon</code> in your terminal and hitting enter. Behold! It executes each line.</p>
+
+<p><code>echo</code> is a new command. You’ll see the terminal respond with whatever follows the command. If you open the makefile in your text editor, you should see exactly what gets echo’d!</p>
+
+<h4 id="familiar-functions">Familiar Functions</h4>
+
+<p>With this format, we can bake in the commands from our previous work into a task we can call in three words:</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/panda.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+	<code class="code-block code-makefile">pandaMap:
+	mapshaper countries.json \
+		-join native-red-pandas.csv keys=NAME,COUNTRY \
+		-filter '"yes".indexOf(PANDAS) &gt; -1' \
+		-clean \
+		-proj +init=EPSG:32645 \
+		-o countries-with-pandas.json
+	echo "finished"</code>
+</div>
+
+<p>This is also included, so run <code>make pandaMap</code> and sit back and enjoy watching your Makebot do all the work for you. <em>And so fast!</em></p>
+
+<p>The <code>\</code> become more important here. Without it each new line is interpreted as a new command, as you saw in echo-caynon. <code>\</code> tells the Makebot that the next line isn’t a new command, but rather a continuation of the previous line’s command. Everything will work if you typed it out one uninterrupted line, <em>but</em> that would make it rather hard to read. Your future self will thank present you for keeping things readable.</p>
+
+<h4 id="formatting">Formatting</h4>
+
+<p>Before we get to the meat of this post – a few formatting quirks.</p>
+
+<p>You can have as many tasks as ya wish in one Makefile. They just need to have unique names.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/spacebug.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>When Make fails, it is very bad about explaining what went wrong. If you get the vague error message: <code>makefile:25: *** missing separator.  Stop.</code>, you should check to make sure you used <strong>tab</strong> indentions instead of spaces.</p>
+
+<p>If that’s not the issue (<em>it will be 90% of the time</em>), I’ve found the fastest way to debug is to:</p>
+
+<ul>
+  <li>Temporarily undo the latest work to determine what new code is introducing the errors.</li>
+  <li>Test out new commands in one-off tasks before baking them in with other commands.</li>
+  <li>Make sure you saved! If you haven’t saved your changes, the file won’t have your updates in it.</li>
+</ul>
+
+<p>K. <em>Let’s GO</em>!</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    3.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Make a Map
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Let’s make a map of all the burn footprints from California wildfires for 2018. Our makefile will handle:</p>
+
+<ul>
+  <li>Downloading the fire perimeter data</li>
+  <li>Filtering the features</li>
+  <li>Dissolving the features</li>
+  <li>&amp; Clipping the data to California</li>
+</ul>
+
+<p>If you haven’t already, open “makefile” from the downloaded resources in your text editor.</p>
+
+<p>From this point on, none of the following tasks are in the included Makefile. You will need to add them to the provided Makefile.</p>
+
+<p>The commands should work as written. <em>But</em> if you need to double check against one that’s pre-written (<em>and works!</em>), you can find that <a href="https://gist.github.com/DylanMoriarty/d419d57b03f326d8dd4dd81c27ae3763" target="_blank">here</a>.</p>
+
+<h4 id="fetching-the-data">Fetching the Data</h4>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/fetch.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>The USGS does a great job providing up-to-date shapefiles for each and every wildfire perimeter as it develops. They also have a file that includes every perimeter shape for the year to date, which we could go get ourselves…</p>
+
+<p>…but we’re being lazy. Let’s tell our bot to go fetch it instead!</p>
+
+<div>
+  <code class="code-block">curl -O URL</code> 
+  <dd class="code-def"><span class="code-def-intro">stands for &#8594;</span> Client URL</dd>
+</div>
+
+<p>USGS hosts their data on a server called <a href="https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/" target="_blank">GeoMAC</a>. <code>curl</code> will look at whatever URL you put after the <code>-O</code>, and download it.</p>
+
+<aside>
+	The file we're downloading from GeoMAC is hefty: <b>174MB</b> zipped and nearly <b>270MB</b> unzipped. If that's an issue for you, instead of curling from GeoMAC replace the URL with: <i>https://moriartynaps.org/assets/files/2018_perimeters_dd83.zip.</i> This will download a reduced version of the file (9.6MB).
+</aside>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">fetch:
+	curl -O "https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/2018_perimeters_dd83.zip"</code> 
+</div>
+
+<p>Curl-ing has the nice feature of displaying how the download is going in the terminal. A lot of commands don’t give an indication of how long they’re taking to complete. In general, you’ll know a command is done when your cursor returns in the terminal. You can always exit a command in progress with <code class="highlighter-rouge">cntrl + c</code>.</p>
+
+<h4 id="unzipping-the-zip-file">Unzipping the .zip file</h4>
+
+<p>If you run <code>ls</code> in your terminal, you should now see the zip file listed. Let’s get those files out. But, one brief detour first –</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/unzip.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div>
+	<code class="code-block">@[ -d FOLDERNAME ] || mkdir FOLDERNAME</code> 
+	<dd class="code-def">Is the first statement true? If not than do second part.</dd>
+</div>
+
+<p>Unzipping this file is going to spit out a pile of shapefile files. Let’s keep things tidy by putting them into their own folder. This command tests if a folder exists, and if it doesn’t, it executes the <code>mkdir</code> command on the rightside of the ||.</p>
+
+<p>”||” is a logic operator, but don’t fret. We’ll only be using it to using it to create folders.</p>
+
+<div><code class="code-block">unzip -o "FILE" -d DESTINATION</code></div>
+
+<p>This will unzip the file. The text following <code>-d</code> will tell it where to save the file.</p>
+
+<p>You’ll often see dash &amp; letters following commands. They are shorthand for longer words, cut down for brevity. For <em>most</em> CLI libaries you can type <code>-h</code> to get a list of what those commands do. That’s your Try it with <code>unzip</code>.</p>
+
+<div><code class="code-block">unzip -h</code></div>
+
+<p>Put together those commands into a Makebot:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">unzip:
+	@[ -d data ] || mkdir data
+	unzip -o "2018_perimeters_dd83.zip" -d data/</code>
+</div>
+
+<p>To review, our first command checks to see if a folder named ‘data’ exists and if not makes one. Our second command unzips the zip file, and puts it in our ‘data’ folder. Spiffy.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/mb-filter.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="filtering">Filtering</h4>
+
+<p>The downloaded file has the perimeter from every wildfire in the U.S. for 2018. We don’t need info for what was happening on Florida, so we can filter out all states that aren’t California.
+Here’s a filter task:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">filter:
+	mapshaper data/2018_perimeters_dd83.shp \
+		-filter '"CA".indexOf(state) &gt; -1' \
+		-o data/perimeters_filtered.shp</code>
+</div>
+
+<p>It may take a second or a minute, but you should see a message “[filter] Retained 992 of 6,046 features” after running <code class="highlighter-rouge">make filter</code>.</p>
+
+<p>Filtering helps cut down the filesize considerably, but the output still contains multiple perimeters for each fire (they measure it daily). For our purposes we only want the whole burn area for each fire, so let’s dissolve the features.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/mb-dissolve.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="dissolve">Dissolve</h4>
+
+<div>
+	<code class="code-block">mapshaper INPUT -dissolve2 FIELD -o OUTPUT</code>
+</div>
+
+<p>The ‘FIELD’ is what we’re choosing to dissolve the features by. In this case the field “incidentna” (incident name) should do the trick.</p>
+
+<p>Translated into a Makebot task:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">dissolve:
+	mapshaper data/perimeters_filtered.shp \
+		-dissolve2 incidentna \
+		-o data/perimeters_dissolved.shp</code>
+</div>
+
+<p>Run <code class="highlighter-rouge">make dissolve</code> and now we have the overall fire perimeters. This will also take a hot minute to complete!</p>
+
+<p>Now we just need to makes sure none these fire perimeters cross state borders.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/mb-clipping.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="clipping">Clipping</h4>
+
+<div>
+	<code class="code-block">Mapshaper INPUT -clip CLIPBY -o OUTPUT</code>
+</div>
+
+<p>This will clip your INPUT file by the CLIPBY file and save it as OUTPUT.</p>
+
+<p>I provided a clipped version of California in the download package. We’ll use that as our CLIPBY file.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">clip:
+	mapshaper data/perimeters_dissolved.shp \
+		-clip California.geojson \
+		-o perimeters_2018.shp </code>
+</div>
+
+<p>Run <code class="highlighter-rouge">make clip</code> and we’re good.</p>
+
+<p>If you open up <code class="highlighter-rouge">perimeters_2018.shp</code> you should see we now have a shapefile that’s just the burn perimeters of California fires. Something like the black bits here:</p>
+
+<div class="post-image inline-img__small ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/fires-18.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="all-the-files">All the files!</h4>
+
+<p>You might have noticed that at each step we output to a new file. This is preferable to just overwriting the original file for a few reasons. For one, it makes debugging easier – you can always view the input file and see if something looks off.</p>
+
+<p>It’s important to never overwrite the original file if you can help it. That way, when you run your tasks the output will <em>always</em> be the same, and you won’t have to download new original files every time.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    4.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Bringing it altogether
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/factory.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>You can call Make tasks from other tasks in your Makefile. This lets us keep our tasks piecemeal, as we’ve been doing, while still letting everything get called from a sole call.</p>
+
+<p>Once we’ve run through all the individual tasks and know they’re working, we can call them all through a <span class="tooltip">
+	“factory”<i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		This is not official terminology. Just how I refer to these sorts of tasks.
+	</span>
+</span>
+ task.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">wildfire-factory:
+	make clean
+	make fetch
+	make unzip
+	make filter
+	make dissolve
+	make clip</code>
+</div>
+
+<p>Alas, I did sneak <em>one more task</em> into that.</p>
+
+<h4 id="cleanin-up">Cleanin’ Up</h4>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">clean:
+	rm -rf data/
+	rm -f 2018_perimeters_dd83.zip</code>
+</div>
+
+<p><code>rm</code> is the standard CLI operation to ‘remove’ a the file that follows. <code>-f</code> and <code>-rf</code> are ways to ‘force’ it, which will ignore non-existent files.</p>
+
+<p>This deletes the zip file and our data folder. This can be helpful for a few reasons: you save space on your computer, and you’ll know that your factory will run under the same conditions next time.</p>
+
+<p>When you’re using these commands, <em>always</em> explicitly state what you want deleted. <code>-rf</code> in particular can be dangerous if it’s used in a root folder with a catchall <code class="highlighter-rouge">*</code> or <code class="highlighter-rouge">.</code>. We can avert that danger by:</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/cleaning.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<ul>
+  <li>Don’t use these commands while you’re in your computer’s home folder.</li>
+  <li>Always following it with exactly what file/folder you want removed, no catchalls.</li>
+  <li>Only remove files you’ve fetched or created through your makefile. Things you can always recreate if need be.</li>
+</ul>
+
+<p>Add the above tasks to your file and run the <code>make wildfire-factory</code> task. Viola!</p>
+
+<p>If something goes awry with one of the tasks, you can always troubleshoot it by calling the problem issue on it’s own. Heck, you don’t have to pile everything together either. If you don’t want to fetch every time, for example, just don’t include it in your factory task.</p>
+
+<h4 id="all-in-one">All in One</h4>
+
+<p>&amp; again, there’s a million different ways to do this sort of GIS work. Once again, we could write this factory in one command:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">wildfire-factory:
+	rm -rf data/
+	rm -r 2018_perimeters-dd83.zip
+	rm 2018_perimeters_dd83.zip 
+	curl -O "https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/2018_perimeters_dd83.zip"
+	@[ -d data ] || mkdir data
+	unzip -o "2018_perimeters_dd83.zip" -d data/
+	Mapshaper data/2018_perimeters_dd83.shp \
+		-filter '"CA".indexOf(state) &gt; -1' \
+		-clip California.geojson \
+		-dissolve2 incidentna \
+		-o format=geojson data/perimeters_2018.json</code>
+</div>
+
+<p>Like I’ve said a bunch here tho, splitting it up has the benefit of making it easier to debug &amp; work through when you’re starting out. When you write these yourself, it’s entirely your call on how you organize things.</p>
+
+<h4 id="the-real-magic">The Real Magic</h4>
+
+<p>Let’s say you’re so excited by this newfound power that you want to see what the 2017 wildfire situation looked like.</p>
+
+<p>All you have to do is replace every instance of 2018 with 2017 in your Makefile, then run your factory command. Try it out! <em>Be amazed</em>.</p>
+
+<p>This format can take awhile to get used to – I still troubleshoot Google frequently. The good news is that you now have working commands for doing basic GIS operations. If you come across a job later that you need a CLIP task for, you already have a working blueprint.</p>
+
+<p>The world is yours to takeover with robots.</p>
+
+<div class="post-image inline-img__small ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/magic.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    5.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">ALL the Buildings
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Before we go, let’s build one more bot.</p>
+
+<div class="post-image inline-img__small ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/buildings.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>In 2017, <a href="https://github.com/Microsoft/USBuildingFootprints" target="_blank">Microsoft released a dataset</a> with all of the buildings in the United States. They have it free for you to download (nice!), but only as geojsons. That’s a lovely format – but when you’re working with 2gb geojsons QGIS will start hemorrhaging. Let’s make a bot that downloads the file for us and makes a quick conversion to the easier-to-parse shapefile.</p>
+
+<p>First thing first, we’ll want to make sure there’s a folder for the data.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data</code>
+</div>
+
+<p>The URL we target for downloading is <em>https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/Wisconsin.zip</em>.</p>
+
+<p>This is perfect for us, because the URL is based on the state we want. If you change Wisconsin there to Idaho you’ll hit a file for Idaho instead. This consistency is the best.</p>
+
+<h4 id="variables">Variables</h4>
+
+<p>In a Makefile, there are two places you can create variables. The first place is typed in the document itself, along the lines of:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">VARIABLE="value"</code>
+</div>
+
+<p>Where VARIABLE can be any ol’ declarative you want to use. ‘CAT’, ‘GLISSRIFFER’, ‘OTTOVONSCHWEINSTEIGER’, etc. would work just as well. For Makefiles, I tend you write my variables in UPPERCASE to help keep them visually distinct. When it comes time to write a bot, you can now reference that variable via:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">testbot:
+	echo $(VARIABLE)</code>
+</div>
+
+<p>The $() bit tells Make that the name inside is a variable it should be looking for, and not just text (or a command) that reads VARIABLE.</p>
+
+<p>The second place to assign a value to a variable is when we call the command. Delete the line in your Makefile that assigned “value” to VARIABLE.</p>
+
+<p>Now run the following command in your terminal…</p>
+
+<div>
+<code class="code-block">make testbot VARIABLE="different value"</code>
+</div>
+
+<p>…and our testbot task will echo that value!</p>
+
+<p>We can take advantage of this and Microsoft’s fortunate URL structure to make our fetch code grab a STATE we choose when we call the task. In this case, we’ll curl: <em>https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip</em>.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data</code>
+</div>
+
+<p>Try running that with the state of your choice <em>that isn’t California, Florida, Ohio or Texas</em>! You should be rewarded with a downloaded file. I’ll explain about California below.</p>
+
+<div>
+<code class="code-block">make getFootprints STATE=Wisconsin</code>
+</div>
+
+<h4 id="processing">Processing</h4>
+
+<p>That grabs the zip file. Now let’s add an unzip command to the task:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data
+	unzip data/$(STATE).zip -d data</code>
+</div>
+
+<p>Because we’re still in the same task, $(STATE) will still be understood as whichever value you called with.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/ohno.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>Let’s convert it a shapefile. If you run mapshaper on it’s lone self, you may get an error: “<em>FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed — process out of memory</em>”.</p>
+
+<p>These files are stinkin’ <strong>huge</strong>, which means that we need to allocate more computin’ power to Mapshaper to finish the task. <code>--max-old-space-size=8192 `which mapshaper`</code> will do this.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data
+	unzip data/$(STATE).zip -d data
+	node --max-old-space-size=8192 `which mapshaper` data/$(STATE).geojson -o format=shapefile data/$(STATE).shp</code>
+</div>
+
+<p>If you run this, it may take five to ten minutes, but during that time you can go do other things. Make breakfast. Do some jumping jacks. <a href="https://www.youtube.com/watch?v=BxRzzm-mjCE" target="_blank">Make yourself a fancy cocktail.</a></p>
+
+<h4 id="cleaning-house">Cleaning House</h4>
+
+<p>Finally, given that we only wanted the Shapefile, it can be nice to remove some of the other files we gathered on the way.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data
+	unzip data/$(STATE).zip -d data
+	node --max-old-space-size=8192 `which mapshaper` data/$(STATE).geojson -o format=shapefile data/$(STATE).shp
+	rm data/$(STATE).geojson</code>
+</div>
+
+<p>Try that out with a different state! Should work well. Now you can quickly pull down that building data and have it in an already accessible format to clip from.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/ogr.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="texas-california-taming-the-beast">Texas, California: Taming the Beast</h4>
+
+<p>Finally, I mentioned above to not download the data for the largest states. That’s because <em>even with</em> the increase in processing power, Mapshaper may not be able to fully convert those files.</p>
+
+<p>Luckily, with CLI GIS, we can mix and match the libraries we’re using to accomplish whatever task we set out for. In this case, we can use <strong>Ogr2Ogr</strong> to make the conversion instead– and this one works.</p>
+
+<p>If you have QGIS installed, you already have Ogr2Ogr. However, if you don’t have QGIS and just want it you can download Ogr2Ogr along with the rest of GDAL <a href="https://www.kyngchaos.com/software/archive/#gdal">here</a>.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">largerFile:
+	ogr2ogr -nlt POLYGON -skipfailures $(STATE).shp $(STATE).geojson OGRGeoJSON</code>
+</div>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    6.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">That's All For Now
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/7-command-two/do-the-thing.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p><em>Congrats</em>! Writing terminal commands this way can be a real struggle bus. I hope you got some good stuff out of this, and have some ideas for processes ya want to codify in a makebot.</p>
+
+<p>This is just scratching the surface on what Makefiles can do! In the next chapter, I’ll go over how to write more generalized tasks and loops. <em>Stay tuned.</em></p>
+
+<p><br /></p>
+
+<p><i>– D.M., <code>make sleepTime LOCATION="brooklyn"</code><br />
+<span class="post-date">June 8th, 2019</span></i></p>
+
+<div class="notes">
+  <p>If any parts of this seem super confusing, or you just have any other questions feel free to send a bird my way on <a href="https://twitter.com/DylanMoriarty" target="_blank">Twitter</a>.</p>
+
+  <p>Once again, all the kudos to Matthew Bloch for his continued work on Mapshaper.</p>
+
+  <p>Also to <a href="https://twitter.com/mojodna" target="_blank">Seth Fitzsimmons</a> and <a href="https://twitter.com/jscarto" target="_blank">Joshua Stevens</a> who both gave talks on Make during PCD over the past two years.</p>
+
+  <p><a href="https://www.youtube.com/watch?v=Ubefm4qUT7g" target="_blank">Joshua's talk</a> does a great job of highlighting the potential strength of working directly with CLI libraries. Meanwhile <a href="https://www.youtube.com/watch?v=qq7iVStVjPU" target="_blank">Seth's talk</a> is a blitz of shell commands that'll make your head spin. After working with make for a bit, you'll undoubtedly pick up useful commands from it tho.</p>
+
+  <p>And finally a quick kudos to <a href="https://twitter.com/dereklieu" target="_blank">Derek Lieu</a> for introducing me to this approach for GIS work way back in 2016.</p>
+</div>
+
+
+    <div class = "article-foot">
+        <div class="article-back"><a href="../" class="no_underline">&larr; Home</a></div>
+    </div>
+
+  </article>
+</section>
+
+<script>
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+      define(function() {
+        return factory(root);
+      });
+    } else if (typeof exports === 'object') {
+      module.exports = factory;
+    } else {
+      root.echo = factory(root);
+    }
+  })(this, function (root) {
+  
+    'use strict';
+  
+    var echo = {};
+  
+    var callback = function () {};
+  
+    var offset, poll, delay, useDebounce, unload;
+  
+    var isHidden = function (element) {
+      return (element.offsetParent === null);
+    };
+    
+    var inView = function (element, view) {
+      if (isHidden(element)) {
+        return false;
+      }
+  
+      var box = element.getBoundingClientRect();
+      return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+    };
+  
+    var debounceOrThrottle = function () {
+      if(!useDebounce && !!poll) {
+        return;
+      }
+      clearTimeout(poll);
+      poll = setTimeout(function(){
+        echo.render();
+        poll = null;
+      }, delay);
+    };
+  
+    echo.init = function (opts) {
+      opts = opts || {};
+      var offsetAll = opts.offset || 0;
+      var offsetVertical = opts.offsetVertical || offsetAll;
+      var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+      var optionToInt = function (opt, fallback) {
+        return parseInt(opt || fallback, 10);
+      };
+      offset = {
+        t: optionToInt(opts.offsetTop, offsetVertical),
+        b: optionToInt(opts.offsetBottom, offsetVertical),
+        l: optionToInt(opts.offsetLeft, offsetHorizontal),
+        r: optionToInt(opts.offsetRight, offsetHorizontal)
+      };
+      delay = optionToInt(opts.throttle, 250);
+      useDebounce = opts.debounce !== false;
+      unload = !!opts.unload;
+      callback = opts.callback || callback;
+      echo.render();
+      if (document.addEventListener) {
+        root.addEventListener('scroll', debounceOrThrottle, false);
+        root.addEventListener('load', debounceOrThrottle, false);
+      } else {
+        root.attachEvent('onscroll', debounceOrThrottle);
+        root.attachEvent('onload', debounceOrThrottle);
+      }
+    };
+  
+    echo.render = function (context) {
+      var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+      var length = nodes.length;
+      var src, elem;
+      var view = {
+        l: 0 - offset.l,
+        t: 0 - offset.t,
+        b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+        r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+      };
+      for (var i = 0; i < length; i++) {
+        elem = nodes[i];
+        if (inView(elem, view)) {
+  
+          if (unload) {
+            elem.setAttribute('data-echo-placeholder', elem.src);
+          }
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+          }
+          else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+            elem.src = src;
+          }
+  
+          if (!unload) {
+            elem.removeAttribute('data-echo');
+            elem.removeAttribute('data-echo-background');
+          }
+  
+          callback(elem, 'load');
+        }
+        else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + src + ')';
+          }
+          else {
+            elem.src = src;
+          }
+  
+          elem.removeAttribute('data-echo-placeholder');
+          callback(elem, 'unload');
+        }
+      }
+      if (!length) {
+        echo.detach();
+      }
+    };
+  
+    echo.detach = function () {
+      if (document.removeEventListener) {
+        root.removeEventListener('scroll', debounceOrThrottle);
+      } else {
+        root.detachEvent('onscroll', debounceOrThrottle);
+      }
+      clearTimeout(poll);
+    };
+  
+    return echo;
+  
+  });
+</script>
+<script>
+    echo.init({
+      offset: 2500,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+        //console.log(element, 'has been', op + 'ed')
+      }
+    });
+</script>
+
+
+</div>
+
+<footer id="footer">
+	<div class="centerme">©2022 <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a></div>
+</footer>
+
+<script src="/assets/scripts/vendor-0d6388c26b.js"></script>
+<script src="/assets/scripts/bundle-337d45c1b4.js"></script>
