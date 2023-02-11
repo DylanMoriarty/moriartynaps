@@ -36,5 +36,6 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - run: chmod +x ./.build_scripts/deploy.sh
       - run: chmod +x ./.build_scripts/lint.sh
+      - run: npm install
       - run: npm test
       - run: npm run build
