@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Command Line Carto III – Loops</title>
+  <meta name="description" content="								">
+
+  <link rel="canonical" href="https://moriartynaps.org/command-carto-part-three/">
+  <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/styles/main-af49830b16.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/graphics/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/graphics/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/graphics/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/graphics/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/graphics/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/graphics/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> 
+
+  
+    <meta property="og:title" content="Command Line Carto III – Loops" />
+  
+
+  <!-- <meta name="twitter:card" content="summary"></meta> -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DylanMoriarty">
+  <meta name="twitter:creator" content="@DylanMoriarty">
+  <meta name="twitter:title" content="Command Line Carto III – Loops">
+
+  
+    <meta name="twitter:description" content="The search for the next great album-inspired map pastiche">
+    <meta property="og:description" content="The search for the next great album-inspired map pastiche" />
+  
+
+  
+    <meta property="og:url"         content="https://moriartynaps.org/covers/" />
+  
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Command Line Carto III – Loops" />
+  <meta property="og:image"       content="https://moriartynaps.org/assets/graphics/posts/19-album/soc-img.jpg" />
+
+  <meta name="twitter:image" content="https://moriartynaps.org/assets/graphics/posts/19-album/twi-img.jpg">
+</head>
+
+
+<h1 class="site-title"><a href="../" class="no_underline">Moriarty Naps</a></h1>
+
+<div class="site-home">
+  
+<div class="nav-container nav-container__right">
+	<div class="nav-musicBox">
+		<iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PL1KbmvLItolRmdKx3C1Fe5rulq7rW5JWH" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="nav-container__tunes">
+    
+      <img src="../assets/graphics/posts/music-box.gif" class="music-box-gif music-box-gif_left" />
+  		<i>Hover for Companion tunes</i>
+      <img src="../assets/graphics/posts/music-box-r.gif" class="music-box-gif music-box-gif_right" />
+    
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="article-container">
+
+  <div class="article-gutter "></div>
+
+  <article class="article-content ">
+    <div class="article-header">
+      <div class="article-back"><a href="../" class="no_underline">&larr; back</a></div>
+      <h3 class="">Command Line Carto III – Loops</h3>
+    </div>
+
+    
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/intro.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<aside>This is the third part of a series for Command Line Cartography. Miss the previous ones? Worry not. <a href="https://moriartynaps.org/command-carto-part-one/#shop" target="_blank">Part one</a> will introduce you to the terminal and what the command line is. In <a href="http://localhost:3000/command-carto-part-two/" target="_blank">Part two</a> you'll be meet makefiles.</aside>
+
+<p>So far, we’ve just worked explicitly – telling our makefile what our input is, and what the output should be. For all the reasons aforementioned, this can be plenty handy in of itself. However, the real ✨ shine ✨ behind programmatic carto work is being able to run your workflow over any amount of files in one go.</p>
+
+<p>Instead of working on a single file, looping allows us to iterate over any number of em’, all with the same commands.</p>
+
+<p>Some use cases:</p>
+<ul>
+  <li>Project, style, and crop multiple raster images</li>
+  <li>Work with datasets (such as state data) consistently without the need to merge them together or repeat workflows manually</li>
+  <li>Splitting a stupidly large shapefile by attributes and work with the output</li>
+</ul>
+
+<p>…and that’s just focusing on GIS-specific tasks. All of the stuff covered in this tutorial will be applicable for <em>any</em> CLI tool. If you wanted to, say:</p>
+
+<ul>
+  <li>Download fifty files from an FTP site without manually clicking on each link</li>
+  <li>Run <a href="https://imagemagick.org/script/index.php" target="_blank">ImageMagick</a> over a folder of images</li>
+  <li>Convert a folder of static images to a video or using <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg</a> or a gif</li>
+</ul>
+
+<p>…you’ll learn all the tools here to do so.</p>
+
+<p>OK - enough salesmanship. Let’s get loopy.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    1.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">The Tools
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/for-loop-build.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>If you’ve followed along with <a href="https://moriartynaps.org/command-carto-part-one/" target="_blank">part one</a> and <a href="https://moriartynaps.org/command-carto-part-two/" target="_blank">two</a>, you already have most of the tools we’ll use this round.</p>
+
+<p>The new kid on the block is going to be <strong>GDAL</strong>. If you’ve used QGIS, chance is good you’ve used GDAL incidentally. In fact, if you have QGIS installed, you already have it installed as well. To test:</p>
+
+<ul>
+  <li>Open your terminal</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">gdalwarp --h</code> and hit enter.</li>
+  <li>If your terminal responds with <code class="language-plaintext highlighter-rouge">Usage: gdalwarp [--help-general] [--formats]...</code>, you’re good to go! Otherwise, you can <a href="https://gdal.org/download.html" target="_blank">install it from here.</a></li>
+</ul>
+
+<p>Finally, here’s some files you’ll need for the rest of the tutorial. Letsago!</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    2.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Loops!
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/for-loop.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>Loops are code that run X times. Where X can be any number greater than one - and hopefully smaller than infinity. Giving a computer a task that goes on indefinitely won’t fry it, but it will stall the poor thing out. We can manually tell our makebot to do a command five times,</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">manualrun:
+  echo run
+  echo run
+  echo run
+  echo run
+  echo run</code>
+  <div class="code-ref">1.1</div>
+</div>
+
+<p><em>or</em> we could create a loop that runs five times.</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">looprun:
+  for num in 1 2 3 4 5; do \
+    echo run; \
+  done</code>
+  <div class="code-ref">1.2</div>
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">for</code> is the magic command we’ll get to know. The basic setup is:</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">for X in Y; do \
+  COMMANDS; \
+done</code>
+</div>
+
+<p><em>The syntax is very important here.</em> Like with mapshaper, a for loop needs to technically be delivered in one line. The <code class="language-plaintext highlighter-rouge">\</code>’s allow us to break the line for our human eyeball’s sake, but computer’s won’t register them.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">;</code> desiginate a break in the code without it being a new line. This lets us write multiple commands that the computer can correctly interpret as:</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">for X in Y; do \
+  RUN COMMAND ONE; \
+  THEN RUN COMMAND TWO; \
+  THEN RUN COMMAND THREE; \
+done</code>
+</div>
+
+<p>Most importantly is the very first line, <code class="language-plaintext highlighter-rouge">for X in Y</code>. In our first example, this was written as for <code class="language-plaintext highlighter-rouge">num</code> in <code class="language-plaintext highlighter-rouge">1 2 3 4 5</code>. Y can be any set of strings seperated by spaces. The length of this list is how many times our loop will run, once for each item in it.</p>
+
+<p>X is the variable name we can use to call those strings in the looped commands. So long as it isn’t already defined, you can name it whatever you’d like. Inside the loop we can then refer to whichever item from Y we’re on by calling <code class="language-plaintext highlighter-rouge">$$X</code>, which is whatever you declared X as. Try running:</p>
+
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/fruit.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">fruitloop:
+  for fruit in banana apple pear; do \
+    echo $$fruit; \
+  done</code>
+</div>
+
+<p>This should spit back the list of fruits. Let’s try a more practical application, using filenames instead of good food.</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">shpToJson:
+  for file in colorado newyork wisconsin; do \
+    mapshaper example-one/$$file.shp \
+      -format geojson \
+      -o example-one/$$file.json; \
+  done</code>
+</div>
+
+<p>Makefiles demand a strict syntax, but thankfully they’re smart enough to deliniate our variable <code class="language-plaintext highlighter-rouge">file</code> from the rest of the words it’s surrounded by. This means instead it will correctly parse our file locations as <code class="language-plaintext highlighter-rouge">example-one/newyork.shp</code> and <code class="language-plaintext highlighter-rouge">example-one/wisconsin.shp</code>.</p>
+
+<p>As shown above, we can also use that variable as many times as we want within the loop. And it can be part of the path name, instead of the full path. With a minor tweak to the above script, we can create an output folder for the processed json’s to be saved into, then save em’ there. All while keeping the input safe and unchanged.</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">shpToJson_Cleaner:
+  mkdir -p example-one-output
+  for file in colorado newyork wisconsin; do \
+    mapshaper example-one/$$file.shp \
+      -format geojson \
+      -o example-one-output/$$file.json; \
+  done</code>
+</div>
+
+<p>You may be saying “Boy howdy, writing out each filename in the <code class="language-plaintext highlighter-rouge">for</code> line seems annoying.” And you’d be right. Next up, how simplify that.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    3.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Writing a List
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/boy-howdy.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>In part two we learned how to declare variables and use them in later commands. Following suit, we could rewrite our last command with a variable:</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">FILES=colorado newyork wisconsin
+
+listStateData_Variable:
+  for file in $(FILES); do \
+    echo $$file; \
+  done</code>
+</div>
+
+<p>This is mildly better, but still not very viable for folders with oodles of files. Make has some in-built functions that can help.</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">FILES_WILDCARD=$(wildcard example-one/*)
+
+listStateData_Wildcard:
+  for file in $(FILES_WILDCARD); do \
+    echo $$file; \
+  done</code>
+</div>
+
+<p>Much like how we call variables, you can call functions with <code class="language-plaintext highlighter-rouge">$(FUNCTION arguments)</code>. In this case <code class="language-plaintext highlighter-rouge">$(wildcard pattern)</code> is a function built into Make that returns a space seperated list of files that match the pattern we give it. Convinent!</p>
+
+<p>That should return a list for files in the folder <em>example-one</em>. You could work with that, but because the variable is the whole path, we won’t be able to save our output to a different file. Not to mention this lists out <em>every</em> file in the folder, so ack, it’s also returning the jsons we made earlier.</p>
+
+<p>This also butts heads with shapefiles, given each one shapefile comes in packs of 4-6 separate files with differing extensions. More functions to the rescue;</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">FILES=$(wildcard example-one/*.shp)</code>
+</div>
+
+<p>Will return just files that end in <code class="language-plaintext highlighter-rouge">.shp</code>. So, <code class="language-plaintext highlighter-rouge">example-one/colorado.shp example-one/newyork.shp example-one/wisconsin.shp</code></p>
+
+<p>While,</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">FILES=$(notdir $(wildcard example-one/*.shp))</code>
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">notdir</code>, i.e. ‘<em>Not Directory</em>’, will ensure the output is <em>just</em> the filename: <code class="language-plaintext highlighter-rouge">colorado.shp newyork.shp wisconsin.shp</code>.</p>
+
+<p>Finally,</p>
+
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/files.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">FILES=$(basename $(notdir $(wildcard example-one/*.shp)))</code>
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">basename</code> will drop any extensions, giving us a clean <code class="language-plaintext highlighter-rouge">colorado newyork wisconsin</code> list. We can always write out folders and extensions in the loop, so this way we free ourselves up to find our input and put our output anywhere, and as anything!</p>
+
+<p>Putting it altogether we have:</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">FILES_BASE=$(basename $(notdir $(wildcard example-one/*.shp)))
+
+shpToJsonVariable:
+	mkdir -p example-one-output
+		for file in $(FILES_BASE); do \
+			mapshaper example-one/$$file.shp \
+			-format geojson \
+			-o example-one-output/$$file.json; \
+	done</code>
+</div>
+
+<p>Worth noting, if you chain multiple commands together Make won’t check the variable until it’s called in a command. This means you can set this variable to check a folder that doesn’t exisit yet. So long as the folder you’re searching contains files by the time you call it, you’re good.</p>
+
+<hr />
+
+<p>That works well and good for a list of files. Sometimes we want to loop over a specified list of text instead though. For example, looping over a series of URL’s for downloading files.</p>
+
+<p>The first step for that would be to generate a list of the strings you want as a CSV. There’s a million ways to do that, but most straightforward might be to write them out in Excel or Google Sheets, then download them.</p>
+
+<p>Whichever way you get your file of strings, we can assign it’s contents to a variable like so:</p>
+
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/23-command-three/cat.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">LIST=example-one/list.csv
+CONTENT=`cat $(LIST)`</code>
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">cat</code> is short for concatenate. If used on any file, it’ll return the contents of the file. The <code class="language-plaintext highlighter-rouge">`</code> tell Make that it should understand the inside text as a command and not as a string.</p>
+
+<p>Just like with our previous example, this can be used to pass along a list of items to our for loop.</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">LIST=example-one/list.csv
+CONTENT=`cat $(LIST)`
+
+shpToJson_List:
+  mkdir -p example-one-output
+  for file in $(CONTENT); do \
+    mapshaper example-one/$$file.shp \
+      -format geojson \
+      -o example-one-output/$$file.json; \
+  done</code>
+</div>
+
+<p>Now let’s see some loops in action.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    4.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Weather Animations
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<aside><i>Preface</i> | there's 100% better ways to achieve the results of the following tutorial. This is intended to highlight what you can achieve with loops while also introducing command line workflows for raster gis files. For best approaches for making weather animations, look to QGIS's Temporal Controller or Google Earth Engine.</aside>
+
+<aside><i>Second preface</i> | this tutorial is going to download buckets of data onto your computer. Make sure you've got a solid internet connection and a couple gigabytes to spare.</aside>
+
+<p>Strap in, we’re going to write commands to:</p>
+
+<ol>
+	<li>Download the past 12 hours worth of weather data</li>
+	<li>Convert each hour's worth of data into a geotiff</li>
+	<li>Style each hour's data according to the temperature</li>
+	<li>Merge those images into a single gif</li>
+<!-- 	<li>Overlay an image over that</li> -->
+</ol>
+
+<h4 id="the-fetch">The fetch</h4>
+
+<p>The data we’re going to use is NOAA’s Real-Time Mesoscale Analysis. This file is a wealth of weather data.</p>
+
+<p>Of ways to access it, we’re going to use NOAA’s FTP site where they post it each day. Now <em>you could</em> manually click on each file to download. No one’s got that kinda time tho.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">URLS=`cat second-example/links.txt`
+
+  fetcher:
+	mkdir -p data
+	cd data
+	for url in $(URLS); do \
+		curl -O $$url; \
+	done</code>
+</div>
+
+<p>Hopefully you recognize the bits and pieces there. We’re:</p>
+<ul>
+  <li>Parsing a list of links, saved as a TXT file</li>
+  <li>Creating a folder for the data,</li>
+  <li>Entering the folder</li>
+  <li>For each URL in that txt file, downloading it</li>
+</ul>
+
+<p>Worth noting you can do variations of this for batch downloading anything hittable with a web URL. If you wanted to download that Microsoft building dataset for the entire U.S., you could write a txt file with all 50 states in it and loop on that. Lots of possibilities here!</p>
+
+<h4 id="extracting-the-data">Extracting the Data</h4>
+
+<p>So now we have a folder full of mystery .grib2 files. Grib stands for ‘GRIdded Binary’ and is something you’ll encounter with weather datasets fairly often. Think of it as a brief case full of raster images. Each image is given a number, or a band, of which we can pull it out with.</p>
+
+<p>You’re already familiar with bands if you’ve done anything with RGB images. In that color space, every color is three plates of red, green, and blue values smashed together. Here, instead of being smashed together, each band is it’s own layer.</p>
+
+<p>RTMA has a bucket-load of layers, each a different weather phenomena. We only need one layer, so like a jenga block we want to pull just one out and save it as something more manageable; a good ol’ geotiff. It’s worth checking out what the other layers contain as well though! RTMA is a wealth of weather data.</p>
+
+<p>Here’s how we dig <em>just</em> the raster we want from the pile.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">FILES=$(basename $(notdir $(wildcard data/*)))
+
+exportBand:
+	mkdir -p band
+	for f in $(FILES); do \
+		gdal_translate -b 9 data/$$f -of Gtiff band/$$f.tiff; \
+	done</code>
+</div>
+
+<p>The new command up there is <code class="language-plaintext highlighter-rouge">gdal_translate</code>. Unlike Mapshaper, gdal comes in bits and pieces. Translate is the goto for converting rasters between formats, and resampling/resizing. You can read all about what this and all other <a href="https://gdal.org/programs/gdal_translate.html" target="_blank">gdal commands can do here</a>.</p>
+
+<p>Our command we’re running on each file here reads:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Call gdal_translate, pick band 3, open [INPUT], save it as a Geotiff, and save it to [OUTPUT]</code></p>
+
+<p>This will work for any grib file, but <strong>be warned</strong>! There is no consistency between different grib sources. RTMA will be consistent, but if you try this out on a different NOAA dataset, the bands may represent different things. Some may have two bands, others dozens. Windspeed may be located on band 8 in some, and 3 in others. It’s imperative you find an explainer file for the dataset you’re using to ensure you’re using the right image!</p>
+
+<p>For RTMA, we can see what the bands translate on <a href="https://developers.google.com/earth-engine/datasets/catalog/NOAA_NWS_RTMA">Google Earth Engine here</a>. We’re going to make a temperature map, so we want the third band.</p>
+
+<p>This is also where our pickiness with the file names pays off. By only using the file name and no extension or directory, we can use it for both the input and output. Running the above command, you should now have a data folder that’s sitting pretty and a shiny new band folder with the same amount of files, but in geotiff. Non-destructive repeatable GIS hoorah!</p>
+
+<h4 id="optional-projections">(Optional) Projections</h4>
+
+<p>RTMA by default comes down in a variation on Albers U.S. making this step optional. Projections will come up a lot tho! So it’ll probably be worth seeing that quick.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">
+exportBand:
+  mkdir -p proj
+  for f in $(FILES); do \
+    gdal_warp -s_srs "+" -t_srs "+" band/$$f.tiff proj/$$f.tiff; \
+  done</code>
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">gdal_warp</code> is the library that handles taking an image that’s in one projection and warp it into another.</p>
+
+<p><code class="language-plaintext highlighter-rouge">s_srs</code> is the source, or the original files projection. <code class="language-plaintext highlighter-rouge">t_srs</code> is the target, or desired</p>
+
+<h4 id="color-by-the-numbers">Color by the Numbers</h4>
+
+<p>The final flavor of gdal we’ll encounter today is <code class="language-plaintext highlighter-rouge">gdaldem</code>, which let’s us apply a color gradient to a geotiff based on it’s values. The command name hints this functionality was meant for coloring elevation models, but it works fine for this too!</p>
+
+<p>You will need another external file, a guide for gdaldem to color-by-the-numbers by. I’ve prepped one for you already, but if you’re curious welcome ya</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">colorize:
+	mkdir -p colorize
+	for f in $(FILES); do \
+		gdaldem color-relief  band/$$f.tiff color.txt colorize/$$f.tif; \
+	done
+  </code>
+</div>
+
+<h4 id="animating">Animating</h4>
+
+<p>With that, we’ve got our frames for the animation. We just need to put it all together. Once you can stop caring about the georeference, you can leave gdal behind and kick open <code class="language-plaintext highlighter-rouge">ImageMagick</code>. This is a library that handles</p>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">gif:
+	convert -delay 15 -loop 0 $(DATS2) gif.gif
+</code>
+</div>
+
+<h4 id="overlay-geographic-data">Overlay geographic data</h4>
+
+<div class="code-block-fix">
+  <code class="code-block code-makefile">composite:
+	convert gif.gif \
+		-coalesce \
+		null: overlay/overlay.png \
+		-gravity center \
+		-layers composite \
+		result.gif</code>
+</div>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    5.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Final Notes
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>As I’ve tried to stress throughout these tutorials, Make is an old language. But a lot of the concepts covered here are universal to programming languages. Python and Node are fantastic alternatives to using this antiquated language - but the general workflow and way of thinking about CLI Carto should translate well.</p>
+
+<p><br /></p>
+
+<p><i>– D.M., live from Bryant Park<br />
+<span class="post-date">April 26th, 2022</span></i></p>
+
+<div class="notes">
+  <p>If you've read this and notice any parts that still seem super confusing, or just have any other questions feel free to reach out to me on Twitter!</p>
+  <p>Quick kudos to Matthew Bloch for both creating Mapshaper and sparking a huge interest in it in me during his talk at NACIS in 2017.</p>
+  <p>And finally another quick kudos to <a href="https://twitter.com/dereklieu">Derek Lieu</a> for inadvertently introducing me to this approach for GIS work.</p>
+</div>
+
+
+    <div class = "article-foot">
+        <div class="article-back"><a href="../" class="no_underline">&larr; Home</a></div>
+    </div>
+
+  </article>
+</section>
+
+<script>
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+      define(function() {
+        return factory(root);
+      });
+    } else if (typeof exports === 'object') {
+      module.exports = factory;
+    } else {
+      root.echo = factory(root);
+    }
+  })(this, function (root) {
+  
+    'use strict';
+  
+    var echo = {};
+  
+    var callback = function () {};
+  
+    var offset, poll, delay, useDebounce, unload;
+  
+    var isHidden = function (element) {
+      return (element.offsetParent === null);
+    };
+    
+    var inView = function (element, view) {
+      if (isHidden(element)) {
+        return false;
+      }
+  
+      var box = element.getBoundingClientRect();
+      return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+    };
+  
+    var debounceOrThrottle = function () {
+      if(!useDebounce && !!poll) {
+        return;
+      }
+      clearTimeout(poll);
+      poll = setTimeout(function(){
+        echo.render();
+        poll = null;
+      }, delay);
+    };
+  
+    echo.init = function (opts) {
+      opts = opts || {};
+      var offsetAll = opts.offset || 0;
+      var offsetVertical = opts.offsetVertical || offsetAll;
+      var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+      var optionToInt = function (opt, fallback) {
+        return parseInt(opt || fallback, 10);
+      };
+      offset = {
+        t: optionToInt(opts.offsetTop, offsetVertical),
+        b: optionToInt(opts.offsetBottom, offsetVertical),
+        l: optionToInt(opts.offsetLeft, offsetHorizontal),
+        r: optionToInt(opts.offsetRight, offsetHorizontal)
+      };
+      delay = optionToInt(opts.throttle, 250);
+      useDebounce = opts.debounce !== false;
+      unload = !!opts.unload;
+      callback = opts.callback || callback;
+      echo.render();
+      if (document.addEventListener) {
+        root.addEventListener('scroll', debounceOrThrottle, false);
+        root.addEventListener('load', debounceOrThrottle, false);
+      } else {
+        root.attachEvent('onscroll', debounceOrThrottle);
+        root.attachEvent('onload', debounceOrThrottle);
+      }
+    };
+  
+    echo.render = function (context) {
+      var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+      var length = nodes.length;
+      var src, elem;
+      var view = {
+        l: 0 - offset.l,
+        t: 0 - offset.t,
+        b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+        r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+      };
+      for (var i = 0; i < length; i++) {
+        elem = nodes[i];
+        if (inView(elem, view)) {
+  
+          if (unload) {
+            elem.setAttribute('data-echo-placeholder', elem.src);
+          }
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+          }
+          else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+            elem.src = src;
+          }
+  
+          if (!unload) {
+            elem.removeAttribute('data-echo');
+            elem.removeAttribute('data-echo-background');
+          }
+  
+          callback(elem, 'load');
+        }
+        else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + src + ')';
+          }
+          else {
+            elem.src = src;
+          }
+  
+          elem.removeAttribute('data-echo-placeholder');
+          callback(elem, 'unload');
+        }
+      }
+      if (!length) {
+        echo.detach();
+      }
+    };
+  
+    echo.detach = function () {
+      if (document.removeEventListener) {
+        root.removeEventListener('scroll', debounceOrThrottle);
+      } else {
+        root.detachEvent('onscroll', debounceOrThrottle);
+      }
+      clearTimeout(poll);
+    };
+  
+    return echo;
+  
+  });
+</script>
+<script>
+    echo.init({
+      offset: 2500,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+        //console.log(element, 'has been', op + 'ed')
+      }
+    });
+</script>
+
+
+</div>
+
+<footer id="footer">
+	<div class="centerme">©2022 <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a></div>
+</footer>
+
+<script src="/assets/scripts/vendor-0d6388c26b.js"></script>
+<script src="/assets/scripts/bundle-807fbb466a.js"></script>

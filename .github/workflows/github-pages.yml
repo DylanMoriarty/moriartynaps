@@ -1,41 +1,19 @@
-name: Deploy page
+name: Deploy the damn thing
 on:
   push:
     branches:
       - develop
 jobs:
-  build:
-    runs-on: '${{ matrix.os }}'
-    strategy:
-      matrix:
-        os:
-          - ubuntu-18.04
-        node-version:
-          - 14.x
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies (Ubuntu)
-        if: runner.os == 'Linux'
-        run: |-
-          sudo apt-get update
-          sudo apt-get install -y g++-4.8
-      - name: 'Set up Node.js ${{ matrix.node-version }}'
-        uses: actions/setup-node@v1
-        with:
-          node-version: '${{ matrix.node-version }}'
-      - name: Cache multiple paths
-        uses: actions/cache@v2
-        with:
-          path: |-
-            node_modules
-            bundle/cache
-          key: '${{ runner.os }}-${{ hashFiles(''TODO'') }}'
-      - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.3' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: chmod +x ./.build_scripts/deploy.sh
-      - run: chmod +x ./.build_scripts/lint.sh
-      - run: npm install
-      - run: npm test
-      - run: npm run build
+    - uses: actions/checkout@master
+
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: master
+        FOLDER: _site
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

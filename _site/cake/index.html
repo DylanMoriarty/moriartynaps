@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Cake Maps!</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="https://moriartynaps.org/cake/">
+  <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/styles/main-af49830b16.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/graphics/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/graphics/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/graphics/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/graphics/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/graphics/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/graphics/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> 
+
+  
+    <meta property="og:title" content="Cake Maps!" />
+  
+
+  <!-- <meta name="twitter:card" content="summary"></meta> -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DylanMoriarty">
+  <meta name="twitter:creator" content="@DylanMoriarty">
+  <meta name="twitter:title" content="Cake Maps!">
+
+  
+    <meta name="twitter:description" content="A dream of a better world where the land was textured cake. Coastlines of frosting, sweets dressing the edges of the world, with sprinkles doing whatever the hell they want.">
+    <meta property="og:description" content="A dream of a better world where the land was textured cake. Coastlines of frosting, sweets dressing the edges of the world, with sprinkles doing whatever the hell they want." />
+  
+
+  
+    <meta property="og:url"         content="https://moriartynaps.org/cake/" />
+  
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cake Maps!" />
+  <meta property="og:image"       content="https://moriartynaps.org/assets/graphics/posts/17-cake/soc-img.jpg" />
+
+  <meta name="twitter:image" content="https://moriartynaps.org/assets/graphics/posts/17-cake/twi-img.jpg">
+</head>
+
+
+<h1 class="site-title"><a href="../" class="no_underline">Moriarty Naps</a></h1>
+
+<div class="site-home">
+  
+<div class="nav-container nav-container__right">
+	<div class="nav-musicBox">
+		<iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PL1KbmvLItolSw7fyztjtKOLyaHjE4PhLu" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="nav-container__tunes">
+    
+      <img src="../assets/graphics/posts/music-box.gif" class="music-box-gif music-box-gif_left" />
+  		<i>Hover for Companion tunes</i>
+      <img src="../assets/graphics/posts/music-box-r.gif" class="music-box-gif music-box-gif_right" />
+    
+	</div>
+</div>
+
+
+
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+
+
+
+
+
+
+
+
+
+<section class="article-container">
+
+  <div class="article-gutter article-gutter_middle"></div>
+
+  <article class="article-content article-content_middle">
+    <div class="article-header">
+      <div class="article-back"><a href="../" class="no_underline">&larr; back</a></div>
+      <h3 class="">Cake Maps!</h3>
+    </div>
+
+    <style>
+.co-byline {
+  position: absolute;
+  font-style: italic;
+  color: #999;
+  font-size: 18px;
+  margin-top: -5rem;
+}
+
+.co-byline a {
+  color: #999;
+}
+
+.co-byline a:visited {
+  color: #999;
+}
+
+.cakemap {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.mapbox-logo {
+  display: none;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapbox-improve-map {
+  display: none;
+}
+
+.mapboxgl-ctrl-compass {
+  display: none;
+}
+
+p {
+  text-align: left;
+}
+
+.innershadow {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.choco-border {
+  position: relative;
+}
+
+.choco-border-corner {
+  position: absolute;
+  width: 300px;
+  z-index: 9999;
+}
+.choco-border-corner__tl {
+  width: 350px;
+  top: -5rem;
+  left: 1rem;
+}
+.choco-border-corner__tr {
+  top: -5rem;
+  right: 1rem;
+}
+.choco-border-corner__bl {
+  bottom: -6rem;
+  left: 1rem;
+}
+.choco-border-corner__br {
+  bottom: -6rem;
+  right: 1rem;
+}
+
+.choco-border-side {
+  position: absolute;
+  z-index: 2;
+  margin: 0 10%;
+}
+.choco-border-side__t {
+  background: linear-gradient(to left, black 20%, #3d2c00 50%, black 80%);
+  margin: 0 10%;
+  width: 80%;
+  height: 46px;
+  top: -23px;
+}
+.choco-border-side__l {
+  background: linear-gradient(0deg, black 20%, #3d2c00 50%, black 80%);
+  width: 46px;
+  height: 100%;
+  right: -23px;
+}
+.choco-border-side__r {
+  background: linear-gradient(0deg, black 20%, #3d2c00 50%, black 80%);
+  width: 46px;
+  height: 100%;
+  left: -23px;
+}
+.choco-border-side__b {
+  background: linear-gradient(to left, black 20%, #3d2c00 50%, black 80%);
+  margin: 0 10%;
+  width: 80%;
+  height: 46px;
+  bottom: -23px;
+}
+
+.choco-border-side__t:after, .choco-border-side__b:after {
+  position: absolute;
+  content: "";
+  background: #a49649;
+  background: linear-gradient(to left, #a49649 15%, gold 30%, #fcffac 50%, gold 70%, #a49649 85%);
+  height: 1px;
+  width: 100%;
+  top: 6px;
+  left: 0;
+}
+.choco-border-side__t:before, .choco-border-side__b:before {
+  position: absolute;
+  content: "";
+  background: #a49649;
+  background: linear-gradient(to left, #a49649 15%, gold 30%, #fcffac 50%, gold 70%, #a49649 85%);
+  height: 1px;
+  width: 100%;
+  bottom: 6px;
+  right: 0;
+}
+
+.choco-border-side__l:after, .choco-border-side__r:after {
+  position: absolute;
+  content: "";
+  background: #a49649;
+  background: linear-gradient(0deg, #a49649 15%, gold 30%, #fcffac 50%, gold 70%, #a49649 85%);
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 6px;
+}
+.choco-border-side__l:before, .choco-border-side__r:before {
+  position: absolute;
+  content: "";
+  background: #a49649;
+  background: linear-gradient(0deg, #a49649 15%, gold 30%, #fcffac 50%, gold 70%, #a49649 85%);
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 6px;
+}
+
+.choco-border-legend {
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.velvet-border {
+  position: relative;
+}
+
+.velvet-border-corner {
+  position: absolute;
+  width: 240px;
+  z-index: 15;
+}
+.velvet-border-corner__tl {
+  top: -5rem;
+  left: 1rem;
+}
+.velvet-border-corner__tr {
+  top: -5rem;
+  right: 1rem;
+}
+.velvet-border-corner__bl {
+  bottom: -6rem;
+  left: 1rem;
+}
+.velvet-border-corner__br {
+  bottom: -6rem;
+  right: 1rem;
+}
+
+.velvet-border-side {
+  position: absolute;
+  z-index: 10;
+  margin: 0 10%;
+}
+.velvet-border-side__t {
+  background-image: url("./../../assets/graphics/posts/17-cake/velvet-frost.png");
+  background-repeat: repeat-x;
+  background-size: 120px 60px;
+  margin: 0 10%;
+  width: 80%;
+  height: 60px;
+  top: -23px;
+}
+.velvet-border-side__l {
+  background-image: url("./../../assets/graphics/posts/17-cake/velvet-frost-v.png");
+  background-repeat: repeat-y;
+  background-size: 60px 120px;
+  width: 60px;
+  height: 100%;
+  right: -23px;
+}
+.velvet-border-side__r {
+  background-image: url("./../../assets/graphics/posts/17-cake/velvet-frost-v.png");
+  background-repeat: repeat-y;
+  background-size: 60px 120px;
+  width: 60px;
+  height: 100%;
+  left: -23px;
+}
+.velvet-border-side__b {
+  background-image: url("./../../assets/graphics/posts/17-cake/velvet-frost.png");
+  background-repeat: repeat-x;
+  background-size: 120px 60px;
+  margin: 0 10%;
+  width: 80%;
+  height: 60px;
+  bottom: -23px;
+}
+
+.velvet-border-legend {
+  position: absolute;
+  z-index: 9999;
+  width: 450px;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.velvet-border-legend-top {
+  position: absolute;
+  z-index: 15;
+  width: 450px;
+  top: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.vanilla-border {
+  position: relative;
+}
+
+.vanilla-border-corner {
+  position: absolute;
+  width: 240px;
+  z-index: 9999;
+}
+.vanilla-border-corner__tl {
+  top: -5rem;
+  left: 1rem;
+}
+.vanilla-border-corner__tr {
+  top: -5rem;
+  right: 1rem;
+}
+.vanilla-border-corner__bl {
+  bottom: -6rem;
+  left: 1rem;
+}
+.vanilla-border-corner__br {
+  bottom: -6rem;
+  right: 1rem;
+}
+
+.vanilla-border-side {
+  position: absolute;
+  z-index: 10;
+  margin: 0 10%;
+}
+.vanilla-border-side__t {
+  background: linear-gradient(to left, #261e0f 15%, #746446 50%, #362f22 85%);
+  margin: 0 10%;
+  width: 80%;
+  height: 46px;
+  top: -23px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+.vanilla-border-side__l {
+  background: linear-gradient(0deg, #261e0f 15%, #746446 50%, #362f22 85%);
+  width: 46px;
+  height: 100%;
+  right: -23px;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+.vanilla-border-side__r {
+  background: linear-gradient(0deg, #261e0f 15%, #746446 50%, #362f22 85%);
+  width: 46px;
+  height: 100%;
+  left: -23px;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+.vanilla-border-side__b {
+  background: linear-gradient(to left, #261e0f 15%, #746446 50%, #362f22 85%);
+  margin: 0 10%;
+  width: 80%;
+  height: 46px;
+  bottom: -23px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.vanilla-border-side__t:after, .vanilla-border-side__b:after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  top: 6px;
+  left: 0;
+}
+.vanilla-border-side__t:before, .vanilla-border-side__b:before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  bottom: 7px;
+  right: 0;
+}
+
+.vanilla-border-side__l:after, .vanilla-border-side__r:after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 6px;
+}
+.vanilla-border-side__l:before, .vanilla-border-side__r:before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  right: 6px;
+}
+
+.vanilla-border-legend {
+  position: absolute;
+  z-index: 9999;
+  width: 450px;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.mapboxgl-popup {
+  pointer-events: none;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 13px;
+  box-shadow: 0 1px 4px black;
+  padding: 7px 9px 9px;
+  pointer-events: none;
+}
+
+.popup-hed {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 -40px 0 20px;
+  width: 100%;
+  max-width: calc(100% - 40px);
+}
+.popup-hed__paul:after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #8fc9cb;
+}
+.popup-hed__prue:after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e8d575;
+}
+.popup-hed__mary:after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f07c8d;
+}
+.popup-hed__unknown:after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.popup-mid {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.popup-link {
+  font-size: 12px;
+  font-style: italic;
+  pointer-events: all;
+}
+</style>
+
+<p><span class="co-byline">Baked with <a href="https://twitter.com/hurricanevicky" target="_blank">Vicky Johnson-Dahl</a> &amp; <a href="https://twitter.com/KatieKowalsky" target="_blank">Katie Kowalsky</a></span></p>
+
+<div class="post-image inline-img ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/17-cake/cake.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>Four years ago, a triumvirate of frivolous cartographers came up with an idea that challenged the norms of both baking and cartography in a series of maps that became a shibboleth, simply described in an excited exclamation: “<strong>CAKE MAP!</strong>”</p>
+
+<p>This barbaric yawp united us in a shared delusion; a dream of a better world where the land was textured cake. Coastlines of frosting, sweets dressing the edges of the world, sprinkles doing whatever the hell they want.</p>
+
+<p>This dream became mired, not just from technical issues, but the realities of our non-pastry lives. Yet the dream persisted in casual discussions on how a renderer could support that many embedded textures or whether scanning cake would work. <span style="color: #999;"><em>(It does!)</em></span></p>
+
+<p>The silver lining that we’ve found this year has been extra time for baking, watching the Great British Baking Show, and doing mapping challenges to keep our wits and fill our homes with those good aromas.</p>
+
+<p>So friends, welcome to this episode of:</p>
+
+<p><em>The Great Cartographer’s Culinary Mapping Show!</em></p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    1.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">The Signature
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>The chemistry of chocolate reminds bakers that this well-loved ingredient is to be feared and respected. Tempering has been known to bring people to tears, the process of controlled crystallization of chocolate is difficult and requires a precision that we take for granted while watching baking shows, biting our nails in anxious glee hoping a chocolate sculpture doesn’t melt or collapse.</p>
+
+<p>The story of a fermented seed from Mexico, now mostly produced in West Africa, sent to Europe and North America for its final blending stages, and then sent globally packaged as chocolate chips, bars, cocoa powder is the story of globalization. An ingredient cultivated by the Olmec people in Mesoamerica, now available in every corner store.</p>
+
+<p><br />
+<br /></p>
+
+  </article>
+</section>
+
+<div class="post-image post-image__full">
+  <div class= "full-bleed">
+    <div class="choco-border">
+      <img class="choco-border-corner choco-border-corner__tl" src="../assets/graphics/posts/17-cake/choco-top-left.png"/>
+      <img class="choco-border-corner choco-border-corner__tr" src="../assets/graphics/posts/17-cake/choco-top-right.png"/>
+      <img class="choco-border-corner choco-border-corner__bl" src="../assets/graphics/posts/17-cake/choco-bottom-left.png"/>
+      <img class="choco-border-corner choco-border-corner__br" src="../assets/graphics/posts/17-cake/choco-bottom-right.png"/>
+      <div class="choco-border-side choco-border-side__t"></div>
+      <div class="choco-border-side choco-border-side__l"></div>
+      <div class="choco-border-side choco-border-side__r"></div>
+      <div class="choco-border-side choco-border-side__b"></div>
+      <img class="choco-border-legend" src="../assets/graphics/posts/17-cake/choco-legend.png"></img>
+      <div class="innershadow"></div>
+      <div id="chocolate-map" class="cakemap"></div>
+    </div>
+  </div>
+</div>
+
+<section class="article-container article-cotainer__within">
+  <article class="article-content article-content_middle">
+
+<p><br /></p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    2.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">The Technical Challenge
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Similar to its chocolate counterpoint, vanilla is also a beloved flavor that derives from cultivation in Mesoamerica. The harvesting of the fruit <em>Vanilla planifolia</em> is distributed between it’s place of origin, Mexico, to Indonesia and Madagascar. This cherished spice is used everywhere in baking, a subtle and beautiful flavor that fits perfectly in patisserie as well as giant sheet cake.</p>
+
+<p>As Americans who live in a post-Funfetti world, we recognize that there’s no better way to celebrate major events quite like a confetti cake. We’ve opted to map the 2020 election by county below. &amp; also want to tip our hats to our pioneering peers at Bloomberg who have <a href="https://twitter.com/anmccartney/status/1060112326009991168" target="_blank">trail-blazed</a> <a href="https://twitter.com/rjnskl/status/1325116410582937603" target="_blank">carto-confectionaries</a> for live election results.</p>
+
+<p>As map folk, we’re obligated to remind you land doesn’t vote, even when it’s made of sugar.</p>
+
+<p><br />
+<br />
+<br />
+<br /></p>
+
+  </article>
+</section>
+
+<div class="post-image post-image__full">
+  <div class= "full-bleed">
+    <div class="vanilla-border">
+      <img class="velvet-border-corner velvet-border-corner__tl" src="../assets/graphics/posts/17-cake/vanilla-top-left.png" />
+      <img class="velvet-border-corner velvet-border-corner__tr" src="../assets/graphics/posts/17-cake/vanilla-top-right.png" />
+      <img class="velvet-border-corner velvet-border-corner__bl" src="../assets/graphics/posts/17-cake/vanilla-bottom-left.png" />
+      <img class="velvet-border-corner velvet-border-corner__br" src="../assets/graphics/posts/17-cake/vanilla-bottom-right.png" />
+      <div class="vanilla-border-side vanilla-border-side__t"></div>
+      <div class="vanilla-border-side vanilla-border-side__l"></div>
+      <div class="vanilla-border-side vanilla-border-side__r"></div>
+      <div class="vanilla-border-side vanilla-border-side__b"></div>
+      <div class="innershadow"></div>
+      <img class="vanilla-border-legend" src="../assets/graphics/posts/17-cake/vanilla-legend.png"></img>
+      <div id="vanilla-map" class="cakemap"></div>
+    </div>
+  </div>
+</div>
+
+<section class="article-container article-cotainer__within">
+  <article class="article-content article-content_middle">
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    3.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">The Showstopper
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>For the final ‘bake’ of <em>The Great Cartographer’s Culinary Mapping Show!</em>, we pay homage to the most delicious stress reliever of the past decade. This show both delights and confounds, watching amateur bakers take on feats that can be tear-inducing. <span style="color: #999;"><em>(Seriously, making folks bake ice cream in a tent without A/C!?)</em></span></p>
+
+<p>A base of classic red velvet cake with vanilla buttercream sits topped with sugar stars, mapping the origins of the technical challenges from the shows 11 series. Color coding by the iconic judge who chose each particular technical reveals some interesting patterns.</p>
+
+<p><br />
+<br /></p>
+
+  </article>
+</section>
+
+<div class="post-image post-image__full">
+  <div class= "full-bleed">
+    <div class="velvet-border">
+      <img class="velvet-border-corner velvet-border-corner__tl" src="../assets/graphics/posts/17-cake/velvet-top-left.png" />
+      <img class="velvet-border-corner velvet-border-corner__tr" src="../assets/graphics/posts/17-cake/velvet-top-right.png" />
+      <img class="velvet-border-corner velvet-border-corner__bl" src="../assets/graphics/posts/17-cake/velvet-bottom-left.png" />
+      <img class="velvet-border-corner velvet-border-corner__br" src="../assets/graphics/posts/17-cake/velvet-bottom-right.png" />
+      <div class="velvet-border-side velvet-border-side__t"></div>
+      <div class="velvet-border-side velvet-border-side__l"></div>
+      <div class="velvet-border-side velvet-border-side__r"></div>
+      <div class="velvet-border-side velvet-border-side__b"></div>
+      <div class="innershadow"></div>
+      <img class="velvet-border-legend" src="../assets/graphics/posts/17-cake/velvet-legend.png" />
+      <img class="velvet-border-legend-top" src="../assets/graphics/posts/17-cake/velvet-legend-top.png" />
+      <div id="red-velvet-map" class="cakemap"></div>
+    </div>
+  </div>
+</div>
+
+<section class="article-container article-cotainer__within">
+  <article class="article-content article-content_middle">
+
+<p><br />
+<br /></p>
+
+<p>Paul Hollywood, the ever-present judge whose handshake has a become coveted award in the tent, has the most geographic spread of challenges, possibly due to breads being his realm.</p>
+
+<p>A critique of the show has always been around how to incorporate a more global perspective with recipes being selected. While it’s namesake declares it definitively ‘British’, baking is <em>human</em> and a <em>global</em> profession. Recipes devised in Parisian patisseries or those past down generations are united in their use of worldly flavors as well as tradition, it’d be better to see that better reflected.</p>
+
+<p>Our pursuit of sweets is ubiquitous tradition that deserves highlight – we think, and hope you agree, in some maps. Some cake maps.</p>
+
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q'
+
+  const chocoMap = new mapboxgl.Map({
+    container: 'chocolate-map',
+    style: 'mapbox://styles/dmoriarty/ckhfth6cq0n2c19pjgdmdn3vr',
+    zoom: 1,
+    center: [0, 25],
+    attributionControl: false
+  })
+
+  const vanillaMap = new mapboxgl.Map({
+    container: 'vanilla-map',
+    style: 'mapbox://styles/dmoriarty/ckhftapww0tdd19qkudiz1igt',
+    zoom: 3,
+    center: [-97.14,40.93],
+    attributionControl: false
+  })
+
+  const velvetMapCont = document.querySelector('#red-velvet-map')
+
+  const velvetMap = new mapboxgl.Map({
+    container: 'red-velvet-map',
+    style: 'mapbox://styles/dmoriarty/ckhe7ils1084g19qxb313js6r',
+    zoom: 1,
+    center: [0, 30],
+    attributionControl: false
+  })
+
+  velvetMap.on('load', function () {
+    const velvetPopup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+    })
+
+    velvetMap.on('mouseenter', 'gbbo-data', function (e) {
+      velvetMap.getCanvas().style.cursor = 'pointer';
+       
+      const coordinates = e.features[0].geometry.coordinates.slice()
+      const props = e.features[0].properties
+
+      const hed = `<div class="popup-hed popup-hed__${props.Challenger}">${props.Challenge}</div>`
+      const location = `<div class="popup-mid">${props.Location}</div>`
+      const details = `<a class="popup-link" href="${props["wiki link"]}" target="_blank">more information</a>`
+
+      const content = hed + location + details
+
+      velvetPopup.setLngLat(coordinates).setHTML(content).addTo(velvetMap);
+    })
+    
+    velvetMapCont.addEventListener("mouseleave", function () {
+      velvetMap.getCanvas().style.cursor = '';
+      velvetPopup.remove();
+    })
+  })
+
+</script>
+
+<p class="beneathMap">
+  <i>Cake Map!</i><br>
+  <i>-Dylan, Katie, Vicky<br>
+  <span class="post-date">November, 25th 2020</span></i>
+</p>
+
+<div class="notes">
+  <p>All maps made w/ <a href="https://www.mapbox.com/about/maps/" target="_blank">Mapbox</a>, using <a href="http://www.openstreetmap.org/about/" target="_blank">OpenStreetMap</a> data. <a href="https://apps.mapbox.com/feedback/?owner=dmoriarty&id=ckfxb2lit031w19sxw3sauitl&access_token=pk.eyJ1IjoiZG1vcmlhcnR5IiwiYSI6Ikd3T29EOWMifQ.-DKJ4ernht84AZmc6Bk51Q" target="_blank">Improve the maps!</a></p>
+
+  <p>All cakes baked by Vicky Johnson-Dahl, using flour, eggs, butter, etc...</p>
+
+  <p><a href="https://twitter.com/hurricanevicky">Vicky</a> is a cartographer who regularly does fantastic talks at NACIS, my personal favorite being "<a href="https://www.youtube.com/watch?v=j4y-LXyTfF8&ab_channel=NACIS" target="_blank">How Far is a Sandwich</a>" where she discusses scale bars through measuring the total distance of sandwiches she ate in 2017. Checkout her twitter feed for a fantastic series being done for the 30dayMapChallenge too!
+
+  <p><a href="https://twitter.com/KatieKowalsky" target="_blank">Katie Kowalsky</a> is a kickass Product Manager, once of Mapzen (R.I.P.). She doesn't make maps as much these days, but is <a href="https://twitter.com/KatieKowalsky/status/1284216592365006848" target="_blank">growing a small jungle</a> and keeps a foot in these waters thru work and a burgeoning love of urban planning.<p>
+
+  <p>Election data is from AP and the chocolate consumption data from Statista. Information on the bake off we compiled.</p>
+
+  <p>Vicky's cakes were photographed and in some cases <i>scanned</i>, then a combo of Photoshop and Illustrator were used to make em' into repeatable textures. I've done a quick walkthrough on how to do that you can <a href="https://www.youtube.com/watch?v=MqJtQDAl4aY" target="_blank">view here</a>.</p>
+</div>
+
+
+
+    <div class = "article-foot">
+        <div class="article-back"><a href="../" class="no_underline">&larr; Home</a></div>
+    </div>
+
+  </article>
+</section>
+
+<script>
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+      define(function() {
+        return factory(root);
+      });
+    } else if (typeof exports === 'object') {
+      module.exports = factory;
+    } else {
+      root.echo = factory(root);
+    }
+  })(this, function (root) {
+  
+    'use strict';
+  
+    var echo = {};
+  
+    var callback = function () {};
+  
+    var offset, poll, delay, useDebounce, unload;
+  
+    var isHidden = function (element) {
+      return (element.offsetParent === null);
+    };
+    
+    var inView = function (element, view) {
+      if (isHidden(element)) {
+        return false;
+      }
+  
+      var box = element.getBoundingClientRect();
+      return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+    };
+  
+    var debounceOrThrottle = function () {
+      if(!useDebounce && !!poll) {
+        return;
+      }
+      clearTimeout(poll);
+      poll = setTimeout(function(){
+        echo.render();
+        poll = null;
+      }, delay);
+    };
+  
+    echo.init = function (opts) {
+      opts = opts || {};
+      var offsetAll = opts.offset || 0;
+      var offsetVertical = opts.offsetVertical || offsetAll;
+      var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+      var optionToInt = function (opt, fallback) {
+        return parseInt(opt || fallback, 10);
+      };
+      offset = {
+        t: optionToInt(opts.offsetTop, offsetVertical),
+        b: optionToInt(opts.offsetBottom, offsetVertical),
+        l: optionToInt(opts.offsetLeft, offsetHorizontal),
+        r: optionToInt(opts.offsetRight, offsetHorizontal)
+      };
+      delay = optionToInt(opts.throttle, 250);
+      useDebounce = opts.debounce !== false;
+      unload = !!opts.unload;
+      callback = opts.callback || callback;
+      echo.render();
+      if (document.addEventListener) {
+        root.addEventListener('scroll', debounceOrThrottle, false);
+        root.addEventListener('load', debounceOrThrottle, false);
+      } else {
+        root.attachEvent('onscroll', debounceOrThrottle);
+        root.attachEvent('onload', debounceOrThrottle);
+      }
+    };
+  
+    echo.render = function (context) {
+      var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+      var length = nodes.length;
+      var src, elem;
+      var view = {
+        l: 0 - offset.l,
+        t: 0 - offset.t,
+        b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+        r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+      };
+      for (var i = 0; i < length; i++) {
+        elem = nodes[i];
+        if (inView(elem, view)) {
+  
+          if (unload) {
+            elem.setAttribute('data-echo-placeholder', elem.src);
+          }
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+          }
+          else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+            elem.src = src;
+          }
+  
+          if (!unload) {
+            elem.removeAttribute('data-echo');
+            elem.removeAttribute('data-echo-background');
+          }
+  
+          callback(elem, 'load');
+        }
+        else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + src + ')';
+          }
+          else {
+            elem.src = src;
+          }
+  
+          elem.removeAttribute('data-echo-placeholder');
+          callback(elem, 'unload');
+        }
+      }
+      if (!length) {
+        echo.detach();
+      }
+    };
+  
+    echo.detach = function () {
+      if (document.removeEventListener) {
+        root.removeEventListener('scroll', debounceOrThrottle);
+      } else {
+        root.detachEvent('onscroll', debounceOrThrottle);
+      }
+      clearTimeout(poll);
+    };
+  
+    return echo;
+  
+  });
+</script>
+<script>
+    echo.init({
+      offset: 2500,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+        //console.log(element, 'has been', op + 'ed')
+      }
+    });
+</script>
+
+
+</div>
+
+<footer id="footer">
+	<div class="centerme">©2022 <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a></div>
+</footer>
+
+<script src="/assets/scripts/vendor-0d6388c26b.js"></script>
+<script src="/assets/scripts/bundle-807fbb466a.js"></script>

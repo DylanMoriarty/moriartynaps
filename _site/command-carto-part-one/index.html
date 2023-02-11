@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Command Carto – The Terminal</title>
+  <meta name="description" content="								">
+
+  <link rel="canonical" href="https://moriartynaps.org/command-carto-part-one/">
+  <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/styles/main-af49830b16.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/graphics/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/graphics/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/graphics/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/graphics/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/graphics/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/graphics/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> 
+
+  
+    <meta property="og:title" content="Command Carto – The Terminal" />
+  
+
+  <!-- <meta name="twitter:card" content="summary"></meta> -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DylanMoriarty">
+  <meta name="twitter:creator" content="@DylanMoriarty">
+  <meta name="twitter:title" content="Command Carto – The Terminal">
+
+  
+    <meta name="twitter:description" content="Smorgasbord of maps, illustrations, & musings">
+    <meta property="og:description" content="Smorgasbord of maps, illustrations, & musings" />
+  
+
+  
+    <meta property="og:url"content="https://moriartynaps.com" />
+  
+  <meta property="og:type"        content="" />
+  <meta property="og:title"       content="Command Carto – The Terminal" />
+  <meta property="og:image"       content="" />
+
+  <meta name="twitter:image" content="https://moriartynaps.org/assets/graphics/posts/4-command-one/twi-img.png">
+</head>
+
+
+<h1 class="site-title"><a href="../" class="no_underline">Moriarty Naps</a></h1>
+
+<div class="site-home">
+  
+<div class="nav-container nav-container__right">
+	<div class="nav-musicBox">
+		<iframe width="100%" height="200" src="https://www.youtube.com/embed/oAmxGglMXYg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+	<div class="nav-container__tunes">
+    
+      <img src="../assets/graphics/posts/music-box.gif" class="music-box-gif music-box-gif_left" />
+  		<i>Hover for Companion tunes</i>
+      <img src="../assets/graphics/posts/music-box-r.gif" class="music-box-gif music-box-gif_right" />
+    
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="article-container">
+
+  <div class="article-gutter "></div>
+
+  <article class="article-content ">
+    <div class="article-header">
+      <div class="article-back"><a href="../" class="no_underline">&larr; back</a></div>
+      <h3 class="">Command Carto – The Terminal</h3>
+    </div>
+
+    
+<div class="post-image post-image__first ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/secrets-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>When we talk about Command Line Interfaces (CLI), we’re referring to text-based commands for our computer.</p>
+
+<p>Think of it like playing one of those <span class="tooltip">
+	80’s text adventure games<i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		If you want to try it out yourself, the spirit of the 80’s lives on in <a href="https://eblong.com/zarf/zweb/dreamhold" target="_blank">corners of the web.</a>
+	</span>
+</span>
+ where you have to enter “Move North” to explore. If instead you type “Prance Left”, nothing will happen because the computer only understands very, <em>very</em> specific inputs.</p>
+
+<p>Which is a pain. But! for GIS work it can be a godsend.</p>
+
+<p>It’s not a cure-all for all GIS woes, but you can save yourself a lot of future headaches by having them now learning the magic of <i class="collecticon collecticons-star"></i><em>Command Line Cartography</em><i class="collecticon collecticons-star"></i></p>
+
+<h4 id="what-were-covering-here">What we’re covering here</h4>
+
+<ul>
+  <li>What is a command line interface (CLI)?</li>
+  <li>When is this a useful approach?</li>
+  <li>An introduction to CLI navigation</li>
+  <li>How to get setup to run GIS commands</li>
+  <li>Some basic CLI carto commands via Mapshaper</li>
+</ul>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+		<h2 id="basic">
+    1.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Why CLI?
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/pile-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="repeatability">Repeatability</h4>
+
+<p>A staple of GIS work is that almost every action either permanently changes the original shapefile, or you save another one. This adds up fast between projections, clipping, buffers, data joins, etc. If you realize you need to fix or update something from early on in the process, this can be a huge time drain redoing in QGIS or Arc.</p>
+
+<p>CLI’s biggest advantage is that each step is written out and repeatable. You can make the needed tweaks to early work, re-run it and be on your merry way.</p>
+
+<h4 id="documentation">Documentation</h4>
+
+<p>Hand in hand with repeatability is that you’re incidentally creating perfect documentation for your GIS process. If you need to come back to a subject six months later you’ll know exactly what you did and how you did it.</p>
+
+<h4 id="batch-processing">Batch Processing</h4>
+
+<p>If you want to operate over 100 or so files we can iterate commands over a folder of files. So, if we have multiple shapefiles, we can easily execute GIS operations over each of them.</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/pile-2-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="mix--match">Mix &amp; Match</h4>
+
+<p>Want to automate more than just GIS operations? Perfect. We can bring in additional CLI to also fetch data from websites, or text operators to tweak csv’s. We can also run scripts written in Javascript, python, or whatever have you. The world’s your oyster!</p>
+
+<h4 id="you-become-neo">You become Neo</h4>
+
+<p>Not as important as the above things, but you will <em>literally</em> become Neo from the Matrix when you run a command that makes your computer screen flood with fast moving text.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+		<h2 id="basic">
+    2.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Get Moving
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/terminal-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<aside>
+  If you're already familiar with navigating a computer terminal, feel free to skip <a href="#shop">to the next section</a>.
+</aside>
+
+<p>To start yelling orders at your computer, you’ll need to open up it’s <strong>Terminal</strong>. If you’re on a Mac, you can do so by searching for an application called “Terminal”. If you’re on Windows, it’s called the “Command Prompt”.</p>
+
+<h4 id="where-am-i">Where Am I?</h4>
+
+<p>When you start up your terminal, you’ll see a guide-less void of a text box. First let’s figure out where we are:</p>
+
+<div>
+	<code class="code-block">pwd</code> 
+	<span class="code-def-intro">stands for &#8594;</span> <dd class="code-def">Print working directory</dd>
+</div>
+
+<p>Type <code class="language-plaintext highlighter-rouge">pwd</code> and hit enter. You’ll see the terminal reply with <em>where</em> it’s is currently looking at. Should be something along the lines of “/Users/yourUsernameHere”.</p>
+
+<p>Just like when you navigate folders and files on your desktop, this terminal is open to a specific folder on your computer. Unlike your desktop, however, we don’t have any folder graphics to click on.</p>
+
+<div>
+	<code class="code-block">ls</code> 
+	<dd class="code-def">List</dd>
+</div>
+
+<p>Entering <code class="language-plaintext highlighter-rouge">ls</code> will list off all the files &amp; folders that are inside wherever your terminal is currently looking. Basically a text version of what you usually see what you look at folders in finder.</p>
+
+<div>
+	<code class="code-block">mkdir newfolder</code> 
+	<dd class="code-def">Make Directory</dd>
+</div>
+
+<p>This will create a folder named newfolder. <code class="language-plaintext highlighter-rouge">mkdir</code> will create a folder with whatever name you enter after the initial command. Quite a few commands work this way – the first word evokes a command and the words that follow help define it.</p>
+
+<p><em>This will only create that folder. It will not move you into it.</em></p>
+
+<p>Unlike our previous commands, <code class="language-plaintext highlighter-rouge">mkdir</code> will not cause your terminal to reply with a message. It can be a bit hard to get used to at first, but many commands don’t automatically say “hey, I did the thing and it worked, hooray!”.</p>
+
+<p>To confirm that the folder you just made exists, you can run the <code class="language-plaintext highlighter-rouge">ls</code> command again. You should see your newly created folder listed now. You did the thing and it worked, hooray!</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/moving-left-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="moving-left">Moving Left</h4>
+
+<p>Files on your computer are tucked away into folders, and the route to them is refereed to as the file’s ‘path’.</p>
+
+<p>You’re already familiar with how file paths work from navigating website URLs. On your computer they work much the same way.</p>
+
+<div>
+	<code class="code-block">cd</code> 
+	<dd class="code-def">Change Directory</dd>
+</div>
+
+<p>This will take you to your home directory, aka your computer’s home folder regardless of where you are.</p>
+
+<div>
+	<code class="code-block">cd newfolder</code> 
+	<dd class="code-def">Change Directory to 'new folder'</dd>
+</div>
+
+<p>This will move you into your newly created folder. Like <code class="language-plaintext highlighter-rouge">mkdir</code>, you can enter any text after cd and it will take you to that folder, if it exists.</p>
+
+<div>
+	<code class="code-block">cd ..</code> 
+	<dd class="code-def">Change Directory up one level.</dd>
+</div>
+
+<p>This will take you to your current folders parent. So, if you’re currently at “home/code/disco-party” and run <code class="language-plaintext highlighter-rouge">cd ..</code> you’ll move to “home/code/”. Think of this as your ‘back’ command.</p>
+
+<h4 id="let-the-adventure-begin">Let the Adventure Begin!</h4>
+
+<p>OK. Now that we can navigate around, we can get started.</p>
+
+<div class="post-image inline-img__small ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/champ-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+		<h2 id="shop">
+    3.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Setting up Shop
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Or well, sorry, one more step. Then we can get to the GIS.</p>
+
+<div class="post-image inline-img__small ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/notyet-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>All of the above commands from the previous section are built into modern operating systems. Commands to do GIS operations however, are not. We’ll need to install some libraries to help out with that work.</p>
+
+<p>There are a <span class="tooltip">
+	lot of options<i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		QGIS is built with and upon many of em’!
+	</span>
+</span>
+ for GIS work but for the purposes of this tutorial we’ll rely on the workhorse library <a href="https://github.com/mbloch/mapshaper" target="_blank">Mapshaper</a>.</p>
+
+<p>To get it installed, we’ll want to do the following:</p>
+
+<ol>
+	<li>Install <a href="https://nodejs.org/en/download/" target="_blank">Node.js</a></li>
+	<li>Type the command <code>npm</code>. If it returns a block of text starting with "Usage: npm &lt;command&gt;", we know we're good. If you get an error, copy and paste that error into Google. Someone else has likely had the same issue!</li>
+	<li>Run the command <code>npm install -g mapshaper</code>. This will install mapshaper on your computer globally so it can be accessed anywhere! Neat.</li>
+	<li>If you get an error message that talks about denied access or permissions, you may need to run it as <code>sudo install -g mapshaper</code>. Sudo is a prefix you can add to commands that tells your terminal you're an administrator of the computer, so it'll ask for your admin password. In general, only run sudo if you need to. No other commands in this tutorial should require it.</li>
+</ol>
+
+<p>Finally, you need a geographic file to work with. You can use anything you’d like for the following examples, but I’ll leave one here for consistencies sake.</p>
+
+<ol>
+	<li><a href="/assets/files/cli-tutorial-one-files.zip" download="">Download this file. (4.9 MB)</a>. This is Natural Earth Data's 10m country geography, renamed 'countries.shp' to save us time typing out the file name. Also included is a csv of countries that red panda's call home.</li>
+	<li>Locate your home folder (the one <code>cd</code> navigates to by default) and create a folder there called Carto.</li>
+	<li>Put the contents in that new Carto folder. I'd recommend just doing this via finder. This will just help us stay on the same page for where our working files are located.</li>
+	<li>Finally, cd via your terminal into your newly created Carto folder.</li>
+</ol>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+		<h2 id="shape">
+    4.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">Shape Up a Map
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Let’s go!</p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/mapshaper-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="change-file-formats">Change file formats</h4>
+
+<p>First, let’s change the file format. Shapefiles are fine, but given that they require four to six different files for one database things get messy fast. Let’s convert to a <span class="tooltip">
+	topojson<i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		Added bonus: topojson is a wonderfully small format, so you’ll save disk space working it.
+	</span>
+</span>
+ for the time being.</p>
+
+<p><code class="code-block">mapshaper countries.shp -o countries.json format=topojson</code></p>
+
+<p>All commands will roughly follow this form: The first word <code>mapshaper</code> tells our Terminal to use the mapshaper library of commands. Next we type in the name of the file we want to operate on. <code>-o</code> is shorthand for “output”, which we follow by stating what the output file should be called. Finally, we tell it what format we want it to kick out as.</p>
+
+<p>If you type <code>ls</code> now, you should see the new file created! Neat, eh?</p>
+
+<p>Mapshaper can translate between the following formats:</p>
+
+<ul>
+  <li><em>shapefile, geojson, topojson, json, dbf, csv, tsv, svg</em></li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="projections">Projections</h4>
+
+<p>Next let’s project our countries. With <code>mapshaper -projections</code> you can see a full list of projections Mapshaper does by default. Let’s do a quick projection to Robinson:</p>
+
+<p><code class="code-block">mapshaper countries.json -proj robin -o countries-projected.json</code></p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/projections-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>If you want to check out these files after they’ve gone through these commands you can open them in [insert favorite gis software here].</p>
+
+<p><br /></p>
+
+<h4 id="filter-geography">Filter Geography</h4>
+
+<p>Let’s say you only need to filter your geography by countries with a low population. First let’s see what attributes our file has with:</p>
+
+<p><code class="code-block">mapshaper countries.json -info</code></p>
+
+<p>Looks like POP_EST is what we’ll want to go with. We can filter our features with:</p>
+
+<p><code class="code-block">mapshaper countries.json -filter 'POP_EST &lt; 250000' -o countries-lowpop.json</code></p>
+
+<p>The part of the text here between the hyphens is a Javascript boolean test. For each feature it asks “is the POP_EST attribute less than 250000?” and if it doesn’t, the feature is excluded from the output. This’ll work on for filtering any attribute that is a numeric value.</p>
+
+<p>You can also filter by strings. Let’s get just countries in South America:</p>
+
+<p><code class="code-block">mapshaper countries.json -filter '"South America".indexOf(CONTINENT) &gt; -1' -o south-america.json</code></p>
+
+<p>This does the same test as before, this time with a bit of Javascript called indexOf. This looks at the value of CONTINENT and if it matches “South America” returns a 1. Because 1 &gt; -1, the statement is true and that feature’s saved. This’ll also work for any attribute that is a string.</p>
+
+<p><br /></p>
+
+<h4 id="projections-cont">Projections, cont.</h4>
+
+<p>In addition to the default projections mapshaper has, you can also use proj4 strings for more specificity.</p>
+
+<p><a href="https://epsg.io/" target="_blank">epsg.io</a> is a great resource for getting proj4 string defintions, letting you search either by projection name or country. Once you’ve selected a projection, just scroll down the page to the Export menu and click Proj.4 to get a defintion.</p>
+
+<p>Just paste that string after -proj, and you’ll be good to go:</p>
+
+<p><code class="code-block code-block__preline">mapshaper south-america.json -proj +proj=poly +lat_0=0 +lon_0=-54 +x_0=5000000 +y_0=10000000 +ellps=aust_SA +towgs84=-57,1,-41,0,0,0,0 +units=m +no_defs -o south-america-projected.json</code></p>
+
+<p><br /></p>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/friends-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="join-csv-data-to-geography">Join CSV Data to Geography</h4>
+
+<p>One last example– joins. Let’s join my csv of red panda habitats to the original countries.json dataset.</p>
+
+<p><code class="code-block">mapshaper countries.json -join native-red-pandas.csv keys=NAME,COUNTRY -o countries-with-pandas.json</code></p>
+
+<p>Here we need to put the path to the data.csv following -join. <code>keys=</code> tells mapshaper which attributes to join by, the former being the field in the GIS file. The later is what field to join by in the csv.</p>
+
+<h4 id="chaining-it-all-together">Chaining it all together</h4>
+
+<p>Doing these step by step will work fine, but you may notice a lot of repetition in the commands structure. We can actually run a lot of these commands together likeso:</p>
+
+<p><code class="code-block">mapshaper countries.json \
+	-join native-red-pandas.csv keys=NAME,COUNTRY \
+	-filter '"yes".indexOf(PANDAS) &gt; -1' \
+	-clean \
+	-proj +init=EPSG:32645 \
+	-o countries-with-pandas.json
+</code></p>
+
+<p>For terminal commands, if you write a command on a new line, it will understand it as two separate commands. The <code class="language-plaintext highlighter-rouge">\</code> character tells it to ignore the new line and instead read it as one uninterrupted command.</p>
+
+<p>You might notice that I snuck one more new command in there; <code class="language-plaintext highlighter-rouge">clean</code>. Sometimes the data we’re working with has minor topological errors in it– or we create them along the way. Mapshaper’s clean function helps tidy up those stray points and mis-aligned borders.</p>
+
+<p>At the end, you should end up with a json of just the five countries that are the current home of red pandas. Fast, eh?</p>
+
+<p>If, somehow, they discover Red Panda’s also exist natively in Ireland, we only need to update the csv with that information and re-run the final script. It will work the exact same- only this time including Ireland in the final output. For practice, try it out! The projection may be a bit off… but you can also tweak that!</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    4.
+		</h2>
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+	</div>
+	<div class="ChapterboxTitle">To Be Continued...
+	</div>
+	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+	<fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/4-command-one/makebot-min.png" />
+	</fig>
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>If you’ve made it this far, kudos! Hope it’s helped demystify CLI ever so slightly.</p>
+
+<p>In the next part, I’ll introduce <i class="collecticon collecticons-star"></i> Makefiles <i class="collecticon collecticons-star"></i>
+, which are an old school way of running commands from a saved file vs. having to copy and paste into the terminal to run. We’re gonna build some CLI robots!</p>
+
+<p>Til then,</p>
+
+<p><i>–D.M. <code class="language-plaintext highlighter-rouge">cd ~./ny/new-york/brooklyn/boerum-hill</code><br />
+<span class="post-date">Feb.18th, 2019</span></i></p>
+
+<p><br />
+<br /></p>
+
+<div class="notes">
+  <p>If any parts of this seem super confusing, or you just have any other questions feel free to send a bird my way on <a href="https://twitter.com/DylanMoriarty" target="_blank">Twitter</a>.</p>
+  <p>Quick kudos to Matthew Bloch for both creating Mapshaper and sparking my interest in this approach to GIS work through <a href="https://www.youtube.com/watch?v=X-CGAS4YaPA" target="_blank">his talk at NACIS</a> in 2016.</p>
+  <p>Last updated Feb.18th.</p>
+</div>
+
+
+    <div class = "article-foot">
+        <div class="article-back"><a href="../" class="no_underline">&larr; Home</a></div>
+    </div>
+
+  </article>
+</section>
+
+<script>
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+      define(function() {
+        return factory(root);
+      });
+    } else if (typeof exports === 'object') {
+      module.exports = factory;
+    } else {
+      root.echo = factory(root);
+    }
+  })(this, function (root) {
+  
+    'use strict';
+  
+    var echo = {};
+  
+    var callback = function () {};
+  
+    var offset, poll, delay, useDebounce, unload;
+  
+    var isHidden = function (element) {
+      return (element.offsetParent === null);
+    };
+    
+    var inView = function (element, view) {
+      if (isHidden(element)) {
+        return false;
+      }
+  
+      var box = element.getBoundingClientRect();
+      return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+    };
+  
+    var debounceOrThrottle = function () {
+      if(!useDebounce && !!poll) {
+        return;
+      }
+      clearTimeout(poll);
+      poll = setTimeout(function(){
+        echo.render();
+        poll = null;
+      }, delay);
+    };
+  
+    echo.init = function (opts) {
+      opts = opts || {};
+      var offsetAll = opts.offset || 0;
+      var offsetVertical = opts.offsetVertical || offsetAll;
+      var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+      var optionToInt = function (opt, fallback) {
+        return parseInt(opt || fallback, 10);
+      };
+      offset = {
+        t: optionToInt(opts.offsetTop, offsetVertical),
+        b: optionToInt(opts.offsetBottom, offsetVertical),
+        l: optionToInt(opts.offsetLeft, offsetHorizontal),
+        r: optionToInt(opts.offsetRight, offsetHorizontal)
+      };
+      delay = optionToInt(opts.throttle, 250);
+      useDebounce = opts.debounce !== false;
+      unload = !!opts.unload;
+      callback = opts.callback || callback;
+      echo.render();
+      if (document.addEventListener) {
+        root.addEventListener('scroll', debounceOrThrottle, false);
+        root.addEventListener('load', debounceOrThrottle, false);
+      } else {
+        root.attachEvent('onscroll', debounceOrThrottle);
+        root.attachEvent('onload', debounceOrThrottle);
+      }
+    };
+  
+    echo.render = function (context) {
+      var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+      var length = nodes.length;
+      var src, elem;
+      var view = {
+        l: 0 - offset.l,
+        t: 0 - offset.t,
+        b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+        r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+      };
+      for (var i = 0; i < length; i++) {
+        elem = nodes[i];
+        if (inView(elem, view)) {
+  
+          if (unload) {
+            elem.setAttribute('data-echo-placeholder', elem.src);
+          }
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+          }
+          else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+            elem.src = src;
+          }
+  
+          if (!unload) {
+            elem.removeAttribute('data-echo');
+            elem.removeAttribute('data-echo-background');
+          }
+  
+          callback(elem, 'load');
+        }
+        else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+  
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + src + ')';
+          }
+          else {
+            elem.src = src;
+          }
+  
+          elem.removeAttribute('data-echo-placeholder');
+          callback(elem, 'unload');
+        }
+      }
+      if (!length) {
+        echo.detach();
+      }
+    };
+  
+    echo.detach = function () {
+      if (document.removeEventListener) {
+        root.removeEventListener('scroll', debounceOrThrottle);
+      } else {
+        root.detachEvent('onscroll', debounceOrThrottle);
+      }
+      clearTimeout(poll);
+    };
+  
+    return echo;
+  
+  });
+</script>
+<script>
+    echo.init({
+      offset: 2500,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+        //console.log(element, 'has been', op + 'ed')
+      }
+    });
+</script>
+
+
+</div>
+
+<footer id="footer">
+	<div class="centerme">©2022 <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a></div>
+</footer>
+
+<script src="/assets/scripts/vendor-0d6388c26b.js"></script>
+<script src="/assets/scripts/bundle-807fbb466a.js"></script>
