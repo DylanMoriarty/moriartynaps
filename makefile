@@ -7,3 +7,5 @@ echo-caynon:
 
 optimizer:
 	imageoptim -a $(IMGPATH)/$(POST)/*.png
+
+
