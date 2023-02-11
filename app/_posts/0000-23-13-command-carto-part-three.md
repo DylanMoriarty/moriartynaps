@@ -13,7 +13,7 @@ soc-url: "https://moriartynaps.org/covers/"
 soc-type: "article"
 soc-img: "https://moriartynaps.org/assets/graphics/posts/19-album/soc-img.jpg"
 
-visible: true
+visible: false
 centerAlign: false
 
 song: ""
