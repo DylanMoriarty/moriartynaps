@@ -10,7 +10,7 @@
   <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/styles/main-a78c22e7cb.css">
+  <link rel="stylesheet" href="/assets/styles/main-af49830b16.css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
@@ -33,6 +33,8 @@
   
     <meta property="og:title" content="Command Line Carto III – Loops" />
   
+
+  <!-- <meta name="twitter:card" content="summary"></meta> -->
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@DylanMoriarty">
@@ -159,8 +161,8 @@
 
 <ul>
   <li>Open your terminal</li>
-  <li>Type <code class="highlighter-rouge">gdalwarp --h</code> and hit enter.</li>
-  <li>If your terminal responds with <code class="highlighter-rouge">Usage: gdalwarp [--help-general] [--formats]...</code>, you’re good to go! Otherwise, you can <a href="https://gdal.org/download.html" target="_blank">install it from here.</a></li>
+  <li>Type <code class="language-plaintext highlighter-rouge">gdalwarp --h</code> and hit enter.</li>
+  <li>If your terminal responds with <code class="language-plaintext highlighter-rouge">Usage: gdalwarp [--help-general] [--formats]...</code>, you’re good to go! Otherwise, you can <a href="https://gdal.org/download.html" target="_blank">install it from here.</a></li>
 </ul>
 
 <p>Finally, here’s some files you’ll need for the rest of the tutorial. Letsago!</p>
@@ -210,7 +212,7 @@
   <div class="code-ref">1.2</div>
 </div>
 
-<p><code class="highlighter-rouge">for</code> is the magic command we’ll get to know. The basic setup is:</p>
+<p><code class="language-plaintext highlighter-rouge">for</code> is the magic command we’ll get to know. The basic setup is:</p>
 
 <div class="code-block-fix">
   <code class="code-block code-makefile">for X in Y; do \
@@ -218,9 +220,9 @@
 done</code>
 </div>
 
-<p><em>The syntax is very important here.</em> Like with mapshaper, a for loop needs to technically be delivered in one line. The <code class="highlighter-rouge">\</code>’s allow us to break the line for our human eyeball’s sake, but computer’s won’t register them.</p>
+<p><em>The syntax is very important here.</em> Like with mapshaper, a for loop needs to technically be delivered in one line. The <code class="language-plaintext highlighter-rouge">\</code>’s allow us to break the line for our human eyeball’s sake, but computer’s won’t register them.</p>
 
-<p>The <code class="highlighter-rouge">;</code> desiginate a break in the code without it being a new line. This lets us write multiple commands that the computer can correctly interpret as:</p>
+<p>The <code class="language-plaintext highlighter-rouge">;</code> desiginate a break in the code without it being a new line. This lets us write multiple commands that the computer can correctly interpret as:</p>
 
 <div class="code-block-fix">
   <code class="code-block code-makefile">for X in Y; do \
@@ -230,9 +232,9 @@ done</code>
 done</code>
 </div>
 
-<p>Most importantly is the very first line, <code class="highlighter-rouge">for X in Y</code>. In our first example, this was written as for <code class="highlighter-rouge">num</code> in <code class="highlighter-rouge">1 2 3 4 5</code>. Y can be any set of strings seperated by spaces. The length of this list is how many times our loop will run, once for each item in it.</p>
+<p>Most importantly is the very first line, <code class="language-plaintext highlighter-rouge">for X in Y</code>. In our first example, this was written as for <code class="language-plaintext highlighter-rouge">num</code> in <code class="language-plaintext highlighter-rouge">1 2 3 4 5</code>. Y can be any set of strings seperated by spaces. The length of this list is how many times our loop will run, once for each item in it.</p>
 
-<p>X is the variable name we can use to call those strings in the looped commands. So long as it isn’t already defined, you can name it whatever you’d like. Inside the loop we can then refer to whichever item from Y we’re on by calling <code class="highlighter-rouge">$$X</code>, which is whatever you declared X as. Try running:</p>
+<p>X is the variable name we can use to call those strings in the looped commands. So long as it isn’t already defined, you can name it whatever you’d like. Inside the loop we can then refer to whichever item from Y we’re on by calling <code class="language-plaintext highlighter-rouge">$$X</code>, which is whatever you declared X as. Try running:</p>
 
 <div class="post-image post-image__first ">
 	<fig>
@@ -261,7 +263,7 @@ done</code>
   done</code>
 </div>
 
-<p>Makefiles demand a strict syntax, but thankfully they’re smart enough to deliniate our variable <code class="highlighter-rouge">file</code> from the rest of the words it’s surrounded by. This means instead it will correctly parse our file locations as <code class="highlighter-rouge">example-one/newyork.shp</code> and <code class="highlighter-rouge">example-one/wisconsin.shp</code>.</p>
+<p>Makefiles demand a strict syntax, but thankfully they’re smart enough to deliniate our variable <code class="language-plaintext highlighter-rouge">file</code> from the rest of the words it’s surrounded by. This means instead it will correctly parse our file locations as <code class="language-plaintext highlighter-rouge">example-one/newyork.shp</code> and <code class="language-plaintext highlighter-rouge">example-one/wisconsin.shp</code>.</p>
 
 <p>As shown above, we can also use that variable as many times as we want within the loop. And it can be part of the path name, instead of the full path. With a minor tweak to the above script, we can create an output folder for the processed json’s to be saved into, then save em’ there. All while keeping the input safe and unchanged.</p>
 
@@ -275,7 +277,7 @@ done</code>
   done</code>
 </div>
 
-<p>You may be saying “Boy howdy, writing out each filename in the <code class="highlighter-rouge">for</code> line seems annoying.” And you’d be right. Next up, how simplify that.</p>
+<p>You may be saying “Boy howdy, writing out each filename in the <code class="language-plaintext highlighter-rouge">for</code> line seems annoying.” And you’d be right. Next up, how simplify that.</p>
 
 <div class="Chapterbox">
 	<div class="ChapterboxHeader">
@@ -322,7 +324,7 @@ listStateData_Wildcard:
   done</code>
 </div>
 
-<p>Much like how we call variables, you can call functions with <code class="highlighter-rouge">$(FUNCTION arguments)</code>. In this case <code class="highlighter-rouge">$(wildcard pattern)</code> is a function built into Make that returns a space seperated list of files that match the pattern we give it. Convinent!</p>
+<p>Much like how we call variables, you can call functions with <code class="language-plaintext highlighter-rouge">$(FUNCTION arguments)</code>. In this case <code class="language-plaintext highlighter-rouge">$(wildcard pattern)</code> is a function built into Make that returns a space seperated list of files that match the pattern we give it. Convinent!</p>
 
 <p>That should return a list for files in the folder <em>example-one</em>. You could work with that, but because the variable is the whole path, we won’t be able to save our output to a different file. Not to mention this lists out <em>every</em> file in the folder, so ack, it’s also returning the jsons we made earlier.</p>
 
@@ -332,7 +334,7 @@ listStateData_Wildcard:
   <code class="code-block code-makefile">FILES=$(wildcard example-one/*.shp)</code>
 </div>
 
-<p>Will return just files that end in <code class="highlighter-rouge">.shp</code>. So, <code class="highlighter-rouge">example-one/colorado.shp example-one/newyork.shp example-one/wisconsin.shp</code></p>
+<p>Will return just files that end in <code class="language-plaintext highlighter-rouge">.shp</code>. So, <code class="language-plaintext highlighter-rouge">example-one/colorado.shp example-one/newyork.shp example-one/wisconsin.shp</code></p>
 
 <p>While,</p>
 
@@ -340,7 +342,7 @@ listStateData_Wildcard:
   <code class="code-block code-makefile">FILES=$(notdir $(wildcard example-one/*.shp))</code>
 </div>
 
-<p><code class="highlighter-rouge">notdir</code>, i.e. ‘<em>Not Directory</em>’, will ensure the output is <em>just</em> the filename: <code class="highlighter-rouge">colorado.shp newyork.shp wisconsin.shp</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">notdir</code>, i.e. ‘<em>Not Directory</em>’, will ensure the output is <em>just</em> the filename: <code class="language-plaintext highlighter-rouge">colorado.shp newyork.shp wisconsin.shp</code>.</p>
 
 <p>Finally,</p>
 
@@ -357,7 +359,7 @@ listStateData_Wildcard:
   <code class="code-block code-makefile">FILES=$(basename $(notdir $(wildcard example-one/*.shp)))</code>
 </div>
 
-<p><code class="highlighter-rouge">basename</code> will drop any extensions, giving us a clean <code class="highlighter-rouge">colorado newyork wisconsin</code> list. We can always write out folders and extensions in the loop, so this way we free ourselves up to find our input and put our output anywhere, and as anything!</p>
+<p><code class="language-plaintext highlighter-rouge">basename</code> will drop any extensions, giving us a clean <code class="language-plaintext highlighter-rouge">colorado newyork wisconsin</code> list. We can always write out folders and extensions in the loop, so this way we free ourselves up to find our input and put our output anywhere, and as anything!</p>
 
 <p>Putting it altogether we have:</p>
 
@@ -397,7 +399,7 @@ shpToJsonVariable:
 CONTENT=`cat $(LIST)`</code>
 </div>
 
-<p><code class="highlighter-rouge">cat</code> is short for concatenate. If used on any file, it’ll return the contents of the file. The <code class="highlighter-rouge">`</code> tell Make that it should understand the inside text as a command and not as a string.</p>
+<p><code class="language-plaintext highlighter-rouge">cat</code> is short for concatenate. If used on any file, it’ll return the contents of the file. The <code class="language-plaintext highlighter-rouge">`</code> tell Make that it should understand the inside text as a command and not as a string.</p>
 
 <p>Just like with our previous example, this can be used to pass along a list of items to our for loop.</p>
 
@@ -491,11 +493,11 @@ exportBand:
 	done</code>
 </div>
 
-<p>The new command up there is <code class="highlighter-rouge">gdal_translate</code>. Unlike Mapshaper, gdal comes in bits and pieces. Translate is the goto for converting rasters between formats, and resampling/resizing. You can read all about what this and all other <a href="https://gdal.org/programs/gdal_translate.html" target="_blank">gdal commands can do here</a>.</p>
+<p>The new command up there is <code class="language-plaintext highlighter-rouge">gdal_translate</code>. Unlike Mapshaper, gdal comes in bits and pieces. Translate is the goto for converting rasters between formats, and resampling/resizing. You can read all about what this and all other <a href="https://gdal.org/programs/gdal_translate.html" target="_blank">gdal commands can do here</a>.</p>
 
 <p>Our command we’re running on each file here reads:</p>
 
-<p><code class="highlighter-rouge">Call gdal_translate, pick band 3, open [INPUT], save it as a Geotiff, and save it to [OUTPUT]</code></p>
+<p><code class="language-plaintext highlighter-rouge">Call gdal_translate, pick band 3, open [INPUT], save it as a Geotiff, and save it to [OUTPUT]</code></p>
 
 <p>This will work for any grib file, but <strong>be warned</strong>! There is no consistency between different grib sources. RTMA will be consistent, but if you try this out on a different NOAA dataset, the bands may represent different things. Some may have two bands, others dozens. Windspeed may be located on band 8 in some, and 3 in others. It’s imperative you find an explainer file for the dataset you’re using to ensure you’re using the right image!</p>
 
@@ -516,13 +518,13 @@ exportBand:
   done</code>
 </div>
 
-<p><code class="highlighter-rouge">gdal_warp</code> is the library that handles taking an image that’s in one projection and warp it into another.</p>
+<p><code class="language-plaintext highlighter-rouge">gdal_warp</code> is the library that handles taking an image that’s in one projection and warp it into another.</p>
 
-<p><code class="highlighter-rouge">s_srs</code> is the source, or the original files projection. <code class="highlighter-rouge">t_srs</code> is the target, or desired</p>
+<p><code class="language-plaintext highlighter-rouge">s_srs</code> is the source, or the original files projection. <code class="language-plaintext highlighter-rouge">t_srs</code> is the target, or desired</p>
 
 <h4 id="color-by-the-numbers">Color by the Numbers</h4>
 
-<p>The final flavor of gdal we’ll encounter today is <code class="highlighter-rouge">gdaldem</code>, which let’s us apply a color gradient to a geotiff based on it’s values. The command name hints this functionality was meant for coloring elevation models, but it works fine for this too!</p>
+<p>The final flavor of gdal we’ll encounter today is <code class="language-plaintext highlighter-rouge">gdaldem</code>, which let’s us apply a color gradient to a geotiff based on it’s values. The command name hints this functionality was meant for coloring elevation models, but it works fine for this too!</p>
 
 <p>You will need another external file, a guide for gdaldem to color-by-the-numbers by. I’ve prepped one for you already, but if you’re curious welcome ya</p>
 
@@ -537,7 +539,7 @@ exportBand:
 
 <h4 id="animating">Animating</h4>
 
-<p>With that, we’ve got our frames for the animation. We just need to put it all together. Once you can stop caring about the georeference, you can leave gdal behind and kick open <code class="highlighter-rouge">ImageMagick</code>. This is a library that handles</p>
+<p>With that, we’ve got our frames for the animation. We just need to put it all together. Once you can stop caring about the georeference, you can leave gdal behind and kick open <code class="language-plaintext highlighter-rouge">ImageMagick</code>. This is a library that handles</p>
 
 <div class="code-block-fix">
   <code class="code-block code-makefile">gif:
@@ -747,4 +749,4 @@ exportBand:
 </footer>
 
 <script src="/assets/scripts/vendor-0d6388c26b.js"></script>
-<script src="/assets/scripts/bundle-337d45c1b4.js"></script>
+<script src="/assets/scripts/bundle-807fbb466a.js"></script>

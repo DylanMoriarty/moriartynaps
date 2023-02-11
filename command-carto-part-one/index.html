@@ -10,7 +10,7 @@
   <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/styles/main-a78c22e7cb.css">
+  <link rel="stylesheet" href="/assets/styles/main-af49830b16.css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
@@ -33,6 +33,8 @@
   
     <meta property="og:title" content="Command Carto – The Terminal" />
   
+
+  <!-- <meta name="twitter:card" content="summary"></meta> -->
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@DylanMoriarty">
@@ -221,7 +223,7 @@
 	<span class="code-def-intro">stands for &#8594;</span> <dd class="code-def">Print working directory</dd>
 </div>
 
-<p>Type <code class="highlighter-rouge">pwd</code> and hit enter. You’ll see the terminal reply with <em>where</em> it’s is currently looking at. Should be something along the lines of “/Users/yourUsernameHere”.</p>
+<p>Type <code class="language-plaintext highlighter-rouge">pwd</code> and hit enter. You’ll see the terminal reply with <em>where</em> it’s is currently looking at. Should be something along the lines of “/Users/yourUsernameHere”.</p>
 
 <p>Just like when you navigate folders and files on your desktop, this terminal is open to a specific folder on your computer. Unlike your desktop, however, we don’t have any folder graphics to click on.</p>
 
@@ -230,20 +232,20 @@
 	<dd class="code-def">List</dd>
 </div>
 
-<p>Entering <code class="highlighter-rouge">ls</code> will list off all the files &amp; folders that are inside wherever your terminal is currently looking. Basically a text version of what you usually see what you look at folders in finder.</p>
+<p>Entering <code class="language-plaintext highlighter-rouge">ls</code> will list off all the files &amp; folders that are inside wherever your terminal is currently looking. Basically a text version of what you usually see what you look at folders in finder.</p>
 
 <div>
 	<code class="code-block">mkdir newfolder</code> 
 	<dd class="code-def">Make Directory</dd>
 </div>
 
-<p>This will create a folder named newfolder. <code class="highlighter-rouge">mkdir</code> will create a folder with whatever name you enter after the initial command. Quite a few commands work this way – the first word evokes a command and the words that follow help define it.</p>
+<p>This will create a folder named newfolder. <code class="language-plaintext highlighter-rouge">mkdir</code> will create a folder with whatever name you enter after the initial command. Quite a few commands work this way – the first word evokes a command and the words that follow help define it.</p>
 
 <p><em>This will only create that folder. It will not move you into it.</em></p>
 
-<p>Unlike our previous commands, <code class="highlighter-rouge">mkdir</code> will not cause your terminal to reply with a message. It can be a bit hard to get used to at first, but many commands don’t automatically say “hey, I did the thing and it worked, hooray!”.</p>
+<p>Unlike our previous commands, <code class="language-plaintext highlighter-rouge">mkdir</code> will not cause your terminal to reply with a message. It can be a bit hard to get used to at first, but many commands don’t automatically say “hey, I did the thing and it worked, hooray!”.</p>
 
-<p>To confirm that the folder you just made exists, you can run the <code class="highlighter-rouge">ls</code> command again. You should see your newly created folder listed now. You did the thing and it worked, hooray!</p>
+<p>To confirm that the folder you just made exists, you can run the <code class="language-plaintext highlighter-rouge">ls</code> command again. You should see your newly created folder listed now. You did the thing and it worked, hooray!</p>
 
 <div class="post-image post-image ">
 	<fig>
@@ -272,14 +274,14 @@
 	<dd class="code-def">Change Directory to 'new folder'</dd>
 </div>
 
-<p>This will move you into your newly created folder. Like <code class="highlighter-rouge">mkdir</code>, you can enter any text after cd and it will take you to that folder, if it exists.</p>
+<p>This will move you into your newly created folder. Like <code class="language-plaintext highlighter-rouge">mkdir</code>, you can enter any text after cd and it will take you to that folder, if it exists.</p>
 
 <div>
 	<code class="code-block">cd ..</code> 
 	<dd class="code-def">Change Directory up one level.</dd>
 </div>
 
-<p>This will take you to your current folders parent. So, if you’re currently at “home/code/disco-party” and run <code class="highlighter-rouge">cd ..</code> you’ll move to “home/code/”. Think of this as your ‘back’ command.</p>
+<p>This will take you to your current folders parent. So, if you’re currently at “home/code/disco-party” and run <code class="language-plaintext highlighter-rouge">cd ..</code> you’ll move to “home/code/”. Think of this as your ‘back’ command.</p>
 
 <h4 id="let-the-adventure-begin">Let the Adventure Begin!</h4>
 
@@ -476,9 +478,9 @@
 	-o countries-with-pandas.json
 </code></p>
 
-<p>For terminal commands, if you write a command on a new line, it will understand it as two separate commands. The <code class="highlighter-rouge">\</code> character tells it to ignore the new line and instead read it as one uninterrupted command.</p>
+<p>For terminal commands, if you write a command on a new line, it will understand it as two separate commands. The <code class="language-plaintext highlighter-rouge">\</code> character tells it to ignore the new line and instead read it as one uninterrupted command.</p>
 
-<p>You might notice that I snuck one more new command in there; <code class="highlighter-rouge">clean</code>. Sometimes the data we’re working with has minor topological errors in it– or we create them along the way. Mapshaper’s clean function helps tidy up those stray points and mis-aligned borders.</p>
+<p>You might notice that I snuck one more new command in there; <code class="language-plaintext highlighter-rouge">clean</code>. Sometimes the data we’re working with has minor topological errors in it– or we create them along the way. Mapshaper’s clean function helps tidy up those stray points and mis-aligned borders.</p>
 
 <p>At the end, you should end up with a json of just the five countries that are the current home of red pandas. Fast, eh?</p>
 
@@ -514,7 +516,7 @@
 
 <p>Til then,</p>
 
-<p><i>–D.M. <code class="highlighter-rouge">cd ~./ny/new-york/brooklyn/boerum-hill</code><br />
+<p><i>–D.M. <code class="language-plaintext highlighter-rouge">cd ~./ny/new-york/brooklyn/boerum-hill</code><br />
 <span class="post-date">Feb.18th, 2019</span></i></p>
 
 <p><br />
@@ -689,4 +691,4 @@
 </footer>
 
 <script src="/assets/scripts/vendor-0d6388c26b.js"></script>
-<script src="/assets/scripts/bundle-337d45c1b4.js"></script>
+<script src="/assets/scripts/bundle-807fbb466a.js"></script>
