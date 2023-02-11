@@ -1,4 +1,4 @@
-name: Converted Workflow
+name: Deploy page
 on:
   push:
     branches:
@@ -30,7 +30,10 @@ jobs:
             bundle/cache
           key: '${{ runner.os }}-${{ hashFiles(''TODO'') }}'
       - uses: actions/checkout@v2
-      - run: rvm install 2.3
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.3"
       - run: chmod +x ./.build_scripts/deploy.sh
       - run: chmod +x ./.build_scripts/lint.sh
       - run: ./.build_scripts/lint.sh
