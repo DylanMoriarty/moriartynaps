@@ -1,0 +1,38 @@
+name: Converted Workflow
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: '${{ matrix.os }}'
+    strategy:
+      matrix:
+        os:
+          - ubuntu-18.04
+        node-version:
+          - 14.x
+    steps:
+      - name: Install dependencies (Ubuntu)
+        if: runner.os == 'Linux'
+        run: |-
+          sudo apt-get update
+          sudo apt-get install -y g++-4.8
+      - name: 'Set up Node.js ${{ matrix.node-version }}'
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ matrix.node-version }}'
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |-
+            node_modules
+            bundle/cache
+          key: '${{ runner.os }}-${{ hashFiles(''TODO'') }}'
+      - uses: actions/checkout@v2
+      - run: rvm install 2.3
+      - run: chmod +x ./.build_scripts/deploy.sh
+      - run: chmod +x ./.build_scripts/lint.sh
+      - run: ./.build_scripts/lint.sh
+      - run: npm test
+      - run: npm run build
