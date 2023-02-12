@@ -6,7 +6,7 @@ date:   2023-1-1
 type: art
 
 twit-title: "’23.1 - Whirling in Rags"
-twit-img: "https://moriartynaps.org/assets/graphics/posts/30-1/twi-img.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/30-1/twi-card.jpg"
 
 visible: true
 
