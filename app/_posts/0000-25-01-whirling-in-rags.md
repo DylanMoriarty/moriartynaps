@@ -5,8 +5,8 @@ date:   2023-1-1
 
 type: art
 
-twit-title: "Sweet Dreams"
-twit-img: "https://moriartynaps.org/assets/graphics/posts/1-dreams/twi-img.png"
+twit-title: "’23.1 - Whirling in Rags"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/30-1/twi-img.png"
 
 visible: true
 
@@ -27,7 +27,7 @@ To get back to DC, I took the long road back from Janesville. The crux of the tr
  
 {% include postimg.html imgsrc="posts/30-1/cincinatti.png" class="inline-img" full="true" caption="Orphan spaghetti, Cincinnati Museum Center ceiling, a thrilling window display." %}
 
-There's a worksman aspect of signage that should resonate with most cartographers and data viz designers. Ultimately, while it's an art, it's a utility foremost. And while we can get giddy over the details and craftsmanship, the audience is there for information. The decoration is more often noticed when it's {% include tooltips.html face="noticeably off" tip="<img src='http://localhost:3000/assets/graphics/posts/30-1/nogood.jpg'>" %}. 
+There's a worksman aspect of signage that should resonate with most cartographers and data viz designers. Ultimately, while it's an art, it's a utility foremost. And while we can get giddy over the details and craftsmanship, the audience is there for information. The decoration is more often noticed when it's {% include tooltips.html face="noticeably off" tip="<img src='https://moriartynaps.org/assets/graphics/posts/30-1/nogood.jpg'>" %}. 
 
 Which is what makes this museum such a delight. It's a celebration of both technical indulgences and just well-crafted signage.
 
