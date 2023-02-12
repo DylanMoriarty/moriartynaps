@@ -5,10 +5,15 @@ date:   2023-1-1
 
 type: art
 
-twit-title: "’23.1 - Whirling in Rags"
 twit-img: "https://moriartynaps.org/assets/graphics/posts/30-1/twit-card.jpg"
 
 visible: true
+
+soc-descrip: "A few ways to spend a January"
+soc-url: "https://moriartynaps.org/whirling-in-rags/"
+soc-type: "article"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/30-1/soc-card.jpg"
+
 
 ---
 
