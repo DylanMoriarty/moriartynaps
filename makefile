@@ -8,4 +8,5 @@ echo-caynon:
 optimizer:
 	imageoptim -a $(IMGPATH)/$(POST)/*.png
 
-
+test:
+	echo woo
