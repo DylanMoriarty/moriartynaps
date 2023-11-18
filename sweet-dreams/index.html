@@ -4,13 +4,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
   <title>Sweet Dreams</title>
-  <meta name="description" content="								">
+  <meta name="description" content="    			  				">
 
-  <link rel="canonical" href="https://moriartynaps.org/sweet-dreams/">
-  <link rel="alternate" type="application/rss+xml" title="MoriartyNaps" href="https://moriartynaps.org/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/sweet-dreams/">
+  <link rel="alternate" type="application/rss+xml" title="Moriarty Naps v2" href="http://localhost:4000/feed.xml">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/styles/main-886d39d8a8.css">
+  <!-- build:css /assets/styles/main.css -->
+    <link rel="stylesheet" href="/assets/styles/main.css">
+  <!-- endbuild -->
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
@@ -33,8 +35,6 @@
   
     <meta property="og:title" content="Sweet Dreams" />
   
-
-  <!-- <meta name="twitter:card" content="summary"></meta> -->
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@DylanMoriarty">
@@ -85,8 +85,6 @@
 
 
 
-
-
 <section class="article-container">
 
   <div class="article-gutter "></div>
@@ -99,9 +97,11 @@
 
     
 <div class="post-image post-image__first ">
-	<fig>
+  
+  <fig>
 		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/1-dreams/moon.png" />
 	</fig>
+  
 	<figcaption>
 		
 	</figcaption>
@@ -117,12 +117,12 @@
     
     <h2>
     1.
-		</h2>
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-	</div>
-	<div class="ChapterboxTitle">What can it be!?
-	</div>
-	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">What can it be!?
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
 </div>
 
 <p>Ideally this site will be a smorgasbord of:</p>
@@ -145,12 +145,12 @@
     
     <h2>
     2.
-		</h2>
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-	</div>
-	<div class="ChapterboxTitle">Paying it Forward
-	</div>
-	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Paying it Forward
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
 </div>
 
 <p>I can only do the things I do because people before me wrote wonderful guides online either in blogs or in stackOverflow answers.</p>
@@ -163,12 +163,12 @@
     
     <h2>
     3.
-		</h2>
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-	</div>
-	<div class="ChapterboxTitle">Write More
-	</div>
-	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Write More
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
 </div>
 
 <p>While the readership of this webzone will be exclusive to wanderlust twitter folks &amp; my parents, I work at newspaper where the same can’t be said. There’s ample opportunity to do my own research and writing, so I’d like to be more confident in writing in general.</p>
@@ -181,12 +181,12 @@
     
     <h2>
     4.
-		</h2>
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-	</div>
-	<div class="ChapterboxTitle">Own the Medium
-	</div>
-	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Own the Medium
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
 </div>
 
 <p>This is a bonefide blog, but I’m still going the self-coded route. Medium, Wordpress, or what have ya seem like swell options, but I like having complete control over <em>everything</em>.</p>
@@ -207,12 +207,12 @@
     
     <h2>
     5.
-		</h2>
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-	</div>
-	<div class="ChapterboxTitle">OK, ...but why naps?
-	</div>
-	<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">OK, ...but why naps?
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
 </div>
 
 <p>…<em>also</em>… my professional email has been MoriartyMaps for a bit. I like the juxtaposition. A digital dream catcher for the dreamt doodles of a busy fella just trying to get some naps in.</p>
@@ -233,158 +233,158 @@
 </section>
 
 <script>
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-      define(function() {
-        return factory(root);
+    (function (root, factory) {
+        if (typeof define === 'function' && define.amd) {
+          define(function() {
+            return factory(root);
+          });
+        } else if (typeof exports === 'object') {
+          module.exports = factory;
+        } else {
+          root.echo = factory(root);
+        }
+      })(this, function (root) {
+      
+        'use strict';
+      
+        var echo = {};
+      
+        var callback = function () {};
+      
+        var offset, poll, delay, useDebounce, unload;
+      
+        var isHidden = function (element) {
+          return (element.offsetParent === null);
+        };
+        
+        var inView = function (element, view) {
+          if (isHidden(element)) {
+            return false;
+          }
+      
+          var box = element.getBoundingClientRect();
+          return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+        };
+      
+        var debounceOrThrottle = function () {
+          if(!useDebounce && !!poll) {
+            return;
+          }
+          clearTimeout(poll);
+          poll = setTimeout(function(){
+            echo.render();
+            poll = null;
+          }, delay);
+        };
+      
+        echo.init = function (opts) {
+          opts = opts || {};
+          var offsetAll = opts.offset || 0;
+          var offsetVertical = opts.offsetVertical || offsetAll;
+          var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+          var optionToInt = function (opt, fallback) {
+            return parseInt(opt || fallback, 10);
+          };
+          offset = {
+            t: optionToInt(opts.offsetTop, offsetVertical),
+            b: optionToInt(opts.offsetBottom, offsetVertical),
+            l: optionToInt(opts.offsetLeft, offsetHorizontal),
+            r: optionToInt(opts.offsetRight, offsetHorizontal)
+          };
+          delay = optionToInt(opts.throttle, 250);
+          useDebounce = opts.debounce !== false;
+          unload = !!opts.unload;
+          callback = opts.callback || callback;
+          echo.render();
+          if (document.addEventListener) {
+            root.addEventListener('scroll', debounceOrThrottle, false);
+            root.addEventListener('load', debounceOrThrottle, false);
+          } else {
+            root.attachEvent('onscroll', debounceOrThrottle);
+            root.attachEvent('onload', debounceOrThrottle);
+          }
+        };
+      
+        echo.render = function (context) {
+          var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+          var length = nodes.length;
+          var src, elem;
+          var view = {
+            l: 0 - offset.l,
+            t: 0 - offset.t,
+            b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+            r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+          };
+          for (var i = 0; i < length; i++) {
+            elem = nodes[i];
+            if (inView(elem, view)) {
+      
+              if (unload) {
+                elem.setAttribute('data-echo-placeholder', elem.src);
+              }
+      
+              if (elem.getAttribute('data-echo-background') !== null) {
+                elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+              }
+              else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+                elem.src = src;
+              }
+      
+              if (!unload) {
+                elem.removeAttribute('data-echo');
+                elem.removeAttribute('data-echo-background');
+              }
+      
+              callback(elem, 'load');
+            }
+            else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+      
+              if (elem.getAttribute('data-echo-background') !== null) {
+                elem.style.backgroundImage = 'url(' + src + ')';
+              }
+              else {
+                elem.src = src;
+              }
+      
+              elem.removeAttribute('data-echo-placeholder');
+              callback(elem, 'unload');
+            }
+          }
+          if (!length) {
+            echo.detach();
+          }
+        };
+      
+        echo.detach = function () {
+          if (document.removeEventListener) {
+            root.removeEventListener('scroll', debounceOrThrottle);
+          } else {
+            root.detachEvent('onscroll', debounceOrThrottle);
+          }
+          clearTimeout(poll);
+        };
+      
+        return echo;
+      
       });
-    } else if (typeof exports === 'object') {
-      module.exports = factory;
-    } else {
-      root.echo = factory(root);
-    }
-  })(this, function (root) {
-  
-    'use strict';
-  
-    var echo = {};
-  
-    var callback = function () {};
-  
-    var offset, poll, delay, useDebounce, unload;
-  
-    var isHidden = function (element) {
-      return (element.offsetParent === null);
-    };
+    </script>
+    <script>
+        echo.init({
+          offset: 2500,
+          throttle: 250,
+          unload: false,
+          callback: function (element, op) {
+            //console.log(element, 'has been', op + 'ed')
+          }
+        });
+    </script>
     
-    var inView = function (element, view) {
-      if (isHidden(element)) {
-        return false;
-      }
-  
-      var box = element.getBoundingClientRect();
-      return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
-    };
-  
-    var debounceOrThrottle = function () {
-      if(!useDebounce && !!poll) {
-        return;
-      }
-      clearTimeout(poll);
-      poll = setTimeout(function(){
-        echo.render();
-        poll = null;
-      }, delay);
-    };
-  
-    echo.init = function (opts) {
-      opts = opts || {};
-      var offsetAll = opts.offset || 0;
-      var offsetVertical = opts.offsetVertical || offsetAll;
-      var offsetHorizontal = opts.offsetHorizontal || offsetAll;
-      var optionToInt = function (opt, fallback) {
-        return parseInt(opt || fallback, 10);
-      };
-      offset = {
-        t: optionToInt(opts.offsetTop, offsetVertical),
-        b: optionToInt(opts.offsetBottom, offsetVertical),
-        l: optionToInt(opts.offsetLeft, offsetHorizontal),
-        r: optionToInt(opts.offsetRight, offsetHorizontal)
-      };
-      delay = optionToInt(opts.throttle, 250);
-      useDebounce = opts.debounce !== false;
-      unload = !!opts.unload;
-      callback = opts.callback || callback;
-      echo.render();
-      if (document.addEventListener) {
-        root.addEventListener('scroll', debounceOrThrottle, false);
-        root.addEventListener('load', debounceOrThrottle, false);
-      } else {
-        root.attachEvent('onscroll', debounceOrThrottle);
-        root.attachEvent('onload', debounceOrThrottle);
-      }
-    };
-  
-    echo.render = function (context) {
-      var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
-      var length = nodes.length;
-      var src, elem;
-      var view = {
-        l: 0 - offset.l,
-        t: 0 - offset.t,
-        b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
-        r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
-      };
-      for (var i = 0; i < length; i++) {
-        elem = nodes[i];
-        if (inView(elem, view)) {
-  
-          if (unload) {
-            elem.setAttribute('data-echo-placeholder', elem.src);
-          }
-  
-          if (elem.getAttribute('data-echo-background') !== null) {
-            elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
-          }
-          else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
-            elem.src = src;
-          }
-  
-          if (!unload) {
-            elem.removeAttribute('data-echo');
-            elem.removeAttribute('data-echo-background');
-          }
-  
-          callback(elem, 'load');
-        }
-        else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
-  
-          if (elem.getAttribute('data-echo-background') !== null) {
-            elem.style.backgroundImage = 'url(' + src + ')';
-          }
-          else {
-            elem.src = src;
-          }
-  
-          elem.removeAttribute('data-echo-placeholder');
-          callback(elem, 'unload');
-        }
-      }
-      if (!length) {
-        echo.detach();
-      }
-    };
-  
-    echo.detach = function () {
-      if (document.removeEventListener) {
-        root.removeEventListener('scroll', debounceOrThrottle);
-      } else {
-        root.detachEvent('onscroll', debounceOrThrottle);
-      }
-      clearTimeout(poll);
-    };
-  
-    return echo;
-  
-  });
-</script>
-<script>
-    echo.init({
-      offset: 2500,
-      throttle: 250,
-      unload: false,
-      callback: function (element, op) {
-        //console.log(element, 'has been', op + 'ed')
-      }
-    });
-</script>
-
 
 </div>
 
 <footer id="footer">
-	<div class="centerme">©2022 <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a></div>
+	<div class="centerme">©2023 <a target="_blank" href="https://twitter.com/DylanMoriarty">Dylan Moriarty</a></div>
 </footer>
 
-<script src="/assets/scripts/vendor-0d6388c26b.js"></script>
-<script src="/assets/scripts/bundle-807fbb466a.js"></script>
+<script src="/assets/scripts/main.js"></script>
+
