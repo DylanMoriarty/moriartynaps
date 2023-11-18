@@ -1,0 +1,43 @@
+@keyframes dullColor {
+    0%  {color: $rainRed; border-color: $rainRed;}
+    15% {color: $rainOrange; border-color: $rainOrange;}
+    30% {color: $rainYellow; border-color: $rainYellow;}
+    45% {color: $rainGreen; border-color: $rainGreen;}
+    60% {color: $rainBlue; border-color: $rainBlue;}
+    75% {color: $rainPurple; border-color: $rainPurple;}
+    100%  {color: $rainRed; border-color: $rainRed;}
+  }
+  
+  @keyframes goldGlow {
+    0%  {color: gold; border-color: gold;}
+    25% {color: darken(gold, 2); border-color: darken(gold, 2);}
+    50% {color: darken(gold, 5); border-color: darken(gold, 5);}
+    75% {color: darken(gold, 2); border-color: darken(gold, 2);}
+    100%  {color: gold; border-color: gold;}
+  }
+  
+  .spinme {
+    fig {
+      img {
+        transition: 0.2s all;
+        animation-timing-function: linear !important;
+        &:hover {
+          animation: spin 2s infinite;
+        }
+      }
+    }
+  }
+  
+  .spingme2 {
+    transition: 0.2s all;
+    animation-timing-function: linear !important;
+    &:hover {
+      animation: spin 4s infinite;
+    }
+  }
+  
+  @keyframes spin {
+      0% {transform:rotate(0deg);}
+      100% {transform:rotate(360deg);}
+  }
+  

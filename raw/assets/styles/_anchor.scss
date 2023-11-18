@@ -1,0 +1,32 @@
+a {
+  color: desaturate(black, 20);
+  text-decoration: none;
+  transition: 0.2s all;
+  border-bottom: 1px solid;
+  &:visited {
+    color: desaturate(black, 20);
+    text-decoration: none;
+  }
+  &:hover {
+    animation: dullColor 4s infinite;
+    text-decoration: none;
+  }
+  &:active {
+    animation: dullColor 4s infinite;
+    text-decoration: none;
+  }
+  &:focus {
+    color: darken(black, 20);
+    text-decoration: none;
+  }
+}
+
+.no_underline { border-bottom: 0; }
+
+.img-fade img {
+  opacity: 1;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.5;
+  }
+}

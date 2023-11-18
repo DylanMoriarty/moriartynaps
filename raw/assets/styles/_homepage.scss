@@ -1,0 +1,237 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+	// background-color: #f5f5f5;
+  font-family: 'Crimson Text';
+  background: $bodyColor; /* Old browsers */
+  background: -moz-linear-gradient(top, $bodyColor 0%, $bodyToFade 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $bodyColor 0%, site-title$bodyToFade 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $bodyColor 0%, $bodyToFade 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bodyColor', endColorstr='$bodyToFade',GradientType=0 ); /* IE6-9 */
+}
+
+.site-home {
+  min-height: 100%;
+  margin: 0 auto;
+  clear: both;
+  padding-bottom: 56px;
+  @include media-query($mobile) {
+    margin: 0 auto;
+  }
+}
+
+.article-content {
+  font-size: 20px;
+  line-height: 28px;
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.article-cotainer__within {
+  padding-top: 2.5rem !important;
+}
+// img {
+//   width: 600px;
+// 	max-width: 100%;
+// 	margin: 1rem 0 1.5rem;
+// }
+
+$titleOutline: 2px;
+
+h3 {
+  font-family: 'Averia Serif Libre';
+  font-size: 2rem;
+  border-bottom: 10px solid #ddd;
+  text-shadow:
+   -$titleOutline -$titleOutline 0 #f5f5f5,  
+    $titleOutline -$titleOutline 0 #f5f5f5,
+    -$titleOutline $titleOutline 0 #f5f5f5,
+    $titleOutline $titleOutline 0 #f5f5f5;
+}
+
+h4 {
+  font-family: 'Proza Libre';
+  font-weight: 800;
+  font-size: 20px;
+  color: initial;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+  margin: 3rem 1.5rem;
+}
+
+hr {
+  margin: 4rem 0 2rem;
+  height: 1px;
+  background-color: $Primary;
+  border: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 6rem;
+  background-color: rgba(0,0,0,0.1);
+  height: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+.site-title {
+  z-index: 1;
+  position: absolute;
+  margin: 1rem 0 1rem 2rem;
+  @include media-query($mobile) {
+    position: relative;
+  }
+}
+
+.intro-box {
+  position: absolute;
+  left: 1rem;
+  top: 4rem;
+  z-index: 2;
+  @include media-query($mobile) {
+    opacity: 0.8;
+    right: 0;
+    top: -1rem;
+    left: initial;
+  }
+}
+
+.pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+
+.pagination a {    
+    &:hover {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+ }
+
+.pagination {
+    text-align: center;
+ }
+
+.small {
+  margin-left: 1rem;
+  width: 250px;
+}
+
+.homepage-cont {
+  display: flex;
+  min-height: 100%;
+}
+
+.jus-takin-up-space {
+  min-height: calc(100vh - 56px);
+  flex: 2;
+  background-color: rgba(#84bec7, 0.2);
+  @include media-query($mobile) {
+    display: none;
+  }
+}
+
+.post-container {
+  flex: 6;
+  z-index: 1;
+  margin: 6rem 4rem 0;
+  font-size: 20px;
+  .post-li {
+    max-width: 600px;
+    margin: 0 0 1.5rem;
+    border-bottom: 1px solid rgba(17, 72, 65, 0.2);
+    padding-bottom: 1.5rem;
+  }
+  @include media-query($laptop) {
+    margin-left: 6rem;
+  }
+  @include media-query($mobile) {
+    margin-left: 0;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.sleepyme {
+  float: left;
+  pointer-events: none;
+  img { width: 250px; }
+  @include media-query($laptop) {
+    img { width: 200px; }
+  }
+}
+
+.post-icon {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  width: 30px;
+  height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  padding-top: 4px;
+  color: rgba(17, 72, 65, 0.2);
+  border: 1px solid rgba(17, 72, 65, 0.2);
+}
+
+.post-hed a {
+  border-bottom: 0;
+}
+
+.post-hedimg {
+  float: left;
+  img { width: 350px; }
+}
+
+.post-date {
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.4;
+}
+
+.nav-container__tunes {
+  text-align: center;
+}
+
+.music-box-gif {
+  position: absolute;
+  height: 20px;
+  margin-top: 0px;
+  &_left {
+    margin-left: -42px;
+  }
+  &_right {
+    margin-left: 6px;
+  }
+}
+
+.pager {
+  display: block;
+  font-style: italic;
+  padding-top: 0.5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}

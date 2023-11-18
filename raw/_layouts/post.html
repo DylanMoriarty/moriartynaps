@@ -1,0 +1,29 @@
+---
+layout: frame
+songtext: "Companion Tunes"
+---
+
+{% include musicBox.html %}
+
+{% include script-check.html %}
+
+<section class="article-container">
+
+  <div class="article-gutter {% if page.centerAlign %}article-gutter_middle{% endif %}"></div>
+
+  <article class="article-content {% if page.centerAlign %}article-content_middle{% endif %}">
+    <div class="article-header">
+      <div class="article-back"><a href="../" class="no_underline">&larr; back</a></div>
+      <h3 class="">{{ page.title }}</h3>
+    </div>
+
+    {{ content }}
+
+    <div class = "article-foot">
+        <div class="article-back"><a href="../" class="no_underline">&larr; Home</a></div>
+    </div>
+
+  </article>
+</section>
+
+{% include lazyload.html %}

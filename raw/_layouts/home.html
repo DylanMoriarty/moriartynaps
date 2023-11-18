@@ -1,0 +1,53 @@
+---
+layout: frame
+---
+
+<div class="intro-box">
+  <div class="sleepyme">
+    <img src="{{site.baseurl}}/assets/graphics/sleepytime.png" />
+  </div>
+</div>
+
+<section class="homepage-cont">
+  <div class="jus-takin-up-space"></div>
+
+  <div class="post-container clearfix">
+    <ul class="">
+    {% for post in paginator.posts %}
+      {% if post.visible %}
+        <li class="post-li">
+          <p class="post-icon icon-{{ post.type }}">
+            <i class="collecticon collecticons-{{ post.type }}" role="img text" alt="{{ post.type }}" aria-label="{{ post.type }}"></i>
+          </p>
+          <p class="post-hed">
+            <a href='{{ post.url | relative_url }}'>{{ post.title | escape }}</a>
+          </p>
+          <p class="post-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}
+    <ul class="pager">
+        {% if paginator.previous_page %}
+        <li class="paginator-block previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            class="no_underline">
+            &larr; Newer slumbers
+          </a>
+        </li>
+        {% endif %}
+        {% if paginator.next_page %}
+        <li class="paginator-block next">
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+              class="no_underline">
+              Older slumbers &rarr;
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+
+</section>

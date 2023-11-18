@@ -1,0 +1,37 @@
+<div class = "show-block">
+  {% if include.pos == "l" %}
+  <div class="show-cd show-cd__left">
+    <a href="{{ include.url }}" target="_blank">
+    <img 
+      src="{{ site.baseurl }}/assets/graphics/posts/13-wfmu/{{ include.img }}.png"
+      class="wfmu-cd spingme2"
+    />
+    </a>
+  </div>
+  {% endif %}
+
+  <div class="show-text {% if include.pos == 'r' %}show-text__right{% endif %}">
+    <a href="{{ include.url }}" target="_blank">
+      <img 
+        src="{{ site.baseurl }}/assets/graphics/posts/13-wfmu/blank-cd.png"
+        class="blank-cd"
+      />
+    </a>
+    <a href="{{ include.url }}" target="_blank">
+      <h2 class="wfmu-show-title collecticons-expand-top-right-after"><span class="wfmu-show-title-font">{{ include.show }}</span></h2>
+    </a>
+    <p class="show-host">w/ {{ include.host }}</p>
+    <p class="show-description">{{ include.descrip }}</p>
+  </div>
+
+  {% if include.pos == "r" %}
+  <div class="show-cd show-cd__right">
+    <a href="{{ include.url }}" target="_blank">
+      <img 
+        src="{{ site.baseurl }}/assets/graphics/posts/13-wfmu/{{ include.img }}.png"
+        class="wfmu-cd spingme2"
+      />
+    </a>
+  </div>
+  {% endif %}
+</div>

@@ -1,12 +1,8 @@
-IMGPATH:= app/assets/graphics/posts/
+start:
+	bundle exec jekyll serve --livereload --open-url
 
-echo-caynon:
-	echo "don't have a cow homer!";
-	echo "don't have a cow homer!";
-	echo "don't have a cow homer!";
+all-optim:
+	imageoptim 'raw/assets/graphics'
 
-optimizer:
-	imageoptim -a $(IMGPATH)/$(POST)/*.png
-
-test:
-	echo woo
+optim:
+	imageoptim 'raw/assets/graphics/posts/$(POST)'

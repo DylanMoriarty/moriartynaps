@@ -1,0 +1,35 @@
+$Primary: #70b5b2;
+$golden: #b58b07;
+
+$ChapterColor: #555;
+$LineColor: #70b5b2;
+
+$bodyColor: #f5f5f5;
+$bodyToFade: lighten($Primary, 28);
+
+$rainRed: #e46565;
+$rainOrange: #d59b62;
+$rainYellow: #d2bb75;
+$rainGreen: #69c371;
+$rainBlue: #69c3bc;
+$rainPurple: #a16e9f;
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Width of the content area
+$content-width:    800px;
+$on-palm:          600px;
+$mobile:          600px;
+$laptop:        800px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+.white-bg { background-color: white; }
