@@ -1,495 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-18T12:43:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Moriarty Naps v2</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">’23.11 - Resolute in a Sea of Bread</title><link href="http://localhost:4000/resolute/" rel="alternate" type="text/html" title="’23.11 - Resolute in a Sea of Bread" /><published>2023-11-01T00:00:00-04:00</published><updated>2023-11-01T00:00:00-04:00</updated><id>http://localhost:4000/resolute</id><content type="html" xml:base="http://localhost:4000/resolute/"><![CDATA[<p>….</p>
-
-<p>logs, shamelessly inspired by other bloggers.</p>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    1.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Ventures
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>…</p>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    2.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Works
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>Besides the steady stream of hurricane trackers published over autumn, did publish three fun pieces.</p>
-
-<p><a class="wapo-hed no_underline" href="https://www.washingtonpost.com/food/2023/11/09/thanksgiving-recipes-joy-of-cooking/" target="_blank">
-    “How Thanksgiving recipes have changed over time, according to ‘Joy of Cooking’” →
-</a></p>
-
-<div class="post-image inline-img ">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/16-resolute/joy.jpg" />
-	</fig>
-  
-	<figcaption>
-		
-	</figcaption>
-</div>
-
-<p><a class="wapo-hed no_underline" href="https://www.washingtonpost.com/climate-environment/interactive/2023/cloud-shapes-height-sky-climate/" target="_blank">
-    “How high is the sky?” →
-</a></p>
-
-<div class="cloud-height-marquee">
-  <img src="/assets/graphics/posts/16-resolute/hsits-1.jpg" class="cloud-img cloud-img-1" />
-  <div class="cloud-imgs">
-		<img src="/assets/graphics/posts/16-resolute/hsits-2.jpg" class="cloud-img cloud-img-2" />
-		<img src="/assets/graphics/posts/16-resolute/hsits-3.jpg" class="cloud-img cloud-img-3" />
-		<img src="/assets/graphics/posts/16-resolute/hsits-4.jpg" class="cloud-img cloud-img-4" />
-  </div>
-</div>
-
-<style>
-  .cloud-height-marquee {
-    max-width: 100%;
-    position: relative;
-  }
-
-  .cloud-img {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    max-height: 350px;
-  }
-
-  .cloud-img-2 { position: absolute; opacity: 0%; animation: cloud-shift-2 20s linear infinite; }
-  .cloud-img-3 { position: absolute; opacity: 0%; animation: cloud-shift-3 20s linear infinite; }
-  .cloud-img-4 { position: absolute; opacity: 0%; animation: cloud-shift-4 20s linear infinite; }
-
-  @keyframes cloud-shift-2 {
-    0% { opacity: 0%; }
-    15% { opacity: 0%; }
-    20% { opacity: 100%; }
-    40% { opacity: 100%; }
-    60% { opacity: 0%; }
-    80% { opacity: 0%; }
-    100% { opacity: 0%; }
-  }
-  @keyframes cloud-shift-3 {
-    0% { opacity: 0%; }
-    20% { opacity: 0%; }
-    35% { opacity: 0%; }
-    40% { opacity: 100%; }
-    60% { opacity: 100%; }
-    80% { opacity: 0%; }
-    100% { opacity: 0%; }
-  }
-  @keyframes cloud-shift-4 {
-    0% { opacity: 0%; }
-    20% { opacity: 0%; }
-    40% { opacity: 0%; }
-    55% { opacity: 0%; }
-    60% { opacity: 100%; }
-    80% { opacity: 100%; }
-    95% { opacity: 100%; }
-    100% { opacity: 0%; }
-  }
-</style>
-
-<p>HOW HIGH IS THE SKY? has been kicking around in my head since forever. Stars aligned in both finding the data for this last year (thanks Maria &amp; friends!) and an ally to write the words in Kasha Patel.</p>
-
-<p>Also at long, long last finally got a co-byline with the unshakable Andrew Van Dam with some pizza maps.</p>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    3.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Cooking
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>Into bread now.</p>
-
-    </article>
-  </section>
-
-<div class="bread-marquee">
-    <div class="bread-img"></div>
-</div>
-
-<style>
-  .bread-marquee {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    max-width: 100%;
-    overflow: hidden;
-    margin-top: -8rem;
-    margin-bottom: 2rem;
-  }
-
-  .bread-img {
-    height: 400px;
-    overflow-x: hidden;
-
-    background-image: url("http://127.0.0.1:4000/assets/graphics/posts/16-resolute/bread-marquee.jpg");
-    background-size: cover;
-    background-repeat: repeat-x;
-    animation: marquee 30s linear infinite;   
-  }
-
-    @keyframes marquee {
-        from { background-position: 2852px;}
-        to { background-position-x: 0;}        
-    }
-</style>
-
-  <section class="article-container article-cotainer__within">
-    <div class="article-gutter "></div>
-    <article class="article-content ">
-
-<p>After many false-starts, two jars of my mother’s sourdough starter were successfully trucked across the country and I’ve been a bread machine ever since. Six loafs in, with two great ones and one bowling ball. Been alternating between <a href="https://preppykitchen.com/sourdough-bread/">John Kanell’s recipe for it that takes two days</a>, and <a href="https://www.breadscheduler.com/#/recipe/5e88fb59aa3c8d002393a16b">Stuart Thompson’s Bread Scheduler</a> that takes way less time.</p>
-
-<p>After spending October largely traveling, there’s nothing more cozy than being back in a kitchen of one’s own device. Particularly pleased how well a cabinet I’ve previously used as a dresser and liquor cabinet has become the main pantry for everything. I’ve got standard apartment kitchen cabinatry I could use, but having everything visible (and accessible!) at all times has such a charm to it.</p>
-
-<p>[[ cabinet ]]</p>
-
-<p>Likewise, instead of trying to fit pots and pans in said cupboards, it’s been nice to return to kitchen island clusterfucks for those.</p>
-
-<p>[[ pans ]]</p>
-
-<p>Been a good month for good home cooked meals. Still loving this Cauliflower Salmon recipe from Carla Lalli Music’s book, and also bone-in chicken thighs. Cheaper and a skin to crisp, hard to complain.</p>
-
-<p>[[ fooood ]]</p>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    4.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Listening
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>Fantastic autumn for live big name concerts: saw The Music Tapes (Julian Koster), my namesake Bob Dylan, and college superstar Kesha.</p>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2RGvAQoi6q5OSZNBKJk1GO?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    5.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Rewiring
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>This was going to be a year in which I wrote an entry one a month.</p>
-
-<p>What actually happened was that the poor old, <em>old</em> infastructure that compiles this site finally gave out. The codebase was solid, in 2015, but now trying to install older versions of Ruby, Python, and long abandoned node libraries to get it to work has been a nightmare to resolve.</p>
-
-<p><em>Luckily</em>, the code for the site itself has always been simple Jekyll markdown files. I resisted refactoring what builds the site for years, but it turns out the default Jekyll serve works well enough on it’s own.</p>
-
-<p>The post-pandemic web fatigue glazed over myself (&amp; I get the impression others. You?) has been a drain on fixing tackling. What joy that can be found from friends and family posting their own joys is just so drowned in ads and marketing. And particularly <em>dumb</em> ads and marketing, because that’s what gets engagement.</p>
-
-<p>…but that also led me to finally fix this thing. I don’t want to cede to that despair when the tool still has such potential. And ultimately it’s always been therapuetic to look back at the logs here. So we’re back to monthly diddies.</p>
-
-<p>Maybe this time.</p>
-
-<p>Til next month?
-<i>– D<br />
-<span class="post-date">Nov.15, 2023</span></i></p>]]></content><author><name></name></author><summary type="html"><![CDATA[….]]></summary></entry><entry><title type="html">’23.1 - Whirling in Rags</title><link href="http://localhost:4000/whirling-in-rags/" rel="alternate" type="text/html" title="’23.1 - Whirling in Rags" /><published>2023-01-01T00:00:00-05:00</published><updated>2023-01-01T00:00:00-05:00</updated><id>http://localhost:4000/whirling-in-rags</id><content type="html" xml:base="http://localhost:4000/whirling-in-rags/"><![CDATA[<p>Minutes before midnight, trekking uphill in a post-sleet crunch, I got home just in time to toast the New Year with my folks. Fare thee well 2022. <em>Hello 2023!</em></p>
-
-<div class="post-image inline-img black-border ">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/folks.jpg" />
-	</fig>
-  
-	<figcaption>
-		
-	</figcaption>
-</div>
-
-<p>In the past I’ve made multiple daily visual diaries (<a href="https://dylanmoriarty.github.io/anno/ " target="_blank">2017</a>, <a href="https://dylanmoriarty.github.io/days-2020/" target="_blank">2020</a>). Consistently, I fall off that horse around month four or so, but they’ve been fun to look back. This year I’m going to try to do monthly logs, shamelessly inspired by other bloggers.</p>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    1.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Ventures
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>To get back to DC, I took the long road back from Janesville. The crux of the trip was to hit up the American Sign Museum, a huge collection of signage from over the years.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/cincinatti.png" />
-	</fig>
-  
-	<figcaption>
-		Orphan spaghetti, Cincinnati Museum Center ceiling, a thrilling window display.
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>There’s a worksman aspect of signage that should resonate with most cartographers and data viz designers. Ultimately, while it’s an art, it’s a utility foremost. And while we can get giddy over the details and craftsmanship, the audience is there for information. The decoration is more often noticed when it’s <span class="tooltip">
-	noticeably off<i class="collecticons collecticons-circle-information"></i>
-	<span class="tooltiptext" style="display:block">
-		<img src="https://moriartynaps.org/assets/graphics/posts/15-whirling/nogood.jpg" />
-	</span>
-</span>
-.</p>
-
-<p>Which is what makes this museum such a delight. It’s a celebration of both technical indulgences and just well-crafted signage.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/signs.png" />
-	</fig>
-  
-	<figcaption>
-		
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>Signs don’t age well. By nature, they’re out in nature, getting worn down. Businesses fade, technology changes.</p>
-
-<p>The boot in the image below as a prime example of that age. While it had been built in the ‘lightbulb era’, it’s owners had updated it by removing all the bulbs and adding neon tubing to outline it instead. The museum restored the half visible in the photo, and left the other side with the neon.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/signs-2.jpg" />
-	</fig>
-  
-	<figcaption>
-		
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>They also partnered Neonworks of Cincinnati, who have their workshop attached to the museum via a wall of windows where you can see them blowing new glass. Those windows line a faux-storefront on their main street that rivals <a href="https://www.mpm.edu/exhibitions/permanent-exhibits/first-floor-exhibits/streets-old-milwaukee" target="_blank">Streets of Old Milwuakee</a>. Not only does it have a freakin’ huge old McDonalds sign, but also has a rotating globe.</p>
-
-<p>Go! Go to this museum if you’re ever passing through the area.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/signs-3.png" />
-	</fig>
-  
-	<figcaption>
-		
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    2.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Cooking
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p><a href="https://www.amazon.com/Pie-Room-achievable-show-stopping-everywhere/dp/1472973615" target="_blank">The Pie Room</a> is a wonderful book. Written by a British pastry chef, Calum Franklin, and his kitchen, I’ve yet to find a dud among the recipes. The lattice below is a tomato, onion, and goat cheese tart that was just splendid.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/food.png" />
-	</fig>
-  
-	<figcaption>
-		
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>Also ended up making three wellingtons between this month and Christmas. Two <a href="https://cooking.nytimes.com/recipes/1020596-vegetarian-mushroom-wellington">mushroom wellington’s</a>, one to test bake, another for Christmas dinner, and finally a beef wellington for a second Christmas dinner. Will never hold a candle to someone who makes a hundred of these a month, but, can’t say any of them  less than delicious.</p>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    3.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Listening
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7tcVfF9m0hQJRuZts1MwmC?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<div class="Chapterbox">
-	<div class="ChapterboxHeader">
-		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-    
-    <h2>
-    4.
-</h2>
-<div class="ChapterboxHeaderLine ChapterboxLine"></div>
-</div>
-<div class="ChapterboxTitle">Inspiring
-</div>
-<div class="ChapterboxFooterLine ChapterboxLine"></div>
-</div>
-
-<p>Disco Elysium is a masterpiece. I’m about two years late to that opinion, and it isn’t a hot one. But it’s hard to overstate how awe-inspiringly cohesive the writing, art, and gameplay are together. Read about it in countless reviews, or better yet go play the game.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img black-border post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/disco.jpg" />
-	</fig>
-  
-	<figcaption>
-		Conquest of Revachol. <a href="https://www.artstation.com/artwork/gJk0ex" target="_blank">Aleksander Rostov</a>.
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>The art. <em>The art</em>! I’m a sucker for expressive brush and linework. From an early affection for <a href="https://www.bretthelquist.com/" target="_blank">Brett Helquist</a> (illustrator of A Series of Unfortunate Events), to <a href="https://www.google.com/search?q=JC+Leyendecker+gallery&amp;bih=680&amp;biw=1207&amp;hl=en&amp;ei=tpHmY-SmHtqv5NoP69qg8Ao&amp;ved=0ahUKEwjk2Zunz4v9AhXaF1kFHWstCK4Q4dUDCBA&amp;uact=5&amp;oq=JC+Leyendecker+gallery&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBQgAEIYDMgUIABCGAzoKCAAQRxDWBBCwAzoHCAAQsAMQQzoNCAAQ5AIQ1gQQsAMYAToMCC4QyAMQsAMQQxgCOgkIABAWEB4Q8QRKBAhBGABKBAhGGAFQwwFY3wVg-wZoAnAAeACAAUaIAcwDkgEBN5gBAKABAcgBEsABAdoBBggBEAEYCdoBBggCEAEYCA&amp;sclient=gws-wiz-serp">JC Leyendecker</a>, confident strokes adds momentum and life.</p>
-
-<p>Reading about how they developed the portrait styles and backgrounds is illuminating. <a href="https://www.artstation.com/artwork/gJk0ex" target="_blank">Aleksander Rostov</a>, the lead artist behind the game, casts a wide net of credit – the Post-Soviet Union world they grew up in to abstract painters, to the interface of 1999 Sid Meier’s <a href="https://twitter.com/AlphaCentQuotes" target="_blank">Alpha Centauri</a>. But he speaks on Craig Mullens at length in the Disco Elysium art book, describing his work as “painterly anarchy on top of rigid and true fundamentals.”</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/mullens.png" />
-	</fig>
-  
-	<figcaption>
-		Work by <a href="goodbrush.com" target="_blank">Craig Mullens</a>. Mind blowing stuff.
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>There’s an obvious influence of hurried, splashy backgrounds. Even the roughly drawn rotunda courtyard above, the structure is there. It looks so effortless, but enough rules of perspective and light are being followed that it feels like all <em>you</em> have to do is squint and it would come into focus. The lack of details isn’t the painting, you just forgot to wear your glasses today.</p>
-
-<p>Stuff to aspire to.</p>
-
-      </article>
-    </section>
-
-<div class="post-image inline-img black-border post-image__full">
-  
-  <fig>
-		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/15-whirling/disco-2.jpg" />
-	</fig>
-  
-	<figcaption>
-		Archetype portraits of the main protagonist of Disco Elysium. <a href="https://www.artstation.com/artwork/6aAL8x" target="_blank">Aleksander Rostov.</a>
-	</figcaption>
-</div>
-
-    <section class="article-container article-cotainer__within">
-      <div class="article-gutter "></div>
-      <article class="article-content ">
-
-<p>With A.I. art increasingly accessible, I imagine we’ll see a lot more of this kind of art. Abstraction is a great way to mask a lack of focus. But that’s not what these are – they ooze intention. A quiet confidence that when it works, <em>works</em>.</p>
-
-<p>Rostov is just one member of ZU/UM, the collective that made Disco. Thanks to the success it was, they put out the aforementioned art book where they detailed it’s creation. There’s a great passion that comes through as they talk about their inspirations and a seeming honesty in the blunt manner they speak to technical and business decisions. There’s a purity in that the game spun out of their teenage dnd homebrew’d world.</p>
-
-<p>It altogether makes it utterly painful to hear that the collective’s leads were all <a href="https://www.ign.com/articles/disco-elysium-developers-involuntarily-left-zaum-responds" target="_blank">involuntarily kicked of the company</a> built around making a sequel in that world. It always sucks when people responsible for great work have to waste time in litigation vs. making cool shit. I look forward to whatever comes out of em’ wherever they go.</p>
-
-<p>Finishing this game and reading about it’s creation is partly what led to this series. Besides a natural predilection towards being open about how sausage is made, I liked the honesty about their inspirations. I’m not about to become a renaissance painter – unless I’m Groundhog Day’ed – but this inspires the hell out of me. And maybe, in some ways, you’ll see the strokes of that down the road.</p>
-
-<p>Til next month,
-<i>– D.M.<br />
-<span class="post-date">Jan.31, 2023</span></i></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Minutes before midnight, trekking uphill in a post-sleet crunch, I got home just in time to toast the New Year with my folks. Fare thee well 2022. Hello 2023!]]></summary></entry><entry><title type="html">Foggy Spaces</title><link href="http://localhost:4000/foggy-spaces/" rel="alternate" type="text/html" title="Foggy Spaces" /><published>2022-11-10T18:00:01-05:00</published><updated>2022-11-10T18:00:01-05:00</updated><id>http://localhost:4000/foggy-spaces</id><content type="html" xml:base="http://localhost:4000/foggy-spaces/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-04T18:56:48-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Moriarty Naps v2</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Foggy Spaces</title><link href="http://localhost:4000/foggy-spaces/" rel="alternate" type="text/html" title="Foggy Spaces" /><published>2022-11-10T18:00:01-05:00</published><updated>2022-11-10T18:00:01-05:00</updated><id>http://localhost:4000/foggy-spaces</id><content type="html" xml:base="http://localhost:4000/foggy-spaces/"><![CDATA[<style>
   .repub-note {
     margin: -5.75rem 0 0;
     padding-bottom: 3rem;
@@ -692,7 +201,7 @@
   <!-- Artboard: mobile -->
   <div id="g-school-route-mental-ai2html-mobile" class="g-artboard" style="max-width: 400px;max-height: 380px" data-aspect-ratio="1.052" data-min-width="0" data-max-width="599">
 <div style="padding: 0 0 95.0579% 0;"></div>
-    <img id="g-school-route-mental-ai2html-mobile-img" class="g-school-route-mental-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/school-route-mental-ai2html_mobile-400.png"/>
+    <img id="g-school-route-mental-ai2html-mobile-img" class="g-school-route-mental-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/school-route-mental-ai2html_mobile-400.png"/>
     <div id="g-ai0-1" class="g-text g-aiAbs g-aiPointText" style="top:8.3759%;margin-top:-9.8px;left:45.1369%;width:116px;">
       <p class="g-pstyle0">Sweet Home</p>
     </div>
@@ -705,7 +214,7 @@
   <!-- Artboard: desktop -->
   <div id="g-school-route-mental-ai2html-desktop" class="g-artboard" style="width:900px; height:659.18751931805px;" data-aspect-ratio="1.365" data-min-width="900">
 <div style=""></div>
-    <img id="g-school-route-mental-ai2html-desktop-img" class="g-school-route-mental-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/school-route-mental-ai2html_desktop-900.png"/>
+    <img id="g-school-route-mental-ai2html-desktop-img" class="g-school-route-mental-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/school-route-mental-ai2html_desktop-900.png"/>
     <div id="g-ai1-1" class="g-text g-aiAbs g-aiPointText" style="top:9.6858%;margin-top:-9.8px;right:87.6737%;width:116px;">
       <p class="g-pstyle0">Sweet Home</p>
     </div>
@@ -717,7 +226,7 @@
   <!-- Artboard: smalldesk -->
   <div id="g-school-route-mental-ai2html-smalldesk" class="g-artboard" style="width:600px; height:528.596747998989px;" data-aspect-ratio="1.135" data-min-width="600" data-max-width="899">
 <div style=""></div>
-    <img id="g-school-route-mental-ai2html-smalldesk-img" class="g-school-route-mental-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/school-route-mental-ai2html_smalldesk-600.png"/>
+    <img id="g-school-route-mental-ai2html-smalldesk-img" class="g-school-route-mental-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/school-route-mental-ai2html_smalldesk-600.png"/>
     <div id="g-ai2-1" class="g-text g-aiAbs g-aiPointText" style="top:11.322%;margin-top:-9.8px;left:38.5749%;width:116px;">
       <p class="g-pstyle0">Sweet Home</p>
     </div>
@@ -882,7 +391,7 @@
   <!-- Artboard: mobile -->
   <div id="g-janesville-ai2html-mobile" class="g-artboard" style="max-width: 400px;max-height: 1058px" data-aspect-ratio="0.378" data-min-width="0" data-max-width="599">
 <div style="padding: 0 0 264.5808% 0;"></div>
-    <img id="g-janesville-ai2html-mobile-img" class="g-janesville-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/janesville-ai2html_mobile-400.png"/>
+    <img id="g-janesville-ai2html-mobile-img" class="g-janesville-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/janesville-ai2html_mobile-400.png"/>
     <div id="g-ai0-1" class="g-text g-aiAbs g-aiPointText" style="top:2.8655%;margin-top:-9.3px;left:83.061%;margin-left:-54.5px;width:109px;">
       <p class="g-pstyle0">Olive Garden</p>
     </div>
@@ -924,7 +433,7 @@
   <!-- Artboard: desktop -->
   <div id="g-janesville-ai2html-desktop" class="g-artboard" style="width:900px; height:1176.13109904444px;" data-aspect-ratio="0.765" data-min-width="900">
 <div style=""></div>
-    <img id="g-janesville-ai2html-desktop-img" class="g-janesville-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/janesville-ai2html_desktop-900.png"/>
+    <img id="g-janesville-ai2html-desktop-img" class="g-janesville-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/janesville-ai2html_desktop-900.png"/>
     <div id="g-ai1-1" class="g-text g-aiAbs g-aiPointText" style="top:1.4731%;margin-top:-9.3px;left:78.6845%;width:109px;">
       <p class="g-pstyle0">Olive Garden</p>
     </div>
@@ -966,7 +475,7 @@
   <!-- Artboard: smalldesk -->
   <div id="g-janesville-ai2html-smalldesk" class="g-artboard" style="width:600px; height:849.348406896889px;" data-aspect-ratio="0.706" data-min-width="600" data-max-width="899">
 <div style=""></div>
-    <img id="g-janesville-ai2html-smalldesk-img" class="g-janesville-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/janesville-ai2html_smalldesk-600.png"/>
+    <img id="g-janesville-ai2html-smalldesk-img" class="g-janesville-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/janesville-ai2html_smalldesk-600.png"/>
     <div id="g-ai2-1" class="g-text g-aiAbs g-aiPointText" style="top:2.1576%;margin-top:-9.3px;left:83.0535%;width:109px;">
       <p class="g-pstyle0">Olive Garden</p>
     </div>
@@ -1142,7 +651,7 @@
   <!-- Artboard: mobile -->
   <div id="g-school-route-actual-ai2html-mobile" class="g-artboard" style="max-width: 400px;max-height: 278px" data-aspect-ratio="1.437" data-min-width="0" data-max-width="599">
 <div style="padding: 0 0 69.5976% 0;"></div>
-    <img id="g-school-route-actual-ai2html-mobile-img" class="g-school-route-actual-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/school-route-actual-ai2html_mobile-400.png"/>
+    <img id="g-school-route-actual-ai2html-mobile-img" class="g-school-route-actual-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/school-route-actual-ai2html_mobile-400.png"/>
     <div id="g-ai0-1" class="g-text_copy g-aiAbs g-aiPointText" style="top:3.1781%;margin-top:-9.8px;left:17.9306%;width:116px;">
       <p class="g-pstyle0">Sweet Home</p>
     </div>
@@ -1155,7 +664,7 @@
   <!-- Artboard: desktop -->
   <div id="g-school-route-actual-ai2html-desktop" class="g-artboard" style="width:900px; height:561.436247519585px;" data-aspect-ratio="1.603" data-min-width="900">
 <div style=""></div>
-    <img id="g-school-route-actual-ai2html-desktop-img" class="g-school-route-actual-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/school-route-actual-ai2html_desktop-900.png"/>
+    <img id="g-school-route-actual-ai2html-desktop-img" class="g-school-route-actual-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/school-route-actual-ai2html_desktop-900.png"/>
     <div id="g-ai1-1" class="g-text_copy g-aiAbs g-aiPointText" style="top:4.2476%;margin-top:-9.8px;right:84.9871%;width:116px;">
       <p class="g-pstyle0">Sweet Home</p>
     </div>
@@ -1167,7 +676,7 @@
   <!-- Artboard: smalldesk -->
   <div id="g-school-route-actual-ai2html-smalldesk" class="g-artboard" style="width:600px; height:445.134034413669px;" data-aspect-ratio="1.348" data-min-width="600" data-max-width="899">
 <div style=""></div>
-    <img id="g-school-route-actual-ai2html-smalldesk-img" class="g-school-route-actual-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/school-route-actual-ai2html_smalldesk-600.png"/>
+    <img id="g-school-route-actual-ai2html-smalldesk-img" class="g-school-route-actual-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/school-route-actual-ai2html_smalldesk-600.png"/>
     <div id="g-ai2-1" class="g-text_copy g-aiAbs g-aiPointText" style="top:4.4588%;margin-top:-9.8px;right:79.9729%;width:116px;">
       <p class="g-pstyle0">Sweet Home</p>
     </div>
@@ -1379,8 +888,8 @@
   <!-- Artboard: large -->
   <div id="g-madison-ai2html-large" class="g-artboard" style="width:1200px; height:538.732896621074px;" data-aspect-ratio="2.227" data-min-width="1200">
 <div style=""></div>
-    <img id="g-madison-ai2html-large-img" class="g-madison-ai2html-large-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/madison-ai2html_large-1200.png""/>
-    <img id="g-madison-ai2html-large-humanities-img" class="g-madison-ai2html-large-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/humanities.png"/>
+    <img id="g-madison-ai2html-large-img" class="g-madison-ai2html-large-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/madison-ai2html_large-1200.png""/>
+    <img id="g-madison-ai2html-large-humanities-img" class="g-madison-ai2html-large-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/humanities.png"/>
     <div id="g-ai0-1" class="g-text g-aiAbs g-aiPointText" style="top:10.084%;margin-top:-9.3px;left:85.0312%;margin-left:-64.5px;width:129px;">
       <p class="g-pstyle0">Farmer&rsquo;s Market</p>
     </div>
@@ -1410,8 +919,8 @@
   <!-- Artboard: mobile -->
   <div id="g-madison-ai2html-mobile" class="g-artboard" style="max-width: 400px;max-height: 958px" data-aspect-ratio="0.418" data-min-width="0" data-max-width="599">
 <div style="padding: 0 0 239.5016% 0;"></div>
-    <img id="g-madison-ai2html-mobile-img" class="g-madison-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/madison-ai2html_mobile-400.png""/>
-    <img id="g-madison-ai2html-mobile-humanities-img" class="g-madison-ai2html-mobile-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/humanities.png" />
+    <img id="g-madison-ai2html-mobile-img" class="g-madison-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/madison-ai2html_mobile-400.png""/>
+    <img id="g-madison-ai2html-mobile-humanities-img" class="g-madison-ai2html-mobile-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/humanities.png" />
     <div id="g-ai1-1" class="g-text g-aiAbs g-aiPointText" style="top:5.8795%;margin-top:-18.3px;right:78.4311%;width:79px;">
       <p class="g-pstyle0">Farmer&rsquo;s</p>
       <p class="g-pstyle0">Market</p>
@@ -1444,8 +953,8 @@
   <!-- Artboard: desktop -->
   <div id="g-madison-ai2html-desktop" class="g-artboard" style="width:900px; height:462.74526699589px;" data-aspect-ratio="1.945" data-min-width="900" data-max-width="1199">
 <div style=""></div>
-    <img id="g-madison-ai2html-desktop-img" class="g-madison-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/madison-ai2html_desktop-900.png"/>
-    <img id="g-madison-ai2html-desktop-humanities-img" class="g-madison-ai2html-desktop-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/humanities.png"/>
+    <img id="g-madison-ai2html-desktop-img" class="g-madison-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/madison-ai2html_desktop-900.png"/>
+    <img id="g-madison-ai2html-desktop-humanities-img" class="g-madison-ai2html-desktop-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/humanities.png"/>
     <div id="g-ai2-1" class="g-text g-aiAbs g-aiPointText" style="top:9.5789%;margin-top:-18.3px;left:18.6179%;width:128px;">
       <p class="g-pstyle0">Memorial Union</p>
       <p class="g-pstyle0">(Ice Cream)</p>
@@ -1475,8 +984,8 @@
   <!-- Artboard: smalldesk -->
   <div id="g-madison-ai2html-smalldesk" class="g-artboard" style="width:600px; height:963.820347268696px;" data-aspect-ratio="0.623" data-min-width="600" data-max-width="899">
 <div style=""></div>
-    <img id="g-madison-ai2html-smalldesk-img" class="g-madison-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/madison-ai2html_smalldesk-600.png"/>
-    <img id="g-madison-ai2html-smalldesk-humanities-img" class="g-madison-ai2html-smalldesk-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/humanities.png"/>
+    <img id="g-madison-ai2html-smalldesk-img" class="g-madison-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/madison-ai2html_smalldesk-600.png"/>
+    <img id="g-madison-ai2html-smalldesk-humanities-img" class="g-madison-ai2html-smalldesk-humanities-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/humanities.png"/>
     <div id="g-ai3-1" class="g-text g-aiAbs g-aiPointText" style="top:7.7116%;margin-top:-18.3px;left:72.7502%;width:110px;">
       <p class="g-pstyle0">Free Cheese </p>
       <p class="g-pstyle0">Samples</p>
@@ -1655,7 +1164,7 @@
   <!-- Artboard: mobile -->
   <div id="g-dc-ai2html-mobile" class="g-artboard" style="max-width: 400px;max-height: 379px" data-aspect-ratio="1.056" data-min-width="0" data-max-width="599">
 <div style="padding: 0 0 94.6651% 0;"></div>
-    <img id="g-dc-ai2html-mobile-img" class="bg-dc-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/dc-ai2html-mobile.jpg"/>
+    <img id="g-dc-ai2html-mobile-img" class="bg-dc-ai2html-mobile-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/dc-ai2html-mobile.jpg"/>
     <div id="g-ai0-1" class="g-Layer_5 g-aiAbs g-aiPointText" style="top:9.8574%;margin-top:-18.3px;right:60.3598%;width:67px;">
       <p class="g-pstyle0">All the</p>
       <p class="g-pstyle0">friends</p>
@@ -1699,7 +1208,7 @@
   <!-- Artboard: smalldesk -->
   <div id="g-dc-ai2html-smalldesk" class="g-artboard" style="width:600px; height:598.387693204602px;" data-aspect-ratio="1.003" data-min-width="600" data-max-width="899">
 <div style=""></div>
-    <img id="g-dc-ai2html-smalldesk-img" class="g-dc-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/dc-ai2html-smalldesk.jpg"/>
+    <img id="g-dc-ai2html-smalldesk-img" class="g-dc-ai2html-smalldesk-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/dc-ai2html-smalldesk.jpg"/>
     <div id="g-ai1-1" class="g-Layer_5 g-aiAbs g-aiPointText" style="top:34.5251%;margin-top:-9.6px;left:19.1798%;width:84px;">
       <p class="g-pstyle0">Devseed!</p>
     </div>
@@ -1741,7 +1250,7 @@
   <!-- Artboard: desktop -->
   <div id="g-dc-ai2html-desktop" class="g-artboard" style="width:900px; height:653.781586124547px;" data-aspect-ratio="1.377" data-min-width="900">
 <div style=""></div>
-    <img id="g-dc-ai2html-desktop-img" class="g-dc-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/24-foggy-spaces/dc-ai2html-desktop.jpg"/>
+    <img id="g-dc-ai2html-desktop-img" class="g-dc-ai2html-desktop-img g-aiImg" alt="" src="/assets/graphics/posts/14-foggy/dc-ai2html-desktop.jpg"/>
     <div id="g-ai2-1" class="g-Layer_5 g-aiAbs g-aiPointText" style="top:36.8004%;margin-top:-9.6px;left:26.5783%;width:84px;">
       <p class="g-pstyle0">Devseed!</p>
     </div>
@@ -7741,4 +7250,943 @@ p {
 <span class="post-date">June, 22nd 2019</span></i></p>
 
 <p><br />
-<br /></p>]]></content><author><name></name></author><category term="wikipedia" /><summary type="html"><![CDATA[This is it! A few months after adopting 154 cds from the sidewalk, I’ve made it through this stranger’s collection of tunes.]]></summary></entry></feed>
+<br /></p>]]></content><author><name></name></author><category term="wikipedia" /><summary type="html"><![CDATA[This is it! A few months after adopting 154 cds from the sidewalk, I’ve made it through this stranger’s collection of tunes.]]></summary></entry><entry><title type="html">Command Carto II – Make</title><link href="http://localhost:4000/command-line-carto-two/" rel="alternate" type="text/html" title="Command Carto II – Make" /><published>2019-06-08T01:00:00-04:00</published><updated>2019-06-08T01:00:00-04:00</updated><id>http://localhost:4000/command-line-carto-two</id><content type="html" xml:base="http://localhost:4000/command-line-carto-two/"><![CDATA[<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/adventure.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<aside>
+  This is the second part of a series for Command Line Cartography. Miss part one? Worry not, you can read part one → <a href="https://moriartynaps.org/command-carto-part-one/" target="_blank">here</a>.
+</aside>
+
+<p>Welcome back!</p>
+
+<p>Last time we popped open our terminal and did some quick GIS work. As we saw at the end, the real benefit comes from chaining commands together. However, typing all that out in the terminal is inconvenient, and you don’t leave a history of commands for later.</p>
+
+<p>We want to yell “DO THE THING”, in so many words, and have it do the thing.</p>
+
+<p>Good news! This round we’re gonna learn how to do that by introducing <i class="collecticon collecticons-star"></i>Makefiles<i class="collecticon collecticons-star"></i>.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    1.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Making Camp
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>At this point I’d recommend getting a text editor to help write in. Text editors are fancy notepads that make coding more pleasant.</p>
+
+<p>I personally use <a href="https://www.sublimetext.com/" target="_blank">Sublime</a>, but there are lots of other good options – all free to download and use. If you work on a team, it’s best to see what your colleagues are using and start there.</p>
+
+<p>Also:</p>
+
+<ol>
+  <li>Make sure your terminal can run Make commands. You can test this by typing <code>make</code> into your terminal. If it returns the message: <code>make: *** No targets specificed...</code>, you're good. Otherwise, you may need to install additional <a href="https://stackoverflow.com/questions/1469994/using-make-on-osx" target="_blank">developer tools</a>.</li>
+  <li>New blog post, new package of files to help ya along. <a href="/assets/files/cli-carto-two-files.zip">Download this zip file (409kb)</a> s'il vous plaît.</li>
+  <li>Throw those files into a folder, and navigate your terminal to it.</li>
+  <li>Mentally picture your favorite meal or snack. Promise yourself that you'll go get said meal or snack after finishing this tutorial. Makefile syntax is frustrating and unforgiving. You'll have earned it.</li>
+</ol>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    2.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Make It So
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Make was created in 1976 as a means to give computer’s a task list of commands they can use to install programs and properly setup files. It’s still used, albeit mostly in software development. This format is <em>old</em>, but tried and true!</p>
+
+<p>Make gives us the ability to save terminal commands to a file we can then call from – as opposed to typing them in manually into the terminal, as we did in part one. That file is a <code class="language-plaintext highlighter-rouge">makefile</code>.</p>
+
+<p>In our Makefile, we write <span class="tooltip">
+	<strong>Tasks</strong><i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		In official documentation, this is called TARGET. I’ll explain why in the <em>next</em> installment. For now, don’t worry about that.
+	</span>
+</span></p>
+
+<p>. Think of each Task as a lil’ robot you can call to execute your series of commands. A Make task is formatted like so:</p>
+
+<div class="post-image inline-img__small ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/makebot.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>To call a task, you first save your Makefile to a folder. This file should just be called <code class="language-plaintext highlighter-rouge">makefile</code>, no extension or <span class="tooltip">
+	<strong>additional names needed</strong><i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		Of course, you <em>can</em> give it a name, but then you also have to type more when calling the tasks. For brevities sake, just having it be ‘makefile’ works well and good.
+	</span>
+</span>
+.</p>
+
+<p>If your terminal is directed to a folder containing a Makefile, you can call tasks from the terminal with: <code>make [task name]</code>. When called the commands for that task are run sequentially.</p>
+
+<h4 id="mike-alfa-kilo-echo">Mike… Alfa… Kilo… Echo…</h4>
+
+<p>We’re going to be alternating between your terminal and the Makefile throughout this tutorial. For the sake of clarity, code written in the <span class="code-makefile">purple boxes</span> is meant for a Makefile. Code in <span class="white-bg">white boxes</span> are meant to be entered into your terminal, just like last time.</p>
+
+<p>The following is a functional make command:</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/echo.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+	<code class="code-block code-makefile">echo-caynon:
+	echo "don't have a cow homer!"
+	echo "don't have a cow homer!!"
+	echo "don't have a cow homer!!!"</code>
+</div>
+
+<p>The <code>echo-caynon</code> task is included in the Makefile you downloaded. You can run it yourself by typing <code>make echo-caynon</code> in your terminal and hitting enter. Behold! It executes each line.</p>
+
+<p><code>echo</code> is a new command. You’ll see the terminal respond with whatever follows the command. If you open the makefile in your text editor, you should see exactly what gets echo’d!</p>
+
+<h4 id="familiar-functions">Familiar Functions</h4>
+
+<p>With this format, we can bake in the commands from our previous work into a task we can call in three words:</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/panda.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="code-block-fix">
+	<code class="code-block code-makefile">pandaMap:
+	mapshaper countries.json \
+		-join native-red-pandas.csv keys=NAME,COUNTRY \
+		-filter '"yes".indexOf(PANDAS) &gt; -1' \
+		-clean \
+		-proj +init=EPSG:32645 \
+		-o countries-with-pandas.json
+	echo "finished"</code>
+</div>
+
+<p>This is also included, so run <code>make pandaMap</code> and sit back and enjoy watching your Makebot do all the work for you. <em>And so fast!</em></p>
+
+<p>The <code>\</code> become more important here. Without it each new line is interpreted as a new command, as you saw in echo-caynon. <code>\</code> tells the Makebot that the next line isn’t a new command, but rather a continuation of the previous line’s command. Everything will work if you typed it out one uninterrupted line, <em>but</em> that would make it rather hard to read. Your future self will thank present you for keeping things readable.</p>
+
+<h4 id="formatting">Formatting</h4>
+
+<p>Before we get to the meat of this post – a few formatting quirks.</p>
+
+<p>You can have as many tasks as ya wish in one Makefile. They just need to have unique names.</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/spacebug.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>When Make fails, it is very bad about explaining what went wrong. If you get the vague error message: <code>makefile:25: *** missing separator.  Stop.</code>, you should check to make sure you used <strong>tab</strong> indentions instead of spaces.</p>
+
+<p>If that’s not the issue (<em>it will be 90% of the time</em>), I’ve found the fastest way to debug is to:</p>
+
+<ul>
+  <li>Temporarily undo the latest work to determine what new code is introducing the errors.</li>
+  <li>Test out new commands in one-off tasks before baking them in with other commands.</li>
+  <li>Make sure you saved! If you haven’t saved your changes, the file won’t have your updates in it.</li>
+</ul>
+
+<p>K. <em>Let’s GO</em>!</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    3.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Make a Map
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Let’s make a map of all the burn footprints from California wildfires for 2018. Our makefile will handle:</p>
+
+<ul>
+  <li>Downloading the fire perimeter data</li>
+  <li>Filtering the features</li>
+  <li>Dissolving the features</li>
+  <li>&amp; Clipping the data to California</li>
+</ul>
+
+<p>If you haven’t already, open “makefile” from the downloaded resources in your text editor.</p>
+
+<p>From this point on, none of the following tasks are in the included Makefile. You will need to add them to the provided Makefile.</p>
+
+<p>The commands should work as written. <em>But</em> if you need to double check against one that’s pre-written (<em>and works!</em>), you can find that <a href="https://gist.github.com/DylanMoriarty/d419d57b03f326d8dd4dd81c27ae3763" target="_blank">here</a>.</p>
+
+<h4 id="fetching-the-data">Fetching the Data</h4>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/fetch.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>The USGS does a great job providing up-to-date shapefiles for each and every wildfire perimeter as it develops. They also have a file that includes every perimeter shape for the year to date, which we could go get ourselves…</p>
+
+<p>…but we’re being lazy. Let’s tell our bot to go fetch it instead!</p>
+
+<div>
+  <code class="code-block">curl -O URL</code> 
+  <dd class="code-def"><span class="code-def-intro">stands for &#8594;</span> Client URL</dd>
+</div>
+
+<p>USGS hosts their data on a server called <a href="https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/" target="_blank">GeoMAC</a>. <code>curl</code> will look at whatever URL you put after the <code>-O</code>, and download it.</p>
+
+<aside>
+	The file we're downloading from GeoMAC is hefty: <b>174MB</b> zipped and nearly <b>270MB</b> unzipped. If that's an issue for you, instead of curling from GeoMAC replace the URL with: <i>https://moriartynaps.org/assets/files/2018_perimeters_dd83.zip.</i> This will download a reduced version of the file (9.6MB).
+</aside>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">fetch:
+	curl -O "https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/2018_perimeters_dd83.zip"</code> 
+</div>
+
+<p>Curl-ing has the nice feature of displaying how the download is going in the terminal. A lot of commands don’t give an indication of how long they’re taking to complete. In general, you’ll know a command is done when your cursor returns in the terminal. You can always exit a command in progress with <code class="language-plaintext highlighter-rouge">cntrl + c</code>.</p>
+
+<h4 id="unzipping-the-zip-file">Unzipping the .zip file</h4>
+
+<p>If you run <code>ls</code> in your terminal, you should now see the zip file listed. Let’s get those files out. But, one brief detour first –</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/unzip.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div>
+	<code class="code-block">@[ -d FOLDERNAME ] || mkdir FOLDERNAME</code> 
+	<dd class="code-def">Is the first statement true? If not than do second part.</dd>
+</div>
+
+<p>Unzipping this file is going to spit out a pile of shapefile files. Let’s keep things tidy by putting them into their own folder. This command tests if a folder exists, and if it doesn’t, it executes the <code>mkdir</code> command on the rightside of the ||.</p>
+
+<p>”||” is a logic operator, but don’t fret. We’ll only be using it to using it to create folders.</p>
+
+<div><code class="code-block">unzip -o "FILE" -d DESTINATION</code></div>
+
+<p>This will unzip the file. The text following <code>-d</code> will tell it where to save the file.</p>
+
+<p>You’ll often see dash &amp; letters following commands. They are shorthand for longer words, cut down for brevity. For <em>most</em> CLI libaries you can type <code>-h</code> to get a list of what those commands do. That’s your Try it with <code>unzip</code>.</p>
+
+<div><code class="code-block">unzip -h</code></div>
+
+<p>Put together those commands into a Makebot:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">unzip:
+	@[ -d data ] || mkdir data
+	unzip -o "2018_perimeters_dd83.zip" -d data/</code>
+</div>
+
+<p>To review, our first command checks to see if a folder named ‘data’ exists and if not makes one. Our second command unzips the zip file, and puts it in our ‘data’ folder. Spiffy.</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/mb-filter.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="filtering">Filtering</h4>
+
+<p>The downloaded file has the perimeter from every wildfire in the U.S. for 2018. We don’t need info for what was happening on Florida, so we can filter out all states that aren’t California.
+Here’s a filter task:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">filter:
+	mapshaper data/2018_perimeters_dd83.shp \
+		-filter '"CA".indexOf(state) &gt; -1' \
+		-o data/perimeters_filtered.shp</code>
+</div>
+
+<p>It may take a second or a minute, but you should see a message “[filter] Retained 992 of 6,046 features” after running <code class="language-plaintext highlighter-rouge">make filter</code>.</p>
+
+<p>Filtering helps cut down the filesize considerably, but the output still contains multiple perimeters for each fire (they measure it daily). For our purposes we only want the whole burn area for each fire, so let’s dissolve the features.</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/mb-dissolve.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="dissolve">Dissolve</h4>
+
+<div>
+	<code class="code-block">mapshaper INPUT -dissolve2 FIELD -o OUTPUT</code>
+</div>
+
+<p>The ‘FIELD’ is what we’re choosing to dissolve the features by. In this case the field “incidentna” (incident name) should do the trick.</p>
+
+<p>Translated into a Makebot task:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">dissolve:
+	mapshaper data/perimeters_filtered.shp \
+		-dissolve2 incidentna \
+		-o data/perimeters_dissolved.shp</code>
+</div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">make dissolve</code> and now we have the overall fire perimeters. This will also take a hot minute to complete!</p>
+
+<p>Now we just need to makes sure none these fire perimeters cross state borders.</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/mb-clipping.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="clipping">Clipping</h4>
+
+<div>
+	<code class="code-block">Mapshaper INPUT -clip CLIPBY -o OUTPUT</code>
+</div>
+
+<p>This will clip your INPUT file by the CLIPBY file and save it as OUTPUT.</p>
+
+<p>I provided a clipped version of California in the download package. We’ll use that as our CLIPBY file.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">clip:
+	mapshaper data/perimeters_dissolved.shp \
+		-clip California.geojson \
+		-o perimeters_2018.shp </code>
+</div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">make clip</code> and we’re good.</p>
+
+<p>If you open up <code class="language-plaintext highlighter-rouge">perimeters_2018.shp</code> you should see we now have a shapefile that’s just the burn perimeters of California fires. Something like the black bits here:</p>
+
+<div class="post-image inline-img__small ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/fires-18.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="all-the-files">All the files!</h4>
+
+<p>You might have noticed that at each step we output to a new file. This is preferable to just overwriting the original file for a few reasons. For one, it makes debugging easier – you can always view the input file and see if something looks off.</p>
+
+<p>It’s important to never overwrite the original file if you can help it. That way, when you run your tasks the output will <em>always</em> be the same, and you won’t have to download new original files every time.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    4.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Bringing it altogether
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/factory.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>You can call Make tasks from other tasks in your Makefile. This lets us keep our tasks piecemeal, as we’ve been doing, while still letting everything get called from a sole call.</p>
+
+<p>Once we’ve run through all the individual tasks and know they’re working, we can call them all through a <span class="tooltip">
+	“factory”<i class="collecticons collecticons-circle-information"></i>
+	<span class="tooltiptext" style="display:block">
+		This is not official terminology. Just how I refer to these sorts of tasks.
+	</span>
+</span>
+ task.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">wildfire-factory:
+	make clean
+	make fetch
+	make unzip
+	make filter
+	make dissolve
+	make clip</code>
+</div>
+
+<p>Alas, I did sneak <em>one more task</em> into that.</p>
+
+<h4 id="cleanin-up">Cleanin’ Up</h4>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">clean:
+	rm -rf data/
+	rm -f 2018_perimeters_dd83.zip</code>
+</div>
+
+<p><code>rm</code> is the standard CLI operation to ‘remove’ a the file that follows. <code>-f</code> and <code>-rf</code> are ways to ‘force’ it, which will ignore non-existent files.</p>
+
+<p>This deletes the zip file and our data folder. This can be helpful for a few reasons: you save space on your computer, and you’ll know that your factory will run under the same conditions next time.</p>
+
+<p>When you’re using these commands, <em>always</em> explicitly state what you want deleted. <code>-rf</code> in particular can be dangerous if it’s used in a root folder with a catchall <code class="language-plaintext highlighter-rouge">*</code> or <code class="language-plaintext highlighter-rouge">.</code>. We can avert that danger by:</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/cleaning.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<ul>
+  <li>Don’t use these commands while you’re in your computer’s home folder.</li>
+  <li>Always following it with exactly what file/folder you want removed, no catchalls.</li>
+  <li>Only remove files you’ve fetched or created through your makefile. Things you can always recreate if need be.</li>
+</ul>
+
+<p>Add the above tasks to your file and run the <code>make wildfire-factory</code> task. Viola!</p>
+
+<p>If something goes awry with one of the tasks, you can always troubleshoot it by calling the problem issue on it’s own. Heck, you don’t have to pile everything together either. If you don’t want to fetch every time, for example, just don’t include it in your factory task.</p>
+
+<h4 id="all-in-one">All in One</h4>
+
+<p>&amp; again, there’s a million different ways to do this sort of GIS work. Once again, we could write this factory in one command:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">wildfire-factory:
+	rm -rf data/
+	rm -r 2018_perimeters-dd83.zip
+	rm 2018_perimeters_dd83.zip 
+	curl -O "https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/2018_perimeters_dd83.zip"
+	@[ -d data ] || mkdir data
+	unzip -o "2018_perimeters_dd83.zip" -d data/
+	Mapshaper data/2018_perimeters_dd83.shp \
+		-filter '"CA".indexOf(state) &gt; -1' \
+		-clip California.geojson \
+		-dissolve2 incidentna \
+		-o format=geojson data/perimeters_2018.json</code>
+</div>
+
+<p>Like I’ve said a bunch here tho, splitting it up has the benefit of making it easier to debug &amp; work through when you’re starting out. When you write these yourself, it’s entirely your call on how you organize things.</p>
+
+<h4 id="the-real-magic">The Real Magic</h4>
+
+<p>Let’s say you’re so excited by this newfound power that you want to see what the 2017 wildfire situation looked like.</p>
+
+<p>All you have to do is replace every instance of 2018 with 2017 in your Makefile, then run your factory command. Try it out! <em>Be amazed</em>.</p>
+
+<p>This format can take awhile to get used to – I still troubleshoot Google frequently. The good news is that you now have working commands for doing basic GIS operations. If you come across a job later that you need a CLIP task for, you already have a working blueprint.</p>
+
+<p>The world is yours to takeover with robots.</p>
+
+<div class="post-image inline-img__small ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/magic.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    5.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">ALL the Buildings
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Before we go, let’s build one more bot.</p>
+
+<div class="post-image inline-img__small ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/buildings.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>In 2017, <a href="https://github.com/Microsoft/USBuildingFootprints" target="_blank">Microsoft released a dataset</a> with all of the buildings in the United States. They have it free for you to download (nice!), but only as geojsons. That’s a lovely format – but when you’re working with 2gb geojsons QGIS will start hemorrhaging. Let’s make a bot that downloads the file for us and makes a quick conversion to the easier-to-parse shapefile.</p>
+
+<p>First thing first, we’ll want to make sure there’s a folder for the data.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data</code>
+</div>
+
+<p>The URL we target for downloading is <em>https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/Wisconsin.zip</em>.</p>
+
+<p>This is perfect for us, because the URL is based on the state we want. If you change Wisconsin there to Idaho you’ll hit a file for Idaho instead. This consistency is the best.</p>
+
+<h4 id="variables">Variables</h4>
+
+<p>In a Makefile, there are two places you can create variables. The first place is typed in the document itself, along the lines of:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">VARIABLE="value"</code>
+</div>
+
+<p>Where VARIABLE can be any ol’ declarative you want to use. ‘CAT’, ‘GLISSRIFFER’, ‘OTTOVONSCHWEINSTEIGER’, etc. would work just as well. For Makefiles, I tend you write my variables in UPPERCASE to help keep them visually distinct. When it comes time to write a bot, you can now reference that variable via:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">testbot:
+	echo $(VARIABLE)</code>
+</div>
+
+<p>The $() bit tells Make that the name inside is a variable it should be looking for, and not just text (or a command) that reads VARIABLE.</p>
+
+<p>The second place to assign a value to a variable is when we call the command. Delete the line in your Makefile that assigned “value” to VARIABLE.</p>
+
+<p>Now run the following command in your terminal…</p>
+
+<div>
+<code class="code-block">make testbot VARIABLE="different value"</code>
+</div>
+
+<p>…and our testbot task will echo that value!</p>
+
+<p>We can take advantage of this and Microsoft’s fortunate URL structure to make our fetch code grab a STATE we choose when we call the task. In this case, we’ll curl: <em>https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip</em>.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data</code>
+</div>
+
+<p>Try running that with the state of your choice <em>that isn’t California, Florida, Ohio or Texas</em>! You should be rewarded with a downloaded file. I’ll explain about California below.</p>
+
+<div>
+<code class="code-block">make getFootprints STATE=Wisconsin</code>
+</div>
+
+<h4 id="processing">Processing</h4>
+
+<p>That grabs the zip file. Now let’s add an unzip command to the task:</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data
+	unzip data/$(STATE).zip -d data</code>
+</div>
+
+<p>Because we’re still in the same task, $(STATE) will still be understood as whichever value you called with.</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/ohno.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>Let’s convert it a shapefile. If you run mapshaper on it’s lone self, you may get an error: “<em>FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed — process out of memory</em>”.</p>
+
+<p>These files are stinkin’ <strong>huge</strong>, which means that we need to allocate more computin’ power to Mapshaper to finish the task. <code>--max-old-space-size=8192 `which mapshaper`</code> will do this.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data
+	unzip data/$(STATE).zip -d data
+	node --max-old-space-size=8192 `which mapshaper` data/$(STATE).geojson -o format=shapefile data/$(STATE).shp</code>
+</div>
+
+<p>If you run this, it may take five to ten minutes, but during that time you can go do other things. Make breakfast. Do some jumping jacks. <a href="https://www.youtube.com/watch?v=BxRzzm-mjCE" target="_blank">Make yourself a fancy cocktail.</a></p>
+
+<h4 id="cleaning-house">Cleaning House</h4>
+
+<p>Finally, given that we only wanted the Shapefile, it can be nice to remove some of the other files we gathered on the way.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">getFootprints:
+	@[ -d data ] || mkdir data
+	curl -O https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/$(STATE).zip data
+	unzip data/$(STATE).zip -d data
+	node --max-old-space-size=8192 `which mapshaper` data/$(STATE).geojson -o format=shapefile data/$(STATE).shp
+	rm data/$(STATE).geojson</code>
+</div>
+
+<p>Try that out with a different state! Should work well. Now you can quickly pull down that building data and have it in an already accessible format to clip from.</p>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/ogr.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h4 id="texas-california-taming-the-beast">Texas, California: Taming the Beast</h4>
+
+<p>Finally, I mentioned above to not download the data for the largest states. That’s because <em>even with</em> the increase in processing power, Mapshaper may not be able to fully convert those files.</p>
+
+<p>Luckily, with CLI GIS, we can mix and match the libraries we’re using to accomplish whatever task we set out for. In this case, we can use <strong>Ogr2Ogr</strong> to make the conversion instead– and this one works.</p>
+
+<p>If you have QGIS installed, you already have Ogr2Ogr. However, if you don’t have QGIS and just want it you can download Ogr2Ogr along with the rest of GDAL <a href="https://www.kyngchaos.com/software/archive/#gdal">here</a>.</p>
+
+<div class="code-block-fix">
+<code class="code-block code-makefile">largerFile:
+	ogr2ogr -nlt POLYGON -skipfailures $(STATE).shp $(STATE).geojson OGRGeoJSON</code>
+</div>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    6.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">That's All For Now
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<div class="post-image post-image ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/06-clc2/do-the-thing.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p><em>Congrats</em>! Writing terminal commands this way can be a real struggle bus. I hope you got some good stuff out of this, and have some ideas for processes ya want to codify in a makebot.</p>
+
+<p>This is just scratching the surface on what Makefiles can do! In the next chapter, I’ll go over how to write more generalized tasks and loops. <em>Stay tuned.</em></p>
+
+<p><br /></p>
+
+<p><i>– D.M., <code>make sleepTime LOCATION="brooklyn"</code><br />
+<span class="post-date">June 8th, 2019</span></i></p>
+
+<div class="notes">
+  <p>If any parts of this seem super confusing, or you just have any other questions feel free to send a bird my way on <a href="https://twitter.com/DylanMoriarty" target="_blank">Twitter</a>.</p>
+
+  <p>Once again, all the kudos to Matthew Bloch for his continued work on Mapshaper.</p>
+
+  <p>Also to <a href="https://twitter.com/mojodna" target="_blank">Seth Fitzsimmons</a> and <a href="https://twitter.com/jscarto" target="_blank">Joshua Stevens</a> who both gave talks on Make during PCD over the past two years.</p>
+
+  <p><a href="https://www.youtube.com/watch?v=Ubefm4qUT7g" target="_blank">Joshua's talk</a> does a great job of highlighting the potential strength of working directly with CLI libraries. Meanwhile <a href="https://www.youtube.com/watch?v=qq7iVStVjPU" target="_blank">Seth's talk</a> is a blitz of shell commands that'll make your head spin. After working with make for a bit, you'll undoubtedly pick up useful commands from it tho.</p>
+
+  <p>And finally a quick kudos to <a href="https://twitter.com/dereklieu" target="_blank">Derek Lieu</a> for introducing me to this approach for GIS work way back in 2016.</p>
+</div>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Stranger Music II</title><link href="http://localhost:4000/stranger-music-ii/" rel="alternate" type="text/html" title="Stranger Music II" /><published>2019-04-06T19:00:01-04:00</published><updated>2019-04-06T19:00:01-04:00</updated><id>http://localhost:4000/stranger-music-ii</id><content type="html" xml:base="http://localhost:4000/stranger-music-ii/"><![CDATA[<p>Turns out nowadays people’s faces light up when they see cds.</p>
+
+<p>Sometimes it’s an audible “hah”, other times it’s a “wait, what?”</p>
+
+<p>On the F train I dropped a disc on the crowded floor while swapping two out. No one seemed to notice, and I considered leaving it to wherever things lost on the subway go.</p>
+
+<div class="post-image inline-img ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/lost.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p>But! I couldn’t remember the artist or album name for that wayward cd… so I waited until the crowd had petered out and bent down to retrieve the little guy.</p>
+
+<p>I grabbed it just as I exited the train car, looking up to catch a couple with bewildered smiles who asked “wait, you still use those?”. Gave them an affirmative thumbsup and carried on.</p>
+
+<p>It’s been fun seeing reactions to an outdated technology <em>that isn’t even that old</em>. Too old to have a place in this world, too young to be ironically loved by hipsters.</p>
+
+<p>Anyhoo, like last time, here’s my favorite tunes from the next 46 cds from this stranger’s burned music collection.</p>
+
+      </article>
+    </section>
+
+<div class="post-image black-border post-image__full">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/all2.jpg" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+    <section class="article-container article-cotainer__within">
+      <div class="article-gutter "></div>
+      <article class="article-content ">
+
+<iframe src="https://open.spotify.com/embed/user/eatincake/playlist/0EE8aEBQtdouMdWyoYd8Ro" width="100%" height="300px" frameborder="0" allowtransparency="true" class="spotif"></iframe>
+
+<p><br /></p>
+
+<div class="post-image post-image spinme ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/tinhat-1.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<h2 id="tin-hat-trio">Tin Hat Trio</h2>
+
+<p>These folks are the spirit of Autumn captured in short haunting melodies. I knew of em’ before, but was delighted to see three cd’s of their stuff. This music just <em>jives</em> really well with me.</p>
+
+<p>They drift seamlessly through folky sounds to blues to aggressive central American diddies. An accordion and violin are mainstays in the trio, and it floors me how well the two meld together in harmony. Heck, they even get guest vocals on a few tracks, including Tom Waits &amp; Willie Nelson.</p>
+
+<p>Love love love this band. Maybe you will too. Their album ‘Book of Silk’ is up <a href="https://downloads.ropeadope.com/album/book-of-silk" target="_blank">on bandcamp</a>, and a few are <a href="https://open.spotify.com/artist/5qTWHmoWrGvTBCtAfR48j6?si=X1AAiKQgR-O7LG7CK4l5tw" target="_blank">on Spotify</a>.</p>
+
+<div class="post-image post-image spinme ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/moondog.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p><br /></p>
+
+<h2 id="moondog">Moondog</h2>
+
+<p><em>The Viking of 6th Avenue</em></p>
+
+<p>Moondog the person was incredible. He spent some thirty years in New York, where he dressed up in a viking garb selling his music, poetry, and philosophies in downtown Manhattan. Blinded at a young age, he trained in music and became a pretty well known jazz musician.</p>
+
+<div class="post-image inline-img ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/moondog-man.png" />
+	</fig>
+  
+	<figcaption>
+		Doodle based off one of many <a href="https://www.gettyimages.com/photos/moondog" target="_blank">great photos taken of Moondog</a>.
+	</figcaption>
+</div>
+
+<p>His story is pretty incredible, and his music lives up to it. You hear he was a viking and expect some kinda Nordic chanting. Instead, you get some soft-spoken and atmospheric chamber music. A lot of it builds up slowly, but there’s a great sense of tension in it too.</p>
+
+<p>If you listen to Moondog you’re going to hear something you recognize. Full albums of his are on <a href="https://www.youtube.com/results?search_query=moondog+full+album" target="_blank">Youtube</a> and <a href="https://open.spotify.com/artist/7HvQfRNJCvPXTVirKKB0Nn?si=ISPxoMbxSNybGSbZNUcbUQ" target="_blank">Spotify</a>.</p>
+
+<div class="post-image post-image spinme ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/carla.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p><br /></p>
+
+<h2 id="clara-moreno">Clara Moreno</h2>
+
+<p>I’ve never sought out Samba, and as a genre it has a very “background music in a coffee shop” flavor… but this is good stuff.</p>
+
+<p>This album is really calming. If Tin Hat Trio is has the spirit of Fall, Clara is the epitome of a calm sunny Summer day. Album has a lot of jangly guitars and laid back vocals that’ll ease ya into a good mood.</p>
+
+<p>This one’s up on <a href="https://claramoreno.bandcamp.com/album/meu-samba-torto" target="_blank">Bandcamp</a> and <a href="https://open.spotify.com/artist/72As0LhT6I8lgCn1nlMZK5?si=N5sKt4StRDGjGudXqyFlnA">Spotify</a>.</p>
+
+<p><br />
+<br /></p>
+
+<div class="post-image post-image spinme ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/gary-bartz.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p><br /></p>
+
+<h2 id="gary-bartz-ntu-troop">Gary Bartz NTU Troop</h2>
+
+<p>Chaotic, soulful, and jazzy.</p>
+
+<p>I don’t know enough about jazz to talk intelligently about it, but it reminds me a lot of the band backing Bowie on Blackstar.  It’s from the 70’s, so there’s a lot of spoken words of revolution over the melodies, cut in and out for freeform saxophones before coming back for resolution.</p>
+
+<p>My favorite song on this album <a href="https://www.youtube.com/watch?v=0dnJVhBIAug" target="_blank">Drinking Song</a> can be found on Youtube and hardly anywhere else. The rest of Gary Bartz stuff is much easier to find at the <a href="https://open.spotify.com/artist/5ArqvMflDEhxdqW8sBBQUQ?si=MRlr7Q5iRrKkpmHcL157RA" target="_blank">usual places</a>.</p>
+
+<div class="post-image post-image spinme ">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/molam.png" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+<p><br /></p>
+
+<h2 id="-and-the-rest">, and the rest.</h2>
+
+<ul>
+  <li>
+    <p><strong>Joe Medgewick</strong>. Joe was a Blues/Soul songwriter from the 50s &amp; 60s who sold most of his work to other artists to record. This means the album I have is mostly demo’s, but it’s a good window into the songwriting world. Quite a few tracks will <span class="tooltip">
+  remind you of more famous work<i class="collecticons collecticons-circle-information"></i>
+  <span class="tooltiptext" style="display:block">
+      <a href="https://www.youtube.com/watch?v=cs3CTKWyHCc" target="_blank">‘When a Boy Becomes a Man’</a> starts out with a note that makes you think he’s about to launch into ‘A Change Is Gonna Come’. While his song <a href="https://www.youtube.com/watch?v=Cl5ZrhUGwkM" target="_blank">‘I Feel Good’</a> sounds like Jame’s Brown ‘I Feel Good’ from an alternate dimension, to name a few.
+  </span>
+</span>
+, but ya have to wonder if that was him keeping up with trends, or just being ahead of the game.</p>
+  </li>
+  <li>
+    <p><strong>Lots of Reggae</strong>. Yah man. Jhonny Greenwood’s a standout here.</p>
+  </li>
+  <li>
+    <p><strong>XTC – Skylarking</strong>, by track two or so I was on board for this. I thought the singer sounded <span class="tooltip">
+  stereotypically 80’s<i class="collecticons collecticons-circle-information"></i>
+  <span class="tooltiptext" style="display:block">
+      seriously why do all 80s male singers sing in bored forced baritone tones
+  </span>
+</span>
+, but I really thought this was from the 2000’s. Figured it was one of those psychedelic rock bands out of California.</p>
+  </li>
+  <li>
+    <p><strong>Iron &amp; Wine &amp; Other Folk</strong>. Good amount of that good good folk.</p>
+  </li>
+  <li>
+    <p><strong>More Worldly Tunes</strong>. This time from Iran to Portugal, from Spain to Brazil! When I’ve finished the collection I’ll put a list of what they are folks interested in these.</p>
+
+    </article>
+  </section>
+  </li>
+</ul>
+
+<div class="post-image  post-image__full">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/05-sm2/sofar.png" style="max-width:100%; width: 600px;" />
+	</fig>
+  
+	<figcaption>
+		
+	</figcaption>
+</div>
+
+    <section class="article-container article-cotainer__within">
+      <div class="article-gutter "></div>
+      <article class="article-content ">
+
+<p>Thanks for joining me, and thanks, of course, to whoever burned these. Hope this is what they expected to happen when they left them out on the sidewalk.</p>
+
+<p><i>-D.M., No Stranger<br />
+<span class="post-date">Mar.17th, 2019</span></i></p>
+
+<p><br />
+<br /></p>]]></content><author><name></name></author><category term="wikipedia" /><summary type="html"><![CDATA[Turns out nowadays people’s faces light up when they see cds.]]></summary></entry></feed>
