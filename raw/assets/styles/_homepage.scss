@@ -183,6 +183,14 @@ p {
   }
 }
 
+.other-links {
+  margin-top: 360px;
+  margin-left: 20px;
+  @include media-query($laptop) {
+    margin-top: 300px;
+  }
+}
+
 .post-icon {
   float: left;
   margin-right: 1rem;
