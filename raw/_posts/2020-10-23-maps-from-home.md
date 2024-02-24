@@ -6,7 +6,7 @@ categories: wikipedia
 
 type: maps
 scripts: Mapbox Waypoints
-permalink: the-new-primary-geography
+permalink: maps-from-home
 
 twit-img: "https://moriartynaps.org/assets/graphics/posts/09-home/twi-img.jpg"
 
