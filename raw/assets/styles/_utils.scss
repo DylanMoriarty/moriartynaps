@@ -20,6 +20,10 @@ $rainPurple: #a16e9f;
   clear: both;
 }
 
+$Averia: 'Averia Serif Libre';
+$Georgia: Georgia, 'Times New Roman', Times, serif !important;
+$Proza: 'Proza Libre', Helvetica, sans-serif;
+
 // Width of the content area
 $content-width:    800px;
 $on-palm:          600px;
@@ -33,3 +37,12 @@ $laptop:        800px;
 }
 
 .white-bg { background-color: white; }
+
+.sup {
+  font-size: 8px;
+  vertical-align: super;
+}
+
+.centerme {
+  text-align: center;
+}

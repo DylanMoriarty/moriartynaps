@@ -1,0 +1,46 @@
+{% if include.full %}
+  {::nomarkdown}  
+      </article>
+    </section>
+  {:/}
+{% endif %}
+ 
+<div class="post-image post-image__before-after {{ include.class }} {% if include.full %}post-image__full{% endif %}">
+  {% if include.link %}
+  <a href="{{ include.link }}" target="_blank" class="img-fade no_underline">
+  {% endif %}
+  <div>
+	  <img
+      class="image-base"
+      src="{{site.baseurl}}/assets/graphics/blank.png"
+      alt="{{ include.alt }}"
+      data-echo="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc-one }}"
+      {% if include.max %}style="max-width:100%; width: {{ include.max }}px;"{% endif %} />
+	  <img 
+      class="image-overlay-1"
+      src="{{site.baseurl}}/assets/graphics/blank.png"
+      alt="{{ include.alt }}"
+      data-echo="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc-two }}"
+      {% if include.max %}style="max-width:100%; width: {{ include.max }}px;"{% endif %} />
+	  <img
+      class="image-overlay-2"
+      src="{{site.baseurl}}/assets/graphics/blank.png"
+      alt="{{ include.alt }}"
+      data-echo="{{ site.baseurl }}/assets/graphics/{{ include.imgsrc-three }}"
+      {% if include.max %}style="max-width:100%; width: {{ include.max }}px;"{% endif %} />
+  </div>
+  {% if include.link %}
+  </a>
+  {% endif %}
+	<figcaption>
+		{{ include.caption }}
+	</figcaption>
+</div>
+
+{% if include.full %}
+  {::nomarkdown}
+    <section class="article-container article-cotainer__within">
+      <div class="article-gutter {% if page.centerAlign %}article-gutter_middle{% endif %}"></div>
+      <article class="article-content {% if page.centerAlign %}article-content_middle{% endif %}">
+  {:/}
+{% endif %}

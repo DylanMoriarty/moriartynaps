@@ -103,6 +103,10 @@
       }
     }
   }
+
+  .mw1000 { img { max-width: 1000px !important; }}
+  .mw800 { img { max-width: 800px !important; }}
+  .mw600 { img { max-width: 600px !important; }}
   
   .full-img-placeholder {
     height: 800px;
@@ -121,6 +125,12 @@
     text-align: center;
     img {
       max-width: 100%; 
+    }
+
+    &__heightcap {
+      img {
+        max-height: 450px;
+      }
     }
   }
   
@@ -159,7 +169,8 @@
   }
   
   figcaption {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 20px;
     font-style: italic;
     opacity: 0.9;
     margin: 1rem 0 3rem;
@@ -189,4 +200,86 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 800;
+}
+
+.post-image__before-after {
+  div {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  img {
+    max-width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Base image remains visible always */
+  .image-base {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Overlay 1 fades in at 2s, out by 4s */
+  .image-overlay-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeOverlay1 12s ease-in-out infinite;
+  }
+
+  /* Overlay 2 fades in at 4s, out by 6s */
+  .image-overlay-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeOverlay2 12s ease-in-out infinite;
+  }
+}
+
+/* Fade in/out for image 2 */
+@keyframes fadeOverlay1 {
+  0%, 26.66% {
+    opacity: 0;
+  }
+  30%, 33.33% {
+    opacity: 1;
+  }
+  33.34%, 80% {
+    opacity: 1;
+  }
+  80.01%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Fade in/out for image 3 */
+@keyframes fadeOverlay2 {
+  0%, 59.99% {
+    opacity: 0;
+  }
+  63%, 66.66% {
+    opacity: 1;
+  }
+  66.67%, 93.33% {
+    opacity: 1;
+  }
+  96.34%, 100% {
+    opacity: 0;
+  }
+}
+
+.notes {
+  margin-top: 6rem;
+  padding: 2rem 0;
+  border-top: 1px solid #70b5b2;
+  border-bottom: 1px solid #70b5b2;
+  font-size: 17px;
+  line-height: 24px;
 }

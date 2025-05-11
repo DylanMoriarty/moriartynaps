@@ -19,6 +19,7 @@ centerAlign: true
 song: ""
 songurl: https://www.youtube.com/embed/videoseries?list=PL1KbmvLItolQ3HavUE6-v1jvUrQV8Ns_x
 
+
 ---
 
 {% include blog-bits/foggy/style.html %}
