@@ -60,7 +60,8 @@ Check out the map, and read on for the story of it. But, beware dear reader...
 
 <style>
     #map {
-        width: 800px;
+        width: 100%;
+        max-width: 1000px;
         margin: -8rem auto 0;
         height: 600px;
     }
@@ -136,19 +137,17 @@ Pokemon was big enough that it had multiple books on the shelves. Nintendo publi
 
 In '99, VERSUS, _yet another_ California guidebook publishing firm put out their guide. And it incidentally became a masterclass in the powers of good design.
 
-You can read each of these books by their covers:
+Take all the covers. The 
 
-[[ covers ai2html ]]
+{% include postimg.html imgsrc="posts/22-monsters/covers.png" full="true" %}
 
 A core part of the games is walking through tall grass to find pokemon. Who shows up is randomized, with some monsters being rarer than others. Among the biggest things a player wants to know is what those rates are – am I spending two hours walking in grass, or two hours.
 
-[[ rates ]]
+{% include postimg.html imgsrc="posts/22-monsters/viridian-forest.jpg" full="true" %}
 
 The other core to these games is combat. All throughout you're encountering unskippable NPC's that challenge you to a battle, and knowing what they're packing is a major advantage. 
 
-[[ viridian forest ]]
-
-With adult eyes, I all the more appreciate how much personality these guides have. The bylines on both books are _tight_. At the end of the Versus guide, they provide some "suggested teams", a combination of Pokemon the player could assemble for a well-rounded party. The last one is Casey's team, and it's just one long joke. I don't think I ever clocked as a kid, in spite of the hours spent on it, that Casey Loe was the head editor and designer of the whole book.
+With adult eyes, I all the more appreciate how much personality _both_ these guides have. The bylines on both books are _tight_. At the end of the Versus guide, they provide some "suggested teams", a combination of Pokemon the player could assemble for a well-rounded party. The last one is Casey's team, and it's just one long joke. I don't think I ever clocked as a kid, in spite of the hours spent on it, that Casey Loe was the head editor and designer of the whole book.
 
 Couldn't tell you how many hours I spent in this book. The mixture of good data viz, good design principals, and practical info was intoxicating, even to a literal child.
 

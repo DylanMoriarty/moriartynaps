@@ -1,0 +1,180 @@
+{% assign scrolly_id = include.id | default: "scrollytelling" %}
+{% assign first_slide = include.slides | first %}
+
+<div class="scrolly{% if include.mode == 'dialog' %} scrolly--dialog{% endif %}" id="{{ scrolly_id | escape }}">
+  <div class="scrolly__visual">
+    <img
+      class="scrolly__image"
+      src="{{ first_slide.image | relative_url }}"
+      alt="{{ first_slide.alt | escape }}"
+    >
+  </div>
+
+  {% if include.mode == "dialog" %}
+    <div class="scrolly__dialog" aria-live="polite" hidden>
+      {{ first_slide.text | markdownify }}
+    </div>
+  {% endif %}
+
+  <div class="scrolly__steps"{% if include.mode == "dialog" %} aria-hidden="true"{% endif %}>
+    {% for slide in include.slides %}
+      <section
+        class="scrolly__step"
+        data-slide="{{ forloop.index }}"
+        data-image="{{ slide.image | relative_url }}"
+        data-alt="{{ slide.alt | escape }}"
+      >
+        <div class="scrolly__text">
+          {{ slide.text | markdownify }}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  #{{ scrolly_id | escape }} {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+  }
+
+  #{{ scrolly_id | escape }} .scrolly__visual {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  #{{ scrolly_id | escape }} .scrolly__image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  #{{ scrolly_id | escape }} .scrolly__step {
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    padding: 2rem 0;
+    box-sizing: border-box;
+  }
+
+  #{{ scrolly_id | escape }} .scrolly__text {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  @media (max-width: 700px) {
+    #{{ scrolly_id | escape }} {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    #{{ scrolly_id | escape }} .scrolly__visual {
+      z-index: 1;
+      height: 50vh;
+      background: white;
+    }
+
+    #{{ scrolly_id | escape }} .scrolly__steps {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .scrolly--dialog .scrolly__steps {
+    visibility: hidden;
+  }
+
+  .scrolly--dialog .scrolly__dialog {
+    position: fixed;
+    z-index: 10;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 100%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 8px 16px 8px 12px;
+    border: 8px double black;
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .scrolly__dialog p {
+    margin: 0;
+  }
+
+  .scrolly--dialog .scrolly__dialog[hidden] {
+    display: none;
+  }
+</style>
+
+<script>
+  (() => {
+    const root = document.getElementById({{ scrolly_id | jsonify }});
+    if (!root) return;
+
+    const image = root.querySelector(".scrolly__image");
+    const dialog = root.querySelector(".scrolly__dialog");
+    const steps = [...root.querySelectorAll(".scrolly__step")];
+    let framePending = false;
+
+    function updateScrolly() {
+      framePending = false;
+
+    const rootRect = root.getBoundingClientRect();
+    const isVisible = rootRect.bottom > 0 && rootRect.top < window.innerHeight;
+    const hasStarted = rootRect.top <= 0;
+    const beforeEnd = rootRect.bottom > window.innerHeight / 2;
+
+    if (dialog) dialog.hidden = !isVisible || !hasStarted || !beforeEnd;
+    if (!isVisible || !steps.length) return;
+
+      const viewportCenter = window.innerHeight / 2;
+      const activeStep = steps.reduce((closest, step) => {
+        const rect = step.getBoundingClientRect();
+        const distance = viewportCenter < rect.top
+          ? rect.top - viewportCenter
+          : viewportCenter > rect.bottom
+            ? viewportCenter - rect.bottom
+            : 0;
+
+        return distance < closest.distance
+          ? { step, distance }
+          : closest;
+      }, { step: steps[0], distance: Infinity }).step;
+
+      const slideNumber = Number(activeStep.dataset.slide);
+
+      if (image.dataset.currentImage !== activeStep.dataset.image) {
+        image.src = activeStep.dataset.image;
+        image.alt = activeStep.dataset.alt || "";
+        image.dataset.currentImage = activeStep.dataset.image;
+      }
+
+      const text = activeStep.querySelector(".scrolly__text");
+      if (dialog && text) dialog.innerHTML = text.innerHTML;
+
+      window.currentScrollySlide = slideNumber;
+      window.dispatchEvent(new CustomEvent("scrolly:change", {
+        detail: { id: root.id, slide: slideNumber }
+      }));
+    }
+
+    function requestUpdate() {
+      if (framePending) return;
+      framePending = true;
+      window.requestAnimationFrame(updateScrolly);
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    requestUpdate();
+  })();
+</script>
