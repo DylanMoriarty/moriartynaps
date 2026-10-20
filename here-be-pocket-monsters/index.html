@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Here Be Pocket Monsters</title>
+  <meta name="description" content="Video games give you something the real world refuses: a fathomable map. Every corner can be explored, every secret discovered. A linear story that matches t...">
+
+  <link rel="canonical" href="http://localhost:4000/here-be-pocket-monsters/">
+  <link rel="alternate" type="application/rss+xml" title="Moriarty Naps v2" href="http://localhost:4000/feed.xml">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Quicksand|Proza+Libre|Averia+Serif+Libre|Oleo+Script|Maven+Pro" rel="stylesheet">
+
+  <!-- build:css /assets/styles/main.css -->
+    <link rel="stylesheet" href="/assets/styles/main.css">
+  <!-- endbuild -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/graphics/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/graphics/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/graphics/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/graphics/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/graphics/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/graphics/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/graphics/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/graphics/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/graphics/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/graphics/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/graphics/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/graphics/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/graphics/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/graphics/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/graphics/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff"> 
+
+  
+    <meta property="og:title" content="Here Be Pocket Monsters" />
+  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DylanMoriarty">
+  <meta name="twitter:creator" content="@DylanMoriarty">
+  <meta name="twitter:title" content="Here Be Pocket Monsters">
+
+  
+    <meta name="twitter:description" content="A guide to capturing springtime bliss and centuries old design in map form">
+    <meta property="og:description" content="A guide to capturing springtime bliss and centuries old design in map form" />
+  
+
+  
+    <meta property="og:url"         content="https://moriartynaps.org/here-be-pocket-monsters/" />
+  
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Here Be Pocket Monsters" />
+  <meta property="og:image"       content="https://moriartynaps.org/assets/graphics/posts/19-cherry-two/soc-card.jpg" />
+
+  <meta name="twitter:image" content="https://moriartynaps.org/assets/graphics/posts/19-cherry-two/twit-card.jpg">
+</head>
+
+
+<h1 class="site-title"><a href="../" class="no_underline">Moriarty Naps</a></h1>
+
+<div class="site-home">
+  
+
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/pmtiles@3.2.0/dist/pmtiles.js"></script>
+  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<section class="article-container">
+
+  <div class="article-gutter "></div>
+
+  <article class="article-content ">
+    <div class="article-header">
+      <div class="article-back"><a href="../" class="no_underline">&larr; back</a></div>
+      <h3 class="">Here Be Pocket Monsters</h3>
+    </div>
+
+    <p>Video games give you something the real world refuses: <em>a fathomable map</em>. Every corner can be explored, every secret discovered. A linear story that matches the geography perfectly. It’s no surprise fantasy mapping is so dang popular, it’s all gas no filler.</p>
+
+<!-- Earlier this year, I had a problem. I wanted to experiment with making a FREAKIN' HUGE painting, but wasn't sure what project warranted it. -->
+
+<!-- I spent a month making a huge freakin' painting of the world of the first Pokemon games - for charity! Desert Bus For Hope will be auctioning it off **at some point**, and it can be yours! -->
+
+<p>Despite being a Cartographer with a knack for illustration and a recovering Gameboy addict, I haven’t done that many fantasy maps. There’s so many real-world stories to tell! But alas, the stars aligned, and I spent a month painting a freakin’ huge painting of Kanto, the world of the first Pokemon games.</p>
+
+<p>For charity! The incredible <a href="https://desertbus.org/2026/info/about" target="_blank">Desert Bus For Hope</a> will be <a href="https://desertbus.org/2026/prize/1cjJnLAHy2d3T7pJE1YjF" target="_blank">live auctioning</a> it off around Monday, Oct 26, 12:00 PM EDT.</p>
+
+<p>Check out the map, and read on for the story of it. But, beware dear reader…</p>
+
+    </article>
+  </section>
+
+<div id="map"></div>
+
+<style>
+    #map {
+        width: 100%;
+        max-width: 1000px;
+        margin: -8rem auto 0;
+        height: 600px;
+    }
+</style>
+
+<script>
+    const protocol = new pmtiles.Protocol();
+    maplibregl.addProtocol('pmtiles', protocol.tile);
+    
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: {
+        version: 8,
+        sources: {
+          kanto: {
+            type: 'raster',
+            url: 'pmtiles://https://the-world-inferno-507689989688-us-east-2-an.s3.us-east-2.amazonaws.com/kanto.pmtiles',
+            tileSize: 256
+          }
+        },
+        layers: [
+          { id: 'background', type: 'background', paint: { 'background-color': 'rgba(0,0,0,0)' } },
+          { id: 'kanto', type: 'raster', source: 'kanto' }
+        ]
+      },
+      center: [0, 0],
+      zoom: 0.5,
+      minZoom: 0.5,
+      maxZoom: 2.75,
+      renderWorldCopies: false,
+      cooperativeGestures: true
+    });
+
+    map.addControl(new maplibregl.NavigationControl());
+</script>
+
+  <section class="article-container article-cotainer__within">
+    <div 
+      class="article-gutter 
+      
+      "></div>
+    <article 
+      class="article-content 
+      
+      ">
+
+<p>…here be Pocket Monsters.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    1.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">"How the hell did you get into that?"
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Not gonna lie, it’s satisfying as hell to respond to:</p>
+
+<p>“So, what do you do?”</p>
+
+<p>with “Cartography”. Few know that’s still a thing you can do, fewer yet understand it, and <em>no one</em> anticipates it. Inevitably, the revelation is followed by a “how the hell did you get into <em>that</em>?”</p>
+
+<p>The shortest answer is ~ <i class="collecticon collecticons-star"></i><em>Serendipity!</em><i class="collecticon collecticons-star"></i></p>
+
+<p>The short answer is that I took a class that <a href="https://somethingaboutmaps.wordpress.com/2011/03/02/on-salvation/" target="_blank">Daniel Huffman</a> was teaching, and found a vibrant community fostered by the mighty Tanya Buckingham.</p>
+
+<p>A lifetime doodler, I had dabbled in art classes at UW-Madison, but each had a fatal flaw. A photography class taught by someone absent one half and noticeably high the other. A typography class taught by a guy passionate about it in the best ways, but so strict any creative deviation was destroyed and discouraged.</p>
+
+<p>[[ drawings of those classes ]]</p>
+
+<p>Then I took Cartography, where the final project was “Make a Map about something you love.” I’d go on to spend three days in a cage in a basement pouring over 35 years worth of phonebooks to assemble a dataset to work with. The system works.</p>
+
+<p>[[ phone books ]]</p>
+
+<p>Moral of the story: <em>every</em> art class should end on that assignment!!</p>
+
+<p>The shoe fit. The community rules. And still to this day, anytime I want to try out something new or scary, I gravitate towards basing it on something dear to me.</p>
+
+<p>Now, the LONG answer to “<em>How the hell did you get into that?</em>” begins, in part, with Pocket Monsters.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    2.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">A guide of many things
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>My first memory of noticing GOOD vs. BAD data visualization came from Pokemon game guide books. In ‘98 you had limited options for a video game cheat sheet. Haphazard online <a href="https://gamefaqs.gamespot.com/gameboy/367023-pokemon-red-version/faqs/5763" target="_blank">txt file walkthroughs</a> that <a href="https://gamefaqs.gamespot.com/snes/588436-the-legend-of-zelda-a-link-to-the-past/faqs/63303" target="blank">pioneered ASCII art</a>, schoolyard rumors, or magazines that only held your hand through the first levels.</p>
+
+<p>Then there were full on published book guides purchasable at your local Barnes and Nobles. Unlike the text-only archives of gamefaqs, these had full on art. Screenshots! Could be referenced away from the computer! <em>Were chock full of maps!</em></p>
+
+<p>Pokemon was big enough that it had multiple books on the shelves. Nintendo published their own guide in ‘98. Also in ‘98, PRIMA, a guidebook publishing firm out of California, put out theirs that would seemingly dominate the shelves.</p>
+
+<p>In ‘99, VERSUS, <em>yet another</em> California guidebook publishing firm put out their guide. And it incidentally became a masterclass in the powers of good design.</p>
+
+<p>Take all the covers. The</p>
+
+      </article>
+    </section>
+
+<div class="post-image  post-image__full">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/22-monsters/covers.png" />
+	</fig>
+  
+  
+</div>
+
+    <section class="article-container article-cotainer__within">
+      <div class="article-gutter "></div>
+      <article class="article-content ">
+
+<p>A core part of the games is walking through tall grass to find pokemon. Who shows up is randomized, with some monsters being rarer than others. Among the biggest things a player wants to know is what those rates are – am I spending two hours walking in grass, or two hours.</p>
+
+      </article>
+    </section>
+
+<div class="post-image  post-image__full">
+  
+  <fig>
+		<img src="/assets/graphics/blank.png" alt="" data-echo="/assets/graphics/posts/22-monsters/viridian-forest.jpg" />
+	</fig>
+  
+  
+</div>
+
+    <section class="article-container article-cotainer__within">
+      <div class="article-gutter "></div>
+      <article class="article-content ">
+
+<p>The other core to these games is combat. All throughout you’re encountering unskippable NPC’s that challenge you to a battle, and knowing what they’re packing is a major advantage.</p>
+
+<p>With adult eyes, I all the more appreciate how much personality <em>both</em> these guides have. The bylines on both books are <em>tight</em>. At the end of the Versus guide, they provide some “suggested teams”, a combination of Pokemon the player could assemble for a well-rounded party. The last one is Casey’s team, and it’s just one long joke. I don’t think I ever clocked as a kid, in spite of the hours spent on it, that Casey Loe was the head editor and designer of the whole book.</p>
+
+<p>Couldn’t tell you how many hours I spent in this book. The mixture of good data viz, good design principals, and practical info was intoxicating, even to a literal child.</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    3.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Notebook Dreams
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Strategy guides of video games also provide a blueprint to a kid with an imagination. Even without a game controller, any interaction, music, or story, once you’ve learned the physics of a platformer, you can look at a static map of Super Mario World level and imagine how it plays.</p>
+
+<p>My first maps were 100% imitations of the worldly screenshots from game guides. Notebooks were filled with Pokemon and Warcraft II maps. No need for a magic spell to turn them into reality – I can play em’ out in my head! And good lord, I did.</p>
+
+<p>[[ early pokemon illustrations ]]</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    5.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Imperfection
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>Pokemon Red and Green debuted in 1996 with 151 monsters to catch and battle with. In the 30 years (eek!) since, they’ve added another 874.</p>
+
+<p>I’m aged out of the games at this point, but I find always find it fun to check out how the new class of critters are being designed. Some I dig, others I find weird. But overall it still bums me out they moved away from <a href="https://imgur.com/gallery/original-151-pok-mon-sugimori-style-7HThc/" target="_blank">Ken Sugimori’s watercolor illustrations so quickly</a>.</p>
+
+<p>Watercolor gives you built-in fluidity and texture.</p>
+
+<p>BLAHBLAHBLAH</p>
+
+<p>I suspect a major reason they moved away from watercolor, is how difficult it clearly was to capture accurately. Only <em>three years</em> ago, someone came across an <a href="https://kotaku.com/pokemon-ken-sugimori-original-art-red-blue-gold-silver-1850352781" target="_blank">archive of high quality scans that weren’t <em>as</em> blown out.</a></p>
+
+<p>My map is imperfect too – a few of the mon’s I wish I had done a better job on. There’s a few red speckles in the negative space. The size is</p>
+
+<p>BLAHBLAHBLAH</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    4.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">Hit Play
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>All the way in 2025, I’m watching a pile of goofs drive a bus for a straight week for Desert Bus for Hope.</p>
+
+<p>Desert Bus for Hope is one of the internet’s oldest charity streams – going strong 20 years! They raise funds for Child’s Play, an organization that provides therapeutic games and tech to sick kids.</p>
+
+<p>It’s hosted by Loading Ready Run, one of the internet’s OG nerd comedy troupes. I’ve tuned in a few times over it’s 20-year run, but it took til last year for me to finally go “wait, I can actually contribute to this.”</p>
+
+<p>I’ve been meaning to work out how to do large paintings for awhile. You have more space for detail, you can really stick your nose in it, and people like big art. This seemed like a perfect excuse to figure it out!</p>
+
+<p>After years of yearning for the <em>big watercolor paper roll</em>, 44.5 inches x 10 yards of goodness, I finally own one. First challenge… how do you cut that? Bad solution: circular cutter, large cutting board, and a lot of paper weights. I at least had the foresight to give myself some margins to cut off later to make it actually the right size.</p>
+
+<p>Paper cut, pencils ready, I drew up my sleeves and cracked open my trusty Versus guide book for reference. 151 critters later, we have a map.</p>
+
+<p>If you’d like to own it, there’s one chance to!</p>
+
+<div class="Chapterbox">
+	<div class="ChapterboxHeader">
+		<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+    
+    <h2>
+    6.
+</h2>
+<div class="ChapterboxHeaderLine ChapterboxLine"></div>
+</div>
+<div class="ChapterboxTitle">So, you won! Congratulations!
+</div>
+<div class="ChapterboxFooterLine ChapterboxLine"></div>
+</div>
+
+<p>…and that’s a chunk of the LONG answer to how I got into cartography! Not the whole story, but a few significant nudges.</p>
+
+<p>I was tepid on Pokemon by ‘02, and fully aged out by ‘06. I’ve played a few other entries, but alas, the fix isn’t the same, and that’s fine.</p>
+
+<p>Even giving up the original of it, I’m just happy the design exists. A little love letter to all the notebook dreams, a serious thank you note to Ken Sugimori’s work, and a salute to Casey and everyone else at Versus.</p>
+
+<div class="scrolly scrolly--dialog" id="kanto-story">
+  <div class="scrolly__visual">
+    <img class="scrolly__image" src="/assets/graphics/posts/22-monsters/slide-1.jpg" alt="Kanto map overview" />
+  </div>
+
+  
+    <div class="scrolly__dialog" aria-live="polite" hidden="">
+      <p>So, you won! Congratulations! You’re the new POKEMON LEAGE champion!</p>
+
+    </div>
+  
+
+  <div class="scrolly__steps" aria-hidden="true">
+    
+      <section class="scrolly__step" data-slide="1" data-image="/assets/graphics/posts/22-monsters/slide-1.jpg" data-alt="Kanto map overview">
+        <div class="scrolly__text">
+          <p>So, you won! Congratulations! You’re the new POKEMON LEAGE champion!</p>
+
+        </div>
+      </section>
+    
+      <section class="scrolly__step" data-slide="2" data-image="/assets/graphics/posts/22-monsters/slide-2.jpg" data-alt="Detail of the map">
+        <div class="scrolly__text">
+          <p>You’ve grown up so much since you first left with SQUIRTLE! You have come of age!</p>
+
+        </div>
+      </section>
+    
+      <section class="scrolly__step" data-slide="3" data-image="/assets/graphics/posts/22-monsters/slide-1.jpg" data-alt="Kanto map overview">
+        <div class="scrolly__text">
+          <p>You understand that your victory was not just your own doing!</p>
+
+        </div>
+      </section>
+    
+      <section class="scrolly__step" data-slide="4" data-image="/assets/graphics/posts/22-monsters/slide-1.jpg" data-alt="Kanto map overview">
+        <div class="scrolly__text">
+          <p>The bond you share with your POKEMON is marvelous!</p>
+
+
+        </div>
+      </section>
+    
+  </div>
+</div>
+
+<style>
+  #kanto-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+  }
+
+  #kanto-story .scrolly__visual {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+  #kanto-story .scrolly__image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  #kanto-story .scrolly__step {
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    padding: 2rem 0;
+    box-sizing: border-box;
+  }
+
+  #kanto-story .scrolly__text {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  @media (max-width: 700px) {
+    #kanto-story {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    #kanto-story .scrolly__visual {
+      z-index: 1;
+      height: 50vh;
+      background: white;
+    }
+
+    #kanto-story .scrolly__steps {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .scrolly--dialog .scrolly__steps {
+    visibility: hidden;
+  }
+
+  .scrolly--dialog .scrolly__dialog {
+    position: fixed;
+    z-index: 10;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 100%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 8px 16px 8px 12px;
+    border: 8px double black;
+    background: rgba(255, 255, 255, 0.94);
+  }
+
+  .scrolly__dialog p {
+    margin: 0;
+  }
+
+  .scrolly--dialog .scrolly__dialog[hidden] {
+    display: none;
+  }
+</style>
+
+<script>
+  (() => {
+    const root = document.getElementById("kanto-story");
+    if (!root) return;
+
+    const image = root.querySelector(".scrolly__image");
+    const dialog = root.querySelector(".scrolly__dialog");
+    const steps = [...root.querySelectorAll(".scrolly__step")];
+    let framePending = false;
+
+    function updateScrolly() {
+      framePending = false;
+
+    const rootRect = root.getBoundingClientRect();
+    const isVisible = rootRect.bottom > 0 && rootRect.top < window.innerHeight;
+    const hasStarted = rootRect.top <= 0;
+    const beforeEnd = rootRect.bottom > window.innerHeight / 2;
+
+    if (dialog) dialog.hidden = !isVisible || !hasStarted || !beforeEnd;
+    if (!isVisible || !steps.length) return;
+
+      const viewportCenter = window.innerHeight / 2;
+      const activeStep = steps.reduce((closest, step) => {
+        const rect = step.getBoundingClientRect();
+        const distance = viewportCenter < rect.top
+          ? rect.top - viewportCenter
+          : viewportCenter > rect.bottom
+            ? viewportCenter - rect.bottom
+            : 0;
+
+        return distance < closest.distance
+          ? { step, distance }
+          : closest;
+      }, { step: steps[0], distance: Infinity }).step;
+
+      const slideNumber = Number(activeStep.dataset.slide);
+
+      if (image.dataset.currentImage !== activeStep.dataset.image) {
+        image.src = activeStep.dataset.image;
+        image.alt = activeStep.dataset.alt || "";
+        image.dataset.currentImage = activeStep.dataset.image;
+      }
+
+      const text = activeStep.querySelector(".scrolly__text");
+      if (dialog && text) dialog.innerHTML = text.innerHTML;
+
+      window.currentScrollySlide = slideNumber;
+      window.dispatchEvent(new CustomEvent("scrolly:change", {
+        detail: { id: root.id, slide: slideNumber }
+      }));
+    }
+
+    function requestUpdate() {
+      if (framePending) return;
+      framePending = true;
+      window.requestAnimationFrame(updateScrolly);
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    requestUpdate();
+  })();
+</script>
+
+<p><i>-D.M., picked Squirtle every time<br />
+<span class="post-date">October, 22nd 2026</span></i></p>
+
+<p>P.S. My biggest regret of the map was that I couldn’t justify shoehorning Casey’s Team into it. To make amends, here they are:</p>
+
+
+    <div class = "article-foot">
+        <div class="article-back"><a href="../" class="no_underline">&larr; Home</a></div>
+    </div>
+
+  </article>
+</section>
+
+<script>
+    (function (root, factory) {
+        if (typeof define === 'function' && define.amd) {
+          define(function() {
+            return factory(root);
+          });
+        } else if (typeof exports === 'object') {
+          module.exports = factory;
+        } else {
+          root.echo = factory(root);
+        }
+      })(this, function (root) {
+      
+        'use strict';
+      
+        var echo = {};
+      
+        var callback = function () {};
+      
+        var offset, poll, delay, useDebounce, unload;
+      
+        var isHidden = function (element) {
+          return (element.offsetParent === null);
+        };
+        
+        var inView = function (element, view) {
+          if (isHidden(element)) {
+            return false;
+          }
+      
+          var box = element.getBoundingClientRect();
+          return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+        };
+      
+        var debounceOrThrottle = function () {
+          if(!useDebounce && !!poll) {
+            return;
+          }
+          clearTimeout(poll);
+          poll = setTimeout(function(){
+            echo.render();
+            poll = null;
+          }, delay);
+        };
+      
+        echo.init = function (opts) {
+          opts = opts || {};
+          var offsetAll = opts.offset || 0;
+          var offsetVertical = opts.offsetVertical || offsetAll;
+          var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+          var optionToInt = function (opt, fallback) {
+            return parseInt(opt || fallback, 10);
+          };
+          offset = {
+            t: optionToInt(opts.offsetTop, offsetVertical),
+            b: optionToInt(opts.offsetBottom, offsetVertical),
+            l: optionToInt(opts.offsetLeft, offsetHorizontal),
+            r: optionToInt(opts.offsetRight, offsetHorizontal)
+          };
+          delay = optionToInt(opts.throttle, 250);
+          useDebounce = opts.debounce !== false;
+          unload = !!opts.unload;
+          callback = opts.callback || callback;
+          echo.render();
+          if (document.addEventListener) {
+            root.addEventListener('scroll', debounceOrThrottle, false);
+            root.addEventListener('load', debounceOrThrottle, false);
+          } else {
+            root.attachEvent('onscroll', debounceOrThrottle);
+            root.attachEvent('onload', debounceOrThrottle);
+          }
+        };
+      
+        echo.render = function (context) {
+          var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+          var length = nodes.length;
+          var src, elem;
+          var view = {
+            l: 0 - offset.l,
+            t: 0 - offset.t,
+            b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+            r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+          };
+          for (var i = 0; i < length; i++) {
+            elem = nodes[i];
+            if (inView(elem, view)) {
+      
+              if (unload) {
+                elem.setAttribute('data-echo-placeholder', elem.src);
+              }
+      
+              if (elem.getAttribute('data-echo-background') !== null) {
+                elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+              }
+              else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+                elem.src = src;
+              }
+      
+              if (!unload) {
+                elem.removeAttribute('data-echo');
+                elem.removeAttribute('data-echo-background');
+              }
+      
+              callback(elem, 'load');
+            }
+            else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+      
+              if (elem.getAttribute('data-echo-background') !== null) {
+                elem.style.backgroundImage = 'url(' + src + ')';
+              }
+              else {
+                elem.src = src;
+              }
+      
+              elem.removeAttribute('data-echo-placeholder');
+              callback(elem, 'unload');
+            }
+          }
+          if (!length) {
+            echo.detach();
+          }
+        };
+      
+        echo.detach = function () {
+          if (document.removeEventListener) {
+            root.removeEventListener('scroll', debounceOrThrottle);
+          } else {
+            root.detachEvent('onscroll', debounceOrThrottle);
+          }
+          clearTimeout(poll);
+        };
+      
+        return echo;
+      
+      });
+    </script>
+    <script>
+        echo.init({
+          offset: 2500,
+          throttle: 250,
+          unload: false,
+          callback: function (element, op) {
+            //console.log(element, 'has been', op + 'ed')
+          }
+        });
+    </script>
+    
+
+</div>
+
+<footer id="footer">
+	<div class="centerme">2026 <a target="_blank" href="https://www.instagram.com/moriartymaps/">Dylan Moriarty</a></div>
+</footer>
+
+<script src="/assets/scripts/main.js"></script>
+
