@@ -53,11 +53,13 @@ Video games give you something the real world refuses: _a fathomable map_. Every
 
 <!-- I spent a month making a huge freakin' painting of the world of the first Pokemon games - for charity! Desert Bus For Hope will be auctioning it off **at some point**, and it can be yours! -->
 
-Despite being a Cartographer with a knack for illustration and a recovering Gameboy addict, I haven't done that many fantasy maps. There's so many real-world stories to tell! But alas, the stars aligned, and I spent a month painting a freakin' huge painting of Kanto, the world of the first Pokemon games.
+Despite being a Cartographer with a knack for illustration and a recovering Gameboy addict, I haven't made many fantasy maps. There's so many real-world stories to tell! 
 
-For charity! The incredible <a href="https://desertbus.org/2026/info/about" target="_blank">Desert Bus For Hope</a> will be <a href="https://desertbus.org/2026/prize/1cjJnLAHy2d3T7pJE1YjF" target="_blank">live auctioning</a> it off around Monday, Oct 26, 12p EDT.
+Alas, the stars aligned, and so I spent a month painting a freakin' huge painting, (for charity!) of the world of Pokemon Red & Blue.
 
-Check out the map, and read on for the story of it. But, beware dear reader... 
+The incredible <a href="https://desertbus.org/2026/info/about" target="_blank">Desert Bus For Hope</a> will be <a href="https://desertbus.org/2026/prize/1cjJnLAHy2d3T7pJE1YjF" target="_blank">live auctioning</a> it off around *Monday, Oct 26, 12p EDT*.
+
+Check out the map below, and read on for the story of it. But, beware dear reader... 
 
 {% include article-break.html %}
 <div id="map"></div>
@@ -122,47 +124,51 @@ The short answer is that I took a class that <a href="https://somethingaboutmaps
 
 A lifetime doodler, I had dabbled in art classes at UW-Madison, but each had a fatal flaw. A photography class taught by someone absent one half and noticeably high the other. A typography class taught by a guy passionate about it in the best ways, but so strict any creative deviation was destroyed and discouraged.
 
-Then I took Cartography, where the final project was "Make a Map about something you love." I'd go on to spend three days in a cage in a basement pouring over 35 years worth of phonebooks to assemble a dataset to work with. The system works.
+Then I took Cartography, where the final project was "Make a Map about something you love." I'd go on to spend three days in a cage in a library basement pouring over 35 years worth of phonebooks to assemble a dataset to work with.
 
 {% include postimg.html imgsrc="posts/22-monsters/library.png" %}
 
 Moral of the story: _every_ art class should end on that assignment!!
 
-The shoe fit. The community rules. And still to this day, anytime I want to try out something new or scary, I gravitate towards basing it on something dear to me.
+The shoe fit. The community rules. And still to this day, anytime I want to try out something new or scary, I gravitate towards basing it on something near or dear to me.
 
-Now, the LONG answer to "_How the hell did you get into that?_" begins, in part, with Pocket Monsters. 
+Related, the LONG answer to "_How the hell did you get into that?_" begins, in part, with Pocket Monsters. 
 
 {% include chapter.html num="2." title="A guide of many things" %}
 
-My first memory of noticing GOOD vs. BAD data visualization came from Pokemon game guide books. In '98 you had limited options for a video game cheat sheet. Haphazard online <a href="https://gamefaqs.gamespot.com/gameboy/367023-pokemon-red-version/faqs/5763" target="_blank">txt file walkthroughs</a> that <a href="https://gamefaqs.gamespot.com/snes/588436-the-legend-of-zelda-a-link-to-the-past/faqs/63303" target="blank">pioneered ASCII art</a>, schoolyard rumors, or magazines that only held your hand through the first levels. 
+My first memory of noticing GOOD vs. BAD data visualization came from Pokemon game guide books. In '98 you had limited options for a video game cheat sheet. Haphazard online <a href="https://gamefaqs.gamespot.com/gameboy/367023-pokemon-red-version/faqs/5763" target="_blank">txt file walkthroughs</a> that <a href="https://gamefaqs.gamespot.com/snes/588436-the-legend-of-zelda-a-link-to-the-past/faqs/63303" target="blank">pioneered ASCII art</a>, <a href="https://www.eurogamer.net/searching-for-mew-the-story-of-pokemons-greatest-mystery" target="_blank"> schoolyard rumors</a>, or magazines that only held your hand through the first levels. 
 
-Then there were full on published book guides purchasable at your local Barnes and Nobles. Unlike the text-only archives of gamefaqs, these had full on art. Screenshots! Could be referenced away from the computer! _Were chock full of maps!_
+Then there were published book guides purchasable at your local Barnes and Nobles. Unlike the text-only archives of gamefaqs, these had full on art. Screenshots! Could be referenced away from the computer! _Were chock full of maps!_
 
-Pokemon was big enough that it had multiple books on the shelves. Nintendo published their own guide in '98. Also in '98, Prima, a guidebook publishing firm out of California, put out theirs that would seemingly dominate the shelves.
+Pokemon was big enough that it had multiple books on the shelves. Nintendo published their guide in ’98. Also in ’98, Prima, a guidebook publishing firm out of California, put out theirs that would seemingly dominate the shelves.
 
-In '99, Versus, _yet another_ California guidebook publishing firm put out their guide. And it incidentally became a masterclass in the powers of good design.
+In ’99, Versus, another California guidebook publishing firm put out their guide. And it incidentally became a introductory course of the powers of good design.
 
 Take all the covers. They each use the same stock illustrations you see _everywhere_, but the official one looks like a sticker sheet. Prima's looks identical to the box the game was sold in... which is about as uninspired as they come. Versus meanwhile has ELECTRICITY! Dozens of stock illo's of Pokemon below the hero, but layered such that they don't compete with it. 
 
-{% include postimg.html imgsrc="posts/22-monsters/covers.png" full="true" caption="Versus invokes the  rare wholly appropriate and good use of Comic Sans!" %}
+{% include postimg.html imgsrc="posts/22-monsters/covers.png" full="true" caption="Versus invoking the rare wholly appropriate and *good* use of Comic Sans!" %}
 
-A core part of the games is walking through tall grass to find pokemon. Who shows up is randomized, with some monsters being rarer than others. Among the biggest things a player wants to know is what those rates are – am I spending two hours walking in grass, or two hours.
+A core part of the games is walking through tall grass to find pokemon. Which one shows up is randomized, with some monsters being rarer than others. Among the biggest things a player wants to know is what those rates are – "am I spending two hours walking in grass, or two hours?"
 
-{% include postimg.html imgsrc="posts/22-monsters/viridian-forest.jpg" full="true" %}
+One of these guides gives you a shrug of "common", "rare", the other gives you hard numbers:
 
-The other core to these games is combat. All throughout you're encountering unskippable NPC's that challenge you to a battle, and knowing what they're packing is a major advantage. 
+{% include postimg.html imgsrc="posts/22-monsters/viridian-forest.jpg" full="true" caption="Prima (left), Versus (right)" %}
 
-{% include postimg.html imgsrc="posts/22-monsters/dex.jpg" full="true" %}
+The other core to these games is combat. In the Versus guide you get indicators of where enemy trainers are, and what their teams are. Prima leaves it to your imagination.
+
+{% include postimg.html imgsrc="posts/22-monsters/dex.jpg" full="true" caption="Prima (left), Versus (right)"%}
 
 Finally, each guide ends in an encyclopedia of Pokemon. Prima gives you a word document, Versus gives ya structure. Tastefully subtle bar chart in the stats!
 
-I come not to bury Prima. With adult eyes, I all the more appreciate how much personality _all_ these guides have. And that they were clearly made by people just playing through the games and documenting what they saw. The bylines on both books are _tight_.
+I come not to bury Prima. With adult eyes, I all the more appreciate how much personality _all_ these guides have. The text blocks are full of opinions, quirks, and jokes. Versus ends with a few 'suggested teams', giving the reader a roster of Pokemon they could catch to beat the game. The last one, named Casey's Team, is a complete joke, full of the worst Pokemon you could battle with.
 
-Couldn't tell you how many hours I spent in this book. The mixture of good data viz, good design principals, and practical info was intoxicating, even to a literal child.
+It wasn't until this project that I noticed Casey was actually the head designer and editor of the book. There's only three additional credits on the book's content, not counting Cover/Back cover designers. Prima also only credits about five people. The bylines on both books are _tight_.
+
+Couldn't tell you how many hours I spent in the Versus guide book. The mixture of good data viz, good design principals, and practical info was intoxicating, even to a literal child.
 
 {% include chapter.html num="3." title="Notebook Dreams" %}
 
-{% include postimg.html imgsrc="posts/22-monsters/sketchbook.jpg" %}
+{% include postimg.html imgsrc="posts/22-monsters/sketchbook.jpg" caption="Get Game Freak on the phone, this 8 year-old has ideas." %}
 
 Strategy guides of video games also provide a blueprint to a kid with an imagination. Even without a game controller, any interaction, music, or story, once you've learned the physics of a platformer, you can look at a static map of Super Mario World level and imagine how it plays.
 
@@ -170,7 +176,7 @@ My first maps were 100% imitations of the worldly screenshots from game guides. 
 
 {% include chapter.html num="5." title="Imperfection" %}
 
-{% include postimg.html imgsrc="posts/22-monsters/watercolor.png" %}
+{% include postimg.html imgsrc="posts/22-monsters/watercolor.png" caption='<a href="https://pokemondb.net/artwork/squirtle" target="_blank">Official art by Ken Sugimori</a> over the years. Earliest to most recent from top to bottom.' %}
 
 Pokemon Red and Green debuted in 1996 with 151 monsters to catch and battle with. In the 30 years (eek!) since, they've added another 874. 
 
@@ -184,13 +190,13 @@ Watercolors are gentle, subtle, and get obliterated by the bright light of most 
 
 {% include chapter.html num="4." title="Hit Play" %}
 
-All the way in 2025, I'm watching a pile of goofs drive a bus for a straight week for Desert Bus for Hope. 
+All the way in 2025, I'm watching a pile of goofs drive a bus for a straight week for <a href="https://desertbus.org/2026/info/about" target="_blank">Desert Bus for Hope</a>. 
 
-Desert Bus for Hope is one of the internet's oldest charity streams – going strong 20 years! They raise funds for Child's Play, an organization that provides therapeutic games and tech to sick kids.
+Desert Bus for Hope is one of the internet's oldest charity streams – going strong 20 years! They raise funds for <a href="https://childsplaycharity.org/" target="_blank">Child's Play</a>, an organization that provides therapeutic games and tech to sick kids.
 
-It's hosted by Loading Ready Run, one of the internet's OG nerd comedy troupes. I've tuned in a few times over it's 20-year run, but it took til last year for me to finally go "wait, I can actually contribute to this."
+It's hosted by Loading Ready Run, one of the internet's OG nerd comedy troupes. I've tuned in a bunch over it's 20-year run, but it took til last year for me to finally go "wait, I can actually contribute to this."
 
-I've been meaning to work out how to do large paintings for awhile. You have more space for detail, you can really stick your nose in it, and people like big art. This seemed like a perfect excuse to figure it out!
+I've also been meaning to learn how to do large paintings for awhile. Work on a four foot canvas and you have more space for detail. The kinda work you can really stick your nose in. This seemed like a perfect excuse to figure it out!
 
 {% include postimg.html imgsrc="posts/22-monsters/makingof0.jpg" full="true" caption="Pro tip: rulers at Home Depot cost a fraction of what art supply stores sell them for. And if you have curled paper, get out the cookbooks." %}
 
@@ -215,19 +221,19 @@ If you'd like to own it, there's one chance to! Desert Bus! Monday! Oct 26! Roun
 
 {% include chapter.html num="6." title="So, you won! Congratulations!" %}
 
-...and that's a chunk of the LONG answer to how I got into cartography! Not the whole story, but a few significant nudges.
+...and that's a chunk of the LONG answer to how I got into cartography. Not the whole picture, but a few significant nudges.
 
-I was tepid on Pokemon by '02, and mostly aged out by '06. I've played a few other entries, but alas, the fix isn't the same. Yet, the franchise remains imprinted on me. Lodged squarely next to my mental multiplication tables is a grid of what Pokemon types are super effective against each other.
+I was tepid on Pokemon by '02, and mostly aged out by '06. I've played a few other entries, but the fix isn't the same. Yet, the franchise remains imprinted on me. Lodged squarely next to my mental multiplication tables is a grid of what Pokemon types are super effective against each other.
 
 While part of me would have liked to keep the map, I'm just happy it exists.
 
 A serious kudos to Ken Sugimori's work.
 
-A salute to Casey and everyone else at Versus.
+A salute to Casey and the small team that once made up Versus.
 
 A little love letter to the notebook dreams, 
 
-& a detail rich treat that a kid, desperately positioning his gameboy against the setting sun to get the last few moments of gameplay in, would obsess over.
+& a detail-rich treat that a kid, desperately positioning his gameboy against the setting sun to get the last few moments of gameplay in, would obsess over.
 
 {% include article-break.html %}
 
