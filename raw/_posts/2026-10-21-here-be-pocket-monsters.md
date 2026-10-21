@@ -6,12 +6,12 @@ date:   2026-10-21 04:0:01 +0100
 
 type: maps
 
-twit-img: "https://moriartynaps.org/here-be-pocket-monsters/twit-card.jpg"
+twit-img: "https://moriartynaps.org/assets/graphics/posts/22-monsters/twit-card.jpg"
 
-soc-descrip: "A guide to capturing springtime bliss and centuries old design in map form"
+soc-descrip: "Painting a new map of an old legend"
 soc-url: "https://moriartynaps.org/here-be-pocket-monsters/"
 soc-type: "article"
-soc-img: "https://moriartynaps.org/here-be-pocket-monsters/soc-card.jpg"
+soc-img: "https://moriartynaps.org/assets/graphics/posts/22-monsters/soc-card.jpg"
 
 visible: true
 centerAlign: false
